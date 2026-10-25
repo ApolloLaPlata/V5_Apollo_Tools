@@ -13,6 +13,9 @@ import { CreditCardValidator } from '@/components/tools/CreditCardValidator';
 import { WhatsAppLinkGenerator } from '@/components/tools/WhatsAppLinkGenerator';
 import { LineCleaner } from '@/components/tools/LineCleaner';
 import { PromptCrafter } from '@/components/tools/PromptCrafter';
+import { PasswordGenerator } from '@/components/tools/PasswordGenerator';
+import { JsonFormatter } from '@/components/tools/JsonFormatter';
+import { ViralTitleGenerator } from '@/components/tools/ViralTitleGenerator';
 import { ComfyWorkflowModal } from '@/components/tools/ComfyWorkflowModal';
 import { 
   Search, 
@@ -147,7 +150,10 @@ export default function ApolloToolsPage() {
             {activeInteractiveTool === 'luhn-card-validator' && <CreditCardValidator />}
             {activeInteractiveTool === 'whatsapp-link-gen' && <WhatsAppLinkGenerator />}
             {activeInteractiveTool === 'line-cleaner' && <LineCleaner />}
+            {activeInteractiveTool === 'password-generator' && <PasswordGenerator />}
+            {activeInteractiveTool === 'json-formatter' && <JsonFormatter />}
             {activeInteractiveTool === 'prompt-expander' && <PromptCrafter />}
+            {activeInteractiveTool === 'viral-title-generator' && <ViralTitleGenerator />}
             {activeInteractiveTool === 'char-counter' && <CharacterCounter />}
             {activeInteractiveTool === 'case-converter' && <CaseConverter />}
             {activeInteractiveTool === 'pix-qr-generator' && <PixQrCodeGenerator />}

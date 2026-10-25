@@ -60,7 +60,8 @@ export const TOOLS_CATALOG: ToolItem[] = [
     categoryLabel: 'Dev & Testes (4Devs)',
     icon: 'KeyRound',
     badge: '100% Local',
-    isInteractive: false,
+    isInteractive: true,
+    popular: true,
     tags: ['4devs', 'senha', 'segurança', 'hash', 'criptografia']
   },
   {
@@ -71,7 +72,8 @@ export const TOOLS_CATALOG: ToolItem[] = [
     categoryLabel: 'Dev & Testes (4Devs)',
     icon: 'FileCode',
     badge: 'Client-Side',
-    isInteractive: false,
+    isInteractive: true,
+    popular: true,
     tags: ['4devs', 'json', 'formatador', 'parser', 'api']
   },
 
@@ -257,7 +259,8 @@ export const TOOLS_CATALOG: ToolItem[] = [
     categoryLabel: 'IA Criativa (Apollo La Plata)',
     icon: 'FileText',
     badge: 'Alto CTR',
-    isInteractive: false,
+    isInteractive: true,
+    popular: true,
     tags: ['apollo', 'títulos', 'youtube', 'ctr', 'retenção', 'viral']
   },
   {
