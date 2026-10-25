@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -634,6 +634,62 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'lottery-games-suite',
     suiteTab: 'palavras',
     tags: ['invertexto', 'palavras', 'palavras aleatórias', 'brainstorming', 'vocabulário', 'dicionário']
+  },
+  {
+    id: 'cronometro-online',
+    title: 'Cronômetro Online de Alta Precisão (Laps)',
+    description: 'Medição de tempo com precisão de centésimos de segundo, registro de voltas (Laps) com delta de tempo e histórico.',
+    category: 'invertexto',
+    categoryLabel: 'Tempo & Foco (Invertexto)',
+    icon: 'Timer',
+    badge: 'Alta Precisão & Laps',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'time-focus-suite',
+    suiteTab: 'cronometro',
+    tags: ['invertexto', 'cronometro', 'cronômetro', 'tempo', 'laps', 'voltas', 'precisão', 'parada']
+  },
+  {
+    id: 'pomodoro-timer',
+    title: 'Pomodoro Timer 25/5 com Notificação Sonora',
+    description: 'Técnica Pomodoro com ciclos de foco de 25 min, pausas curtas (5 min) e longas (15 min), anel SVG e bipe sonoro nativo.',
+    category: 'invertexto',
+    categoryLabel: 'Tempo & Foco (Invertexto)',
+    icon: 'Brain',
+    badge: '25/5 min + Áudio',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'time-focus-suite',
+    suiteTab: 'pomodoro',
+    tags: ['invertexto', 'pomodoro', 'foco', 'produtividade', 'estudo', 'trabalho', 'temporizador', 'timer']
+  },
+  {
+    id: 'calculadora-horas',
+    title: 'Calculadora de Horas de Trabalho & Ponto',
+    description: 'Cálculo de jornada com entrada, intervalo de almoço e saída, total de horas trabalhadas e saldo de banco de horas/extras.',
+    category: 'invertexto',
+    categoryLabel: 'Tempo & Foco (Invertexto)',
+    icon: 'Clock',
+    badge: 'Ponto & Horas Extras',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'time-focus-suite',
+    suiteTab: 'calculadora-horas',
+    tags: ['invertexto', 'horas', 'calculadora de horas', 'ponto', 'banco de horas', 'jornada', 'trabalho', 'clt']
+  },
+  {
+    id: 'contagem-regressiva',
+    title: 'Contagem Regressiva para Eventos',
+    description: 'Contador regressivo em tempo real com dias, horas, minutos e segundos para aniversários, lançamentos e metas.',
+    category: 'invertexto',
+    categoryLabel: 'Tempo & Foco (Invertexto)',
+    icon: 'Hourglass',
+    badge: 'Tempo Real',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'time-focus-suite',
+    suiteTab: 'contagem-regressiva',
+    tags: ['invertexto', 'contagem regressiva', 'countdown', 'evento', 'lançamento', 'meta', 'tempo']
   },
   {
     id: 'char-counter',

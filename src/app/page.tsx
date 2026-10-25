@@ -30,6 +30,7 @@ import { ApolloLaPlataSuite } from '@/components/tools/ApolloLaPlataSuite';
 import { GeometrySuite } from '@/components/tools/GeometrySuite';
 import { DevAndCvSuite } from '@/components/tools/DevAndCvSuite';
 import { LotteryAndGamesSuite } from '@/components/tools/LotteryAndGamesSuite';
+import { TimeAndFocusSuite } from '@/components/tools/TimeAndFocusSuite';
 
 import { 
   Search, 
@@ -89,6 +90,10 @@ import {
   CircleDot,
   Shuffle,
   Trophy,
+  Timer,
+  Clock,
+  Hourglass,
+  Brain,
   X
 } from 'lucide-react';
 
@@ -143,7 +148,11 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Image: ImageIcon,
   CircleDot,
   Shuffle,
-  Trophy
+  Trophy,
+  Timer,
+  Clock,
+  Hourglass,
+  Brain
 };
 
 export default function ApolloToolsPage() {
@@ -269,6 +278,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'lottery-games-suite' && (
               <LotteryAndGamesSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'time-focus-suite' && (
+              <TimeAndFocusSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
