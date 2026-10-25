@@ -23,9 +23,10 @@
   * **Status:** 100% Concluído e testado. Build Next.js verde. Commit registrado.
   * **Ferramentas Absorvidas:** `Gerador de Inscrição Estadual` e `Validador de Inscrição Estadual`.
 
-- [ ] **Etapa 2: Massa Veicular Completa & Validador Bancário (4Devs)**
-  * **Objetivo:** Gerador de Veículos para QA Mock (Marca, Modelo, Ano, Cor, Combustível, Chassi, Placa Mercosul e RENAVAM) + Validador de Agência e Conta Bancária (DV check).
-  * **Arquivo:** `src/components/tools/VehiclesAndBanksSuite.tsx`.
+- [x] **Etapa 2: Massa Veicular Completa & Validador Bancário (4Devs) - CONCLUÍDA**
+  * **Objetivo:** Gerador de Veículos para QA Mock (Marca, Modelo, Ano, Cor, Combustível, Valor Fipe, Chassi VIN, Placa Mercosul e RENAVAM) + Validador de Agência e Conta Bancária (DV check oficial para BB, Bradesco, Itaú, Caixa, Santander e Nubank).
+  * **Arquivo:** `src/components/tools/VehiclesAndBanksSuite.tsx`, `src/lib/data/toolsData.ts`.
+  * **Status:** 100% Concluído e testado. Build Next.js verde (0 erros).
   * **Ferramentas Absorvidas:** `Gerador de Veículos`, `Validador Conta Bancária`.
 
 - [ ] **Etapa 3: Suíte de Geometria Plana & Áreas (13 Formas) (4Devs)**

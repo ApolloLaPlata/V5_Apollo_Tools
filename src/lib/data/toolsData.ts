@@ -172,6 +172,19 @@ export const TOOLS_CATALOG: ToolItem[] = [
     tags: ['4devs', 'placa', 'mercosul', 'renavam', 'veículos', 'detran']
   },
   {
+    id: 'veiculo-mock-tool',
+    title: 'Gerador de Veículos para Testes (QA Mock)',
+    description: 'Ficha veicular completa com Marca, Modelo, Ano Fab/Mod, Cor, Combustível, Valor Fipe, Placa Mercosul, RENAVAM e Chassi VIN.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Car',
+    badge: 'Fipe + Chassi VIN',
+    isInteractive: true,
+    suiteTarget: 'vehicles-banks',
+    suiteTab: 'veiculo-mock',
+    tags: ['4devs', 'veículo', 'carro', 'fipe', 'chassi', 'vin', 'mock', 'qa']
+  },
+  {
     id: 'bancos-tool',
     title: 'Gerador de Contas Bancárias Fictícias',
     description: 'Contas correntes e agências com cálculo real de DV para BB, Bradesco, Itaú, Caixa, Santander e Nubank.',
@@ -183,6 +196,19 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'vehicles-banks',
     suiteTab: 'bancos',
     tags: ['4devs', 'bancos', 'conta bancária', 'agência', 'itaú', 'bradesco', 'nubank']
+  },
+  {
+    id: 'validador-banco-tool',
+    title: 'Validador de Conta e Agência Bancária',
+    description: 'Validação matemática oficial de dígitos verificadores (DV) de contas e agências para BB, Bradesco, Itaú, Caixa, Santander e Nubank.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'ShieldCheck',
+    badge: 'DV Módulo 10/11',
+    isInteractive: true,
+    suiteTarget: 'vehicles-banks',
+    suiteTab: 'validador-banco',
+    tags: ['4devs', 'banco', 'validador', 'agência', 'conta corrente', 'dv', 'módulo 11']
   },
   {
     id: 'empresas-tool',
