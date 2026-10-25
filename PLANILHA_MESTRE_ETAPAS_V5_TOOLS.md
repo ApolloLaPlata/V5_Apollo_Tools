@@ -29,10 +29,11 @@
   * **Status:** 100% Concluído e testado. Build Next.js verde (0 erros).
   * **Ferramentas Absorvidas:** `Gerador de Veículos`, `Validador Conta Bancária`.
 
-- [ ] **Etapa 3: Suíte de Geometria Plana & Áreas (13 Formas) (4Devs)**
-  * **Objetivo:** Criar a `GeometrySuite.tsx` com cálculo de área, perímetro e fórmulas passo a passo para Círculo, Quadrado, Retângulo, Triângulo, Losango, Trapézio, Paralelogramo, Pentágono, Hexágono, Polígono Regular, Elipse, Coroa Circular e Setor Circular.
-  * **Arquivo:** `src/components/tools/GeometrySuite.tsx`.
-  * **Ferramentas Absorvidas:** 13 ferramentas de geometria do 4Devs.
+- [x] **Etapa 3: Suíte de Geometria Plana & Áreas (13 Formas) (4Devs) - CONCLUÍDA**
+  * **Objetivo:** Criar a `GeometrySuite.tsx` com cálculo de área, perímetro, diagonais e fórmulas passo a passo para Círculo, Quadrado, Retângulo, Triângulo (Base/Alt e Heron), Losango, Trapézio, Paralelogramo, Pentágono Regular, Hexágono Regular, Polígono Regular (n lados), Elipse (Ramanujan), Coroa Circular e Setor Circular + Visualizador Vetorial SVG interativo.
+  * **Arquivo:** `src/components/tools/GeometrySuite.tsx`, `src/lib/data/toolsData.ts`, `src/app/page.tsx`.
+  * **Status:** 100% Concluído e testado. Build Next.js verde (0 erros).
+  * **Ferramentas Absorvidas:** 13 calculadoras geométricas completas do 4Devs.
 
 - [ ] **Etapa 4: Matemática Avançada & Operações de Datas (4Devs)**
   * **Objetivo:** Fatoração completa de inteiros em números primos, Resto da Divisão (Módulo `%`), e Calculadora de Somar/Subtrair Dias, Semanas e Meses a partir de uma data inicial.

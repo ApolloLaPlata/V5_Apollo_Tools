@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -222,6 +222,179 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'vehicles-banks',
     suiteTab: 'empresas',
     tags: ['4devs', 'empresas', 'b2b', 'cnpj', 'inscrição estadual', 'mock']
+  },
+
+  // ------------------------------------------
+  // SUÍTE DE GEOMETRIA PLANA (13 FORMAS 4DEVS)
+  // ------------------------------------------
+  {
+    id: 'area-circulo',
+    title: 'Calculadora de Área do Círculo',
+    description: 'Cálculo da área (π·r²), diâmetro e perímetro da circunferência com precisão decimal e visualização gráfica vetorial.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Circle',
+    badge: 'A = π · r²',
+    isInteractive: true,
+    suiteTarget: 'geometry-suite',
+    suiteTab: 'circulo',
+    tags: ['4devs', 'geometria', 'círculo', 'raio', 'diâmetro', 'perímetro', 'área']
+  },
+  {
+    id: 'area-quadrado',
+    title: 'Calculadora de Área do Quadrado',
+    description: 'Cálculo de área (L²), perímetro (4L) e diagonal (L√2) do quadrado com passo a passo da fórmula.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Square',
+    badge: 'A = L²',
+    isInteractive: true,
+    suiteTarget: 'geometry-suite',
+    suiteTab: 'quadrado',
+    tags: ['4devs', 'geometria', 'quadrado', 'lado', 'perímetro', 'diagonal', 'área']
+  },
+  {
+    id: 'area-retangulo',
+    title: 'Calculadora de Área do Retângulo',
+    description: 'Cálculo da área (b · h), perímetro e diagonal euclidiana do retângulo com diagrama SVG interativo.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Square',
+    badge: 'A = b · h',
+    isInteractive: true,
+    suiteTarget: 'geometry-suite',
+    suiteTab: 'retangulo',
+    tags: ['4devs', 'geometria', 'retângulo', 'base', 'altura', 'perímetro', 'área']
+  },
+  {
+    id: 'area-triangulo',
+    title: 'Calculadora de Área do Triângulo',
+    description: 'Cálculo por Base & Altura (b·h/2) ou pelos 3 lados usando a Fórmula de Heron com validação de desigualdade triangular.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Triangle',
+    badge: 'Heron + Base/Alt',
+    isInteractive: true,
+    suiteTarget: 'geometry-suite',
+    suiteTab: 'triangulo',
+    tags: ['4devs', 'geometria', 'triângulo', 'heron', 'base', 'altura', 'área']
+  },
+  {
+    id: 'area-losango',
+    title: 'Calculadora de Área do Losango',
+    description: 'Cálculo de área ((D·d)/2), comprimento do lado e perímetro a partir das diagonais maior e menor.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Shapes',
+    badge: 'A = (D · d)/2',
+    isInteractive: true,
+    suiteTarget: 'geometry-suite',
+    suiteTab: 'losango',
+    tags: ['4devs', 'geometria', 'losango', 'diagonal', 'perímetro', 'área']
+  },
+  {
+    id: 'area-trapezio',
+    title: 'Calculadora de Área do Trapézio',
+    description: 'Cálculo da área ((B+b)·h/2) e base média a partir da base maior, base menor e altura perpendicular.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Layers',
+    badge: 'A = ((B+b)·h)/2',
+    isInteractive: true,
+    suiteTarget: 'geometry-suite',
+    suiteTab: 'trapezio',
+    tags: ['4devs', 'geometria', 'trapézio', 'base maior', 'base menor', 'base média', 'área']
+  },
+  {
+    id: 'area-paralelogramo',
+    title: 'Calculadora de Área do Paralelogramo',
+    description: 'Cálculo da área (b · h) e perímetro do paralelogramo com representação vetorial em tempo real.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Shapes',
+    badge: 'A = b · h',
+    isInteractive: true,
+    suiteTarget: 'geometry-suite',
+    suiteTab: 'paralelogramo',
+    tags: ['4devs', 'geometria', 'paralelogramo', 'base', 'altura', 'perímetro', 'área']
+  },
+  {
+    id: 'area-pentagono',
+    title: 'Calculadora de Área do Pentágono Regular',
+    description: 'Cálculo da área, apótema e perímetro do pentágono regular de 5 lados congruentes.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Shapes',
+    badge: 'Pentágono 5L',
+    isInteractive: true,
+    suiteTarget: 'geometry-suite',
+    suiteTab: 'pentagono',
+    tags: ['4devs', 'geometria', 'pentágono', 'apótema', 'perímetro', 'área']
+  },
+  {
+    id: 'area-hexagono',
+    title: 'Calculadora de Área do Hexágono Regular',
+    description: 'Cálculo da área exata ((3√3/2)·L²), apótema e perímetro do hexágono regular de 6 lados.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Hexagon',
+    badge: 'A = (3√3/2) · L²',
+    isInteractive: true,
+    suiteTarget: 'geometry-suite',
+    suiteTab: 'hexagono',
+    tags: ['4devs', 'geometria', 'hexágono', 'apótema', 'perímetro', 'área']
+  },
+  {
+    id: 'area-poligono',
+    title: 'Calculadora de Área de Polígono Regular (n lados)',
+    description: 'Cálculo generalizado de área e apótema para qualquer polígono regular de n lados (heptágono, octógono, decágono, etc).',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Compass',
+    badge: 'n Lados Universal',
+    isInteractive: true,
+    suiteTarget: 'geometry-suite',
+    suiteTab: 'poligono',
+    tags: ['4devs', 'geometria', 'polígono', 'octógono', 'decágono', 'apótema', 'área']
+  },
+  {
+    id: 'area-elipse',
+    title: 'Calculadora de Área da Elipse',
+    description: 'Cálculo da área (π·a·b) e perímetro aproximado de Ramanujan a partir dos semi-eixos maior e menor.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Circle',
+    badge: 'A = π · a · b',
+    isInteractive: true,
+    suiteTarget: 'geometry-suite',
+    suiteTab: 'elipse',
+    tags: ['4devs', 'geometria', 'elipse', 'semi-eixo', 'ramanujan', 'área']
+  },
+  {
+    id: 'area-coroa',
+    title: 'Calculadora de Área da Coroa Circular',
+    description: 'Cálculo da área compreendida entre dois círculos concêntricos (π·(R² - r²)) e espessura do anel.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Circle',
+    badge: 'A = π · (R² - r²)',
+    isInteractive: true,
+    suiteTarget: 'geometry-suite',
+    suiteTab: 'coroa',
+    tags: ['4devs', 'geometria', 'coroa circular', 'anel', 'raio maior', 'raio menor', 'área']
+  },
+  {
+    id: 'area-setor',
+    title: 'Calculadora de Área do Setor Circular',
+    description: 'Cálculo da área da fatia circular ((α/360)·π·r²), comprimento do arco e perímetro total do setor.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Compass',
+    badge: 'Setor Circular',
+    isInteractive: true,
+    suiteTarget: 'geometry-suite',
+    suiteTab: 'setor',
+    tags: ['4devs', 'geometria', 'setor circular', 'arco', 'ângulo', 'fatia', 'área']
   },
 
   // ==========================================

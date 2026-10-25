@@ -27,6 +27,7 @@ import { MathUtilsSuite } from '@/components/tools/MathUtilsSuite';
 import { TextManipulatorSuite } from '@/components/tools/TextManipulatorSuite';
 import { CryptoWebSuite } from '@/components/tools/CryptoWebSuite';
 import { ApolloLaPlataSuite } from '@/components/tools/ApolloLaPlataSuite';
+import { GeometrySuite } from '@/components/tools/GeometrySuite';
 
 import { 
   Search, 
@@ -69,6 +70,12 @@ import {
   Binary,
   Dices,
   ArrowRightLeft,
+  Circle,
+  Square,
+  Triangle,
+  Hexagon,
+  Shapes,
+  Compass,
   X
 } from 'lucide-react';
 
@@ -106,7 +113,13 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Binary,
   Dices,
   ArrowRightLeft,
-  Layers
+  Layers,
+  Circle,
+  Square,
+  Triangle,
+  Hexagon,
+  Shapes,
+  Compass
 };
 
 export default function ApolloToolsPage() {
@@ -223,6 +236,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'apollo-suite' && (
               <ApolloLaPlataSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'geometry-suite' && (
+              <GeometrySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
