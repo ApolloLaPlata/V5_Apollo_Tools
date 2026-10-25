@@ -28,6 +28,7 @@ import { TextManipulatorSuite } from '@/components/tools/TextManipulatorSuite';
 import { CryptoWebSuite } from '@/components/tools/CryptoWebSuite';
 import { ApolloLaPlataSuite } from '@/components/tools/ApolloLaPlataSuite';
 import { GeometrySuite } from '@/components/tools/GeometrySuite';
+import { DevAndCvSuite } from '@/components/tools/DevAndCvSuite';
 
 import { 
   Search, 
@@ -80,6 +81,10 @@ import {
   Scissors,
   Split,
   Table,
+  Briefcase,
+  Gamepad2,
+  UserPlus,
+  Image as ImageIcon,
   X
 } from 'lucide-react';
 
@@ -127,7 +132,11 @@ const ICON_MAP: Record<string, React.ElementType> = {
   BarChart2,
   Scissors,
   Split,
-  Table
+  Table,
+  Briefcase,
+  Gamepad2,
+  UserPlus,
+  Image: ImageIcon
 };
 
 export default function ApolloToolsPage() {
@@ -247,6 +256,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'geometry-suite' && (
               <GeometrySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'dev-cv-suite' && (
+              <DevAndCvSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

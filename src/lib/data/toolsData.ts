@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -520,6 +520,62 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'text-manipulator',
     suiteTab: 'tabela-ascii',
     tags: ['4devs', 'ascii', 'tabela ascii', 'caracteres', 'decimal', 'hexadecimal', 'binário', 'html entity']
+  },
+
+  // ------------------------------------------
+  // DEV, CARREIRA, NOMES & IMAGENS (4DEVS FINAL)
+  // ------------------------------------------
+  {
+    id: 'gerador-curriculo',
+    title: 'Gerador de Currículo Profissional (A4 PDF)',
+    description: 'Crie currículos completos com layout profissional, dados de contato, experiências, educação e impressão nativa formatada em A4.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Briefcase',
+    badge: 'Layout A4 PDF',
+    isInteractive: true,
+    suiteTarget: 'dev-cv-suite',
+    suiteTab: 'curriculo',
+    tags: ['4devs', 'currículo', 'cv', 'pdf', 'carreira', 'vagas', 'emprego', 'a4']
+  },
+  {
+    id: 'gerador-nicks',
+    title: 'Gerador de Nicks & Apelidos Estilizados',
+    description: 'Gere nicks gamers e para redes com caracteres especiais, leet speak, estética cyberpunk, estrelas e símbolos épicos.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Gamepad2',
+    badge: 'Gamer & Redes',
+    isInteractive: true,
+    suiteTarget: 'dev-cv-suite',
+    suiteTab: 'nicks',
+    tags: ['4devs', 'nicks', 'apelidos', 'games', 'free fire', 'discord', 'letras personalizadas']
+  },
+  {
+    id: 'gerador-nomes-ibge',
+    title: 'Gerador de Nomes Brasileiros (Censo IBGE)',
+    description: 'Geração em massa de nomes masculinos, femininos e mistos com os sobrenomes mais frequentes do censo demográfico do Brasil.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'UserPlus',
+    badge: 'Censo Demográfico',
+    isInteractive: true,
+    suiteTarget: 'dev-cv-suite',
+    suiteTab: 'nomes',
+    tags: ['4devs', 'nomes', 'ibge', 'brasileiros', 'sobrenomes', 'qa mock', 'dados fictícios']
+  },
+  {
+    id: 'gerador-imagem-dummy',
+    title: 'Gerador de Imagem Placeholder (Dummy Image)',
+    description: 'Crie imagens placeholder SVG e Data URI em qualquer dimensão (L x A) com cores personalizadas e download instantâneo.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Image',
+    badge: 'SVG & Data URI',
+    isInteractive: true,
+    suiteTarget: 'dev-cv-suite',
+    suiteTab: 'dummy-img',
+    tags: ['4devs', 'placeholder', 'dummy image', 'svg', 'lorem pixel', 'banner', 'mockup']
   },
 
   // ==========================================

@@ -47,10 +47,11 @@
   * **Status:** 100% Concluído e testado. Build Next.js verde (0 erros).
   * **Ferramentas Absorvidas:** 5 ferramentas de manipulação de texto do 4Devs (`Contador de Ocorrência de Palavra`, `Converter Texto para HTML`, `Cortar Textos`, `Dividir String`, `Informações do Caractere / Tabela ASCII`).
 
-- [ ] **Etapa 6: Gerador de Currículo, Nicks, Nomes & Imagem Dummy (4Devs)**
-  * **Objetivo:** Criar a `DevAndCvSuite.tsx` com Gerador de Currículo profissional com layout para impressão, Gerador de Nicks estilizados para games, Gerador de Nomes brasileiros (IBGE) e Placeholder Image Generator (Lorem Pixel SVG).
-  * **Arquivo:** `src/components/tools/DevAndCvSuite.tsx`.
-  * **Ferramentas Absorvidas:** 4 ferramentas de utilitários do 4Devs.
+- [x] **Etapa 6: Gerador de Currículo, Nicks, Nomes & Imagem Dummy (4Devs) - CONCLUÍDA**
+  * **Objetivo:** Criar a `DevAndCvSuite.tsx` com Gerador de Currículo profissional com layout A4 para impressão nativa (`window.print()`), Gerador de Nicks estilizados para games e redes sociais, Gerador de Nomes brasileiros em massa (Censo IBGE) e Placeholder Image Generator (Dummy Image SVG / Data URI customizável).
+  * **Arquivo:** `src/components/tools/DevAndCvSuite.tsx`, `src/lib/data/toolsData.ts`, `src/app/page.tsx`.
+  * **Status:** 100% Concluído e testado. Build Next.js verde (0 erros). **FASE 1 (4DEVS TOTAL REVERSE) 100% FINALIZADA!**
+  * **Ferramentas Absorvidas:** 4 ferramentas de utilitários do 4Devs (`Gerador de Currículo`, `Gerador de Nicks`, `Gerador de Nomes`, `Gerador de Imagem Placeholder`).
 
 ---
 
