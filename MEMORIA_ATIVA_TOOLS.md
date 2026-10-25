@@ -94,8 +94,11 @@ flowchart TD
 6. **Limpador de Linhas & Duplicatas (`LineCleaner.tsx`)**: Deduplicação, trim, ordenação A-Z/Z-A e estatísticas de linhas.
 7. **Gerador de Link do WhatsApp (`WhatsAppLinkGenerator.tsx`)**: Link `wa.me` com mensagem, preview nativo de chat e QR Code.
 8. **Cartão de Crédito Validador & Gerador QA (`CreditCardValidator.tsx`)**: Algoritmo de Luhn (Módulo 10), detecção de bandeira e dados de checkout fictícios.
-9. **Refinador de Prompts Cinematográficos (`PromptCrafter.tsx`)**: Engenharia de prompts com lentes, iluminação, estilos e presets para Flux, Midjourney e Vídeo.
-10. **Catálogo de Workflows ComfyUI (`ComfyWorkflowModal.tsx`)**: Modal com visualização de nós e download de JSON de API estilo Nordy.ai.
+9. **Gerador de Senhas Seguras & Entropia (`PasswordGenerator.tsx`)**: Criptografia nativa (`crypto.getRandomValues`), entropia em bits e estimativa de tempo contra força bruta.
+10. **Formatador & Validador de JSON (`JsonFormatter.tsx`)**: Validação sintática em tempo real, indentação 2/4 espaços, minificação e cálculo de bytes salvos.
+11. **Refinador de Prompts Cinematográficos (`PromptCrafter.tsx`)**: Engenharia de prompts com lentes, iluminação, estilos e presets para Flux, Midjourney e Vídeo.
+12. **Gerador de Títulos Virais & CTR (`ViralTitleGenerator.tsx`)**: Fórmulas comprovadas de YouTube, Reels e TikTok com pontuação de CTR e gatilhos mentais.
+13. **Catálogo de Workflows ComfyUI (`ComfyWorkflowModal.tsx`)**: Modal com visualização de nós e download de JSON de API estilo Nordy.ai.
 
 ---
 
@@ -119,13 +122,15 @@ flowchart TD
 - [x] **Gerador de Link do WhatsApp (`WhatsAppLinkGenerator.tsx`):** Criação de link `wa.me/55...` com texto codificado, preview de chat e QR Code.
 - [x] **Limpador de Linhas & Duplicatas (`LineCleaner.tsx`):** Deduplicação, trim, ordenação A-Z e estatísticas.
 - [x] **Validador & Gerador de Cartão de Crédito (`CreditCardValidator.tsx`):** Verificação pelo algoritmo de Luhn (Módulo 10) e cartão visual de testes.
-- [ ] **Formatador e Validador de JSON (`JsonFormatter.tsx`):** Indentação, minificação e detecção de erros.
-- [ ] **Gerador de Senhas Seguras (`PasswordGenerator.tsx`):** Chaves criptográficas de alta entropia.
+- [x] **Formatador e Validador de JSON (`JsonFormatter.tsx`):** Indentação, minificação e detecção de erros sintáticos.
+- [x] **Gerador de Senhas Seguras (`PasswordGenerator.tsx`):** Chaves criptográficas de alta entropia.
 - [ ] **Gerador de CEP e Endereço Fictício (`CepAddressGenerator.tsx`):** Logradouros por estado para frete.
 
 ### 🤖 Sprint 2: Migração do Acervo APOLLO La PLATA Ferramentas
 - [x] Componente `PromptCrafter.tsx`: Refinador cinematográfico com câmeras, iluminação e suporte a Flux / Midjourney / Sora.
-- [ ] Componente `ViralTitleGenerator.tsx`: Ganchos e títulos de alta retenção (CTR) com fórmulas psicológicas.
+- [x] Componente `ViralTitleGenerator.tsx`: Ganchos e títulos de alta retenção (CTR) com fórmulas psicológicas e estimativa de score.
+- [ ] Componente `VideoPromptCrafter.tsx`: Prompts para Veo 3 / Sora / Kling com blocos de áudio diegético.
+- [ ] Componente `HashtagGenerator.tsx`: Gerador de tags segmentadas por nicho e volume.
 - [ ] Componente `VideoPromptCrafter.tsx`: Prompts para Veo 3 / Sora / Kling com blocos de áudio diegético.
 - [ ] Componente `HashtagGenerator.tsx`: Gerador de tags segmentadas por nicho e volume.
 
