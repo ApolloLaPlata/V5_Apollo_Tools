@@ -29,6 +29,7 @@ import { CryptoWebSuite } from '@/components/tools/CryptoWebSuite';
 import { ApolloLaPlataSuite } from '@/components/tools/ApolloLaPlataSuite';
 import { GeometrySuite } from '@/components/tools/GeometrySuite';
 import { DevAndCvSuite } from '@/components/tools/DevAndCvSuite';
+import { LotteryAndGamesSuite } from '@/components/tools/LotteryAndGamesSuite';
 
 import { 
   Search, 
@@ -85,6 +86,9 @@ import {
   Gamepad2,
   UserPlus,
   Image as ImageIcon,
+  CircleDot,
+  Shuffle,
+  Trophy,
   X
 } from 'lucide-react';
 
@@ -136,7 +140,10 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Briefcase,
   Gamepad2,
   UserPlus,
-  Image: ImageIcon
+  Image: ImageIcon,
+  CircleDot,
+  Shuffle,
+  Trophy
 };
 
 export default function ApolloToolsPage() {
@@ -259,6 +266,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'dev-cv-suite' && (
               <DevAndCvSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'lottery-games-suite' && (
+              <LotteryAndGamesSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

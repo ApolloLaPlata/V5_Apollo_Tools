@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -581,6 +581,60 @@ export const TOOLS_CATALOG: ToolItem[] = [
   // ==========================================
   // CATEGORIA 2: INVERTEXTO & UTILITÁRIOS RÁPIDOS (BENCHMARK INVERTEXTO.COM)
   // ==========================================
+  {
+    id: 'loterias-caixa',
+    title: 'Gerador de Jogos da Loteria Caixa',
+    description: 'Mega-Sena, Quina, Lotofácil, Lotomania e Dupla Sena com dezenas não repetidas, ordenação e visual oficial de bolas numeradas.',
+    category: 'invertexto',
+    categoryLabel: 'Loterias & Jogos (Invertexto)',
+    icon: 'Award',
+    badge: 'Mega, Quina, Loto',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'lottery-games-suite',
+    suiteTab: 'loterias',
+    tags: ['invertexto', 'loteria', 'mega-sena', 'quina', 'lotofácil', 'lotomania', 'dupla sena', 'sorteio']
+  },
+  {
+    id: 'roleta-online',
+    title: 'Roleta da Sorte Interativa Online',
+    description: 'Roleta giratória com física de desaceleração suave, opções e cores personalizáveis e sorteio transparente.',
+    category: 'invertexto',
+    categoryLabel: 'Loterias & Jogos (Invertexto)',
+    icon: 'CircleDot',
+    badge: 'Física Interativa',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'lottery-games-suite',
+    suiteTab: 'roleta',
+    tags: ['invertexto', 'roleta', 'roleta online', 'sorteio', 'roleta da sorte', 'decisão']
+  },
+  {
+    id: 'embaralhador-lista',
+    title: 'Embaralhador de Listas & Gerador de Times',
+    description: 'Embaralhe listas com algoritmo Fisher-Yates, sorteie itens únicos ou divida pessoas em grupos e times equilibrados.',
+    category: 'invertexto',
+    categoryLabel: 'Loterias & Jogos (Invertexto)',
+    icon: 'Shuffle',
+    badge: 'Shuffle & Times',
+    isInteractive: true,
+    suiteTarget: 'lottery-games-suite',
+    suiteTab: 'embaralhador',
+    tags: ['invertexto', 'embaralhador', 'shuffle', 'sorteador', 'times', 'grupos', 'lista']
+  },
+  {
+    id: 'palavras-aleatorias',
+    title: 'Gerador de Palavras Aleatórias (PT-BR)',
+    description: 'Gere palavras aleatórias da língua portuguesa com filtros de 4, 5, 6 ou 7+ letras para adivinhação e brainstorming.',
+    category: 'invertexto',
+    categoryLabel: 'Loterias & Jogos (Invertexto)',
+    icon: 'Sparkles',
+    badge: 'Vocabulário PT-BR',
+    isInteractive: true,
+    suiteTarget: 'lottery-games-suite',
+    suiteTab: 'palavras',
+    tags: ['invertexto', 'palavras', 'palavras aleatórias', 'brainstorming', 'vocabulário', 'dicionário']
+  },
   {
     id: 'char-counter',
     title: 'Contador de Caracteres & Palavras',
