@@ -453,6 +453,75 @@ export const TOOLS_CATALOG: ToolItem[] = [
     tags: ['4devs', 'subtrair dias', 'datas', 'prazo retroativo', 'dias úteis', 'calendário']
   },
 
+  // ------------------------------------------
+  // MANIPULAÇÃO AVANÇADA DE STRING & ASCII (4DEVS)
+  // ------------------------------------------
+  {
+    id: 'contador-ocorrencia-palavra',
+    title: 'Contador de Ocorrência & Frequência de Palavras',
+    description: 'Analise a repetição de termos no texto, densidade de palavras-chave, ranking top 15 com percentual e filtro de stopwords.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'BarChart2',
+    badge: 'Densidade & Frequência',
+    isInteractive: true,
+    suiteTarget: 'text-manipulator',
+    suiteTab: 'ocorrencia-palavra',
+    tags: ['4devs', 'frequência', 'ocorrência', 'palavras', 'densidade', 'seo', 'repetição']
+  },
+  {
+    id: 'converter-texto-html',
+    title: 'Converter Texto Puro para HTML',
+    description: 'Transforme parágrafos e quebras de texto em tags <p> e <br />, com escape de caracteres especiais e preview visual em tempo real.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'FileCode',
+    badge: 'Tags <p> & <br>',
+    isInteractive: true,
+    suiteTarget: 'text-manipulator',
+    suiteTab: 'texto-html',
+    tags: ['4devs', 'html', 'texto para html', 'tags p', 'br', 'conversor', 'web']
+  },
+  {
+    id: 'cortar-textos',
+    title: 'Cortador de Textos (Slice & Truncate)',
+    description: 'Corte textos por quantidade exata de caracteres ou palavras, com elipse customizada e preservação de palavras completas.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Scissors',
+    badge: 'Slice com Elipse',
+    isInteractive: true,
+    suiteTarget: 'text-manipulator',
+    suiteTab: 'cortar-texto',
+    tags: ['4devs', 'cortar texto', 'slice', 'truncar', 'elipse', 'resumo']
+  },
+  {
+    id: 'dividir-string',
+    title: 'Dividir String por Delimitador',
+    description: 'Separe textos por vírgula, ponto e vírgula, hífen, barra ou delimitador personalizado com exportação em lista ou JSON Array.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Split',
+    badge: 'Delimitador Flexível',
+    isInteractive: true,
+    suiteTarget: 'text-manipulator',
+    suiteTab: 'dividir-string',
+    tags: ['4devs', 'dividir string', 'split', 'delimitador', 'array json', 'tokens']
+  },
+  {
+    id: 'informacoes-caractere-ascii',
+    title: 'Inspetor de Caracteres & Tabela ASCII',
+    description: 'Descubra o código Decimal ASCII, Hexadecimal, Binário de 8 bits e HTML Entity de qualquer caractere com tabela de consulta rápida.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Table',
+    badge: 'ASCII · Hex · Bin',
+    isInteractive: true,
+    suiteTarget: 'text-manipulator',
+    suiteTab: 'tabela-ascii',
+    tags: ['4devs', 'ascii', 'tabela ascii', 'caracteres', 'decimal', 'hexadecimal', 'binário', 'html entity']
+  },
+
   // ==========================================
   // CATEGORIA 2: INVERTEXTO & UTILITÁRIOS RÁPIDOS (BENCHMARK INVERTEXTO.COM)
   // ==========================================

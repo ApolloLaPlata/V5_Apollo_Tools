@@ -76,6 +76,10 @@ import {
   Hexagon,
   Shapes,
   Compass,
+  BarChart2,
+  Scissors,
+  Split,
+  Table,
   X
 } from 'lucide-react';
 
@@ -119,7 +123,11 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Triangle,
   Hexagon,
   Shapes,
-  Compass
+  Compass,
+  BarChart2,
+  Scissors,
+  Split,
+  Table
 };
 
 export default function ApolloToolsPage() {

@@ -41,10 +41,11 @@
   * **Status:** 100% Concluído e testado. Build Next.js verde (0 erros).
   * **Ferramentas Absorvidas:** `Fatorar Número`, `Resto da Divisão`, `Somar Dias em Datas`, `Subtrair Dias em Datas`.
 
-- [ ] **Etapa 5: Manipulação Avançada de String & Tabela ASCII (4Devs)**
-  * **Objetivo:** Contador de Ocorrência e Frequência de Palavras, Conversor de Texto para HTML (`<p>`/`<br>`), Cortador/Slice de Textos com Elipse, Divisor de Strings por delimitador e Inspetor de Caracteres (Tabela ASCII, Decimal, Hex, Binário e HTML Entity).
-  * **Arquivo:** `src/components/tools/TextManipulatorSuite.tsx`.
-  * **Ferramentas Absorvidas:** 5 ferramentas de manipulação de texto do 4Devs.
+- [x] **Etapa 5: Manipulação Avançada de String & Tabela ASCII (4Devs) - CONCLUÍDA**
+  * **Objetivo:** Contador de Ocorrência e Frequência de Palavras (ranking top 15, densidade e filtro stopwords), Conversor de Texto para HTML (`<p>`/`<br>` com escape e preview), Cortador/Slice de Textos com Elipse, Divisor de Strings por delimitador (com exportação JSON/Lista) e Inspetor de Caracteres & Tabela ASCII completa (Dec, Hex, Bin, HTML Entity).
+  * **Arquivo:** `src/components/tools/TextManipulatorSuite.tsx`, `src/lib/data/toolsData.ts`, `src/app/page.tsx`.
+  * **Status:** 100% Concluído e testado. Build Next.js verde (0 erros).
+  * **Ferramentas Absorvidas:** 5 ferramentas de manipulação de texto do 4Devs (`Contador de Ocorrência de Palavra`, `Converter Texto para HTML`, `Cortar Textos`, `Dividir String`, `Informações do Caractere / Tabela ASCII`).
 
 - [ ] **Etapa 6: Gerador de Currículo, Nicks, Nomes & Imagem Dummy (4Devs)**
   * **Objetivo:** Criar a `DevAndCvSuite.tsx` com Gerador de Currículo profissional com layout para impressão, Gerador de Nicks estilizados para games, Gerador de Nomes brasileiros (IBGE) e Placeholder Image Generator (Lorem Pixel SVG).
