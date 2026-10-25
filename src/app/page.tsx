@@ -33,6 +33,7 @@ import { LotteryAndGamesSuite } from '@/components/tools/LotteryAndGamesSuite';
 import { TimeAndFocusSuite } from '@/components/tools/TimeAndFocusSuite';
 import { CalendarAndAstronomySuite } from '@/components/tools/CalendarAndAstronomySuite';
 import { UnitsAndConvertersSuite } from '@/components/tools/UnitsAndConvertersSuite';
+import { FinanceAndEconomySuite } from '@/components/tools/FinanceAndEconomySuite';
 
 import { 
   Search, 
@@ -100,6 +101,10 @@ import {
   CalendarDays,
   Ruler,
   Fingerprint,
+  DollarSign,
+  TrendingUp,
+  PiggyBank,
+  Fuel,
   X
 } from 'lucide-react';
 
@@ -162,7 +167,11 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Moon,
   CalendarDays,
   Ruler,
-  Fingerprint
+  Fingerprint,
+  DollarSign,
+  TrendingUp,
+  PiggyBank,
+  Fuel
 };
 
 export default function ApolloToolsPage() {
@@ -297,6 +306,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'units-converters-suite' && (
               <UnitsAndConvertersSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'finance-economy-suite' && (
+              <FinanceAndEconomySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

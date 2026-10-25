@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -802,6 +802,62 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'units-converters-suite',
     suiteTab: 'timestamp-uuid',
     tags: ['invertexto', 'timestamp', 'unix timestamp', 'epoch', 'uuid', 'uuid v4', 'guid', 'identificador']
+  },
+  {
+    id: 'simulador-juros-compostos',
+    title: 'Simulador de Juros Compostos & Investimentos',
+    description: 'Simulação patrimonial com aportes mensais, juros a.a ou a.m e projeção visual do rendimento acumulado.',
+    category: 'invertexto',
+    categoryLabel: 'Finanças (Invertexto)',
+    icon: 'TrendingUp',
+    badge: 'Aportes & Juros',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'finance-economy-suite',
+    suiteTab: 'juros-compostos',
+    tags: ['invertexto', 'juros compostos', 'investimentos', 'simulador financeiro', 'rendimento', 'poupança', 'cdi', 'selic']
+  },
+  {
+    id: 'calculadora-primeiro-milhao',
+    title: 'Calculadora do Primeiro Milhão',
+    description: 'Descubra em quantos anos e meses você atinge R$ 1 milhão com seus aportes e o efeito bola de neve dos juros.',
+    category: 'invertexto',
+    categoryLabel: 'Finanças (Invertexto)',
+    icon: 'PiggyBank',
+    badge: 'R$ 1 Milhão',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'finance-economy-suite',
+    suiteTab: 'primeiro-milhao',
+    tags: ['invertexto', 'primeiro milhão', 'milhão', 'independência financeira', 'aposentadoria', 'meta', 'liberdade financeira']
+  },
+  {
+    id: 'simulador-financiamento',
+    title: 'Simulador de Financiamento (Tabela Price vs SAC)',
+    description: 'Comparativo definitivo entre Tabela Price (parcelas fixas) e SAC (amortização constante com economia total).',
+    category: 'invertexto',
+    categoryLabel: 'Finanças (Invertexto)',
+    icon: 'DollarSign',
+    badge: 'Price vs SAC',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'finance-economy-suite',
+    suiteTab: 'financiamento',
+    tags: ['invertexto', 'financiamento', 'imobiliário', 'price', 'sac', 'amortização', 'parcelas', 'empréstimo']
+  },
+  {
+    id: 'comparador-combustivel',
+    title: 'Comparador Gasolina vs Etanol & Custo de Viagem',
+    description: 'Regra dos 70% para economia real na bomba e calculadora completa de combustível e pedágio dividida por passageiro.',
+    category: 'invertexto',
+    categoryLabel: 'Economia & Carro (Invertexto)',
+    icon: 'Fuel',
+    badge: 'Regra dos 70%',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'finance-economy-suite',
+    suiteTab: 'gasolina-etanol-viagem',
+    tags: ['invertexto', 'combustível', 'gasolina ou etanol', 'álcool', 'viagem', 'pedágio', 'rachadinha', 'km/l']
   },
   {
     id: 'char-counter',
