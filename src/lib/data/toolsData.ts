@@ -92,6 +92,20 @@ export const TOOLS_CATALOG: ToolItem[] = [
     tags: ['4devs', 'rg', 'identidade', 'ssp', 'documento', 'validador', 'gerador']
   },
   {
+    id: 'ie-tool',
+    title: 'Gerador & Validador de Inscrição Estadual (IE)',
+    description: 'Cálculo de dígitos verificadores fiscais para os 26 estados brasileiros + DF segundo as normas da SEFAZ e Sintegra.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Building2',
+    badge: 'Sintegra 27 UFs',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'brazilian-docs',
+    suiteTab: 'ie',
+    tags: ['4devs', 'ie', 'inscrição estadual', 'sefaz', 'sintegra', 'fiscal', 'icms', 'validador', 'gerador']
+  },
+  {
     id: 'cnh-tool',
     title: 'Gerador & Validador de CNH',
     description: 'Carteira Nacional de Habilitação com cálculo de dois dígitos verificadores segundo a regra do Denatran.',

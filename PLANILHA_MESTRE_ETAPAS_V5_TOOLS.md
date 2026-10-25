@@ -17,9 +17,10 @@
 
 ### 🇧🇷 FASE 1: 4DEVS TOTAL REVERSE (DOCUMENTOS, GEOMETRIA & DEV TOOLS)
 
-- [ ] **Etapa 1: Inscrição Estadual (IE) Completa (4Devs)**
+- [x] **Etapa 1: Inscrição Estadual (IE) Completa (4Devs) - CONCLUÍDA**
   * **Objetivo:** Implementar o Gerador e Validador oficial de Inscrição Estadual para os 26 estados + Distrito Federal (algoritmos fiscais e pesos específicos por UF).
-  * **Arquivo:** `src/components/tools/BrazilianDocsSuite.tsx` (nova aba `ie`).
+  * **Arquivos:** `src/lib/utils/inscricaoEstadual.ts`, `src/components/tools/BrazilianDocsSuite.tsx` (aba `ie`), `src/lib/data/toolsData.ts`.
+  * **Status:** 100% Concluído e testado. Build Next.js verde. Commit registrado.
   * **Ferramentas Absorvidas:** `Gerador de Inscrição Estadual` e `Validador de Inscrição Estadual`.
 
 - [ ] **Etapa 2: Massa Veicular Completa & Validador Bancário (4Devs)**

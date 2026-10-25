@@ -1,10 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ShieldCheck, Copy, Check, RefreshCw, FileText, CheckCircle2, XCircle, Award, CreditCard, Hash } from 'lucide-react';
+import { ShieldCheck, Copy, Check, RefreshCw, FileText, CheckCircle2, XCircle, Award, CreditCard, Hash, Building2 } from 'lucide-react';
+import { ESTADOS_IE, generateIE, validateIE } from '@/lib/utils/inscricaoEstadual';
 
-export function BrazilianDocsSuite({ defaultTab = 'cpf' }: { defaultTab?: 'cpf' | 'cnpj' | 'cnh' | 'pis' | 'titulo' | 'certidao' | 'rg' }) {
-  const [activeTab, setActiveTab] = useState<'cpf' | 'cnpj' | 'cnh' | 'pis' | 'titulo' | 'certidao' | 'rg'>(defaultTab);
+export function BrazilianDocsSuite({ defaultTab = 'cpf' }: { defaultTab?: 'cpf' | 'cnpj' | 'cnh' | 'pis' | 'titulo' | 'certidao' | 'rg' | 'ie' }) {
+  const [activeTab, setActiveTab] = useState<'cpf' | 'cnpj' | 'cnh' | 'pis' | 'titulo' | 'certidao' | 'rg' | 'ie'>(defaultTab);
   const [withMask, setWithMask] = useState(true);
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
 
@@ -41,6 +42,12 @@ export function BrazilianDocsSuite({ defaultTab = 'cpf' }: { defaultTab?: 'cpf' 
   const [rg, setRg] = useState('');
   const [rgValidation, setRgValidation] = useState<boolean | null>(null);
   const [inputRg, setInputRg] = useState('');
+
+  // Inscrição Estadual (IE) State
+  const [selectedUfIE, setSelectedUfIE] = useState<string>('SP');
+  const [ie, setIe] = useState('');
+  const [ieValidation, setIeValidation] = useState<{ valid: boolean; message: string } | null>(null);
+  const [inputIe, setInputIe] = useState('');
 
   // UF Map for Title of Elector & CPF
   const UF_TITULO_MAP: Record<string, string> = {
@@ -308,7 +315,8 @@ export function BrazilianDocsSuite({ defaultTab = 'cpf' }: { defaultTab?: 'cpf' 
     generateTitulo();
     generateCertidao();
     generateRg(withMask);
-  }, [withMask, tipoCertidao]);
+    setIe(generateIE(selectedUfIE, withMask));
+  }, [withMask, tipoCertidao, selectedUfIE]);
 
   const copyToClipboard = (text: string, key: string) => {
     navigator.clipboard.writeText(text);
@@ -358,6 +366,7 @@ export function BrazilianDocsSuite({ defaultTab = 'cpf' }: { defaultTab?: 'cpf' 
         {[
           { id: 'cpf', label: 'CPF', desc: 'Pessoa Física' },
           { id: 'cnpj', label: 'CNPJ', desc: 'Pessoa Jurídica' },
+          { id: 'ie', label: 'Inscrição Estadual', desc: 'Sintegra 27 UFs' },
           { id: 'rg', label: 'RG', desc: 'Identidade SSP' },
           { id: 'cnh', label: 'CNH', desc: 'Habilitação' },
           { id: 'pis', label: 'PIS/PASEP', desc: 'Trabalhador' },
@@ -710,6 +719,113 @@ export function BrazilianDocsSuite({ defaultTab = 'cpf' }: { defaultTab?: 'cpf' 
               )}
             </div>
             <p className="text-[11px] text-slate-500">Validação matemática pelo dígito verificador oficial SSP.</p>
+          </div>
+        </div>
+      )}
+
+      {/* ABA: INSCRIÇÃO ESTADUAL (TODOS OS 26 ESTADOS + DF) */}
+      {activeTab === 'ie' && (
+        <div className="space-y-6">
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-slate-950/70 p-4 border border-slate-800 rounded-2xl">
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-bold text-slate-400">Estado emissor (UF):</span>
+              <select
+                value={selectedUfIE}
+                onChange={(e) => {
+                  const uf = e.target.value;
+                  setSelectedUfIE(uf);
+                  setIe(generateIE(uf, withMask));
+                  setInputIe('');
+                  setIeValidation(null);
+                }}
+                className="bg-slate-900 border border-slate-800 rounded-xl px-3 py-1.5 text-xs text-emerald-400 font-bold focus:outline-none focus:border-emerald-500 cursor-pointer"
+              >
+                {ESTADOS_IE.map((est) => (
+                  <option key={est.uf} value={est.uf}>
+                    {est.uf} - {est.nome} ({est.regiao})
+                  </option>
+                ))}
+              </select>
+            </div>
+            <span className="text-[11px] font-mono text-slate-500">
+              Padrão Sintegra / Confaz / 4Devs Oficial
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Gerador de IE */}
+            <div className="p-5 bg-slate-950/70 border border-slate-800 rounded-2xl space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-xs uppercase font-bold text-slate-400 block">
+                  Gerador de IE ({selectedUfIE})
+                </span>
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 font-bold">
+                  {ESTADOS_IE.find(e => e.uf === selectedUfIE)?.nome}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-full bg-slate-900 border border-emerald-500/30 rounded-xl px-4 py-2.5 font-mono text-base sm:text-lg font-bold text-emerald-300 truncate">
+                  {ie}
+                </span>
+                <button
+                  onClick={() => copyToClipboard(ie, 'ie')}
+                  className="px-3.5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs flex items-center gap-1.5 transition cursor-pointer shrink-0"
+                >
+                  {copiedKey === 'ie' ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                  {copiedKey === 'ie' ? 'Copiado!' : 'Copiar'}
+                </button>
+                <button
+                  onClick={() => setIe(generateIE(selectedUfIE, withMask))}
+                  className="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer shrink-0"
+                  title="Gerar nova Inscrição Estadual"
+                >
+                  <RefreshCw className="w-4 h-4" />
+                </button>
+              </div>
+              <p className="text-[11px] text-slate-500">
+                Geração com cálculo real dos dígitos verificadores fiscais segundo a regra SEFAZ/{selectedUfIE}.
+              </p>
+            </div>
+
+            {/* Validador de IE */}
+            <div className="p-5 bg-slate-950/70 border border-slate-800 rounded-2xl space-y-3">
+              <span className="text-xs uppercase font-bold text-slate-400 block">
+                Validador de IE ({selectedUfIE})
+              </span>
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder={`Digite a IE de ${selectedUfIE} para validar...`}
+                  value={inputIe}
+                  onChange={(e) => {
+                    const val = e.target.value;
+                    setInputIe(val);
+                    if (val.trim()) {
+                      setIeValidation(validateIE(val, selectedUfIE));
+                    } else {
+                      setIeValidation(null);
+                    }
+                  }}
+                  className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 font-mono text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-emerald-500"
+                />
+                {ieValidation !== null && (
+                  <div className="absolute right-3 top-2.5 flex items-center gap-1 text-xs font-bold">
+                    {ieValidation.valid ? (
+                      <span className="text-emerald-400 flex items-center gap-1">
+                        <CheckCircle2 className="w-4 h-4" /> Válida
+                      </span>
+                    ) : (
+                      <span className="text-rose-400 flex items-center gap-1">
+                        <XCircle className="w-4 h-4" /> Inválida
+                      </span>
+                    )}
+                  </div>
+                )}
+              </div>
+              <p className={`text-[11px] ${ieValidation ? (ieValidation.valid ? 'text-emerald-400' : 'text-rose-400') : 'text-slate-500'}`}>
+                {ieValidation ? ieValidation.message : `Exemplo aceito: ${ESTADOS_IE.find(e => e.uf === selectedUfIE)?.exemploFormatado}`}
+              </p>
+            </div>
           </div>
         </div>
       )}
