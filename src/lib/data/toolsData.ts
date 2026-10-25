@@ -7,6 +7,8 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite';
+  suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
   tags: string[];
@@ -26,7 +28,7 @@ export const TOOLS_CATALOG: ToolItem[] = [
     badge: 'Padrão 4Devs',
     isInteractive: true,
     popular: true,
-    tags: ['4devs', 'cpf', 'cnpj', 'validador', 'gerador', 'testes', 'qa']
+    tags: ['4devs', 'cpf', 'cnpj', 'validador', 'gerador', 'testes', 'qa', 'receita federal']
   },
   {
     id: 'fake-person-generator',
@@ -76,6 +78,111 @@ export const TOOLS_CATALOG: ToolItem[] = [
     popular: true,
     tags: ['4devs', 'json', 'formatador', 'parser', 'api']
   },
+  {
+    id: 'rg-tool',
+    title: 'Gerador & Validador de RG',
+    description: 'Geração e validação do Registro Geral com cálculo de dígito verificador SSP Módulo 11 com/sem pontuação.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'ShieldCheck',
+    badge: 'SSP Oficial',
+    isInteractive: true,
+    suiteTarget: 'brazilian-docs',
+    suiteTab: 'rg',
+    tags: ['4devs', 'rg', 'identidade', 'ssp', 'documento', 'validador', 'gerador']
+  },
+  {
+    id: 'cnh-tool',
+    title: 'Gerador & Validador de CNH',
+    description: 'Carteira Nacional de Habilitação com cálculo de dois dígitos verificadores segundo a regra do Denatran.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Award',
+    badge: 'Denatran Mód 11',
+    isInteractive: true,
+    suiteTarget: 'brazilian-docs',
+    suiteTab: 'cnh',
+    tags: ['4devs', 'cnh', 'habilitação', 'denatran', 'trânsito', 'validador']
+  },
+  {
+    id: 'pis-tool',
+    title: 'Gerador & Validador de PIS / PASEP / NIS',
+    description: 'Dígito verificador oficial Caixa/BB com pesos de 3 a 2 para cadastro de funcionários e testes trabalhistas.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'CreditCard',
+    badge: 'Padrão Caixa/BB',
+    isInteractive: true,
+    suiteTarget: 'brazilian-docs',
+    suiteTab: 'pis',
+    tags: ['4devs', 'pis', 'pasep', 'nis', 'trabalhador', 'caixa']
+  },
+  {
+    id: 'titulo-eleitor-tool',
+    title: 'Gerador & Validador de Título de Eleitor',
+    description: 'Validação e geração com código de UF oficial do Tribunal Superior Eleitoral (TSE) e 2 dígitos verificadores.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'ShieldCheck',
+    badge: 'TSE Oficial',
+    isInteractive: true,
+    suiteTarget: 'brazilian-docs',
+    suiteTab: 'titulo',
+    tags: ['4devs', 'titulo', 'eleitor', 'tse', 'eleições', 'validador']
+  },
+  {
+    id: 'certidao-tool',
+    title: 'Gerador de Certidão CNJ (32 Dígitos)',
+    description: 'Certidões unificadas de nascimento, casamento e óbito padrão Conselho Nacional de Justiça com código CNS.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'FileText',
+    badge: 'Padrão CNJ',
+    isInteractive: true,
+    suiteTarget: 'brazilian-docs',
+    suiteTab: 'certidao',
+    tags: ['4devs', 'certidão', 'nascimento', 'casamento', 'óbito', 'cnj', 'cartório']
+  },
+  {
+    id: 'veiculos-tool',
+    title: 'Gerador de Placas & Validador de RENAVAM',
+    description: 'Placas modelo Mercosul e cinza clássico com validador e gerador de RENAVAM oficial Módulo 11.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Car',
+    badge: 'Mercosul + RENAVAM',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'vehicles-banks',
+    suiteTab: 'veiculos',
+    tags: ['4devs', 'placa', 'mercosul', 'renavam', 'veículos', 'detran']
+  },
+  {
+    id: 'bancos-tool',
+    title: 'Gerador de Contas Bancárias Fictícias',
+    description: 'Contas correntes e agências com cálculo real de DV para BB, Bradesco, Itaú, Caixa, Santander e Nubank.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Landmark',
+    badge: '6 Maiores Bancos',
+    isInteractive: true,
+    suiteTarget: 'vehicles-banks',
+    suiteTab: 'bancos',
+    tags: ['4devs', 'bancos', 'conta bancária', 'agência', 'itaú', 'bradesco', 'nubank']
+  },
+  {
+    id: 'empresas-tool',
+    title: 'Gerador de Empresas Fictícias B2B',
+    description: 'Massa completa de dados corporativos (Razão Social, Nome Fantasia, CNPJ, Inscrição Estadual, CEP e Cidade/UF).',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Building2',
+    badge: 'B2B Mock',
+    isInteractive: true,
+    suiteTarget: 'vehicles-banks',
+    suiteTab: 'empresas',
+    tags: ['4devs', 'empresas', 'b2b', 'cnpj', 'inscrição estadual', 'mock']
+  },
 
   // ==========================================
   // CATEGORIA 2: INVERTEXTO & UTILITÁRIOS RÁPIDOS (BENCHMARK INVERTEXTO.COM)
@@ -83,14 +190,14 @@ export const TOOLS_CATALOG: ToolItem[] = [
   {
     id: 'char-counter',
     title: 'Contador de Caracteres & Palavras',
-    description: 'Conta caracteres com e sem espaços, palavras, linhas, parágrafos e calcula o tempo estimado de leitura e fala para o V5 Sound.',
+    description: 'Conta caracteres com e sem espaços, palavras, linhas, parágrafos e calcula o tempo estimado de fala para o V5 Sound.',
     category: 'invertexto',
     categoryLabel: 'Texto (Invertexto)',
     icon: 'Type',
     badge: '100% Client-Side',
     isInteractive: true,
     popular: true,
-    tags: ['invertexto', 'texto', 'caracteres', 'palavras', 'leitura', 'redação']
+    tags: ['invertexto', 'texto', 'caracteres', 'palavras', 'leitura', 'redação', 'tts']
   },
   {
     id: 'case-converter',
@@ -139,6 +246,216 @@ export const TOOLS_CATALOG: ToolItem[] = [
     isInteractive: true,
     popular: true,
     tags: ['invertexto', 'linhas', 'duplicatas', 'limpeza', 'ordenação']
+  },
+  {
+    id: 'fontes-letras',
+    title: 'Letras Diferentes & Fontes para Instagram / Bio',
+    description: 'Transforme textos em Negrito, Itálico, Cursivo, Gótico, Monospace e Bubble usando caracteres Unicode.',
+    category: 'invertexto',
+    categoryLabel: 'Texto (Invertexto)',
+    icon: 'Type',
+    badge: 'Bio & Redes',
+    isInteractive: true,
+    suiteTarget: 'text-manipulator',
+    suiteTab: 'fontes',
+    tags: ['invertexto', 'letras diferentes', 'fontes', 'instagram', 'bio', 'unicode']
+  },
+  {
+    id: 'texto-invertido',
+    title: 'Texto de Cabeça para Baixo (Flip Text)',
+    description: 'Inverta caracteres e pontuação de ponta-cabeça (¿oãçatnop) ou espelhado para memes e postagens criativas.',
+    category: 'invertexto',
+    categoryLabel: 'Texto (Invertexto)',
+    icon: 'ArrowRightLeft',
+    badge: 'Flip Unicode',
+    isInteractive: true,
+    suiteTarget: 'text-manipulator',
+    suiteTab: 'flip',
+    tags: ['invertexto', 'inverter texto', 'cabeça para baixo', 'flip', 'espelho']
+  },
+  {
+    id: 'diff-checker',
+    title: 'Comparador de Textos (Diff Checker)',
+    description: 'Compare dois textos ou códigos linha a linha com detecção visual de diferenças, adições e remoções.',
+    category: 'invertexto',
+    categoryLabel: 'Texto (Invertexto)',
+    icon: 'Layers',
+    badge: 'Side-by-Side',
+    isInteractive: true,
+    suiteTarget: 'text-manipulator',
+    suiteTab: 'diff',
+    tags: ['invertexto', 'diff', 'comparador', 'código', 'texto', 'revisão']
+  },
+  {
+    id: 'find-replace',
+    title: 'Localizar & Substituir Texto em Massa',
+    description: 'Busca e substituição rápida de palavras ou expressões com suporte a maiúsculas/minúsculas.',
+    category: 'invertexto',
+    categoryLabel: 'Texto (Invertexto)',
+    icon: 'Search',
+    badge: 'Substituição',
+    isInteractive: true,
+    suiteTarget: 'text-manipulator',
+    suiteTab: 'replace',
+    tags: ['invertexto', 'localizar', 'substituir', 'texto', 'replace']
+  },
+  {
+    id: 'remove-acentos',
+    title: 'Removedor de Acentos & Diacríticos',
+    description: 'Remove todos os acentos, cedilhas e caracteres gráficos de um texto em milissegundos.',
+    category: 'invertexto',
+    categoryLabel: 'Texto (Invertexto)',
+    icon: 'Type',
+    badge: 'Sem Acentos',
+    isInteractive: true,
+    suiteTarget: 'text-manipulator',
+    suiteTab: 'acentos',
+    tags: ['invertexto', 'acentos', 'remover acentos', 'normalizar', 'texto puro']
+  },
+  {
+    id: 'lorem-ipsum',
+    title: 'Gerador de Lorem Ipsum',
+    description: 'Gere textos de preenchimento (dummy text) em latim clássico por parágrafos, frases ou palavras.',
+    category: 'invertexto',
+    categoryLabel: 'Texto (Invertexto)',
+    icon: 'FileText',
+    badge: 'Dummy Text',
+    isInteractive: true,
+    suiteTarget: 'text-manipulator',
+    suiteTab: 'lorem',
+    tags: ['invertexto', 'lorem ipsum', 'dummy text', 'layout', 'design', 'placeholder']
+  },
+  {
+    id: 'porcentagem-calc',
+    title: 'Calculadora de Porcentagem',
+    description: 'Três cálculos rápidos: quanto é X% de Y, qual a porcentagem de A em relação a B, e variação percentual.',
+    category: 'invertexto',
+    categoryLabel: 'Matemática (Invertexto)',
+    icon: 'Percent',
+    badge: '3 Cálculos',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'math-utils',
+    suiteTab: 'porcentagem',
+    tags: ['invertexto', 'porcentagem', 'matemática', 'cálculo', 'desconto', 'acréscimo']
+  },
+  {
+    id: 'regra-tres',
+    title: 'Calculadora de Regra de Três',
+    description: 'Resolva proporções diretas e inversamente proporcionais com fórmula passo a passo exibida.',
+    category: 'invertexto',
+    categoryLabel: 'Matemática (Invertexto)',
+    icon: 'Divide',
+    badge: 'Direta & Inversa',
+    isInteractive: true,
+    suiteTarget: 'math-utils',
+    suiteTab: 'regra3',
+    tags: ['invertexto', 'regra de 3', 'proporção', 'matemática', 'cálculo']
+  },
+  {
+    id: 'numero-extenso',
+    title: 'Conversor de Número por Extenso',
+    description: 'Converte valores numéricos para escrita por extenso em moeda (Reais e centavos) ou formato cardinal.',
+    category: 'invertexto',
+    categoryLabel: 'Matemática (Invertexto)',
+    icon: 'Calculator',
+    badge: 'Moeda & Cardinal',
+    isInteractive: true,
+    suiteTarget: 'math-utils',
+    suiteTab: 'extenso',
+    tags: ['invertexto', 'extenso', 'número por extenso', 'cheque', 'reais', 'moeda']
+  },
+  {
+    id: 'numeros-romanos',
+    title: 'Conversor de Números Romanos',
+    description: 'Conversão instantânea bidirecional entre algarismos arábicos (1 a 3999) e numerais romanos (I a MMMCMXCIX).',
+    category: 'invertexto',
+    categoryLabel: 'Matemática (Invertexto)',
+    icon: 'Hash',
+    badge: 'Bidirecional',
+    isInteractive: true,
+    suiteTarget: 'math-utils',
+    suiteTab: 'romanos',
+    tags: ['invertexto', 'romanos', 'números romanos', 'algarismos', 'conversor']
+  },
+  {
+    id: 'mmc-mdc-calc',
+    title: 'Calculadora de MMC e MDC',
+    description: 'Cálculo do Mínimo Múltiplo Comum e Máximo Divisor Comum entre dois números com explicação matemática.',
+    category: 'invertexto',
+    categoryLabel: 'Matemática (Invertexto)',
+    icon: 'Calculator',
+    badge: 'MMC & MDC',
+    isInteractive: true,
+    suiteTarget: 'math-utils',
+    suiteTab: 'mmc-mdc',
+    tags: ['invertexto', 'mmc', 'mdc', 'múltiplo', 'divisor', 'matemática']
+  },
+  {
+    id: 'diferenca-datas',
+    title: 'Calculadora de Diferença entre Datas',
+    description: 'Calcule a distância temporal exata entre datas: dias corridos, dias úteis (seg-sex), semanas e meses.',
+    category: 'invertexto',
+    categoryLabel: 'Utilitários (Invertexto)',
+    icon: 'Calendar',
+    badge: 'Dias & Úteis',
+    isInteractive: true,
+    suiteTarget: 'math-utils',
+    suiteTab: 'datas',
+    tags: ['invertexto', 'datas', 'diferença de datas', 'dias úteis', 'calendário', 'prazos']
+  },
+  {
+    id: 'barcode-gen',
+    title: 'Gerador de Código de Barras (EAN-13 & Code 128)',
+    description: 'Crie códigos de barra com cálculo automático de dígito verificador e renderização vetorial SVG de alta resolução.',
+    category: 'invertexto',
+    categoryLabel: 'Web & Códigos (Invertexto)',
+    icon: 'Barcode',
+    badge: 'EAN-13 & Code 128',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'crypto-web',
+    suiteTab: 'barcode',
+    tags: ['invertexto', 'código de barras', 'barcode', 'ean13', 'code128', 'produtos']
+  },
+  {
+    id: 'wifi-qr-gen',
+    title: 'Gerador de QR Code Wi-Fi',
+    description: 'Conecte visitantes à sua rede sem fio instantaneamente apontando a câmera, com segurança WPA/WEP.',
+    category: 'invertexto',
+    categoryLabel: 'Web & Códigos (Invertexto)',
+    icon: 'Wifi',
+    badge: 'Conexão Fácil',
+    isInteractive: true,
+    suiteTarget: 'crypto-web',
+    suiteTab: 'wifi',
+    tags: ['invertexto', 'wifi', 'qr code wifi', 'rede sem fio', 'conexão']
+  },
+  {
+    id: 'cripto-encoder',
+    title: 'Codificador & Decodificador (Base64 / Morse / Binário)',
+    description: 'Conversão instantânea de strings para Base64, URL Encode/Decode, Código Morse e representação Binária.',
+    category: 'invertexto',
+    categoryLabel: 'Criptografia (Invertexto)',
+    icon: 'Binary',
+    badge: 'Base64 & Morse',
+    isInteractive: true,
+    suiteTarget: 'crypto-web',
+    suiteTab: 'cripto',
+    tags: ['invertexto', 'base64', 'url encode', 'morse', 'binário', 'criptografia']
+  },
+  {
+    id: 'sorteador-tool',
+    title: 'Sorteador de Nomes, Números & Dado Virtual',
+    description: 'Realize sorteios justos a partir de listas de nomes, intervalos numéricos ou rolagem de dados (d6 e d20).',
+    category: 'invertexto',
+    categoryLabel: 'Utilitários (Invertexto)',
+    icon: 'Dices',
+    badge: 'Nomes & Dados',
+    isInteractive: true,
+    suiteTarget: 'crypto-web',
+    suiteTab: 'sorteio',
+    tags: ['invertexto', 'sorteio', 'sorteador', 'nomes', 'roleta', 'dado', 'aleatório']
   },
 
   // ==========================================
@@ -243,12 +560,14 @@ export const TOOLS_CATALOG: ToolItem[] = [
   {
     id: 'veo3-prompter',
     title: 'Gerador de Prompts para Veo 3 / Sora / Kling',
-    description: 'Estruturação de prompts em blocos (Câmera, Ação, Atmosfera, Iluminação e Áudio Diegético).',
+    description: 'Estruturação de prompts em blocos técnicos (Câmera, Ação, Atmosfera, Iluminação e Áudio Diegético).',
     category: 'prompts',
     categoryLabel: 'IA Criativa (Apollo La Plata)',
     icon: 'Film',
     badge: 'Veo 3 & Sora',
-    isInteractive: false,
+    isInteractive: true,
+    suiteTarget: 'apollo-suite',
+    suiteTab: 'veo3',
     tags: ['apollo', 'veo3', 'sora', 'kling', 'vídeo ia', 'prompt']
   },
   {
@@ -264,14 +583,43 @@ export const TOOLS_CATALOG: ToolItem[] = [
     tags: ['apollo', 'títulos', 'youtube', 'ctr', 'retenção', 'viral']
   },
   {
+    id: 'roteiro-viral',
+    title: 'Gerador de Roteiros Curtos Virais (30-60s)',
+    description: 'Roteiros estruturados para TikTok e Reels com Hook inicial, desenvolvimento dinâmico e Call to Action.',
+    category: 'prompts',
+    categoryLabel: 'IA Criativa (Apollo La Plata)',
+    icon: 'Video',
+    badge: '30s & 60s',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'apollo-suite',
+    suiteTab: 'roteiro',
+    tags: ['apollo', 'roteiro', 'reels', 'tiktok', 'shorts', 'vídeo curto', 'viral']
+  },
+  {
+    id: 'descricao-seo',
+    title: 'Gerador de Descrições SEO para Vídeos',
+    description: 'Descrições otimizadas com resumo, capítulos de minutagem e hashtags para ranqueamento no YouTube e redes.',
+    category: 'prompts',
+    categoryLabel: 'IA Criativa (Apollo La Plata)',
+    icon: 'FileText',
+    badge: 'SEO Ranking',
+    isInteractive: true,
+    suiteTarget: 'apollo-suite',
+    suiteTab: 'descricao',
+    tags: ['apollo', 'descrição', 'seo', 'youtube', 'ranking', 'texto']
+  },
+  {
     id: 'hashtag-crafter',
     title: 'Gerador de Hashtags Segmentadas',
-    description: 'Seleção automática de tags quentes de cauda longa para Instagram Reels e TikTok.',
+    description: 'Seleção automática de tags quentes de cauda longa para Instagram Reels, TikTok e Shorts.',
     category: 'prompts',
     categoryLabel: 'IA Criativa (Apollo La Plata)',
     icon: 'Hash',
     badge: 'SEO Social',
-    isInteractive: false,
+    isInteractive: true,
+    suiteTarget: 'apollo-suite',
+    suiteTab: 'hashtags',
     tags: ['apollo', 'hashtags', 'instagram', 'tiktok', 'seo']
   }
 ];

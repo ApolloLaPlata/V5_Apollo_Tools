@@ -4,6 +4,8 @@ import React, { useState, useMemo } from 'react';
 import Apollo5RocketLogo from '@/components/ui/Apollo5RocketLogo';
 import V5AppActivationBanner from '@/components/ui/V5AppActivationBanner';
 import { TOOLS_CATALOG, ToolItem } from '@/lib/data/toolsData';
+
+// Individual Tools
 import { CharacterCounter } from '@/components/tools/CharacterCounter';
 import { CaseConverter } from '@/components/tools/CaseConverter';
 import { PixQrCodeGenerator } from '@/components/tools/PixQrCodeGenerator';
@@ -17,6 +19,15 @@ import { PasswordGenerator } from '@/components/tools/PasswordGenerator';
 import { JsonFormatter } from '@/components/tools/JsonFormatter';
 import { ViralTitleGenerator } from '@/components/tools/ViralTitleGenerator';
 import { ComfyWorkflowModal } from '@/components/tools/ComfyWorkflowModal';
+
+// Specialized Power Suites
+import { BrazilianDocsSuite } from '@/components/tools/BrazilianDocsSuite';
+import { VehiclesAndBanksSuite } from '@/components/tools/VehiclesAndBanksSuite';
+import { MathUtilsSuite } from '@/components/tools/MathUtilsSuite';
+import { TextManipulatorSuite } from '@/components/tools/TextManipulatorSuite';
+import { CryptoWebSuite } from '@/components/tools/CryptoWebSuite';
+import { ApolloLaPlataSuite } from '@/components/tools/ApolloLaPlataSuite';
+
 import { 
   Search, 
   Sparkles, 
@@ -44,7 +55,21 @@ import {
   Layers,
   Terminal,
   Cpu,
-  BookmarkCheck
+  BookmarkCheck,
+  Award,
+  Car,
+  Landmark,
+  Building2,
+  Calculator,
+  Percent,
+  Divide,
+  Calendar,
+  Barcode,
+  Wifi,
+  Binary,
+  Dices,
+  ArrowRightLeft,
+  X
 } from 'lucide-react';
 
 const ICON_MAP: Record<string, React.ElementType> = {
@@ -67,7 +92,21 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Users,
   CreditCard,
   KeyRound,
-  FileCode
+  FileCode,
+  Award,
+  Car,
+  Landmark,
+  Building2,
+  Calculator,
+  Percent,
+  Divide,
+  Calendar,
+  Barcode,
+  Wifi,
+  Binary,
+  Dices,
+  ArrowRightLeft,
+  Layers
 };
 
 export default function ApolloToolsPage() {
@@ -75,6 +114,10 @@ export default function ApolloToolsPage() {
   const [selectedCategory, setSelectedCategory] = useState<'all' | 'dev-4devs' | 'invertexto' | 'comfyui' | 'prompts'>('all');
   const [activeInteractiveTool, setActiveInteractiveTool] = useState<string | null>('cpf-cnpj-tool');
   const [activeComfyModal, setActiveComfyModal] = useState<ToolItem | null>(null);
+
+  const selectedToolItem = useMemo(() => {
+    return TOOLS_CATALOG.find((t) => t.id === activeInteractiveTool) || null;
+  }, [activeInteractiveTool]);
 
   const filteredTools = useMemo(() => {
     return TOOLS_CATALOG.filter((tool) => {
@@ -113,19 +156,22 @@ export default function ApolloToolsPage() {
             V5 Apollo Tools
           </h1>
           <p className="text-sm sm:text-base text-slate-400">
-            A união definitiva das utilidades de desenvolvedor do <span className="text-emerald-400 font-bold">4Devs</span>, a agilidade do <span className="text-cyan-400 font-bold">Invertexto</span> e o poder dos workflows do <span className="text-purple-400 font-bold">Nordy.ai ComfyUI</span>.
+            A união definitiva das utilidades de desenvolvedor do <span className="text-emerald-400 font-bold">4Devs</span>, a agilidade do <span className="text-cyan-400 font-bold">Invertexto</span> e o poder criativo do <span className="text-amber-400 font-bold">Apollo La Plata</span> com vitrine de workflows do <span className="text-purple-400 font-bold">Nordy.ai ComfyUI</span>.
           </p>
 
           {/* Benchmarks Badge Row */}
-          <div className="flex items-center justify-center gap-3 pt-2 flex-wrap">
+          <div className="flex items-center justify-center gap-2.5 pt-2 flex-wrap">
             <span className="text-[11px] font-mono px-3 py-1 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 font-bold flex items-center gap-1.5">
               <Terminal className="w-3.5 h-3.5" /> Padrão 4Devs (Dev & QA)
             </span>
             <span className="text-[11px] font-mono px-3 py-1 rounded-lg bg-cyan-950/40 border border-cyan-500/30 text-cyan-300 font-bold flex items-center gap-1.5">
               <Type className="w-3.5 h-3.5" /> Padrão Invertexto (Client-Side)
             </span>
+            <span className="text-[11px] font-mono px-3 py-1 rounded-lg bg-amber-950/40 border border-amber-500/30 text-amber-300 font-bold flex items-center gap-1.5">
+              <Wand2 className="w-3.5 h-3.5" /> Apollo La Plata (IA Criativa)
+            </span>
             <span className="text-[11px] font-mono px-3 py-1 rounded-lg bg-purple-950/40 border border-purple-500/30 text-purple-300 font-bold flex items-center gap-1.5">
-              <Cpu className="w-3.5 h-3.5" /> Padrão Nordy.ai (ComfyUI Workflows)
+              <Cpu className="w-3.5 h-3.5" /> Padrão Nordy.ai (ComfyUI)
             </span>
           </div>
 
@@ -134,7 +180,7 @@ export default function ApolloToolsPage() {
             <Search className="w-5 h-5 absolute left-4 top-7 text-slate-500 pointer-events-none" />
             <input
               type="text"
-              placeholder="Buscar por ferramenta (ex: CPF, Pix, ComfyUI, Face Swap, Contador, JSON)..."
+              placeholder="Buscar por ferramenta (ex: CPF, CNPJ, CNH, Placa, Pix, Porcentagem, JSON, Barcode)..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full bg-slate-900/90 border border-slate-800 rounded-2xl pl-12 pr-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 shadow-xl transition-all"
@@ -144,19 +190,58 @@ export default function ApolloToolsPage() {
 
         {/* Workbench Ativo (Ferramenta Interativa Selecionada) */}
         {activeInteractiveTool && (
-          <div className="mb-10 transition-all duration-300">
-            {activeInteractiveTool === 'cpf-cnpj-tool' && <CpfCnpjTool />}
-            {activeInteractiveTool === 'fake-person-generator' && <FakePersonGenerator />}
-            {activeInteractiveTool === 'luhn-card-validator' && <CreditCardValidator />}
-            {activeInteractiveTool === 'whatsapp-link-gen' && <WhatsAppLinkGenerator />}
-            {activeInteractiveTool === 'line-cleaner' && <LineCleaner />}
-            {activeInteractiveTool === 'password-generator' && <PasswordGenerator />}
-            {activeInteractiveTool === 'json-formatter' && <JsonFormatter />}
-            {activeInteractiveTool === 'prompt-expander' && <PromptCrafter />}
-            {activeInteractiveTool === 'viral-title-generator' && <ViralTitleGenerator />}
-            {activeInteractiveTool === 'char-counter' && <CharacterCounter />}
-            {activeInteractiveTool === 'case-converter' && <CaseConverter />}
-            {activeInteractiveTool === 'pix-qr-generator' && <PixQrCodeGenerator />}
+          <div className="mb-10 transition-all duration-300 relative">
+            <div className="flex items-center justify-between mb-3 px-2">
+              <div className="flex items-center gap-2 text-xs font-mono text-cyan-400">
+                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+                <span>Bancada de Execução Ativa: <strong>{selectedToolItem?.title || activeInteractiveTool}</strong></span>
+              </div>
+              <button
+                onClick={() => setActiveInteractiveTool(null)}
+                className="text-xs text-slate-400 hover:text-white flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 transition cursor-pointer"
+              >
+                <X className="w-3.5 h-3.5" />
+                <span>Fechar Bancada</span>
+              </button>
+            </div>
+
+            {/* Suítes Especializadas */}
+            {selectedToolItem?.suiteTarget === 'brazilian-docs' && (
+              <BrazilianDocsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'vehicles-banks' && (
+              <VehiclesAndBanksSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'math-utils' && (
+              <MathUtilsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'text-manipulator' && (
+              <TextManipulatorSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'crypto-web' && (
+              <CryptoWebSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'apollo-suite' && (
+              <ApolloLaPlataSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+
+            {/* Ferramentas Standalone */}
+            {!selectedToolItem?.suiteTarget && (
+              <>
+                {activeInteractiveTool === 'cpf-cnpj-tool' && <CpfCnpjTool />}
+                {activeInteractiveTool === 'fake-person-generator' && <FakePersonGenerator />}
+                {activeInteractiveTool === 'luhn-card-validator' && <CreditCardValidator />}
+                {activeInteractiveTool === 'whatsapp-link-gen' && <WhatsAppLinkGenerator />}
+                {activeInteractiveTool === 'line-cleaner' && <LineCleaner />}
+                {activeInteractiveTool === 'password-generator' && <PasswordGenerator />}
+                {activeInteractiveTool === 'json-formatter' && <JsonFormatter />}
+                {activeInteractiveTool === 'prompt-expander' && <PromptCrafter />}
+                {activeInteractiveTool === 'viral-title-generator' && <ViralTitleGenerator />}
+                {activeInteractiveTool === 'char-counter' && <CharacterCounter />}
+                {activeInteractiveTool === 'case-converter' && <CaseConverter />}
+                {activeInteractiveTool === 'pix-qr-generator' && <PixQrCodeGenerator />}
+              </>
+            )}
           </div>
         )}
 
@@ -172,7 +257,7 @@ export default function ApolloToolsPage() {
                   : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'
               }`}
             >
-              Todas ({TOOLS_CATALOG.length})
+              Todas as Ferramentas ({TOOLS_CATALOG.length})
             </button>
             <button
               onClick={() => setSelectedCategory('dev-4devs')}
@@ -182,7 +267,7 @@ export default function ApolloToolsPage() {
                   : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'
               }`}
             >
-              🇧🇷 Dev & Testes (4Devs)
+              🇧🇷 Dev & Testes (4Devs) ({TOOLS_CATALOG.filter(t => t.category === 'dev-4devs').length})
             </button>
             <button
               onClick={() => setSelectedCategory('invertexto')}
@@ -192,17 +277,7 @@ export default function ApolloToolsPage() {
                   : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'
               }`}
             >
-              ⚡ Invertexto & Web
-            </button>
-            <button
-              onClick={() => setSelectedCategory('comfyui')}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                selectedCategory === 'comfyui'
-                  ? 'bg-purple-600 text-white shadow-md shadow-purple-600/20'
-                  : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'
-              }`}
-            >
-              🎨 ComfyUI Workflows (Nordy.ai)
+              ⚡ Invertexto & Web ({TOOLS_CATALOG.filter(t => t.category === 'invertexto').length})
             </button>
             <button
               onClick={() => setSelectedCategory('prompts')}
@@ -212,7 +287,17 @@ export default function ApolloToolsPage() {
                   : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'
               }`}
             >
-              💡 Prompts & IA Criativa
+              💡 Apollo La Plata (IA) ({TOOLS_CATALOG.filter(t => t.category === 'prompts').length})
+            </button>
+            <button
+              onClick={() => setSelectedCategory('comfyui')}
+              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                selectedCategory === 'comfyui'
+                  ? 'bg-purple-600 text-white shadow-md shadow-purple-600/20'
+                  : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'
+              }`}
+            >
+              🎨 ComfyUI Workflows ({TOOLS_CATALOG.filter(t => t.category === 'comfyui').length})
             </button>
           </div>
 
@@ -300,7 +385,7 @@ export default function ApolloToolsPage() {
             </span>
           </div>
           <p className="font-mono text-[11px] text-slate-500">
-            Inspiração: 4Devs · Invertexto · Nordy.ai · Soberania de Dados & Zero Lock-in
+            Inspiração: 4Devs · Invertexto · Apollo La Plata · Nordy.ai · Soberania de Dados & Zero Lock-in
           </p>
         </div>
       </footer>
