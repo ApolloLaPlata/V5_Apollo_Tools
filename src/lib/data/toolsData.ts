@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -746,6 +746,62 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'calendar-astronomy-suite',
     suiteTab: 'estacoes-dia-ano',
     tags: ['invertexto', 'estações do ano', 'estação', 'dia do ano', 'semana do ano', 'iso 8601', 'hemisfério sul']
+  },
+  {
+    id: 'conversor-base-numerica',
+    title: 'Conversor de Base Numérica (Binário, Octal, Dec, Hex)',
+    description: 'Conversão instantânea bidirecional entre Decimal, Binário, Octal e Hexadecimal com agrupamento de nibbles e bits.',
+    category: 'invertexto',
+    categoryLabel: 'Conversores (Invertexto)',
+    icon: 'Binary',
+    badge: 'Bin, Oct, Dec, Hex',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'units-converters-suite',
+    suiteTab: 'base-numerica',
+    tags: ['invertexto', 'base numérica', 'binário', 'hexadecimal', 'octal', 'decimal', 'bits', 'bytes', 'conversor']
+  },
+  {
+    id: 'conversor-medidas',
+    title: 'Conversor de Medidas Físicas & Unidades',
+    description: 'Comprimento, massa, temperatura, velocidade, área e volume com conversão instantânea entre padrões métrico e imperial.',
+    category: 'invertexto',
+    categoryLabel: 'Conversores (Invertexto)',
+    icon: 'Ruler',
+    badge: 'Métrico & Imperial',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'units-converters-suite',
+    suiteTab: 'medidas-unidades',
+    tags: ['invertexto', 'medidas', 'unidades', 'comprimento', 'massa', 'temperatura', 'velocidade', 'km', 'milhas', 'libras']
+  },
+  {
+    id: 'calculadora-fracoes',
+    title: 'Calculadora de Frações & Simplificação MDC',
+    description: 'Soma, subtração, multiplicação e divisão de frações com simplificação de MDC, fração irredutível e mista.',
+    category: 'invertexto',
+    categoryLabel: 'Matemática (Invertexto)',
+    icon: 'Percent',
+    badge: 'MDC & Fração Mista',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'units-converters-suite',
+    suiteTab: 'fracoes',
+    tags: ['invertexto', 'frações', 'calculadora de frações', 'mdc', 'fração mista', 'fração irredutível', 'matemática']
+  },
+  {
+    id: 'conversor-timestamp-uuid',
+    title: 'Conversor de Timestamp UNIX & Gerador de UUID v4',
+    description: 'Conversão bidirecional entre data/hora legível e epoch timestamp UNIX + gerador de UUID v4 (RFC 4122) em lote.',
+    category: 'invertexto',
+    categoryLabel: 'Dev & Tempo (Invertexto)',
+    icon: 'Fingerprint',
+    badge: 'Epoch & RFC 4122',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'units-converters-suite',
+    suiteTab: 'timestamp-uuid',
+    tags: ['invertexto', 'timestamp', 'unix timestamp', 'epoch', 'uuid', 'uuid v4', 'guid', 'identificador']
   },
   {
     id: 'char-counter',
