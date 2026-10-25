@@ -35,9 +35,10 @@
   * **Status:** 100% Concluído e testado. Build Next.js verde (0 erros).
   * **Ferramentas Absorvidas:** 13 calculadoras geométricas completas do 4Devs.
 
-- [ ] **Etapa 4: Matemática Avançada & Operações de Datas (4Devs)**
-  * **Objetivo:** Fatoração completa de inteiros em números primos, Resto da Divisão (Módulo `%`), e Calculadora de Somar/Subtrair Dias, Semanas e Meses a partir de uma data inicial.
-  * **Arquivo:** `src/components/tools/MathUtilsSuite.tsx`.
+- [x] **Etapa 4: Matemática Avançada & Operações de Datas (4Devs) - CONCLUÍDA**
+  * **Objetivo:** Fatoração completa de inteiros em números primos com decomposição em divisões sucessivas, Resto da Divisão (Quociente, Divisor, Resto Módulo `%` e Prova Real Euclidiana), e Calculadora de Somar/Subtrair Dias (corridos e úteis), Semanas, Meses e Anos.
+  * **Arquivo:** `src/components/tools/MathUtilsSuite.tsx`, `src/lib/data/toolsData.ts`.
+  * **Status:** 100% Concluído e testado. Build Next.js verde (0 erros).
   * **Ferramentas Absorvidas:** `Fatorar Número`, `Resto da Divisão`, `Somar Dias em Datas`, `Subtrair Dias em Datas`.
 
 - [ ] **Etapa 5: Manipulação Avançada de String & Tabela ASCII (4Devs)**

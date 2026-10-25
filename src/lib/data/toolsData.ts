@@ -397,6 +397,62 @@ export const TOOLS_CATALOG: ToolItem[] = [
     tags: ['4devs', 'geometria', 'setor circular', 'arco', 'ângulo', 'fatia', 'área']
   },
 
+  // ------------------------------------------
+  // MATEMÁTICA AVANÇADA & OPERAÇÕES DE DATAS (4DEVS)
+  // ------------------------------------------
+  {
+    id: 'fatorar-numero',
+    title: 'Fatoração de Números Primos',
+    description: 'Decomposição em fatores primos com algoritmo de divisões sucessivas, fatores canônicos e lista de todos os divisores.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Calculator',
+    badge: 'Decomposição Primos',
+    isInteractive: true,
+    suiteTarget: 'math-utils',
+    suiteTab: 'fatorar',
+    tags: ['4devs', 'fatorar', 'números primos', 'fatores primos', 'divisores', 'matemática']
+  },
+  {
+    id: 'resto-divisao',
+    title: 'Calculadora de Resto da Divisão (Módulo %)',
+    description: 'Divisão euclidiana detalhada com quociente inteiro, resto matemático, prova real e representação didática de conta armada.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Divide',
+    badge: 'Quociente & Resto',
+    isInteractive: true,
+    suiteTarget: 'math-utils',
+    suiteTab: 'resto-divisao',
+    tags: ['4devs', 'resto da divisão', 'módulo', 'quociente', 'dividendo', 'divisor', 'matemática']
+  },
+  {
+    id: 'somar-dias-datas',
+    title: 'Somar Dias, Meses e Anos em Datas',
+    description: 'Adicione dias corridos ou úteis, semanas, meses e anos a uma data inicial com dia da semana por extenso.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Calendar',
+    badge: 'Adicionar Prazos',
+    isInteractive: true,
+    suiteTarget: 'math-utils',
+    suiteTab: 'operacoes-datas',
+    tags: ['4devs', 'somar dias', 'datas', 'adicionar prazo', 'dias úteis', 'calendário']
+  },
+  {
+    id: 'subtrair-dias-datas',
+    title: 'Subtrair Dias, Meses e Anos em Datas',
+    description: 'Subtraia dias corridos ou úteis, semanas, meses e anos de uma data inicial com cálculo retroativo de prazos.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Calendar',
+    badge: 'Subtrair Prazos',
+    isInteractive: true,
+    suiteTarget: 'math-utils',
+    suiteTab: 'operacoes-datas',
+    tags: ['4devs', 'subtrair dias', 'datas', 'prazo retroativo', 'dias úteis', 'calendário']
+  },
+
   // ==========================================
   // CATEGORIA 2: INVERTEXTO & UTILITÁRIOS RÁPIDOS (BENCHMARK INVERTEXTO.COM)
   // ==========================================
