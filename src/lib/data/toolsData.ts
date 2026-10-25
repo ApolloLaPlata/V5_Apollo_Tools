@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -858,6 +858,62 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'finance-economy-suite',
     suiteTab: 'gasolina-etanol-viagem',
     tags: ['invertexto', 'combustível', 'gasolina ou etanol', 'álcool', 'viagem', 'pedágio', 'rachadinha', 'km/l']
+  },
+  {
+    id: 'calculadora-imc',
+    title: 'Calculadora de IMC & Peso Ideal (OMS)',
+    description: 'Calcule seu Índice de Massa Corporal com classificação clínica da OMS, faixa de peso saudável e peso ideal pela fórmula de Devine.',
+    category: 'invertexto',
+    categoryLabel: 'Saúde & Bem-Estar (Invertexto)',
+    icon: 'Scale',
+    badge: 'Padrão OMS',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'health-everyday-suite',
+    suiteTab: 'imc-peso',
+    tags: ['invertexto', 'imc', 'calculadora de imc', 'peso ideal', 'massa corporal', 'saúde', 'dieta', 'nutrição']
+  },
+  {
+    id: 'calculadora-gestacional',
+    title: 'Calculadora Gestacional & Data Provável do Parto',
+    description: 'Calcule a idade gestacional em semanas e dias, trimestre e data provável do parto (DPP) com base na DUM pela Regra de Naegele.',
+    category: 'invertexto',
+    categoryLabel: 'Saúde & Gestação (Invertexto)',
+    icon: 'Baby',
+    badge: 'Regra de Naegele',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'health-everyday-suite',
+    suiteTab: 'gestacional',
+    tags: ['invertexto', 'gravidez', 'gestacional', 'semanas', 'parto', 'dpp', 'dum', 'bebê', 'maternidade']
+  },
+  {
+    id: 'calculadora-churrasco',
+    title: 'Churrascômetro & Calculadora de Churrasco',
+    description: 'Cálculo exato de carnes (bovina, frango, linguiça), cervejas, refrigerantes, água, carvão e gelo por homens, mulheres e crianças.',
+    category: 'invertexto',
+    categoryLabel: 'Cotidiano & Eventos (Invertexto)',
+    icon: 'Flame',
+    badge: 'Churrascômetro',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'health-everyday-suite',
+    suiteTab: 'churrasco',
+    tags: ['invertexto', 'churrasco', 'churrascômetro', 'carne', 'cerveja', 'festa', 'evento', 'quantidade']
+  },
+  {
+    id: 'gerador-recibo-promissoria',
+    title: 'Gerador de Recibo de Pagamento & Nota Promissória',
+    description: 'Emissão rápida de recibos e notas promissórias com valor por extenso automático e layout A4 pronto para impressão e PDF.',
+    category: 'invertexto',
+    categoryLabel: 'Documentos & Finanças (Invertexto)',
+    icon: 'FileText',
+    badge: 'Impressão A4 & PDF',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'health-everyday-suite',
+    suiteTab: 'recibo-promissoria',
+    tags: ['invertexto', 'recibo', 'recibo de pagamento', 'nota promissória', 'promissória', 'por extenso', 'impressão', 'documento']
   },
   {
     id: 'char-counter',

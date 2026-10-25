@@ -34,6 +34,7 @@ import { TimeAndFocusSuite } from '@/components/tools/TimeAndFocusSuite';
 import { CalendarAndAstronomySuite } from '@/components/tools/CalendarAndAstronomySuite';
 import { UnitsAndConvertersSuite } from '@/components/tools/UnitsAndConvertersSuite';
 import { FinanceAndEconomySuite } from '@/components/tools/FinanceAndEconomySuite';
+import { HealthAndEverydaySuite } from '@/components/tools/HealthAndEverydaySuite';
 
 import { 
   Search, 
@@ -105,6 +106,10 @@ import {
   TrendingUp,
   PiggyBank,
   Fuel,
+  Heart,
+  Baby,
+  Flame,
+  Scale,
   X
 } from 'lucide-react';
 
@@ -171,7 +176,11 @@ const ICON_MAP: Record<string, React.ElementType> = {
   DollarSign,
   TrendingUp,
   PiggyBank,
-  Fuel
+  Fuel,
+  Heart,
+  Baby,
+  Flame,
+  Scale
 };
 
 export default function ApolloToolsPage() {
@@ -309,6 +318,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'finance-economy-suite' && (
               <FinanceAndEconomySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'health-everyday-suite' && (
+              <HealthAndEverydaySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
