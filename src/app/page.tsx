@@ -31,6 +31,7 @@ import { GeometrySuite } from '@/components/tools/GeometrySuite';
 import { DevAndCvSuite } from '@/components/tools/DevAndCvSuite';
 import { LotteryAndGamesSuite } from '@/components/tools/LotteryAndGamesSuite';
 import { TimeAndFocusSuite } from '@/components/tools/TimeAndFocusSuite';
+import { CalendarAndAstronomySuite } from '@/components/tools/CalendarAndAstronomySuite';
 
 import { 
   Search, 
@@ -94,6 +95,8 @@ import {
   Clock,
   Hourglass,
   Brain,
+  Moon,
+  CalendarDays,
   X
 } from 'lucide-react';
 
@@ -152,7 +155,9 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Timer,
   Clock,
   Hourglass,
-  Brain
+  Brain,
+  Moon,
+  CalendarDays
 };
 
 export default function ApolloToolsPage() {
@@ -281,6 +286,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'time-focus-suite' && (
               <TimeAndFocusSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'calendar-astronomy-suite' && (
+              <CalendarAndAstronomySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -690,6 +690,62 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'time-focus-suite',
     suiteTab: 'contagem-regressiva',
     tags: ['invertexto', 'contagem regressiva', 'countdown', 'evento', 'lançamento', 'meta', 'tempo']
+  },
+  {
+    id: 'calculadora-idade',
+    title: 'Calculadora de Idade Exata & Signos do Zodíaco',
+    description: 'Calcule a idade exata em anos, meses e dias, total de dias, horas e minutos vividos, próximo aniversário e signos ocidental e chinês.',
+    category: 'invertexto',
+    categoryLabel: 'Tempo & Calendário (Invertexto)',
+    icon: 'Calendar',
+    badge: 'Idade & Zodíaco',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'calendar-astronomy-suite',
+    suiteTab: 'idade-signos',
+    tags: ['invertexto', 'idade', 'calculadora de idade', 'signo', 'zodíaco', 'horóscopo', 'nascimento', 'aniversário']
+  },
+  {
+    id: 'calendario-feriados',
+    title: 'Calendário Anual com Feriados Nacionais',
+    description: 'Calendário interativo mensal e anual completo com todos os feriados federais e pontos facultativos oficiais do Brasil.',
+    category: 'invertexto',
+    categoryLabel: 'Tempo & Calendário (Invertexto)',
+    icon: 'CalendarDays',
+    badge: 'Feriados Oficiais BR',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'calendar-astronomy-suite',
+    suiteTab: 'calendario-feriados',
+    tags: ['invertexto', 'calendário', 'calendario', 'feriados', 'feriado nacional', 'carnaval', 'páscoa', 'brasil']
+  },
+  {
+    id: 'fases-da-lua',
+    title: 'Fases da Lua & Calendário Lunar',
+    description: 'Fase lunar atual em tempo real com cálculo sinódico, porcentagem de iluminação visível, idade da lua e ciclo das 4 fases.',
+    category: 'invertexto',
+    categoryLabel: 'Astronomia & Tempo (Invertexto)',
+    icon: 'Moon',
+    badge: 'Tempo Real & Órbita',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'calendar-astronomy-suite',
+    suiteTab: 'fases-lua',
+    tags: ['invertexto', 'lua', 'fases da lua', 'lua cheia', 'lua nova', 'astronomia', 'ciclo lunar']
+  },
+  {
+    id: 'estacoes-dia-ano',
+    title: 'Estações do Ano, Dia do Ano & Semana ISO',
+    description: 'Identificação da estação atual no Hemisfério Sul (Brasil), contagem ordinal do dia do ano (1-365) e número da semana ISO 8601.',
+    category: 'invertexto',
+    categoryLabel: 'Astronomia & Tempo (Invertexto)',
+    icon: 'Sun',
+    badge: 'Estações & ISO 8601',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'calendar-astronomy-suite',
+    suiteTab: 'estacoes-dia-ano',
+    tags: ['invertexto', 'estações do ano', 'estação', 'dia do ano', 'semana do ano', 'iso 8601', 'hemisfério sul']
   },
   {
     id: 'char-counter',
