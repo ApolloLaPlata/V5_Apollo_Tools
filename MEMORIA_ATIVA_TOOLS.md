@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Criação:** 25/10/2026 · **Status:** Operacional (Build 100% Green)
+**Data de Atualização:** 26/10/2026 · **Status:** Operacional (Build 100% Green · 47 Ferramentas Ativas)
 
 ---
 
@@ -15,7 +15,7 @@ O **V5 Apollo Tools** (`E:\MEUS PROGRAMAS\V5_APOLLO_SITES\V5_Apollo_Tools`) nasc
 
 ## 2. A Tríade Sagrada de Benchmarks de Inspiração
 
-A pedido explícito do Comandante, o V5 Apollo Tools foi modelado para absorver e superar o que há de melhor nestas três fontes de referência:
+O V5 Apollo Tools absorveu integralmente o que há de melhor nestas quatro fontes de referência:
 
 ```mermaid
 flowchart TD
@@ -33,106 +33,91 @@ flowchart TD
 
 ### 1️⃣ Benchmark 1: 4Devs (`https://www.4devs.com.br`)
 - **Foco:** Geradores, Validadores e Ferramentas para Desenvolvedores e Testes de QA.
-- **Ferramentas Catalogadas para Absorção:**
-  - `Gerador e Validador de CPF`: Cálculo com algoritmo oficial da Receita Federal (dígitos verificadores módulo 11), com ou sem pontuação (`000.000.000-00`), com filtro opcional por estado de emissão.
-  - `Gerador e Validador de CNPJ`: Geração de CNPJ válido para testes de checkout e faturamento B2B.
-  - `Gerador de Pessoas / Dados Fictícios de QA`: Gera nome, idade, sexo, CPF, RG, data de nascimento, celular, e-mail e endereço fictício para testes de cadastro.
-  - `Validador de Cartão de Crédito (Algoritmo de Luhn)`: Testa se a numeração é matematicamente válida e identifica a bandeira (Visa, Mastercard, Elo, Amex).
-  - `Gerador de CEP e Endereço Fictício`: Gera dados de logradouro válidos para preenchimento automático em testes de frete.
-  - `Gerador de Contas Bancárias Fictícias`: Gera agência e conta com dígito verificador para os principais bancos (Banco do Brasil, Bradesco, Itaú, Caixa).
-  - `Gerador de Senhas Fortes`: Gera senhas criptograficamente seguras com seletor de tamanho, caracteres especiais, números e maiúsculas.
-  - `Formatador & Minificador de JSON / SQL / XML`: Formatação com indentação customizável e minificação de payloads.
+- **Cobertura 100% Client-Side:**
+  - `CPF / CNPJ`: Módulo 11 oficial da Receita Federal com estado de emissão.
+  - `RG (Registro Geral)`: Módulo 11 padrão SSP com dígito verificador.
+  - `CNH`: Cálculo Denatran com 2 dígitos verificadores.
+  - `PIS/PASEP/NIS`: Módulo 11 Caixa/Banco do Brasil.
+  - `Título de Eleitor`: Código de UF oficial TSE e 2 dígitos verificadores.
+  - `Certidão CNJ`: Padrão nacional unificado de 32 dígitos (nascimento, casamento, óbito).
+  - `Placas & RENAVAM`: Placas Mercosul e Cinza clássico + validação oficial de RENAVAM.
+  - `Contas Bancárias Fictícias`: BB, Bradesco, Itaú, Caixa, Santander e Nubank com DV.
+  - `Empresas Fictícias B2B`: Massa de dados corporativos (Razão Social, Nome Fantasia, CNPJ, IE, CEP).
+  - `Pessoas Fictícias QA Mock`: Massa cadastral completa com exportação JSON/CSV.
+  - `Cartão de Crédito Luhn`: Módulo 10 com identificação de Visa, Mastercard, Elo e Amex.
+  - `Gerador de Senhas Seguras`: Crypto API nativa, cálculo de entropia e força bruta.
+  - `Formatador de JSON`: Indentação 2/4 espaços, minificação e verificação sintática.
 
 ### 2️⃣ Benchmark 2: Invertexto (`https://www.invertexto.com`)
-- **Foco:** Micro-Ferramentas de Manipulação de Texto e Utilidades Rápidas do Dia a Dia.
-- **Ferramentas Catalogadas para Absorção:**
-  - `Contador de Caracteres & Palavras` *(Já implementado)*: Caracteres, palavras, linhas, parágrafos, tempo de leitura humana e tempo de locução para o V5 Sound.
-  - `Transformador de Caixa Alta / Baixa` *(Já implementado)*: MAIÚSCULAS, minúsculas, Primeira Letra, Título, Inverter e URL Slug.
-  - `Gerador de QR Code Pix & Copia e Cola` *(Já implementado)*: Padrão oficial EMVCo BR Code do BACEN com download PNG.
-  - `Gerador de Link Direto de WhatsApp`: Criação de links `wa.me/55...` com mensagem personalizada pré-preenchida e codificada em URL.
-  - `Limpador de Linhas & Duplicatas`: Remove linhas em branco, remove duplicatas, remove espaços extras e ordena alfabeticamente.
-  - `Inversor de Texto`: Inverte caracteres ou palavras para brincadeiras e testes.
-  - `Slugifier`: Transforma qualquer título ou frase em um slug amigável para SEO e URLs limpas.
+- **Foco:** Micro-ferramentas de Manipulação de Texto, Matemática e Códigos Rápidos.
+- **Cobertura 100% Client-Side:**
+  - `Contador de Caracteres & Palavras`: Métricas completas + Tempo de Fala para V5 Sound (~130 ppm).
+  - `Transformador de Caixa`: MAIÚSCULAS, minúsculas, Primeira Letra, Inverter e URL Slug.
+  - `Gerador de QR Code Pix`: Padrão BACEN EMVCo com copia-e-cola e download PNG.
+  - `Gerador de Link WhatsApp`: Links `wa.me` com mensagem e balão de chat nativo.
+  - `Limpador de Linhas & Duplicatas`: Deduplicação, trim, ordenação A-Z/Z-A e contagem.
+  - `Letras Diferentes & Fontes`: Negrito, Itálico, Cursivo, Gótico, Monospace e Bubble para Bio/Redes.
+  - `Texto Invertido & Flip`: Ponta-cabeça e espelhado usando caracteres Unicode.
+  - `Comparador de Textos Diff`: Comparação side-by-side com destaque de alterações.
+  - `Localizar & Substituir`: Substituição em massa com suporte a case-sensitive e regex.
+  - `Removedor de Acentos`: Normalização NFD para caracteres limpos.
+  - `Gerador de Lorem Ipsum`: Texto dummy por parágrafos, frases ou palavras.
+  - `Calculadora de Porcentagem`: 3 modalidades de porcentagem instantâneas.
+  - `Calculadora de Regra de Três`: Proporções diretas e inversas com passos.
+  - `Número por Extenso`: Moeda em Reais ou números cardinais por extenso.
+  - `Números Romanos`: Conversão bidirecional Arábico <-> Romano (1 a 3999).
+  - `MMC e MDC`: Mínimo múltiplo comum e máximo divisor comum com explicação.
+  - `Diferença entre Datas`: Dias corridos, dias úteis, semanas e meses.
+  - `Código de Barras`: EAN-13 com DV e Code 128 com SVG vetorial.
+  - `QR Code Wi-Fi`: Conexão instantânea para smartphones com criptografia WPA/WEP.
+  - `Criptografia & Codificação`: Base64, URL Encode, Código Morse e Binário.
+  - `Sorteador`: Sorteio justo de nomes em lista, números em intervalo e dado d6/d20.
 
-### 3️⃣ Benchmark 3: Nordy.ai (`https://nordy.ai` e `nordy.ai/community/workflows`)
-- **Foco:** Catálogo de Elite de Workflows ComfyUI e IA Generativa.
-- **Ferramentas Catalogadas para Absorção:**
-  - `Face Swap ReActor + InsightFace` *(Já catalogado)*: Troca de rosto sem perda de expressão.
-  - `IDM-VTON Virtual Try-On` *(Já catalogado)*: Troca realista de roupas em modelos humanos para lojas e e-commerce.
-  - `IC-Light Relighting` *(Já catalogado)*: Mudança de iluminação de estúdio e remoção de fundo com integração de luz.
-  - `Flux 2 Dev + UltraSharp 4K Upscale` *(Já catalogado)*: Geração base com upscale unificado in-node em apenas 38s na H100.
-  - `Wan 2.1 Video Generator` *(Já catalogado)*: Geração de vídeo cinematográfico com controle de movimento e câmera.
-  - `LivePortrait Animação Facial` *(Já catalogado)*: Retratos estáticos que ganham vida com vídeo ou áudio guia.
-  - `Fotografia de Produto Comercial` *(Já catalogado)*: Renderização de estúdio e mesa realista para catálogos.
-  - **Soberania Nordy.ai:** Visualização dos nós principais, guia de parâmetros e **download de JSON de API do ComfyUI com 1 clique (Zero Lock-in)**.
+### 3️⃣ Benchmark 3: Nordy.ai (`https://nordy.ai`)
+- **Foco:** Catálogo de Workflows ComfyUI e Soberania de Dados (Zero Lock-in).
+- **Status:** Vitrine interativa de grafos e nós com exportação de JSON de API soberano. Execuções em GPU real serão despachadas futuramente via `V5_APOLLO_API` na frota Modal H100 / RunPod.
+  - `Face Swap ReActor + InsightFace`
+  - `IDM-VTON Virtual Try-On`
+  - `IC-Light Relighting`
+  - `Flux 2 Dev + UltraSharp 4K Upscale`
+  - `Wan 2.1 Video Generator`
+  - `LivePortrait Animação Facial`
+  - `Fotografia de Produto Comercial`
 
 ### 4️⃣ Pilar Criativo: APOLLO La PLATA Ferramentas
-- **Origem:** Pasta local `APOLLO La PLATA Ferramentas/` (`index.html`, `script.js`).
-- **Ferramentas para Migração:**
-  - Refinador de Prompts Cinematográficos.
-  - Gerador de Títulos Virais de Alta Taxa de Clique (CTR).
-  - Prompts Estruturados para Veo 3 / Sora / Kling.
-  - Gerador de Roteiros Curtos (30s a 60s) com Hooks de Retenção.
-  - Gerador de Hashtags Segmentadas por Nicho.
+- **Origem:** Acervo criativo local adaptado para componentes modernos React/Tailwind.
+- **Ferramentas Integradas:**
+  - `Prompt Crafter`: Refinador cinematográfico de prompts com lentes, câmeras e iluminação.
+  - `Gerador de Prompts Veo 3 / Sora / Kling`: Estrutura técnica em blocos com áudio diegético.
+  - `Gerador de Títulos Virais CTR`: Fórmulas de alta retenção com pontuação preditiva.
+  - `Gerador de Roteiros Curtos Virais`: Roteiros de 30s e 60s com Hook, Retenção e CTA.
+  - `Gerador de Descrições SEO`: Descrições estruturadas para YouTube e Redes com capítulos.
+  - `Gerador de Hashtags Segmentadas`: Tags quentes de cauda longa organizadas por nicho.
 
 ---
 
-## 3. Estado Atual da Implementação
+## 3. Arquitetura das Suítes Especializadas (Power Suites)
 
-### 📦 Estrutura de Arquivos
-- **Framework:** Next.js 14.2.35 (App Router, TypeScript).
-- **Estilização:** Tailwind CSS (Paleta Cyber Obsidian com Slate 950 e bordas Slate 800/80).
-- **Ícones:** Lucide React.
-- **QR Code:** `qrcode.react` (Renderizador vetorial SVG e exportador Canvas).
+Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas pesadas, o sistema adota **Power Suites modulares**:
 
-### 🛠️ Ferramentas Ativas na Interface (100% Interativas)
-1. **Contador de Caracteres (`CharacterCounter.tsx`)**: Métricas de texto, tempo de leitura e tempo de fala para V5 Sound.
-2. **Conversor de Maiúsculas & Minúsculas (`CaseConverter.tsx`)**: Conversão para 6 formatos de texto e slug.
-3. **Gerador de QR Code Pix (`PixQrCodeGenerator.tsx`)**: Padrão oficial BACEN EMVCo, Copia e Cola e download PNG.
-4. **Gerador e Validador de CPF / CNPJ (`CpfCnpjTool.tsx`)**: Módulo 11 da Receita Federal com estado de emissão.
-5. **Gerador de Pessoas para Testes QA (`FakePersonGenerator.tsx`)**: Massa de testes completa (nome, CPF válido, RG, CEP, endereço, celular e exportação JSON/CSV).
-6. **Limpador de Linhas & Duplicatas (`LineCleaner.tsx`)**: Deduplicação, trim, ordenação A-Z/Z-A e estatísticas de linhas.
-7. **Gerador de Link do WhatsApp (`WhatsAppLinkGenerator.tsx`)**: Link `wa.me` com mensagem, preview nativo de chat e QR Code.
-8. **Cartão de Crédito Validador & Gerador QA (`CreditCardValidator.tsx`)**: Algoritmo de Luhn (Módulo 10), detecção de bandeira e dados de checkout fictícios.
-9. **Gerador de Senhas Seguras & Entropia (`PasswordGenerator.tsx`)**: Criptografia nativa (`crypto.getRandomValues`), entropia em bits e estimativa de tempo contra força bruta.
-10. **Formatador & Validador de JSON (`JsonFormatter.tsx`)**: Validação sintática em tempo real, indentação 2/4 espaços, minificação e cálculo de bytes salvos.
-11. **Refinador de Prompts Cinematográficos (`PromptCrafter.tsx`)**: Engenharia de prompts com lentes, iluminação, estilos e presets para Flux, Midjourney e Vídeo.
-12. **Gerador de Títulos Virais & CTR (`ViralTitleGenerator.tsx`)**: Fórmulas comprovadas de YouTube, Reels e TikTok com pontuação de CTR e gatilhos mentais.
-13. **Catálogo de Workflows ComfyUI (`ComfyWorkflowModal.tsx`)**: Modal com visualização de nós e download de JSON de API estilo Nordy.ai.
+| Suíte | Arquivo | Abas Integradas |
+| :--- | :--- | :--- |
+| **Brazilian Docs** | `BrazilianDocsSuite.tsx` | CPF, CNPJ, RG, CNH, PIS/PASEP, Título Eleitor, Certidão CNJ |
+| **Vehicles & Banks** | `VehiclesAndBanksSuite.tsx` | Placas Mercosul/Cinza, Validador/Gerador RENAVAM, 6 Contas Bancárias, Empresas B2B |
+| **Math & Utils** | `MathUtilsSuite.tsx` | Porcentagem, Regra de 3, Número por Extenso, Romanos, MMC/MDC, Diferença de Datas |
+| **Text Manipulator** | `TextManipulatorSuite.tsx` | Letras Diferentes, Texto Invertido (Flip), Comparador Diff, Localizar & Substituir, Sem Acentos, Lorem Ipsum |
+| **Crypto & Web** | `CryptoWebSuite.tsx` | Código de Barras (EAN-13/Code 128), QR Code Wi-Fi, Criptografia (Base64/Morse/Binário), Sorteios |
+| **Apollo La Plata** | `ApolloLaPlataSuite.tsx` | Roteiros Virais 30-60s, Prompts Veo 3/Sora, Descrições SEO, Hashtags Segmentadas |
 
 ---
 
-## 4. Diretrizes Arquiteturais & Regras Absolutas
-
-1. **PROIBIÇÃO TOTAL DO PIXDROP:** O PixDrop (`pixdrop.com.br`) opera isoladamente no mercado cinza. Nenhuma menção, link ou referência ao PixDrop deve existir no código do V5 Tools.
-2. **FINES É O MEGAZORD DE OFERTAS:** O Fines/Finders é a plataforma de mineração e divulgação de afiliados. Não criar ferramentas que tentem substituí-lo.
-3. **NÃO TOCAR EM V5 ACADEMY:** A pasta `E:\MEUS PROGRAMAS\V5_APOLLO_SITES\V5_Apollo_Academy` pertence a outro agente.
-4. **DESENVOLVIMENTO LOCAL (PORTA 3009):** Mantenha o projeto rodando localmente sem provisionar Vercel ou Supabase desnecessariamente.
-5. **EXECUÇÃO DE GPU FUTURA:** Quando o usuário quiser apertar "Executar no Cloud" para os workflows ComfyUI, a requisição deve ser enviada para a `V5_APOLLO_API` e não executada localmente no Next.js.
-6. **AUTOR DOS COMMITS:** Sempre assinar commits como:
-   `git -c user.name="Apollo La Plata" -c user.email="v5estudio@hotmail.com" commit -m "..."`
+## 4. MCPs Homologados no Ambiente
+- `comfyui` / `comfy-mcp`: `comfyui-mcp@0.52.206` instalado via npm global.
+- `v5-apollo-edit` / `apollo-memory`: Script de memória RAG com ChromaDB operacional.
+- `webshare-proxy` / `webshare`: Script MCP para proxy rotativo autenticado (`roxingo@gmail.com`).
 
 ---
 
-## 5. Roadmap Priorizado de Implementação
-
-### 🚀 Sprint 1: Absorção 4Devs & Invertexto (100% Client-Side)
-- [x] **Gerador e Validador de CPF / CNPJ (`CpfCnpjTool.tsx`):** Cálculo de dígitos verificadores oficiais, com opção de máscara e validação em tempo real.
-- [x] **Gerador de Pessoas para Testes (`FakePersonGenerator.tsx`):** Gerador de massa de dados fictícios para QA com exportação JSON/CSV.
-- [x] **Gerador de Link do WhatsApp (`WhatsAppLinkGenerator.tsx`):** Criação de link `wa.me/55...` com texto codificado, preview de chat e QR Code.
-- [x] **Limpador de Linhas & Duplicatas (`LineCleaner.tsx`):** Deduplicação, trim, ordenação A-Z e estatísticas.
-- [x] **Validador & Gerador de Cartão de Crédito (`CreditCardValidator.tsx`):** Verificação pelo algoritmo de Luhn (Módulo 10) e cartão visual de testes.
-- [x] **Formatador e Validador de JSON (`JsonFormatter.tsx`):** Indentação, minificação e detecção de erros sintáticos.
-- [x] **Gerador de Senhas Seguras (`PasswordGenerator.tsx`):** Chaves criptográficas de alta entropia.
-- [ ] **Gerador de CEP e Endereço Fictício (`CepAddressGenerator.tsx`):** Logradouros por estado para frete.
-
-### 🤖 Sprint 2: Migração do Acervo APOLLO La PLATA Ferramentas
-- [x] Componente `PromptCrafter.tsx`: Refinador cinematográfico com câmeras, iluminação e suporte a Flux / Midjourney / Sora.
-- [x] Componente `ViralTitleGenerator.tsx`: Ganchos e títulos de alta retenção (CTR) com fórmulas psicológicas e estimativa de score.
-- [ ] Componente `VideoPromptCrafter.tsx`: Prompts para Veo 3 / Sora / Kling com blocos de áudio diegético.
-- [ ] Componente `HashtagGenerator.tsx`: Gerador de tags segmentadas por nicho e volume.
-- [ ] Componente `VideoPromptCrafter.tsx`: Prompts para Veo 3 / Sora / Kling com blocos de áudio diegético.
-- [ ] Componente `HashtagGenerator.tsx`: Gerador de tags segmentadas por nicho e volume.
-
-### ⚡ Sprint 3: Visualizador Avançado de Nós ComfyUI
-- [ ] Renderização dinâmica de grafos com conexões de fios (ReactFlow/SVG) inspirada na interface do Nordy.ai.
+## 5. Próximos Passos
+1. Conectar a futura execução de GPU Modal na `V5_APOLLO_API` quando autorizada pelo Comandante.
+2. Manter monitoramento contínuo via Shadow Logger e Colmeia.
