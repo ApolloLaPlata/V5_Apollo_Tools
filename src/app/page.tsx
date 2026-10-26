@@ -46,6 +46,7 @@ import { AudioVideoAndSocialSuite } from '@/components/tools/AudioVideoAndSocial
 import { DataAndDevFormatsSuite } from '@/components/tools/DataAndDevFormatsSuite';
 import { DesignAndFrontendSuite } from '@/components/tools/DesignAndFrontendSuite';
 import { ProductivityAndTypesSuite } from '@/components/tools/ProductivityAndTypesSuite';
+import { NetworkAndIdentifiersSuite } from '@/components/tools/NetworkAndIdentifiersSuite';
 
 import { 
   Search, 
@@ -560,6 +561,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'productivity-types-suite' && (
               <ProductivityAndTypesSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'network-identifiers-suite' && (
+              <NetworkAndIdentifiersSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

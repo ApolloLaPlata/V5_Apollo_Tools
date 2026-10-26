@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -2172,5 +2172,77 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'productivity-types-suite',
     suiteTab: 'lorem-markdown',
     tags: ['markdown', 'readme', 'api', 'mockdown', 'docs', 'artigo', 'template']
+  },
+  // ==========================================
+  // CATEGORIA: REDE, HEADERS & IDENTIFICADORES (ETAPA 27)
+  // ==========================================
+  {
+    id: 'uuid-nanoid-generator',
+    title: 'Gerador de UUID v7 (Time-Ordered) & Nanoid Criptográfico',
+    description: 'Gere UUIDs v7 ordenados por timestamp para alta performance em bancos de dados, UUID v4 aleatório e Nanoids configuráveis.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Identificadores',
+    icon: 'Fingerprint',
+    badge: 'UUID v7 / Nanoid',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'network-identifiers-suite',
+    suiteTab: 'uuid-nanoid',
+    tags: ['uuid', 'uuid v7', 'nanoid', 'id', 'rfc 9562', 'database', 'b-tree', 'dev']
+  },
+  {
+    id: 'http-headers-inspector',
+    title: 'Inspetor de Headers HTTP & Catálogo RFC 9110 de Status Codes',
+    description: 'Consulte a especificação de status codes HTTP (2xx, 3xx, 4xx, 5xx) e obtenha templates de Security Headers (HSTS, CSP, X-Frame).',
+    category: 'dev-4devs',
+    categoryLabel: 'Rede & Webmaster',
+    icon: 'Globe',
+    badge: 'RFC 9110 & Security',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'network-identifiers-suite',
+    suiteTab: 'http-headers',
+    tags: ['http', 'headers', 'status code', 'rfc 9110', 'csp', 'hsts', 'segurança', 'web']
+  },
+  {
+    id: 'payment-gateway-calc',
+    title: 'Calculadora de Taxas de Gateway de Pagamento (Stripe / MP / Pagar.me)',
+    description: 'Simule e compare recebimentos líquidos e custos de intermediação Pix e Cartão Parcelado entre Stripe, Mercado Pago e Pagar.me.',
+    category: 'invertexto',
+    categoryLabel: 'Finanças & E-commerce',
+    icon: 'CreditCard',
+    badge: 'Stripe & MP & Pagar.me',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'network-identifiers-suite',
+    suiteTab: 'gateway-calc',
+    tags: ['gateway', 'taxas', 'stripe', 'mercado pago', 'pagar.me', 'pix', 'cartao', 'checkout']
+  },
+  {
+    id: 'cron-expression-tester',
+    title: 'Decodificador & Testador Visual de Expressões Cron',
+    description: 'Traduza expressões cron de 5 campos em português claro em tempo real e utilize presets recomendados da Colmeia e DevOps.',
+    category: 'dev-4devs',
+    categoryLabel: 'DevOps & Automação',
+    icon: 'Clock',
+    badge: 'Colmeia Cron',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'network-identifiers-suite',
+    suiteTab: 'cron-tester',
+    tags: ['cron', 'agendador', 'devops', 'crontab', 'colmeia', 'schedule', 'timer']
+  },
+  {
+    id: 'dns-record-simulator',
+    title: 'Simulador & Gerador de Zona DNS (A, CNAME, MX, SPF, DMARC)',
+    description: 'Gere arquivos de zona DNS no formato padrão BIND e Cloudflare com registros A, CNAME, MX Google e autenticações SPF e DMARC.',
+    category: 'dev-4devs',
+    categoryLabel: 'Infra & Redes',
+    icon: 'Server',
+    badge: 'BIND / Cloudflare',
+    isInteractive: true,
+    suiteTarget: 'network-identifiers-suite',
+    suiteTab: 'dns-records',
+    tags: ['dns', 'bind', 'cloudflare', 'spf', 'dmarc', 'mx', 'cname', 'dominio', 'redes']
   }
 ];
