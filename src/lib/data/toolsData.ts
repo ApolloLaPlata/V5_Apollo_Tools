@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -4243,5 +4243,75 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'dependencies-sbom-suite',
     suiteTab: 'dockerfile-optimizer',
     tags: ['dockerfile', 'multi stage build', 'otimizacao docker', 'docker cache', 'nextjs docker', 'alpine container']
+  },
+  {
+    id: 'qps-concurrency-calculator-tool',
+    title: 'Calculadora de QPS, RPS & Concorrência (Lei de Little)',
+    description: 'Estime conexões simultâneas ativas e workers necessários (Node.js, Go, Python Gunicorn) com base em taxa de requisições por segundo e latência p99.',
+    category: 'dev-4devs',
+    categoryLabel: 'Performance & Infra',
+    icon: 'Activity',
+    badge: 'QPS & Little Law',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'server-benchmarks-suite',
+    suiteTab: 'qps-calc',
+    tags: ['qps', 'rps', 'concorrencia', 'lei de little', 'latencia p99', 'gunicorn workers', 'capacidade servidor']
+  },
+  {
+    id: 'network-throughput-estimator-tool',
+    title: 'Estimador de Throughput de Rede & Bandwidth-Delay Product (BDP)',
+    description: 'Calcule o tempo de transferência de dados (MB a TB) em links de 50Mbps a 40Gbps, estimando o BDP e o tamanho ideal da janela de recepção TCP (tcp_rmem).',
+    category: 'dev-4devs',
+    categoryLabel: 'Redes & Transferência',
+    icon: 'Network',
+    badge: 'Throughput & BDP',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'server-benchmarks-suite',
+    suiteTab: 'network-transfer',
+    tags: ['throughput', 'bdp', 'transferencia rede', 'janela tcp', 'bandwidth delay product', 'tempo download']
+  },
+  {
+    id: 'cloud-instance-cost-comparator-tool',
+    title: 'Comparador de Custos Cloud & Frotas GPU H100 (AWS vs Modal)',
+    description: 'Simule despesas mensais de servidores de computação e GPUs: compare instâncias AWS EC2 On-Demand/Spot contra arquitetura serverless Modal H100 SXM.',
+    category: 'dev-4devs',
+    categoryLabel: 'Cloud & FinOps',
+    icon: 'DollarSign',
+    badge: 'Cloud & GPU FinOps',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'server-benchmarks-suite',
+    suiteTab: 'cloud-cost',
+    tags: ['custo nuvem', 'finops', 'aws ec2', 'modal h100', 'gpu spot', 'custo inferencia']
+  },
+  {
+    id: 'database-connection-pool-dimensioner-tool',
+    title: 'Dimensionador de Connection Pool para PostgreSQL & MySQL',
+    description: 'Aplique a fórmula canônica HikariCP ((CPU * 2) + Spindle) para dimensionar pools por instância de aplicação e evitar contenção por context switching.',
+    category: 'dev-4devs',
+    categoryLabel: 'Banco de Dados & Pool',
+    icon: 'Database',
+    badge: 'DB Pool Sizing',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'server-benchmarks-suite',
+    suiteTab: 'db-pool',
+    tags: ['connection pool', 'hikaricp', 'pgbouncer', 'postgres pool', 'max connections', 'context switching']
+  },
+  {
+    id: 'sla-uptime-downtime-calculator-tool',
+    title: 'Calculadora de Disponibilidade SLA & Janela de Downtime',
+    description: 'Converta percentuais de uptime (99% a 99.999% 5-nines) em tempo máximo tolerável de inatividade por dia, semana, mês e ano, com simulação de multas contratuais.',
+    category: 'dev-4devs',
+    categoryLabel: 'Disponibilidade & SRE',
+    icon: 'Clock',
+    badge: 'SLA Downtime Calc',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'server-benchmarks-suite',
+    suiteTab: 'sla-downtime',
+    tags: ['sla', 'uptime', 'downtime', 'disponibilidade', 'five nines', 'sre', 'credito de servico']
   }
 ];

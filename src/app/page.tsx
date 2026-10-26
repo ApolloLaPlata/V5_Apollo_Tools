@@ -75,6 +75,7 @@ import { NetworkDnsDiagnosticsSuite } from '@/components/tools/NetworkDnsDiagnos
 import { BinaryBuffersAndHexDumpSuite } from '@/components/tools/BinaryBuffersAndHexDumpSuite';
 import { ApiDocsOpenApiMockSuite } from '@/components/tools/ApiDocsOpenApiMockSuite';
 import { DependenciesSbomLicensingSuite } from '@/components/tools/DependenciesSbomLicensingSuite';
+import { ServerBenchmarksAndMetricsSuite } from '@/components/tools/ServerBenchmarksAndMetricsSuite';
 
 import { 
   Search, 
@@ -700,6 +701,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'dependencies-sbom-suite' && (
               <DependenciesSbomLicensingSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'server-benchmarks-suite' && (
+              <ServerBenchmarksAndMetricsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
