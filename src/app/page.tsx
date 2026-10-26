@@ -64,6 +64,7 @@ import { DevOpsAndGitSuite } from '@/components/tools/DevOpsAndGitSuite';
 import { CryptoHashAndChecksumSuite } from '@/components/tools/CryptoHashAndChecksumSuite';
 import { TypographyAndDesignSuite } from '@/components/tools/TypographyAndDesignSuite';
 import { InvestmentAndFinanceBrasilSuite } from '@/components/tools/InvestmentAndFinanceBrasilSuite';
+import { WebSecurityAndDiagnosticsSuite } from '@/components/tools/WebSecurityAndDiagnosticsSuite';
 
 import { 
   Search, 
@@ -656,6 +657,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'investment-finance-suite' && (
               <InvestmentAndFinanceBrasilSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'web-security-diag-suite' && (
+              <WebSecurityAndDiagnosticsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

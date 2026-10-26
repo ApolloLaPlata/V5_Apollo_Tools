@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -3473,5 +3473,75 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'investment-finance-suite',
     suiteTab: 'financiamento-cet',
     tags: ['financiamento de veiculos', 'custo efetivo total', 'cet', 'tabela price', 'juros financiamento', 'simulador de parcelas']
+  },
+  {
+    id: 'ipv6-subnet-cidr-calculator',
+    title: 'Calculadora e Analisador de Subnet IPv6 & Notação CIDR',
+    description: 'Expanda endereços IPv6 abreviados, analise classificação IANA (Global Unicast, ULA, Link-Local), calcule primeiro/último IP da sub-rede e total de endereços.',
+    category: 'dev-4devs',
+    categoryLabel: 'Redes & Infraestrutura',
+    icon: 'Network',
+    badge: 'IPv6 RFC 5952 / 4291',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-security-diag-suite',
+    suiteTab: 'subnet-ipv6',
+    tags: ['ipv6', 'subnet ipv6', 'cidr ipv6', 'prefixo ipv6', 'redes', 'ip expandido', 'iana']
+  },
+  {
+    id: 'ssl-tls-x509-certificate-inspector',
+    title: 'Inspecionador e Decodificador de Certificados SSL/TLS X.509',
+    description: 'Decodifique certificados PEM/ASN.1 no navegador: Common Name, Emissor (CA), dias até expiração, algoritmo de assinatura (RSA/ECDSA) e domínios alternativos SAN.',
+    category: 'dev-4devs',
+    categoryLabel: 'Segurança & Pentest',
+    icon: 'Lock',
+    badge: 'X.509 ASN.1 PEM',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-security-diag-suite',
+    suiteTab: 'ssl-cert',
+    tags: ['ssl', 'tls', 'certificado x509', 'pem inspector', 'lets encrypt', 'seguranca web', 'san domains']
+  },
+  {
+    id: 'cors-preflight-headers-analyzer',
+    title: 'Analisador & Gerador de Headers CORS / Preflight HTTP',
+    description: 'Simule requisições preflight OPTIONS, configure Access-Control-Allow-Origin com segurança, detecte conflito de credenciais com wildcard (*) e gere código para Next.js, Express, Nginx e FastAPI.',
+    category: 'dev-4devs',
+    categoryLabel: 'Segurança Web & APIs',
+    icon: 'Globe',
+    badge: 'CORS Preflight RFC',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-security-diag-suite',
+    suiteTab: 'cors-analyzer',
+    tags: ['cors', 'preflight options', 'access control allow origin', 'headers http', 'nextjs cors', 'nginx cors']
+  },
+  {
+    id: 'sri-hash-generator-subresource',
+    title: 'Gerador de Subresource Integrity (SRI) Hash para CDNs',
+    description: 'Calcule hashes criptográficos SHA-384, SHA-512 e SHA-256 via Web Crypto API nativa e gere tags HTML de script e stylesheet à prova de ataques de supply chain.',
+    category: 'dev-4devs',
+    categoryLabel: 'Segurança & Frontend',
+    icon: 'FileCode',
+    badge: 'SRI SHA-384 / 512',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-security-diag-suite',
+    suiteTab: 'sri-hash',
+    tags: ['sri', 'subresource integrity', 'sha384', 'sha512', 'cdn security', 'script integrity', 'supply chain']
+  },
+  {
+    id: 'rot13-caesar-vigenere-cipher',
+    title: 'Decodificador e Cifrador de Cifras Clássicas (ROT13, César & Vigenère)',
+    description: 'Criptografe e decifre mensagens com cifras clássicas de substituição: ROT13 canônico, Cifra de César com análise de força bruta em 25 rotações e Cifra de Vigenère polialfabética.',
+    category: 'invertexto',
+    categoryLabel: 'Criptografia & Cifras',
+    icon: 'Key',
+    badge: 'ROT13 & Vigenère',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-security-diag-suite',
+    suiteTab: 'rot13-vigenere',
+    tags: ['rot13', 'cifra de cesar', 'vigenere', 'criptografia classica', 'forca bruta', 'decifrador']
   }
 ];
