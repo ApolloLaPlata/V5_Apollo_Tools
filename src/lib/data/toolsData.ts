@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -2964,5 +2964,79 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'api-network-suite',
     suiteTab: 'ports-catalog',
     tags: ['portas tcp', 'udp', 'iana', 'http', 'https', 'ssh', 'mysql', 'postgres', 'redis', 'redes']
+  },
+  // ==========================================
+  // ETAPA 38: O MARCO HISTÓRICO DOS 200 UTILITÁRIOS
+  // SUÍTE DE DOCUMENTOS OPEN SOURCE, QR CODE & FORMATOS WEB
+  // ==========================================
+  {
+    id: 'text-file-extractor-sanitizer',
+    title: 'Extrator & Sanitizador de Texto de Arquivos (TXT, MD, Logs)',
+    description: 'Carregue ou cole arquivos de texto com extração de métricas completas (caracteres, palavras, parágrafos), frequência léxica e sanitização de espaços e linhas.',
+    category: 'invertexto',
+    categoryLabel: 'Documentos & Texto',
+    icon: 'FileText',
+    badge: 'Marco 200 Tools',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'document-opensource-suite',
+    suiteTab: 'text-extractor',
+    tags: ['extrator texto', 'leitor arquivo', 'sanitizador', 'limpar espacos', 'frequencia palavras', 'contagem']
+  },
+  {
+    id: 'custom-vector-qrcode-designer',
+    title: 'Designer Soberano de QR Code Customizado (SVG / PNG)',
+    description: 'Crie QR Codes personalizados com cores HEX para módulos e fundo, controle de margens quiet zone, níveis de correção de erro L/M/Q/H e exportação SVG vetorial.',
+    category: 'invertexto',
+    categoryLabel: 'Design & QR Code',
+    icon: 'QrCode',
+    badge: 'SVG & PNG Alta Definição',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'document-opensource-suite',
+    suiteTab: 'custom-qrcode',
+    tags: ['qr code', 'qrcode customizado', 'svg', 'png 1k', 'cores personalizadas', 'ecc', 'vetorial']
+  },
+  {
+    id: 'json-schema-openapi-validator',
+    title: 'Validador JSON Schema & Especificação OpenAPI 3.0',
+    description: 'Analise e valide estruturas JSON Schema (Draft 2020-12) e OpenAPI com diagnóstico sintático e geração automática de Mock Data de exemplo.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Schemas',
+    icon: 'FileCode',
+    badge: 'OpenAPI & JSON Schema',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'document-opensource-suite',
+    suiteTab: 'openapi-schema',
+    tags: ['json schema', 'openapi', 'swagger', 'mock data', 'validacao', 'tipagem', 'api schema']
+  },
+  {
+    id: 'gzip-brotli-compression-calculator',
+    title: 'Calculadora de Compressão de Dados & Economia de Banda',
+    description: 'Simule a compressão nativa Gzip e Deflate via Web Streams API com estimativa Brotli e projeção de economia de banda para 10k, 100k e 1M de requisições.',
+    category: 'dev-4devs',
+    categoryLabel: 'Web Perf & Dev',
+    icon: 'Zap',
+    badge: 'Web Streams API',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'document-opensource-suite',
+    suiteTab: 'compression-calc',
+    tags: ['gzip', 'brotli', 'deflate', 'compressao', 'performance', 'economia de banda', 'web streams']
+  },
+  {
+    id: 'spdx-opensource-license-generator',
+    title: 'Gerador de Licenças Open Source SPDX (MIT, Apache, GPL)',
+    description: 'Gere termos de licença oficiais padronizados pela SPDX (MIT, Apache 2.0, GNU GPL v3, BSD-3-Clause, ISC, Unlicense) com preenchimento de autor, ano e download do arquivo LICENSE.',
+    category: 'dev-4devs',
+    categoryLabel: 'Open Source & Legal',
+    icon: 'Award',
+    badge: 'SPDX Standard',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'document-opensource-suite',
+    suiteTab: 'opensource-license',
+    tags: ['licenca open source', 'mit', 'apache 2.0', 'gpl v3', 'bsd', 'spdx', 'github license', 'legal']
   }
 ];

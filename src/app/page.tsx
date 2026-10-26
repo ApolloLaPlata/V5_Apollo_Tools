@@ -57,6 +57,7 @@ import { TaxAndFiscalSuite } from '@/components/tools/TaxAndFiscalSuite';
 import { AccessibilityAndWebPerfSuite } from '@/components/tools/AccessibilityAndWebPerfSuite';
 import { RegexAndLexicalSuite } from '@/components/tools/RegexAndLexicalSuite';
 import { ApiAndNetworkTestingSuite } from '@/components/tools/ApiAndNetworkTestingSuite';
+import { DocumentAndOpenSourceSuite } from '@/components/tools/DocumentAndOpenSourceSuite';
 
 import { 
   Search, 
@@ -628,6 +629,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'api-network-suite' && (
               <ApiAndNetworkTestingSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'document-opensource-suite' && (
+              <DocumentAndOpenSourceSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
