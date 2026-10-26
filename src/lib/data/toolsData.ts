@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -3111,5 +3111,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'media-audio-studio-suite',
     suiteTab: 'favicon-pack',
     tags: ['favicon', 'apple touch icon', 'pwa icon', '16x16', '32x32', '192x192', 'gerador favicon']
+  },
+  // ==========================================
+  // ETAPA 40: SUÍTE DE E-MAILS, PROTOCOLOS SMTP & COMUNICAÇÃO (210 FERRAMENTAS)
+  // ==========================================
+  {
+    id: 'responsive-email-html-previewer',
+    title: 'Visualizador & Testador de HTML de E-mails Responsivos',
+    description: 'Renderize templates de e-mail em iframe sandbox com alternância imediata de viewports (Desktop 100%, Tablet 480px, Mobile 360px) e cálculo de tamanho em KB.',
+    category: 'dev-4devs',
+    categoryLabel: 'E-mail & HTML',
+    icon: 'Code',
+    badge: 'Iframe Sandbox',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'email-transactional-suite',
+    suiteTab: 'html-previewer',
+    tags: ['email html', 'preview email', 'responsivo', 'newsletter', 'iframe', 'template email']
+  },
+  {
+    id: 'mail-protocols-smtp-imap-ports',
+    title: 'Diagnóstico de Portas & Protocolos (SMTP, IMAP, POP3)',
+    description: 'Guia de referência e diagnóstico das portas de correio eletrônico (25, 465, 587, 993, 995) com especificações de criptografia SSL/TLS e STARTTLS.',
+    category: 'dev-4devs',
+    categoryLabel: 'Infra & E-mail',
+    icon: 'Server',
+    badge: 'SMTP / IMAP / POP3',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'email-transactional-suite',
+    suiteTab: 'smtp-ports',
+    tags: ['smtp', 'imap', 'pop3', 'porta 587', 'porta 465', 'starttls', 'servidor email']
+  },
+  {
+    id: 'spf-dkim-dmarc-dns-generator',
+    title: 'Gerador de Registros DNS de E-mail (SPF, DKIM, DMARC)',
+    description: 'Crie registros TXT de autenticação e proteção anti-spoofing para Google Workspace, Microsoft 365, SendGrid e servidores próprios com política DMARC p=reject.',
+    category: 'dev-4devs',
+    categoryLabel: 'Segurança & DNS',
+    icon: 'ShieldCheck',
+    badge: 'SPF / DKIM / DMARC',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'email-transactional-suite',
+    suiteTab: 'dns-auth',
+    tags: ['spf', 'dkim', 'dmarc', 'dns txt', 'entregabilidade', 'anti spoofing', 'email auth']
+  },
+  {
+    id: 'email-subject-spam-detector',
+    title: 'Testador de Assuntos de E-mail & Detector de Spam Words',
+    description: 'Calcule o score de entregabilidade do seu assunto (0 a 100), largura em pixels para evitar cortes em smartphones e detecte termos gatilho de filtros anti-spam.',
+    category: 'invertexto',
+    categoryLabel: 'Marketing & E-mail',
+    icon: 'AlertTriangle',
+    badge: 'Score 0-100 & Spam Words',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'email-transactional-suite',
+    suiteTab: 'subject-tester',
+    tags: ['assunto email', 'spam words', 'score entregabilidade', 'subject line', 'marketing', 'email']
+  },
+  {
+    id: 'rfc6068-mailto-link-builder',
+    title: 'Gerador Avançado de Links mailto: (RFC 6068)',
+    description: 'Construa links mailto: profissionais com múltiplos destinatários (To, CC, BCC), assunto e corpo pré-formatados com codificação segura de caracteres e snippet HTML.',
+    category: 'invertexto',
+    categoryLabel: 'Web & Links',
+    icon: 'Link2',
+    badge: 'RFC 6068 Padrão',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'email-transactional-suite',
+    suiteTab: 'mailto-builder',
+    tags: ['mailto', 'link email', 'rfc 6068', 'gerador mailto', 'cc bcc', 'html mailto']
   }
 ];
