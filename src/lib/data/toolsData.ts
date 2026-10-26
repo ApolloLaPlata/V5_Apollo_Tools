@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -3403,5 +3403,75 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'typography-design-suite',
     suiteTab: 'color-harmonies',
     tags: ['harmonia de cores', 'circulo cromatico', 'paleta complementar', 'analoga', 'triadica', 'teoria das cores']
+  },
+  {
+    id: 'cdi-lci-lca-comparison-calc',
+    title: 'Comparador de Investimentos CDB vs LCI / LCA',
+    description: 'Compare a rentabilidade líquida real entre CDB tributado (com alíquota regressiva da RFB de 22,5% a 15%) e LCI/LCA isento de Imposto de Renda.',
+    category: 'invertexto',
+    categoryLabel: 'Finanças & Renda Fixa',
+    icon: 'Landmark',
+    badge: 'IR Regressivo RFB',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'investment-finance-suite',
+    suiteTab: 'cdi-lci-lca',
+    tags: ['cdb vs lci', 'comparador cdi', 'lca', 'renda fixa', 'imposto de renda regressivo', 'investimentos brasil']
+  },
+  {
+    id: 'b3-tesouro-direto-simulator',
+    title: 'Simulador do Tesouro Direto B3 (Selic, Prefixado, IPCA+)',
+    description: 'Simule o rendimento acumulado de aportes mensais no Tesouro Direto com desconto de custódia B3 de 0,20% a.a. e taxa de administração.',
+    category: 'invertexto',
+    categoryLabel: 'Tesouro Direto & B3',
+    icon: 'TrendingUp',
+    badge: 'Custódia B3 0.20%',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'investment-finance-suite',
+    suiteTab: 'tesouro-direto',
+    tags: ['tesouro direto', 'tesouro selic', 'tesouro prefixado', 'tesouro ipca', 'juros compostos', 'renda fixa b3']
+  },
+  {
+    id: 'ipca-inflation-time-corrector',
+    title: 'Corretor de Inflação IPCA Histórica no Tempo',
+    description: 'Calcule o valor corrigido pelo IPCA e a perda de poder de compra ao longo dos anos para dimensionar a desvalorização monetária.',
+    category: 'invertexto',
+    categoryLabel: 'Economia & Poder de Compra',
+    icon: 'PiggyBank',
+    badge: 'Poder de Compra',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'investment-finance-suite',
+    suiteTab: 'inflation-ipca',
+    tags: ['ipca', 'inflacao historica', 'poder de compra', 'ibge', 'correcao monetaria', 'desvalorizacao']
+  },
+  {
+    id: 'clt-net-salary-2026-calculator',
+    title: 'Calculadora de Salário Líquido CLT 2026',
+    description: 'Calcule o holerite líquido com deduções progressivas de INSS por faixas salariais, tabela progressiva do IRRF e dedução por dependentes.',
+    category: 'invertexto',
+    categoryLabel: 'Trabalho & CLT',
+    icon: 'Briefcase',
+    badge: 'Tabela INSS/IRRF 2026',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'investment-finance-suite',
+    suiteTab: 'salario-liquido',
+    tags: ['salario liquido clt', 'calculo inss', 'irrf', 'tabela progressiva', 'holerite', 'descontos folha']
+  },
+  {
+    id: 'vehicle-financing-cet-calculator',
+    title: 'Calculadora de Financiamento de Veículos & CET (Tabela Price)',
+    description: 'Simule parcelas fixas pela Tabela Price, Custo Efetivo Total (CET), amortização acumulada e comparativo de juros totais pagos vs valor financiado.',
+    category: 'invertexto',
+    categoryLabel: 'Crédito & Financiamentos',
+    icon: 'Car',
+    badge: 'Tabela Price & CET',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'investment-finance-suite',
+    suiteTab: 'financiamento-cet',
+    tags: ['financiamento de veiculos', 'custo efetivo total', 'cet', 'tabela price', 'juros financiamento', 'simulador de parcelas']
   }
 ];

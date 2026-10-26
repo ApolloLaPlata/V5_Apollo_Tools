@@ -63,6 +63,7 @@ import { EmailAndTransactionalSuite } from '@/components/tools/EmailAndTransacti
 import { DevOpsAndGitSuite } from '@/components/tools/DevOpsAndGitSuite';
 import { CryptoHashAndChecksumSuite } from '@/components/tools/CryptoHashAndChecksumSuite';
 import { TypographyAndDesignSuite } from '@/components/tools/TypographyAndDesignSuite';
+import { InvestmentAndFinanceBrasilSuite } from '@/components/tools/InvestmentAndFinanceBrasilSuite';
 
 import { 
   Search, 
@@ -652,6 +653,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'typography-design-suite' && (
               <TypographyAndDesignSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'investment-finance-suite' && (
+              <InvestmentAndFinanceBrasilSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
