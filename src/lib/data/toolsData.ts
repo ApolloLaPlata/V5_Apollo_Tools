@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -2821,5 +2821,77 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'accessibility-perf-suite',
     suiteTab: 'csp-builder',
     tags: ['csp', 'content security policy', 'security headers', 'hsts', 'nginx', 'xss', 'clickjacking']
+  },
+  // ==========================================
+  // ETAPA 36: SUÍTE DE REGEX AVANÇADO, TOKENIZAÇÃO DE IA & MANIPULAÇÃO LEXICAL
+  // ==========================================
+  {
+    id: 'regex-lookaround-tester',
+    title: 'Testador Visual de Regex com Lookaround & Grupos',
+    description: 'Teste expressões regulares com suporte nativo a lookahead, lookbehind, grupos de captura, flags e biblioteca de padrões prontos.',
+    category: 'dev-4devs',
+    categoryLabel: 'Regex & Dev',
+    icon: 'Code',
+    badge: 'Lookaround & Grupos',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'regex-lexical-suite',
+    suiteTab: 'regex-lookaround',
+    tags: ['regex', 'regular expression', 'lookahead', 'lookbehind', 'grupos', 'padroes', 'qa']
+  },
+  {
+    id: 'ai-token-cost-counter',
+    title: 'Contador de Tokens de IA & Estimador de Custos',
+    description: 'Calcule a quantidade de tokens para OpenAI GPT-4o, Claude 3.5, Gemini 1.5 e Llama 3 com estimativa de custo por milhão de tokens.',
+    category: 'prompts',
+    categoryLabel: 'IA & Engenharia de Prompt',
+    icon: 'Cpu',
+    badge: 'OpenAI / Claude / Gemini',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'regex-lexical-suite',
+    suiteTab: 'ai-token-counter',
+    tags: ['tokens', 'llm', 'gpt4o', 'claude', 'gemini', 'custo api', 'contagem tokens']
+  },
+  {
+    id: 'naming-case-converter-tool',
+    title: 'Conversor de Nomenclatura (camelCase, snake_case, etc)',
+    description: 'Converta variáveis instantaneamente para camelCase, PascalCase, snake_case, kebab-case, SCREAMING_SNAKE e dot.case.',
+    category: 'dev-4devs',
+    categoryLabel: 'Código & Produtividade',
+    icon: 'Layers',
+    badge: '8 Convenções',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'regex-lexical-suite',
+    suiteTab: 'naming-case-converter',
+    tags: ['camelcase', 'snake_case', 'kebab-case', 'pascalcase', 'variaveis', 'codigo']
+  },
+  {
+    id: 'lgpd-data-masker-tool',
+    title: 'Anonimizador & Mascarador de Dados LGPD / Logs',
+    description: 'Sanitize logs e textos sensíveis com mascaramento automático de CPF, e-mails, números de cartão de crédito, telefones e IPs.',
+    category: 'dev-4devs',
+    categoryLabel: 'Segurança & LGPD',
+    icon: 'ShieldCheck',
+    badge: 'LGPD & GDPR',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'regex-lexical-suite',
+    suiteTab: 'lgpd-data-masker',
+    tags: ['lgpd', 'mascaramento', 'anonimizacao', 'logs', 'dados sensiveis', 'cpf', 'seguranca']
+  },
+  {
+    id: 'hidden-char-detector-tool',
+    title: 'Detector de Caracteres Ocultos (Zero-Width Space)',
+    description: 'Detecte e higienize caracteres invisíveis no código como Zero-Width Space (\\u200B), BOM, NBSP e caracteres de controle bidirecional maliciosos.',
+    category: 'dev-4devs',
+    categoryLabel: 'Texto & Diagnóstico',
+    icon: 'EyeOff',
+    badge: 'Detector Zero-Width',
+    isInteractive: true,
+    suiteTarget: 'regex-lexical-suite',
+    suiteTab: 'hidden-char-detector',
+    tags: ['zero width', 'caracteres invisiveis', 'bom', 'nbsp', 'limpador', 'unicode', 'bugs']
   }
 ];

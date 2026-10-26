@@ -55,6 +55,7 @@ import { AcademicAndStudySuite } from '@/components/tools/AcademicAndStudySuite'
 import { LegalDocumentsA4Suite } from '@/components/tools/LegalDocumentsA4Suite';
 import { TaxAndFiscalSuite } from '@/components/tools/TaxAndFiscalSuite';
 import { AccessibilityAndWebPerfSuite } from '@/components/tools/AccessibilityAndWebPerfSuite';
+import { RegexAndLexicalSuite } from '@/components/tools/RegexAndLexicalSuite';
 
 import { 
   Search, 
@@ -174,6 +175,7 @@ import {
   AlertTriangle,
   Truck,
   Gauge,
+  EyeOff,
   X
 } from 'lucide-react';
 
@@ -285,7 +287,8 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Home,
   AlertTriangle,
   Truck,
-  Gauge
+  Gauge,
+  EyeOff
 };
 
 export default function ApolloToolsPage() {
@@ -616,6 +619,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'accessibility-perf-suite' && (
               <AccessibilityAndWebPerfSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'regex-lexical-suite' && (
+              <RegexAndLexicalSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
