@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -2605,5 +2605,77 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'academic-study-suite',
     suiteTab: 'poetic-meter',
     tags: ['poesia', 'metrica', 'escasao', 'silabas poeticas', 'decassilabo', 'redondilha', 'versos']
+  },
+  // ==========================================
+  // ETAPA 33: SUÍTE DE DOCUMENTOS JURÍDICOS, CARTORÁRIOS & NEGÓCIOS A4
+  // ==========================================
+  {
+    id: 'power-of-attorney-generator',
+    title: 'Gerador de Procuração Particular A4',
+    description: 'Elabore procurações particulares completas com poderes amplos ou específicos (bancos, DETRAN, cartórios), local/data e folha A4 pronta para impressão.',
+    category: 'dev-4devs',
+    categoryLabel: 'Documentos & Cartório',
+    icon: 'UserCheck',
+    badge: 'Impressão A4',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'legal-documents-a4-suite',
+    suiteTab: 'power-of-attorney',
+    tags: ['procuracao', 'procuracao particular', 'cartorio', 'poderes', 'advogado', 'documentos', 'a4']
+  },
+  {
+    id: 'rental-contract-generator',
+    title: 'Minuta de Contrato de Locação Residencial (Lei 8.245/91)',
+    description: 'Gere minutas de contrato de aluguel residencial com prazos, caução garantia, índice de reajuste, vistoria e cláusulas da Lei do Inquilinato.',
+    category: 'dev-4devs',
+    categoryLabel: 'Imobiliário & Contratos',
+    icon: 'Home',
+    badge: 'Lei do Inquilinato',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'legal-documents-a4-suite',
+    suiteTab: 'rental-contract',
+    tags: ['contrato de aluguel', 'locacao', 'inquilinato', 'imobiliaria', 'caucao', 'lei 8245', 'residencia']
+  },
+  {
+    id: 'extrajudicial-notice-generator',
+    title: 'Gerador de Notificação Extrajudicial A4',
+    description: 'Redija notificações extrajudiciais formais para cobrança amigável de débitos ou desocupação de imóvel com prazo fatal e advertência jurídica.',
+    category: 'dev-4devs',
+    categoryLabel: 'Jurídico & Notificações',
+    icon: 'AlertTriangle',
+    badge: 'Advertência Legal',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'legal-documents-a4-suite',
+    suiteTab: 'extrajudicial-notice',
+    tags: ['notificacao extrajudicial', 'cobranca', 'despejo', 'mora', 'debitos', 'prazo legal']
+  },
+  {
+    id: 'residence-poverty-declaration',
+    title: 'Declaração de Residência & Hipossuficiência A4',
+    description: 'Declaração formal de residência (Lei 7.115/83) e Declaração de Pobreza para gratuidade de justiça (Art. 98 CPC) com advertência do art. 299 CP.',
+    category: 'dev-4devs',
+    categoryLabel: 'Declarações & Certidões',
+    icon: 'FileText',
+    badge: 'Lei 7.115/83 & CPC',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'legal-documents-a4-suite',
+    suiteTab: 'residence-declaration',
+    tags: ['declaracao de residencia', 'justica gratuita', 'hipossuficiencia', 'pobreza', 'cpc', 'lei 7115']
+  },
+  {
+    id: 'keys-handover-receipt',
+    title: 'Termo de Entrega de Chaves & Quitação Locatícia',
+    description: 'Termo de devolução de chaves e vistoria final com quitação recíproca de débitos locatícios e assinatura de testemunhas.',
+    category: 'dev-4devs',
+    categoryLabel: 'Imobiliário & Termos',
+    icon: 'Key',
+    badge: 'Quitação Recíproca',
+    isInteractive: true,
+    suiteTarget: 'legal-documents-a4-suite',
+    suiteTab: 'receipt-keys-handover',
+    tags: ['entrega de chaves', 'quitacao', 'vistoria', 'desocupacao', 'termo', 'aluguel']
   }
 ];

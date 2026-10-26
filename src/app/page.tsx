@@ -52,6 +52,7 @@ import { WebAssetsAndDiagnosticsSuite } from '@/components/tools/WebAssetsAndDia
 import { AiPromptAndViralSuite } from '@/components/tools/AiPromptAndViralSuite';
 import { EcommerceTrafficAndConversionSuite } from '@/components/tools/EcommerceTrafficAndConversionSuite';
 import { AcademicAndStudySuite } from '@/components/tools/AcademicAndStudySuite';
+import { LegalDocumentsA4Suite } from '@/components/tools/LegalDocumentsA4Suite';
 
 import { 
   Search, 
@@ -167,6 +168,8 @@ import {
   Tag,
   GraduationCap,
   Feather,
+  Home,
+  AlertTriangle,
   X
 } from 'lucide-react';
 
@@ -274,7 +277,9 @@ const ICON_MAP: Record<string, React.ElementType> = {
   UserCheck,
   Tag,
   GraduationCap,
-  Feather
+  Feather,
+  Home,
+  AlertTriangle
 };
 
 export default function ApolloToolsPage() {
@@ -596,6 +601,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'academic-study-suite' && (
               <AcademicAndStudySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'legal-documents-a4-suite' && (
+              <LegalDocumentsA4Suite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
