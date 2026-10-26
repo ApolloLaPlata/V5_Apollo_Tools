@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 26/10/2026 · **Status:** Operacional (Build 100% Green · 245 Ferramentas Ativas · 47 Etapas Concluídas)
+**Data de Atualização:** 26/10/2026 · **Status:** Operacional (Build 100% Green · 250 Ferramentas Ativas · 48 Etapas Concluídas)
 
 ---
 
@@ -148,16 +148,17 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **Web Security & Pentest** | `WebSecurityAndDiagnosticsSuite.tsx` | Subnet IPv6 & CIDR RFC 5952/4291, Inspecionador SSL/TLS X.509 ASN.1 PEM, Analisador CORS Preflight HTTP, SRI Hash SHA-384/512 (Web Crypto), Cifras Clássicas ROT13, César (25 rotações) & Vigenère |
 | **Vector & Pixel Graphics** | `VectorAndPixelOptimizationSuite.tsx` | Otimizador & Sanitizador SVG (redução decimal), SVG para CSS Data URI URL-encoded, Pixel Art Canvas (16x16 / 32x32 com exportação 512px), Mesh Gradients CSS Orgânicos, Cortador de Proporções Social |
 | **Performance & Core Web Vitals** | `PerformanceAssetsAndVitalsSuite.tsx` | Estimador WebP/AVIF (economia GB/CDN), Critical CSS Inliner (FCP/LCP speedup), Resource Hints (Preload/Preconnect), font-display & CLS Override, Performance Budget (3G/4G/5G) |
+| **Terminal & SysAdmin** | `TerminalAndSysAdminSuite.tsx` | Calculadora Chmod (Octal/Simbólico 755/644/600), Decodificador Cron em Português Claro, Gerador Systemd (.service), Liberador de Portas & Kill Process, SSH Keygen & Config |
 
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário
 - **Sistema de Favoritos Local:** Usuário pode favoritar ferramentas com 1 clique (persistência no `localStorage`).
 - **Histórico Recente de Uso:** Barra de acesso rápido às últimas ferramentas utilizadas com persistência local.
-- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 245 ferramentas.
+- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 250 ferramentas.
 - **Deep-linking Universal:** Compartilhamento direto via URL (`?tool=id`) com cópia em 1 clique e ativação automática com scroll suave.
 - **Filtro Rápido:** Aba instantânea para ferramentas favoritadas na barra de categorias.
-- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 245 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
+- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 250 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
 - **Suporte a PWA Standalone:** Arquivo `manifest.json` com paleta Cyber Obsidian (`#020617` / `#06b6d4`) para instalação como app nativo no Desktop e Mobile.
 
 ---
