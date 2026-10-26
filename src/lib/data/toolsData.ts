@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -3330,5 +3330,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'crypto-hash-suite',
     suiteTab: 'bin-lookup',
     tags: ['bin lookup', 'iin', 'bandeira cartao', 'visa mastercard elo', 'teste pagamentos', 'qa']
+  },
+  // ==========================================
+  // ETAPA 43: SUÍTE DE TIPOGRAFIA WEB, CSS & DESIGN RESPONSIVO (225 FERRAMENTAS)
+  // ==========================================
+  {
+    id: 'font-pairing-previewer-tool',
+    title: 'Visualizador & Testador de Font Pairing (Google Fonts)',
+    description: 'Experimente combinações tipográficas consagradas (Sora + Inter, Playfair + Jakarta, Space Grotesk + Mono) com preview responsivo e código CSS @import.',
+    category: 'dev-4devs',
+    categoryLabel: 'Design & Fontes',
+    icon: 'Type',
+    badge: 'Google Fonts Pair',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'typography-design-suite',
+    suiteTab: 'font-pairing',
+    tags: ['font pairing', 'tipografia', 'google fonts', 'combinacao fontes', 'web fonts', 'css fonts']
+  },
+  {
+    id: 'fluid-typography-clamp-calculator',
+    title: 'Calculadora de Tipografia Fluida com Função clamp()',
+    description: 'Calcule regras CSS de font-size com a função clamp() baseadas na largura mínima e máxima da tela, eliminando a necessidade de media queries manuais.',
+    category: 'dev-4devs',
+    categoryLabel: 'CSS & Frontend',
+    icon: 'Ruler',
+    badge: 'CSS clamp() Math',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'typography-design-suite',
+    suiteTab: 'fluid-typography',
+    tags: ['clamp', 'tipografia fluida', 'css responsivo', 'font size clamp', 'design tokens', 'frontend']
+  },
+  {
+    id: 'aspect-ratio-modern-css-builder',
+    title: 'Construtor de CSS aspect-ratio & Fallback Padding',
+    description: 'Gere regras CSS de proporção para imagens e vídeos (16:9, 9:16 Shorts, 1:1, 21:9 Ultrawide) com suporte ao aspect-ratio nativo e padding-bottom hack.',
+    category: 'dev-4devs',
+    categoryLabel: 'CSS & Layout',
+    icon: 'Maximize2',
+    badge: 'CSS Proporções',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'typography-design-suite',
+    suiteTab: 'aspect-ratio',
+    tags: ['aspect ratio', 'proporcao tela', 'css video', '16 9', 'padding bottom hack', 'css layout']
+  },
+  {
+    id: 'clip-path-polygon-visual-generator',
+    title: 'Gerador Visual de Formas Geométricas clip-path CSS',
+    description: 'Crie recortes geométricos poligonais para cards e botões (chanfros cyber obsidian, setas chevron, trapézios e hexágonos) prontos para copiar.',
+    category: 'dev-4devs',
+    categoryLabel: 'CSS & Design',
+    icon: 'Shapes',
+    badge: 'clip-path Polygons',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'typography-design-suite',
+    suiteTab: 'clip-path',
+    tags: ['clip path', 'polygon css', 'formas geometricas', 'mascara css', 'cyber design', 'frontend']
+  },
+  {
+    id: 'color-harmonies-wheel-generator',
+    title: 'Gerador de Harmonias Cromáticas (Círculo de Cores)',
+    description: 'Calcule harmonias de cores a partir de qualquer tom base: complementar direta (180°), análogas (±30°), triádicas (120°) e variações monocromáticas.',
+    category: 'invertexto',
+    categoryLabel: 'Design & Cores',
+    icon: 'Palette',
+    badge: 'Teoria das Cores HSL',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'typography-design-suite',
+    suiteTab: 'color-harmonies',
+    tags: ['harmonia de cores', 'circulo cromatico', 'paleta complementar', 'analoga', 'triadica', 'teoria das cores']
   }
 ];

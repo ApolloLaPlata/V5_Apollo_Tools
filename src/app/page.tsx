@@ -62,6 +62,7 @@ import { MediaAndAudioStudioSuite } from '@/components/tools/MediaAndAudioStudio
 import { EmailAndTransactionalSuite } from '@/components/tools/EmailAndTransactionalSuite';
 import { DevOpsAndGitSuite } from '@/components/tools/DevOpsAndGitSuite';
 import { CryptoHashAndChecksumSuite } from '@/components/tools/CryptoHashAndChecksumSuite';
+import { TypographyAndDesignSuite } from '@/components/tools/TypographyAndDesignSuite';
 
 import { 
   Search, 
@@ -648,6 +649,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'crypto-hash-suite' && (
               <CryptoHashAndChecksumSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'typography-design-suite' && (
+              <TypographyAndDesignSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
