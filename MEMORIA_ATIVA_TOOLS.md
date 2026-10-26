@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 26/10/2026 · **Status:** Operacional (Build 100% Green · 145+ Ferramentas Ativas · 27 Etapas Concluídas)
+**Data de Atualização:** 26/10/2026 · **Status:** Operacional (Build 100% Green · 150 Ferramentas Ativas · 28 Etapas Concluídas)
 
 ---
 
@@ -128,6 +128,7 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **Design & Frontend** | `DesignAndFrontendSuite.tsx` | Validador de Contraste WCAG 2.1 (AA/AAA), Conversor de Unidades CSS & clamp(), Gerador de Glassmorphism & Box-Shadow Cyber, Cartões Fictícios Luhn para QA Sandbox, Limpador de Metadados EXIF |
 | **Productivity & Types** | `ProductivityAndTypesSuite.tsx` | Conversor de Cores Universal (HEX/RGB/HSL/CMYK/HSV), JSON to TypeScript Interfaces/Types, Custo de Viagem & Pedágios com Rateio, Sanitizador de Slugs SEO, Gerador de Mockdown em Markdown |
 | **Network & Identifiers** | `NetworkAndIdentifiersSuite.tsx` | Gerador de UUID v7 (Time-Ordered) & Nanoid, Inspetor de Headers HTTP & Status RFC 9110, Calculadora de Taxas de Gateways (Stripe/MP/Pagar.me), Cron Expression Tester, Simulador de Zona DNS |
+| **Crypto & Security** | `CryptoTokensAndSecuritySuite.tsx` | Par de Chaves RSA/ECDSA PEM, Assinaturas HMAC-SHA256/512 para Webhooks, API Keys de Alta Entropia, Inspetor PEM X.509, Entropia de Senhas em Bits de Shannon |
 
 ---
 
