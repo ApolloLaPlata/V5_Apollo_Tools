@@ -71,6 +71,7 @@ import { TerminalAndSysAdminSuite } from '@/components/tools/TerminalAndSysAdmin
 import { IoTAndHardwareSensorsSuite } from '@/components/tools/IoTAndHardwareSensorsSuite';
 import { DatabaseSqlOptimizerSuite } from '@/components/tools/DatabaseSqlOptimizerSuite';
 import { ModernCryptoAndSignaturesSuite } from '@/components/tools/ModernCryptoAndSignaturesSuite';
+import { NetworkDnsDiagnosticsSuite } from '@/components/tools/NetworkDnsDiagnosticsSuite';
 
 import { 
   Search, 
@@ -684,6 +685,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'modern-crypto-suite' && (
               <ModernCryptoAndSignaturesSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'network-dns-suite' && (
+              <NetworkDnsDiagnosticsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

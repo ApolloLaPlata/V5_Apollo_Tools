@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 26/10/2026 · **Status:** Operacional (Build 100% Green · 260 Ferramentas Ativas · 50 Etapas Concluídas - JUBILEU DE OURO)
+**Data de Atualização:** 26/10/2026 · **Status:** Operacional (Build 100% Green · 270 Ferramentas Ativas · 52 Etapas Concluídas)
 
 ---
 
@@ -151,16 +151,18 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **Terminal & SysAdmin** | `TerminalAndSysAdminSuite.tsx` | Calculadora Chmod (Octal/Simbólico 755/644/600), Decodificador Cron em Português Claro, Gerador Systemd (.service), Liberador de Portas & Kill Process, SSH Keygen & Config |
 | **IoT & Hardware Sensors** | `IoTAndHardwareSensorsSuite.tsx` | Conversor Termodinâmico & Firmware C++ Arduino/ESP32, Pressão Barométrica & Altitude ICAO, Código de Cores Resistores (4/5 faixas), UART Baud Rate Throughput, Autonomia Bateria IoT |
 | **Database & SQL Optimizer** | `DatabaseSqlOptimizerSuite.tsx` | Formatador & Linter SQL (PostgreSQL/MySQL), Analisador EXPLAIN (Seq Scan / B-Tree), SQL para Prisma & Drizzle, Connection String Mask, UUID v4 & v7 (RFC 9562) |
+| **Modern Crypto & Signatures** | `ModernCryptoAndSignaturesSuite.tsx` | Assinador/Validador HMAC (SHA-512/256/384/1), Calculadora Argon2id & Scrypt (OWASP 2026), Gerador/Validador TOTP 2FA (RFC 6238), Inspetor PGP RFC 4880 Key ID/Fingerprint, Simulador Shamir Secret Sharing |
+| **Network & DNS Diagnostics** | `NetworkDnsDiagnosticsSuite.tsx` | Calculador TTL & Propagação DNS, Construtor Registros BIND RFC (SPF/DKIM/DMARC/MX/CNAME/SRV), Inspetor HSTS Chrome Preload, Calculadora MTU/MSS & Overhead, Validador Regex IP/CIDR/FQDN |
 
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário
 - **Sistema de Favoritos Local:** Usuário pode favoritar ferramentas com 1 clique (persistência no `localStorage`).
 - **Histórico Recente de Uso:** Barra de acesso rápido às últimas ferramentas utilizadas com persistência local.
-- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 260 ferramentas.
+- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 270 ferramentas.
 - **Deep-linking Universal:** Compartilhamento direto via URL (`?tool=id`) com cópia em 1 clique e ativação automática com scroll suave.
 - **Filtro Rápido:** Aba instantânea para ferramentas favoritadas na barra de categorias.
-- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 260 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
+- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 270 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
 - **Suporte a PWA Standalone:** Arquivo `manifest.json` com paleta Cyber Obsidian (`#020617` / `#06b6d4`) para instalação como app nativo no Desktop e Mobile.
 
 ---

@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -3963,5 +3963,75 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'modern-crypto-suite',
     suiteTab: 'shamir-simulator',
     tags: ['shamir secret', 'sss', 'threshold cryptography', 'recuperacao segredo', 'governance']
+  },
+  {
+    id: 'dns-propagation-ttl-tool',
+    title: 'Calculador de TTL & Janela de Propagação DNS',
+    description: 'Estime o tempo de limpeza de cache de servidores recursivos (Cloudflare, Google, OpenDNS, ISPs) e planeje migrações de IP sem indisponibilidade ou downtime.',
+    category: 'dev-4devs',
+    categoryLabel: 'Rede & Infraestrutura',
+    icon: 'Clock',
+    badge: 'DNS Propagation',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'network-dns-suite',
+    suiteTab: 'ttl-calc',
+    tags: ['dns propagation', 'ttl calc', 'time to live', 'migracao ip', 'dns cache', 'cloudflare dns']
+  },
+  {
+    id: 'dns-records-bind-builder',
+    title: 'Construtor & Analisador de Registros DNS (BIND / RFC)',
+    description: 'Crie e valide registros de zona BIND para SPF, DKIM, DMARC, MX, CNAME, SRV e A com detecção de erros comuns de sintaxe e avisos de RFC.',
+    category: 'dev-4devs',
+    categoryLabel: 'Rede & DNS',
+    icon: 'Globe',
+    badge: 'BIND RFC Zone',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'network-dns-suite',
+    suiteTab: 'records-builder',
+    tags: ['bind dns', 'spf generator', 'dkim generator', 'dmarc builder', 'mx record', 'cname']
+  },
+  {
+    id: 'hsts-security-preload-inspector',
+    title: 'Inspetor & Gerador de Diretivas HSTS (Strict-Transport-Security)',
+    description: 'Configure cabeçalhos HSTS para proteção contra SSL-strip e valide os requisitos obrigatórios para submissão na lista HSTS Preload do Google Chrome (hstspreload.org).',
+    category: 'dev-4devs',
+    categoryLabel: 'Segurança Web & SSL',
+    icon: 'ShieldCheck',
+    badge: 'HSTS Preload',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'network-dns-suite',
+    suiteTab: 'hsts-inspector',
+    tags: ['hsts', 'strict transport security', 'hstspreload', 'ssl strip', 'security headers', 'nginx hsts']
+  },
+  {
+    id: 'mtu-mss-packet-calculator-tool',
+    title: 'Calculadora de MTU, MSS & Overhead de Pacotes TCP/IP',
+    description: 'Analise a decomposição de bytes de rede em enlaces Ethernet, PPPoE, WireGuard, OpenVPN e Jumbo Frames; calcule MSS útil e evite fragmentação de pacotes (DF bit).',
+    category: 'dev-4devs',
+    categoryLabel: 'Rede & Enlace',
+    icon: 'Layers',
+    badge: 'MTU & MSS Calc',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'network-dns-suite',
+    suiteTab: 'mtu-calc',
+    tags: ['mtu', 'mss', 'tcp overhead', 'pppoe mtu', 'wireguard mtu', 'pmtud blackhole', 'packet size']
+  },
+  {
+    id: 'ip-domain-regex-validator-tool',
+    title: 'Gerador & Validador de Regex de Rede (IP / CIDR / FQDN)',
+    description: 'Expressões regulares canônicas de alta precisão para validação estrita de IPv4, IPv6 RFC 5952, máscaras CIDR, domínios FQDN e hostnames com snippets para JS/Python.',
+    category: 'dev-4devs',
+    categoryLabel: 'Rede & Expressões Regulares',
+    icon: 'Code',
+    badge: 'Network Regex',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'network-dns-suite',
+    suiteTab: 'regex-validator',
+    tags: ['regex ip', 'regex ipv6', 'regex cidr', 'regex fqdn', 'validador ip', 'network patterns']
   }
 ];
