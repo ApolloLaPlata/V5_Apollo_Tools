@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -4033,5 +4033,75 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'network-dns-suite',
     suiteTab: 'regex-validator',
     tags: ['regex ip', 'regex ipv6', 'regex cidr', 'regex fqdn', 'validador ip', 'network patterns']
+  },
+  {
+    id: 'hex-dump-inspector-tool',
+    title: 'Visualizador & Editor Hex Dump com Offset (Bytes & ASCII)',
+    description: 'Inspecione buffers binários, strings e arquivos locais em formato hex dump clássico (offset, colunas de 16 bytes e preview ASCII) com clique para análise detalhada de byte.',
+    category: 'dev-4devs',
+    categoryLabel: 'Binário & Baixo Nível',
+    icon: 'FileCode',
+    badge: 'Hex Dump Viewer',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'binary-buffers-suite',
+    suiteTab: 'hex-dump',
+    tags: ['hex dump', 'visualizador hexadecimal', 'editor hex', 'buffers', 'offset', 'low-level']
+  },
+  {
+    id: 'endianness-buffer-converter-tool',
+    title: 'Conversor de Endianness & Tipos Primitivos (Little vs Big Endian)',
+    description: 'Alterne ordenação de bytes entre Little Endian (x86/ARM) e Big Endian (Network Order); decodifique int16/32, uint16/32 e float32 IEEE 754 via DataView.',
+    category: 'dev-4devs',
+    categoryLabel: 'Arquitetura & Buffers',
+    icon: 'ArrowRightLeft',
+    badge: 'Little / Big Endian',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'binary-buffers-suite',
+    suiteTab: 'endianness',
+    tags: ['endianness', 'little endian', 'big endian', 'byte order', 'dataview', 'primitivos c']
+  },
+  {
+    id: 'magic-bytes-file-detector-tool',
+    title: 'Detector de Magic Bytes & Assinaturas Reais de Arquivos',
+    description: 'Identifique o formato e tipo MIME real de arquivos inspecionando os primeiros bytes de cabeçalho (PNG, JPEG, PDF, ZIP, ELF, PE/EXE, SQLite) e detecte extensões camufladas.',
+    category: 'dev-4devs',
+    categoryLabel: 'Forense & Segurança',
+    icon: 'FileCheck',
+    badge: 'Magic Numbers',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'binary-buffers-suite',
+    suiteTab: 'magic-bytes',
+    tags: ['magic bytes', 'file signature', 'cabecalho binario', 'extensao falsa', 'mime type', 'analise forense']
+  },
+  {
+    id: 'bitwise-buffer-calculator-tool',
+    title: 'Calculadora Bitwise & Operações Lógicas em Buffers (32-bit)',
+    description: 'Execute operações lógicas binárias AND, OR, XOR, NOT e Bit Shift em números inteiros e buffers com régua de 32 bits, agrupamento em nibbles e peso de Hamming.',
+    category: 'dev-4devs',
+    categoryLabel: 'Matemática & Binário',
+    icon: 'Cpu',
+    badge: 'Bitwise 32-bit',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'binary-buffers-suite',
+    suiteTab: 'bitwise-calc',
+    tags: ['bitwise', 'and or xor', 'bit shift', 'operacoes binarias', 'hamming weight', 'mascara de bits']
+  },
+  {
+    id: 'ascii-control-table-inspector-tool',
+    title: 'Tabela ASCII & Inspetor de Códigos de Controle (0 a 127)',
+    description: 'Consulte a tabela canônica ASCII com conversão para decimal, hex, octal e binário; inspecione códigos de controle (NUL, LF, CR, ESC, DEL) e convenções de quebra de linha.',
+    category: 'dev-4devs',
+    categoryLabel: 'Tabelas & Padrões',
+    icon: 'Table',
+    badge: 'ASCII 0-127',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'binary-buffers-suite',
+    suiteTab: 'ascii-inspector',
+    tags: ['tabela ascii', 'codigos de controle', 'crlf', 'escape ansi', 'ascii hex', 'caracteres especiais']
   }
 ];

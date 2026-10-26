@@ -72,6 +72,7 @@ import { IoTAndHardwareSensorsSuite } from '@/components/tools/IoTAndHardwareSen
 import { DatabaseSqlOptimizerSuite } from '@/components/tools/DatabaseSqlOptimizerSuite';
 import { ModernCryptoAndSignaturesSuite } from '@/components/tools/ModernCryptoAndSignaturesSuite';
 import { NetworkDnsDiagnosticsSuite } from '@/components/tools/NetworkDnsDiagnosticsSuite';
+import { BinaryBuffersAndHexDumpSuite } from '@/components/tools/BinaryBuffersAndHexDumpSuite';
 
 import { 
   Search, 
@@ -688,6 +689,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'network-dns-suite' && (
               <NetworkDnsDiagnosticsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'binary-buffers-suite' && (
+              <BinaryBuffersAndHexDumpSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
