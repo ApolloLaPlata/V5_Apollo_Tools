@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 26/10/2026 · **Status:** Operacional (Build 100% Green · 210 Ferramentas Ativas · 40 Etapas Concluídas)
+**Data de Atualização:** 26/10/2026 · **Status:** Operacional (Build 100% Green · 215 Ferramentas Ativas · 41 Etapas Concluídas)
 
 ---
 
@@ -141,16 +141,17 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **Document & Open Source** | `DocumentAndOpenSourceSuite.tsx` | Extrator & Sanitizador de Texto, Designer de QR Code Customizado (SVG/PNG), Validador JSON Schema/OpenAPI 3.0, Compressão Gzip/Brotli, Gerador de Licenças SPDX (MIT/GPL/Apache) |
 | **Media & Audio Studio** | `MediaAndAudioStudioSuite.tsx` | Sintetizador WAV 16-bit PCM (Web Audio), Waveform SVG, Extrator de Frames de Vídeo Canvas, Calculadora de Render GPU H100 vs Local, Favicon Pack Multi-Resolução |
 | **Email & Transactional** | `EmailAndTransactionalSuite.tsx` | Previewer HTML Responsivo (Desktop/Tablet/Mobile Iframe), Portas SMTP/IMAP/POP3, Registros DNS SPF/DKIM/DMARC, Detector de Spam Words (Score 0-100), Gerador mailto: RFC 6068 |
+| **DevOps & Git** | `DevOpsAndGitSuite.tsx` | Gerador .gitignore Multi-Stack (Node/Next/Python/Rust/Docker/OS), Conventional Commits Builder & Linter, Auditor Dockerfile (Score 0-100), Sanitizador .env vs .env.example, Calculadora SemVer 2.0.0 |
 
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário
 - **Sistema de Favoritos Local:** Usuário pode favoritar ferramentas com 1 clique (persistência no `localStorage`).
 - **Histórico Recente de Uso:** Barra de acesso rápido às últimas ferramentas utilizadas com persistência local.
-- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 210 ferramentas.
+- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 215 ferramentas.
 - **Deep-linking Universal:** Compartilhamento direto via URL (`?tool=id`) com cópia em 1 clique e ativação automática com scroll suave.
 - **Filtro Rápido:** Aba instantânea para ferramentas favoritadas na barra de categorias.
-- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 210 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
+- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 215 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
 - **Suporte a PWA Standalone:** Arquivo `manifest.json` com paleta Cyber Obsidian (`#020617` / `#06b6d4`) para instalação como app nativo no Desktop e Mobile.
 
 ---
