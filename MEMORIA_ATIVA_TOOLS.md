@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 26/10/2026 · **Status:** Operacional (Build 100% Green · 290 Ferramentas Ativas · 56 Etapas Concluídas)
+**Data de Atualização:** 26/10/2026 · **Status:** Operacional (Build 100% Green · 295 Ferramentas Ativas · 57 Etapas Concluídas)
 
 ---
 
@@ -157,6 +157,7 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **API Docs & OpenAPI Mock** | `ApiDocsOpenApiMockSuite.tsx` | Visualizador OpenAPI/Swagger 3.0, Gerador de Massa de Dados JSON Mock (Faker BRL), Matriz de Status Codes RFC 9110 (1xx a 5xx), Formatador/Linter GraphQL, Inspetor Protobuf Proto3 para TypeScript |
 | **Dependencies, SBOM & Licenses** | `DependenciesSbomLicensingSuite.tsx` | Auditor de package.json (Scripts/Tipos/Score), Matriz de Licenças SPDX (MIT/GPL/AGPL), Gerador SBOM CycloneDX v1.5 / SPDX, Resolvador SemVer 2.0 (^ e ~), Otimizador Dockerfile Multi-Stage |
 | **Server Benchmarks & Metrics** | `ServerBenchmarksAndMetricsSuite.tsx` | Calculadora QPS/RPS (Lei de Little L=λ*W), Throughput & BDP de Rede, Comparador de Custo Cloud (AWS vs Modal H100 GPU), Dimensionador Connection Pool PostgreSQL/MySQL, Métricas SLA & Downtime |
+| **AI Telemetry & Token Economics** | `AiTelemetryAndTokenEconomicsSuite.tsx` | Calculadora FinOps de Tokens LLM (Prompt Caching), Estimador de VRAM GPU CUDA (FP16/INT4 & KV Cache), Visualizador de Janela de Contexto (Lost in Middle), Estimador Áudio TTS/STT WPM, Calculadora RAG Cosine Similarity & Dot Product |
 
 ---
 
@@ -178,6 +179,15 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 
 ---
 
-## 5. Próximos Passos
-1. Conectar a futura execução de GPU Modal na `V5_APOLLO_API` quando autorizada pelo Comandante.
+## 5. Integração com a V5 Apollo API (Frota Modal GPU & LLMs)
+- **Status:** 100% Conectado e Validado via Supabase / Produção Vercel.
+- **Endpoint Oficial:** `https://api.v5apollo.com`
+- **Chave de API Dedicada (Capitania #11):** `v5_live_v5_tools_86506bd331adc1bbc223e177c720840c`
+- **Tier de Acesso:** `internal_unlimited` (Vídeo MiniMax H3, Imagem Flux-Schnell, Texto Gemini LLM, TTS e Voz).
+- **Variáveis de Ambiente:** Configuradas em `.env.local` e com fallback nativo em `src/lib/api/v5ApolloClient.ts`.
+
+---
+
+## 6. Próximos Passos
+1. Prosseguir com a Esteira Determinística de Expansão rumo à **Etapa 58: O Grande Marco dos 300 Utilitários** (Suíte de Engenharia de Prompt, Raciocínio & Chain of Thought).
 2. Manter monitoramento contínuo via Shadow Logger e Colmeia.

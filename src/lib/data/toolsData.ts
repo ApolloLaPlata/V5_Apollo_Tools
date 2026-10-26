@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -4313,5 +4313,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'server-benchmarks-suite',
     suiteTab: 'sla-downtime',
     tags: ['sla', 'uptime', 'downtime', 'disponibilidade', 'five nines', 'sre', 'credito de servico']
+  },
+  // ==========================================
+  // ETAPA 57: SUÍTE DE TELEMETRIA DE IA, LLMS & GPU METRICS
+  // ==========================================
+  {
+    id: 'llm-token-price-calculator-tool',
+    title: 'Calculadora de Custos de LLM & ROI (Prompt Caching & Tokens)',
+    description: 'Projete custos de inferência de IA para GPT-4o, Claude 3.5 Sonnet, Gemini 2.0 Flash e DeepSeek com economia de prompt caching e faturas em USD/BRL.',
+    category: 'dev-4devs',
+    categoryLabel: 'FinOps de IA & Tokens',
+    icon: 'DollarSign',
+    badge: 'LLM Token FinOps',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'ai-telemetry-suite',
+    suiteTab: 'token-pricing',
+    tags: ['llm', 'custo token', 'prompt caching', 'gpt-4o', 'claude 3.5', 'gemini 2.0', 'finops ia', 'roi ia']
+  },
+  {
+    id: 'gpu-vram-memory-estimator-tool',
+    title: 'Estimador de VRAM de GPU para LLMs & Inferência CUDA',
+    description: 'Calcule o consumo exato de VRAM para pesos (FP16/INT8/INT4 GGUF), KV Cache por contexto e ativações, com recomendação de placas RTX 4090 ou clusters H100.',
+    category: 'dev-4devs',
+    categoryLabel: 'Hardware & GPU CUDA',
+    icon: 'HardDrive',
+    badge: 'VRAM & GPU CUDA',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'ai-telemetry-suite',
+    suiteTab: 'vram-estimator',
+    tags: ['vram', 'gpu', 'cuda', 'h100', 'rtx 4090', 'kv cache', 'quantizacao', 'gguf', 'int4', 'fp16']
+  },
+  {
+    id: 'context-window-tokens-visualizer-tool',
+    title: 'Visualizador de Janela de Contexto de IA (Lost in the Middle)',
+    description: 'Analise visualmente a ocupação de tokens entre System Prompt, histórico de chat, chunks RAG e margem de resposta, com diagnóstico de degradação de atenção.',
+    category: 'dev-4devs',
+    categoryLabel: 'Engenharia de Prompt',
+    icon: 'Layers',
+    badge: 'Context Window Analyzer',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'ai-telemetry-suite',
+    suiteTab: 'context-visualizer',
+    tags: ['janela de contexto', 'context window', 'tokens prompt', 'rag chunks', 'lost in the middle', 'system prompt']
+  },
+  {
+    id: 'tts-audio-duration-pricing-estimator-tool',
+    title: 'Estimador de Custo e Duração de Áudio TTS / STT',
+    description: 'Converta contagem de caracteres e palavras em tempo real de locução (WPM) com orçamento financeiro para ElevenLabs, OpenAI TTS, Whisper STT e Kokoro.',
+    category: 'dev-4devs',
+    categoryLabel: 'Áudio & Voz IA',
+    icon: 'Mic',
+    badge: 'TTS & STT Estimator',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'ai-telemetry-suite',
+    suiteTab: 'tts-stt',
+    tags: ['tts', 'stt', 'whisper', 'elevenlabs', 'openai voice', 'duracao audio', 'custo locucao', 'wpm']
+  },
+  {
+    id: 'eval-rag-similarity-calculator-tool',
+    title: 'Calculadora de Similaridade Semântica RAG (Cosine & Dot Product)',
+    description: 'Calcule a similaridade de cosseno, produto escalar e distância euclidiana entre vetores de embeddings densos, entendendo o comportamento de pgvector e ChromaDB.',
+    category: 'dev-4devs',
+    categoryLabel: 'RAG & Vetores',
+    icon: 'Binary',
+    badge: 'RAG Cosine Sim',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'ai-telemetry-suite',
+    suiteTab: 'rag-similarity',
+    tags: ['rag', 'cosine similarity', 'dot product', 'embeddings', 'pgvector', 'chromadb', 'busca vetorial', 'distancia euclidiana']
   }
 ];

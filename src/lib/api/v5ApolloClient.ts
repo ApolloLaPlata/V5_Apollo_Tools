@@ -32,7 +32,7 @@ export class V5ApolloClient {
   private baseUrl: string;
 
   constructor(apiKey?: string, baseUrl?: string) {
-    this.apiKey = apiKey || process.env.NEXT_PUBLIC_V5_APOLLO_API_KEY || 'sk_tools_guest';
+    this.apiKey = apiKey || process.env.NEXT_PUBLIC_V5_APOLLO_API_KEY || 'v5_live_v5_tools_86506bd331adc1bbc223e177c720840c';
     this.baseUrl = (baseUrl || process.env.NEXT_PUBLIC_V5_APOLLO_API_URL || 'https://api.v5apollo.com').replace(/\/$/, '');
   }
 

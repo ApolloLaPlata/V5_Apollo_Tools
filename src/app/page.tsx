@@ -76,6 +76,7 @@ import { BinaryBuffersAndHexDumpSuite } from '@/components/tools/BinaryBuffersAn
 import { ApiDocsOpenApiMockSuite } from '@/components/tools/ApiDocsOpenApiMockSuite';
 import { DependenciesSbomLicensingSuite } from '@/components/tools/DependenciesSbomLicensingSuite';
 import { ServerBenchmarksAndMetricsSuite } from '@/components/tools/ServerBenchmarksAndMetricsSuite';
+import { AiTelemetryAndTokenEconomicsSuite } from '@/components/tools/AiTelemetryAndTokenEconomicsSuite';
 
 import { 
   Search, 
@@ -704,6 +705,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'server-benchmarks-suite' && (
               <ServerBenchmarksAndMetricsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'ai-telemetry-suite' && (
+              <AiTelemetryAndTokenEconomicsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
