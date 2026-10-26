@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -2388,5 +2388,77 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'web-assets-suite',
     suiteTab: 'dns-propagation',
     tags: ['dns', 'propagacao', 'anycast', 'rede', 'cloudflare', 'google dns', 'latencia']
+  },
+  // ==========================================
+  // CATEGORIA: ENGENHARIA DE PROMPT & ROTEIRIZAÇÃO VIRAL (ETAPA 30)
+  // ==========================================
+  {
+    id: 'auto-prompt-optimizer',
+    title: 'Otimizador Universal de Prompts (Frameworks RTF / RISEN / CoT)',
+    description: 'Transforme ideias simples em prompts profissionais utilizando frameworks avançados como RTF, RISEN, Chain of Thought, STAR e CLEAR.',
+    category: 'prompts',
+    categoryLabel: 'IA & Engenharia de Prompt',
+    icon: 'Sparkles',
+    badge: '5 Frameworks',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'ai-prompt-viral-suite',
+    suiteTab: 'prompt-optimizer',
+    tags: ['prompt', 'engenharia de prompt', 'rtf', 'risen', 'cot', 'ia', 'chatgpt', 'gemini']
+  },
+  {
+    id: 'viral-hooks-generator',
+    title: 'Gerador de 20 Ganchos Virais de Retenção (Shorts / Reels / TikTok)',
+    description: 'Gere ganchos psicológicos de alta retenção para os primeiros 3 segundos de vídeos curtos com score preditivo de CTR.',
+    category: 'prompts',
+    categoryLabel: 'Social Media & Vídeo',
+    icon: 'Flame',
+    badge: 'Score CTR Preditivo',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'ai-prompt-viral-suite',
+    suiteTab: 'viral-hooks',
+    tags: ['ganchos', 'hooks', 'viral', 'reels', 'tiktok', 'shorts', 'ctr', 'retencao']
+  },
+  {
+    id: 'cta-matrix-builder',
+    title: 'Construtor de Matriz de CTAs Persuasivas por Objetivo',
+    description: 'Gere chamadas para ação focadas em comentários, compartilhamentos, vendas diretas ou captura de leads com gatilhos mentais.',
+    category: 'prompts',
+    categoryLabel: 'Copywriting & Conversão',
+    icon: 'Target',
+    badge: 'Gatilhos de Ação',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'ai-prompt-viral-suite',
+    suiteTab: 'cta-matrix',
+    tags: ['cta', 'call to action', 'copywriting', 'conversao', 'gatilhos', 'vendas']
+  },
+  {
+    id: 'ai-character-bible',
+    title: 'Bíblia de Personagem & Consistência Visual para IA (ComfyUI / FLUX)',
+    description: 'Crie fichas canônicas e sementes mestras para manter o mesmo personagem consistente em múltiplos frames e cenários.',
+    category: 'prompts',
+    categoryLabel: 'ComfyUI & Personagens',
+    icon: 'UserCheck',
+    badge: 'Master Seed Prompt',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'ai-prompt-viral-suite',
+    suiteTab: 'character-bible',
+    tags: ['personagem', 'consistencia', 'seed', 'comfyui', 'flux', 'midjourney', 'ia']
+  },
+  {
+    id: 'youtube-tag-cluster-builder',
+    title: 'Agrupador de Tags e Palavras-Chave SEO para YouTube',
+    description: 'Gere clusters de tags de cauda curta, média e longa com contador de caracteres automático para colar no YouTube Studio.',
+    category: 'prompts',
+    categoryLabel: 'SEO & YouTube',
+    icon: 'Tag',
+    badge: '500 Chars Limit',
+    isInteractive: true,
+    suiteTarget: 'ai-prompt-viral-suite',
+    suiteTab: 'youtube-tags',
+    tags: ['youtube', 'tags', 'seo', 'palavras chave', 'video', 'ranqueamento']
   }
 ];

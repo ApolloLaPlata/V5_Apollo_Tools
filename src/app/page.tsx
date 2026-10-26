@@ -49,6 +49,7 @@ import { ProductivityAndTypesSuite } from '@/components/tools/ProductivityAndTyp
 import { NetworkAndIdentifiersSuite } from '@/components/tools/NetworkAndIdentifiersSuite';
 import { CryptoTokensAndSecuritySuite } from '@/components/tools/CryptoTokensAndSecuritySuite';
 import { WebAssetsAndDiagnosticsSuite } from '@/components/tools/WebAssetsAndDiagnosticsSuite';
+import { AiPromptAndViralSuite } from '@/components/tools/AiPromptAndViralSuite';
 
 import { 
   Search, 
@@ -159,6 +160,9 @@ import {
   Eye,
   Link2,
   Code,
+  Target,
+  UserCheck,
+  Tag,
   X
 } from 'lucide-react';
 
@@ -261,7 +265,10 @@ const ICON_MAP: Record<string, React.ElementType> = {
   GitCompare,
   Eye,
   Link2,
-  Code
+  Code,
+  Target,
+  UserCheck,
+  Tag
 };
 
 export default function ApolloToolsPage() {
@@ -574,6 +581,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'web-assets-suite' && (
               <WebAssetsAndDiagnosticsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'ai-prompt-viral-suite' && (
+              <AiPromptAndViralSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
