@@ -240,18 +240,36 @@ export default function ApolloToolsPage() {
   const [activeInteractiveTool, setActiveInteractiveTool] = useState<string | null>('cpf-cnpj-tool');
   const [activeComfyModal, setActiveComfyModal] = useState<ToolItem | null>(null);
   const [favorites, setFavorites] = useState<string[]>([]);
+  const [recentTools, setRecentTools] = useState<string[]>([]);
   const [copiedLinkToolId, setCopiedLinkToolId] = useState<string | null>(null);
+  const [isCommandOpen, setIsCommandOpen] = useState(false);
+  const [commandQuery, setCommandQuery] = useState('');
 
-  // Inicialização no client: ler favoritos e query param ?tool=...
+  // Inicialização no client: ler favoritos, recentes e query param ?tool=...
   React.useEffect(() => {
     try {
       const savedFavs = localStorage.getItem('v5_tools_favorites');
       if (savedFavs) {
         setFavorites(JSON.parse(savedFavs));
       }
+      const savedRecents = localStorage.getItem('v5_tools_recents');
+      if (savedRecents) {
+        setRecentTools(JSON.parse(savedRecents));
+      }
     } catch {
       // Ignora erro de storage
     }
+
+    // Atalho global Ctrl+K / Cmd+K e Escape
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        setIsCommandOpen((prev) => !prev);
+      } else if (e.key === 'Escape') {
+        setIsCommandOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
 
     // Deep linking: se vier com ?tool=id na URL, ativa imediatamente
     if (typeof window !== 'undefined') {
@@ -271,6 +289,8 @@ export default function ApolloToolsPage() {
         }
       }
     }
+
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   const toggleFavorite = (toolId: string, e: React.MouseEvent) => {
@@ -314,13 +334,35 @@ export default function ApolloToolsPage() {
     });
   }, [searchTerm, selectedCategory, favorites]);
 
+  const commandResults = useMemo(() => {
+    if (!commandQuery.trim()) return TOOLS_CATALOG.slice(0, 10);
+    return TOOLS_CATALOG.filter((tool) => {
+      const q = commandQuery.toLowerCase();
+      return (
+        tool.title.toLowerCase().includes(q) ||
+        tool.description.toLowerCase().includes(q) ||
+        tool.tags.some((t) => t.toLowerCase().includes(q))
+      );
+    }).slice(0, 12);
+  }, [commandQuery]);
+
   const handleToolClick = (tool: ToolItem) => {
+    // Registra nos recentes
+    setRecentTools((prev) => {
+      const updated = [tool.id, ...prev.filter((id) => id !== tool.id)].slice(0, 6);
+      try {
+        localStorage.setItem('v5_tools_recents', JSON.stringify(updated));
+      } catch {}
+      return updated;
+    });
+
     if (tool.category === 'comfyui') {
       setActiveComfyModal(tool);
     } else if (tool.isInteractive) {
       setActiveInteractiveTool(tool.id);
       window.scrollTo({ top: 380, behavior: 'smooth' });
     }
+    setIsCommandOpen(false);
   };
 
   return (
@@ -359,17 +401,46 @@ export default function ApolloToolsPage() {
             </span>
           </div>
 
-          {/* Search Box */}
+          {/* Search Box com Atalho Command Palette */}
           <div className="relative max-w-xl mx-auto pt-4">
             <Search className="w-5 h-5 absolute left-4 top-7 text-slate-500 pointer-events-none" />
             <input
               type="text"
-              placeholder="Buscar por ferramenta (ex: CPF, CNPJ, CNH, Placa, Pix, Porcentagem, JSON, Barcode)..."
+              placeholder="Buscar ferramenta ou pressione ⌘K..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-slate-900/90 border border-slate-800 rounded-2xl pl-12 pr-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 shadow-xl transition-all"
+              className="w-full bg-slate-900/90 border border-slate-800 rounded-2xl pl-12 pr-20 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 shadow-xl transition-all"
             />
+            <button
+              type="button"
+              onClick={() => setIsCommandOpen(true)}
+              className="absolute right-3.5 top-6.5 px-2 py-1 rounded-lg bg-slate-800 border border-slate-700/80 text-[10px] font-mono text-slate-400 hover:text-cyan-400 hover:border-cyan-500/50 transition cursor-pointer flex items-center gap-1 shadow-sm"
+            >
+              <span>⌘K</span>
+            </button>
           </div>
+
+          {/* Histórico Recente de Ferramentas Usadas */}
+          {recentTools.length > 0 && (
+            <div className="flex items-center justify-center gap-1.5 pt-2 flex-wrap text-xs font-mono">
+              <span className="text-slate-500 flex items-center gap-1 text-[11px]">
+                <Clock className="w-3 h-3 text-slate-500" /> Recentes:
+              </span>
+              {recentTools.map((id) => {
+                const tool = TOOLS_CATALOG.find((t) => t.id === id);
+                if (!tool) return null;
+                return (
+                  <button
+                    key={id}
+                    onClick={() => handleToolClick(tool)}
+                    className="px-2.5 py-0.5 rounded-lg bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-[11px] text-slate-300 hover:text-cyan-400 transition cursor-pointer"
+                  >
+                    {tool.title.split(' ')[0]} {tool.title.split(' ')[1] || ''}
+                  </button>
+                );
+              })}
+            </div>
+          )}
         </div>
 
         {/* Workbench Ativo (Ferramenta Interativa Selecionada) */}
@@ -658,6 +729,86 @@ export default function ApolloToolsPage() {
         tool={activeComfyModal}
         onClose={() => setActiveComfyModal(null)}
       />
+
+      {/* Command Palette (Ctrl+K / Cmd+K) */}
+      {isCommandOpen && (
+        <div 
+          onClick={() => setIsCommandOpen(false)}
+          className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-start justify-center pt-20 px-4 animate-in fade-in duration-200"
+        >
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="w-full max-w-2xl bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden flex flex-col"
+          >
+            {/* Header do Input */}
+            <div className="flex items-center gap-3 px-4 py-3.5 border-b border-slate-800">
+              <Search className="w-5 h-5 text-cyan-400 shrink-0" />
+              <input
+                autoFocus
+                type="text"
+                placeholder="Digite o nome de qualquer ferramenta (ex: CPF, Hash, JSON, Regex, ComfyUI)..."
+                value={commandQuery}
+                onChange={(e) => setCommandQuery(e.target.value)}
+                className="w-full bg-transparent text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none font-sans"
+              />
+              <button
+                onClick={() => setIsCommandOpen(false)}
+                className="p-1 rounded-lg text-slate-500 hover:text-white bg-slate-800/60 text-xs font-mono"
+              >
+                ESC
+              </button>
+            </div>
+
+            {/* Lista de Resultados */}
+            <div className="max-h-96 overflow-y-auto p-2 divide-y divide-slate-800/40">
+              {commandResults.length === 0 ? (
+                <div className="p-6 text-center text-xs font-mono text-slate-500">
+                  Nenhuma ferramenta encontrada para "{commandQuery}".
+                </div>
+              ) : (
+                commandResults.map((tool) => {
+                  const Icon = ICON_MAP[tool.icon] || Sparkles;
+                  return (
+                    <div
+                      key={tool.id}
+                      onClick={() => handleToolClick(tool)}
+                      className="flex items-center justify-between p-3 rounded-xl hover:bg-slate-800/80 transition cursor-pointer group"
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className="p-2 rounded-lg bg-slate-950 border border-slate-800 text-cyan-400 group-hover:border-cyan-500/50 transition">
+                          <Icon className="w-4 h-4" />
+                        </div>
+                        <div>
+                          <div className="text-xs font-bold text-slate-200 group-hover:text-cyan-400 transition">
+                            {tool.title}
+                          </div>
+                          <div className="text-[11px] text-slate-500 line-clamp-1">
+                            {tool.description}
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        {tool.badge && (
+                          <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-slate-950 text-slate-400 border border-slate-800">
+                            {tool.badge}
+                          </span>
+                        )}
+                        <ArrowRight className="w-3.5 h-3.5 text-slate-600 group-hover:text-cyan-400 group-hover:translate-x-0.5 transition" />
+                      </div>
+                    </div>
+                  );
+                })
+              )}
+            </div>
+
+            {/* Footer da Command Palette */}
+            <div className="px-4 py-2.5 bg-slate-950 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-500">
+              <span>Navegue com o mouse ou clique para executar</span>
+              <span>115+ Ferramentas Cadastradas</span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
