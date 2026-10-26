@@ -38,6 +38,7 @@ import { HealthAndEverydaySuite } from '@/components/tools/HealthAndEverydaySuit
 import { MediaAndUtilitySuite } from '@/components/tools/MediaAndUtilitySuite';
 import { TextSpecializedSuite } from '@/components/tools/TextSpecializedSuite';
 import { V5AiGatewaySuite } from '@/components/tools/V5AiGatewaySuite';
+import { CreativeAndSpeedSuite } from '@/components/tools/CreativeAndSpeedSuite';
 
 import { 
   Search, 
@@ -124,6 +125,12 @@ import {
   Zap,
   Play,
   Send,
+  Palette,
+  Globe,
+  BookOpen,
+  Star,
+  Share2,
+  Check,
   X
 } from 'lucide-react';
 
@@ -205,14 +212,71 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Server,
   Zap,
   Play,
-  Send
+  Send,
+  Palette,
+  Globe,
+  BookOpen
 };
 
 export default function ApolloToolsPage() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<'all' | 'dev-4devs' | 'invertexto' | 'comfyui' | 'prompts'>('all');
+  const [selectedCategory, setSelectedCategory] = useState<'all' | 'favorites' | 'dev-4devs' | 'invertexto' | 'comfyui' | 'prompts'>('all');
   const [activeInteractiveTool, setActiveInteractiveTool] = useState<string | null>('cpf-cnpj-tool');
   const [activeComfyModal, setActiveComfyModal] = useState<ToolItem | null>(null);
+  const [favorites, setFavorites] = useState<string[]>([]);
+  const [copiedLinkToolId, setCopiedLinkToolId] = useState<string | null>(null);
+
+  // Inicialização no client: ler favoritos e query param ?tool=...
+  React.useEffect(() => {
+    try {
+      const savedFavs = localStorage.getItem('v5_tools_favorites');
+      if (savedFavs) {
+        setFavorites(JSON.parse(savedFavs));
+      }
+    } catch {
+      // Ignora erro de storage
+    }
+
+    // Deep linking: se vier com ?tool=id na URL, ativa imediatamente
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const urlTool = params.get('tool');
+      if (urlTool) {
+        const found = TOOLS_CATALOG.find((t) => t.id === urlTool);
+        if (found) {
+          if (found.category === 'comfyui') {
+            setActiveComfyModal(found);
+          } else {
+            setActiveInteractiveTool(found.id);
+            setTimeout(() => {
+              window.scrollTo({ top: 380, behavior: 'smooth' });
+            }, 300);
+          }
+        }
+      }
+    }
+  }, []);
+
+  const toggleFavorite = (toolId: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setFavorites((prev) => {
+      const updated = prev.includes(toolId) ? prev.filter((id) => id !== toolId) : [...prev, toolId];
+      try {
+        localStorage.setItem('v5_tools_favorites', JSON.stringify(updated));
+      } catch {}
+      return updated;
+    });
+  };
+
+  const copyShareLink = (toolId: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (typeof window !== 'undefined') {
+      const shareUrl = `${window.location.origin}${window.location.pathname}?tool=${toolId}`;
+      navigator.clipboard.writeText(shareUrl);
+      setCopiedLinkToolId(toolId);
+      setTimeout(() => setCopiedLinkToolId(null), 2000);
+    }
+  };
 
   const selectedToolItem = useMemo(() => {
     return TOOLS_CATALOG.find((t) => t.id === activeInteractiveTool) || null;
@@ -220,14 +284,19 @@ export default function ApolloToolsPage() {
 
   const filteredTools = useMemo(() => {
     return TOOLS_CATALOG.filter((tool) => {
-      const matchesCategory = selectedCategory === 'all' || tool.category === selectedCategory;
+      const matchesCategory =
+        selectedCategory === 'all'
+          ? true
+          : selectedCategory === 'favorites'
+          ? favorites.includes(tool.id)
+          : tool.category === selectedCategory;
       const matchesSearch =
         tool.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         tool.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         tool.tags.some((t) => t.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchesCategory && matchesSearch;
     });
-  }, [searchTerm, selectedCategory]);
+  }, [searchTerm, selectedCategory, favorites]);
 
   const handleToolClick = (tool: ToolItem) => {
     if (tool.category === 'comfyui') {
@@ -356,6 +425,9 @@ export default function ApolloToolsPage() {
             {selectedToolItem?.suiteTarget === 'ai-gateway-suite' && (
               <V5AiGatewaySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
+            {selectedToolItem?.suiteTarget === 'creative-speed-suite' && (
+              <CreativeAndSpeedSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
 
             {/* Ferramentas Standalone */}
             {!selectedToolItem?.suiteTarget && (
@@ -390,6 +462,17 @@ export default function ApolloToolsPage() {
               }`}
             >
               Todas as Ferramentas ({TOOLS_CATALOG.length})
+            </button>
+            <button
+              onClick={() => setSelectedCategory('favorites')}
+              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                selectedCategory === 'favorites'
+                  ? 'bg-amber-500 text-slate-950 shadow-md shadow-amber-500/20'
+                  : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'
+              }`}
+            >
+              <Star className={`w-3.5 h-3.5 ${selectedCategory === 'favorites' ? 'fill-slate-950 text-slate-950' : 'text-amber-400 fill-amber-400/20'}`} />
+              <span>Favoritos ({favorites.length})</span>
             </button>
             <button
               onClick={() => setSelectedCategory('dev-4devs')}
@@ -464,21 +547,47 @@ export default function ApolloToolsPage() {
                       >
                         <IconComponent className="w-5 h-5" />
                       </div>
-                      {tool.badge && (
-                        <span
-                          className={`text-[10px] font-mono px-2 py-0.5 rounded-full font-bold border ${
-                            tool.category === 'comfyui'
-                              ? 'bg-purple-500/10 text-purple-300 border-purple-500/30'
-                              : tool.category === 'dev-4devs'
-                              ? 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30'
-                              : tool.category === 'prompts'
-                              ? 'bg-amber-500/10 text-amber-300 border-amber-500/30'
-                              : 'bg-cyan-500/10 text-cyan-300 border-cyan-500/30'
-                          }`}
+                      <div className="flex items-center gap-1.5">
+                        {tool.badge && (
+                          <span
+                            className={`text-[10px] font-mono px-2 py-0.5 rounded-full font-bold border ${
+                              tool.category === 'comfyui'
+                                ? 'bg-purple-500/10 text-purple-300 border-purple-500/30'
+                                : tool.category === 'dev-4devs'
+                                ? 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30'
+                                : tool.category === 'prompts'
+                                ? 'bg-amber-500/10 text-amber-300 border-amber-500/30'
+                                : 'bg-cyan-500/10 text-cyan-300 border-cyan-500/30'
+                            }`}
+                          >
+                            {tool.badge}
+                          </span>
+                        )}
+
+                        <button
+                          onClick={(e) => copyShareLink(tool.id, e)}
+                          title="Copiar Link Direto"
+                          className="p-1 rounded-lg text-slate-500 hover:text-cyan-400 hover:bg-slate-800 transition cursor-pointer"
                         >
-                          {tool.badge}
-                        </span>
-                      )}
+                          {copiedLinkToolId === tool.id ? (
+                            <Check className="w-3.5 h-3.5 text-emerald-400" />
+                          ) : (
+                            <Share2 className="w-3.5 h-3.5" />
+                          )}
+                        </button>
+
+                        <button
+                          onClick={(e) => toggleFavorite(tool.id, e)}
+                          title={favorites.includes(tool.id) ? "Remover dos Favoritos" : "Favoritar Ferramenta"}
+                          className="p-1 rounded-lg text-slate-500 hover:text-amber-400 hover:bg-slate-800 transition cursor-pointer"
+                        >
+                          <Star
+                            className={`w-3.5 h-3.5 ${
+                              favorites.includes(tool.id) ? 'fill-amber-400 text-amber-400' : ''
+                            }`}
+                          />
+                        </button>
+                      </div>
                     </div>
 
                     <div>

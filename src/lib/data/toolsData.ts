@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -1610,5 +1610,76 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'ai-gateway-suite',
     suiteTab: 'api-agent-bridge',
     tags: ['orquestrador', 'agente', 'colmeia', 'v5 apollo api', 'bridge', 'prompt']
+  },
+
+  // ==========================================
+  // CATEGORIA 6: SUÍTE CRIATIVA & UTILIDADES AVANÇADAS (CANVAS, RSVP & HISTÓRICO)
+  // ==========================================
+  {
+    id: 'canvas-whiteboard',
+    title: 'Lousa & Desenho Digital Online',
+    description: 'Quadro branco interativo com pincel, cores, borracha, espessura ajustável e download direto em PNG (100% Canvas GPU).',
+    category: 'invertexto',
+    categoryLabel: 'Mídia & Criatividade',
+    icon: 'Palette',
+    badge: 'Canvas GPU',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'creative-speed-suite',
+    suiteTab: 'whiteboard',
+    tags: ['desenho', 'canvas', 'lousa', 'whiteboard', 'paint', 'png', 'invertexto']
+  },
+  {
+    id: 'rsvp-speed-reader',
+    title: 'Leitor Dinâmico RSVP (Alta Velocidade)',
+    description: 'Tecnologia Spritz de leitura dinâmica acelerada (150 a 800 WPM) com alinhamento óptico no ponto de fixação focal.',
+    category: 'invertexto',
+    categoryLabel: 'Foco & Produtividade',
+    icon: 'Play',
+    badge: '150-800 WPM',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'creative-speed-suite',
+    suiteTab: 'speed-reader',
+    tags: ['leitura', 'rsvp', 'spritz', 'velocidade', 'wpm', 'produtividade', 'foco']
+  },
+  {
+    id: 'world-clock-suite',
+    title: 'Relógio Mundial & Fusos Horários Globais',
+    description: 'Horário local simultâneo nas principais capitais do mundo (Brasília, Nova York, Londres, Paris, Tóquio, Sydney) com UTC.',
+    category: 'invertexto',
+    categoryLabel: 'Tempo & Cotidiano',
+    icon: 'Globe',
+    badge: '7 Fusos UTC',
+    isInteractive: true,
+    suiteTarget: 'creative-speed-suite',
+    suiteTab: 'world-clock',
+    tags: ['relógio', 'fusos', 'hora mundial', 'brasilia', 'londres', 'tempo', 'utc']
+  },
+  {
+    id: 'rhyme-finder-tool',
+    title: 'Dicionário Fonético de Rimas PT-BR',
+    description: 'Encontre rimas ricas e métricas fonéticas para títulos virais de YouTube, ganchos de retenção e copywriting criativo.',
+    category: 'prompts',
+    categoryLabel: 'IA Criativa & Redação',
+    icon: 'BookOpen',
+    badge: 'Copy & Rimas',
+    isInteractive: true,
+    suiteTarget: 'creative-speed-suite',
+    suiteTab: 'rhyme-finder',
+    tags: ['rimas', 'copywriting', 'poesia', 'métrica', 'títulos', 'hooks', 'vocabulário']
+  },
+  {
+    id: 'salary-history-table',
+    title: 'Histórico do Salário Mínimo Nacional',
+    description: 'Evolução cronológica oficial do salário mínimo de 1994 (Plano Real) até 2026 com leis, decretos e variação percentual.',
+    category: 'invertexto',
+    categoryLabel: 'Economia & Dados',
+    icon: 'DollarSign',
+    badge: '1994 - 2026',
+    isInteractive: true,
+    suiteTarget: 'creative-speed-suite',
+    suiteTab: 'min-salary',
+    tags: ['salário mínimo', 'economia', 'histórico', 'legislação', 'decretos', 'inpc']
   }
 ];
