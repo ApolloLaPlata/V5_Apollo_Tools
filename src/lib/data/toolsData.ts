@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -2100,5 +2100,77 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'design-frontend-suite',
     suiteTab: 'exif-cleaner',
     tags: ['exif', 'privacidade', 'gps', 'metadados', 'fotos', 'limpador', 'camera']
+  },
+  // ==========================================
+  // CATEGORIA: PRODUTIVIDADE, UTILIDADES & TIPAGEM (ETAPA 26)
+  // ==========================================
+  {
+    id: 'color-converter-pro',
+    title: 'Conversor Avançado de Cores (HEX, RGB, HSL, CMYK, HSV)',
+    description: 'Converta qualquer valor de cor instantaneamente entre HEX, RGB, HSL, CMYK e HSV com gerador de gradiente CSS e amostra visual.',
+    category: 'dev-4devs',
+    categoryLabel: 'Design & Cores',
+    icon: 'Palette',
+    badge: 'CMYK / HSL / HEX',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'productivity-types-suite',
+    suiteTab: 'color-converter',
+    tags: ['cores', 'hex', 'rgb', 'hsl', 'cmyk', 'hsv', 'conversor', 'css', 'design']
+  },
+  {
+    id: 'json-to-typescript',
+    title: 'Gerador de Tipos e Interfaces TypeScript (JSON to TS)',
+    description: 'Cole JSON bruto e converta automaticamente em interfaces ou types TypeScript aninhados com suporte a propriedades opcionais.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Tipagem',
+    icon: 'Code2',
+    badge: 'JSON -> TS',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'productivity-types-suite',
+    suiteTab: 'json-to-ts',
+    tags: ['typescript', 'json', 'interfaces', 'types', 'tipagem', 'dev', 'api']
+  },
+  {
+    id: 'fuel-trip-calculator',
+    title: 'Calculadora de Custo de Combustível, Pedágio & Trajeto',
+    description: 'Calcule o custo total de combustível e pedágios por quilometragem e faça o rateio justo por passageiro para caronas e viagens.',
+    category: 'invertexto',
+    categoryLabel: 'Finanças & Viagem',
+    icon: 'Fuel',
+    badge: 'Rateio por Pessoa',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'productivity-types-suite',
+    suiteTab: 'fuel-trip',
+    tags: ['viagem', 'combustivel', 'gasolina', 'etanol', 'pedagio', 'km', 'consumo', 'carona']
+  },
+  {
+    id: 'slug-url-cleaner',
+    title: 'Sanitizador & Gerador de Slugs Amigáveis para URLs',
+    description: 'Gere slugs limpos para SEO removendo acentos, caracteres especiais, pontuações e stopwords com visualização de URL amigável.',
+    category: 'invertexto',
+    categoryLabel: 'SEO & Webmaster',
+    icon: 'Link2',
+    badge: 'SEO Friendly',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'productivity-types-suite',
+    suiteTab: 'slug-cleaner',
+    tags: ['slug', 'url', 'seo', 'limpador', 'amigavel', 'link', 'web']
+  },
+  {
+    id: 'lorem-markdown-generator',
+    title: 'Gerador Estruturado de Documentos Markdown (Mockdown)',
+    description: 'Gere templates estruturados em Markdown para Artigos Técnicos, READMEs de repositório e Documentações de APIs REST.',
+    category: 'invertexto',
+    categoryLabel: 'Texto & Produtividade',
+    icon: 'FileText',
+    badge: 'README / API / Blog',
+    isInteractive: true,
+    suiteTarget: 'productivity-types-suite',
+    suiteTab: 'lorem-markdown',
+    tags: ['markdown', 'readme', 'api', 'mockdown', 'docs', 'artigo', 'template']
   }
 ];

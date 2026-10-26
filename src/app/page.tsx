@@ -45,6 +45,7 @@ import { LegalAndWorkplaceSuite } from '@/components/tools/LegalAndWorkplaceSuit
 import { AudioVideoAndSocialSuite } from '@/components/tools/AudioVideoAndSocialSuite';
 import { DataAndDevFormatsSuite } from '@/components/tools/DataAndDevFormatsSuite';
 import { DesignAndFrontendSuite } from '@/components/tools/DesignAndFrontendSuite';
+import { ProductivityAndTypesSuite } from '@/components/tools/ProductivityAndTypesSuite';
 
 import { 
   Search, 
@@ -153,6 +154,7 @@ import {
   FileCode2,
   GitCompare,
   Eye,
+  Link2,
   X
 } from 'lucide-react';
 
@@ -253,7 +255,8 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Maximize,
   FileCode2,
   GitCompare,
-  Eye
+  Eye,
+  Link2
 };
 
 export default function ApolloToolsPage() {
@@ -554,6 +557,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'design-frontend-suite' && (
               <DesignAndFrontendSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'productivity-types-suite' && (
+              <ProductivityAndTypesSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
