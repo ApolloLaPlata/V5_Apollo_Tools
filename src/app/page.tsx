@@ -54,6 +54,7 @@ import { EcommerceTrafficAndConversionSuite } from '@/components/tools/Ecommerce
 import { AcademicAndStudySuite } from '@/components/tools/AcademicAndStudySuite';
 import { LegalDocumentsA4Suite } from '@/components/tools/LegalDocumentsA4Suite';
 import { TaxAndFiscalSuite } from '@/components/tools/TaxAndFiscalSuite';
+import { AccessibilityAndWebPerfSuite } from '@/components/tools/AccessibilityAndWebPerfSuite';
 
 import { 
   Search, 
@@ -172,6 +173,7 @@ import {
   Home,
   AlertTriangle,
   Truck,
+  Gauge,
   X
 } from 'lucide-react';
 
@@ -282,7 +284,8 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Feather,
   Home,
   AlertTriangle,
-  Truck
+  Truck,
+  Gauge
 };
 
 export default function ApolloToolsPage() {
@@ -610,6 +613,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'tax-fiscal-suite' && (
               <TaxAndFiscalSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'accessibility-perf-suite' && (
+              <AccessibilityAndWebPerfSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

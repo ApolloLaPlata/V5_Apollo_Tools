@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -2749,5 +2749,77 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'tax-fiscal-suite',
     suiteTab: 'lucro-presumido',
     tags: ['lucro presumido', 'irpj', 'csll', 'pis', 'cofins', 'tributacao', 'contabilidade']
+  },
+  // ==========================================
+  // ETAPA 35: SUÍTE DE ACESSIBILIDADE DIGITAL & PERFORMANCE WEB (CORE WEB VITALS)
+  // ==========================================
+  {
+    id: 'wcag-contrast-checker',
+    title: 'Verificador de Contraste WCAG 2.2 & Touch Target',
+    description: 'Cálculo exato de contraste W3C (níveis AA/AAA para texto normal e grande) e validador de área mínima de toque mobile (44x44px).',
+    category: 'dev-4devs',
+    categoryLabel: 'Acessibilidade & UI',
+    icon: 'Eye',
+    badge: 'WCAG 2.2 AA/AAA',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'accessibility-perf-suite',
+    suiteTab: 'wcag-checker',
+    tags: ['wcag', 'acessibilidade', 'contraste', 'touch target', 'w3c', 'frontend', 'ui']
+  },
+  {
+    id: 'core-web-vitals-estimator',
+    title: 'Estimador Core Web Vitals (LCP, INP, CLS) & Score',
+    description: 'Simule métricas vitais do Google PageSpeed/Lighthouse (Largest Contentful Paint, Interaction to Next Paint e Cumulative Layout Shift).',
+    category: 'dev-4devs',
+    categoryLabel: 'Performance & SEO',
+    icon: 'Gauge',
+    badge: 'Lighthouse CWV',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'accessibility-perf-suite',
+    suiteTab: 'cwv-estimator',
+    tags: ['core web vitals', 'lcp', 'inp', 'cls', 'lighthouse', 'performance', 'pagespeed', 'seo']
+  },
+  {
+    id: 'wai-aria-builder',
+    title: 'Construtor de Componentes WAI-ARIA 1.2',
+    description: 'Gere snippets de código JSX/HTML acessíveis para Modais, Accordions, Alertas e Tablists com suporte oficial a leitores de tela.',
+    category: 'dev-4devs',
+    categoryLabel: 'Frontend & ARIA',
+    icon: 'Code2',
+    badge: 'WAI-ARIA 1.2',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'accessibility-perf-suite',
+    suiteTab: 'aria-builder',
+    tags: ['aria', 'wai-aria', 'acessibilidade', 'screen reader', 'modal', 'accordion', 'tabs']
+  },
+  {
+    id: 'css-specificity-calculator',
+    title: 'Calculadora de Especificidade CSS & Comparador de Cascata',
+    description: 'Calcule o peso exato de seletores CSS (IDs, classes e tags) com comparador visual de regras conflitantes na cascata do navegador.',
+    category: 'dev-4devs',
+    categoryLabel: 'CSS & Arquitetura',
+    icon: 'Layers',
+    badge: 'Cascata CSS',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'accessibility-perf-suite',
+    suiteTab: 'css-specificity',
+    tags: ['css', 'especificidade', 'cascata', 'seletores', 'frontend', 'specificity']
+  },
+  {
+    id: 'csp-security-headers-builder',
+    title: 'Gerador de Content Security Policy (CSP) & Headers',
+    description: 'Crie políticas de segurança CSP contra XSS e Clickjacking com cabeçalhos HSTS, X-Content-Type-Options e exportação Nginx/Next.js.',
+    category: 'dev-4devs',
+    categoryLabel: 'Segurança & Headers',
+    icon: 'ShieldCheck',
+    badge: 'Anti-XSS & HSTS',
+    isInteractive: true,
+    suiteTarget: 'accessibility-perf-suite',
+    suiteTab: 'csp-builder',
+    tags: ['csp', 'content security policy', 'security headers', 'hsts', 'nginx', 'xss', 'clickjacking']
   }
 ];
