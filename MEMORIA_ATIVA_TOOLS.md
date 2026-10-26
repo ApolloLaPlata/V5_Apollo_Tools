@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 26/10/2026 · **Status:** Operacional (Build 100% Green · 280 Ferramentas Ativas · 54 Etapas Concluídas)
+**Data de Atualização:** 26/10/2026 · **Status:** Operacional (Build 100% Green · 285 Ferramentas Ativas · 55 Etapas Concluídas)
 
 ---
 
@@ -155,16 +155,17 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **Network & DNS Diagnostics** | `NetworkDnsDiagnosticsSuite.tsx` | Calculador TTL & Propagação DNS, Construtor Registros BIND RFC (SPF/DKIM/DMARC/MX/CNAME/SRV), Inspetor HSTS Chrome Preload, Calculadora MTU/MSS & Overhead, Validador Regex IP/CIDR/FQDN |
 | **Binary Buffers & Hex Dump** | `BinaryBuffersAndHexDumpSuite.tsx` | Visualizador Hex Dump com Offset (Bytes & ASCII), Conversor Endianness (Little vs Big Endian DataView), Detector de Magic Bytes (PNG/JPG/PDF/ZIP/EXE/SQLite), Calculadora Bitwise 32-bit, Tabela de Controle ASCII (0-127) |
 | **API Docs & OpenAPI Mock** | `ApiDocsOpenApiMockSuite.tsx` | Visualizador OpenAPI/Swagger 3.0, Gerador de Massa de Dados JSON Mock (Faker BRL), Matriz de Status Codes RFC 9110 (1xx a 5xx), Formatador/Linter GraphQL, Inspetor Protobuf Proto3 para TypeScript |
+| **Dependencies, SBOM & Licenses** | `DependenciesSbomLicensingSuite.tsx` | Auditor de package.json (Scripts/Tipos/Score), Matriz de Licenças SPDX (MIT/GPL/AGPL), Gerador SBOM CycloneDX v1.5 / SPDX, Resolvador SemVer 2.0 (^ e ~), Otimizador Dockerfile Multi-Stage |
 
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário
 - **Sistema de Favoritos Local:** Usuário pode favoritar ferramentas com 1 clique (persistência no `localStorage`).
 - **Histórico Recente de Uso:** Barra de acesso rápido às últimas ferramentas utilizadas com persistência local.
-- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 280 ferramentas.
+- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 285 ferramentas.
 - **Deep-linking Universal:** Compartilhamento direto via URL (`?tool=id`) com cópia em 1 clique e ativação automática com scroll suave.
 - **Filtro Rápido:** Aba instantânea para ferramentas favoritadas na barra de categorias.
-- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 280 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
+- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 285 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
 - **Suporte a PWA Standalone:** Arquivo `manifest.json` com paleta Cyber Obsidian (`#020617` / `#06b6d4`) para instalação como app nativo no Desktop e Mobile.
 
 ---

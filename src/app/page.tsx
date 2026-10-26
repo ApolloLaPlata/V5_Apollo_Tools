@@ -74,6 +74,7 @@ import { ModernCryptoAndSignaturesSuite } from '@/components/tools/ModernCryptoA
 import { NetworkDnsDiagnosticsSuite } from '@/components/tools/NetworkDnsDiagnosticsSuite';
 import { BinaryBuffersAndHexDumpSuite } from '@/components/tools/BinaryBuffersAndHexDumpSuite';
 import { ApiDocsOpenApiMockSuite } from '@/components/tools/ApiDocsOpenApiMockSuite';
+import { DependenciesSbomLicensingSuite } from '@/components/tools/DependenciesSbomLicensingSuite';
 
 import { 
   Search, 
@@ -696,6 +697,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'api-docs-mock-suite' && (
               <ApiDocsOpenApiMockSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'dependencies-sbom-suite' && (
+              <DependenciesSbomLicensingSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

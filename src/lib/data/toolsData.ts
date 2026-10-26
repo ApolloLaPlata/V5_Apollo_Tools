@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -4173,5 +4173,75 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'api-docs-mock-suite',
     suiteTab: 'protobuf-inspector',
     tags: ['protobuf', 'proto3', 'grpc', 'typescript interface', 'schema converter', 'microservicos']
+  },
+  {
+    id: 'package-json-auditor-tool',
+    title: 'Auditor & Inspetor de Dependências (package.json)',
+    description: 'Verifique a saúde de manifestos npm: scripts suspeitos (pre/postinstall), dependências depreciadas, tipos em produção e score de qualidade 0-100.',
+    category: 'dev-4devs',
+    categoryLabel: 'DevOps & Pacotes',
+    icon: 'Package',
+    badge: 'package.json Audit',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'dependencies-sbom-suite',
+    suiteTab: 'pkg-auditor',
+    tags: ['package.json', 'npm audit', 'dependencias', 'seguranca npm', 'postinstall', 'devops']
+  },
+  {
+    id: 'spdx-license-compatibility-tool',
+    title: 'Matriz de Compatibilidade de Licenças Open Source (SPDX)',
+    description: 'Analise riscos de contaminação viral e copyleft (MIT, Apache, BSD, MPL, LGPL, GPL, AGPL) para SaaS na nuvem e distribuição de software proprietário.',
+    category: 'dev-4devs',
+    categoryLabel: 'Compliance & Licenças',
+    icon: 'ShieldCheck',
+    badge: 'SPDX License Matrix',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'dependencies-sbom-suite',
+    suiteTab: 'spdx-matrix',
+    tags: ['spdx', 'licencas open source', 'mit license', 'gpl copyleft', 'agpl saas', 'compliance juridico']
+  },
+  {
+    id: 'sbom-cyclonedx-generator-tool',
+    title: 'Gerador & Visualizador SBOM (CycloneDX v1.5 / SPDX v2.3)',
+    description: 'Crie manifestos de Software Bill of Materials (SBOM) em formato JSON compatíveis com auditorias SOC 2, ISO 27001 e conformidade da Executive Order 14028.',
+    category: 'dev-4devs',
+    categoryLabel: 'Segurança & Compliance',
+    icon: 'FileText',
+    badge: 'CycloneDX SBOM',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'dependencies-sbom-suite',
+    suiteTab: 'sbom-generator',
+    tags: ['sbom', 'cyclonedx', 'spdx', 'soc 2', 'iso 27001', 'supply chain security']
+  },
+  {
+    id: 'semver-calculator-range-resolver-tool',
+    title: 'Resolvador de Intervalos SemVer 2.0.0 (Caret ^ / Tilde ~)',
+    description: 'Simulador visual de satisfação de versões SemVer 2.0: compare operadores ^, ~, ranges x.x e wildcards com matriz de versões de pacotes aceitas e rejeitadas.',
+    category: 'dev-4devs',
+    categoryLabel: 'Versionamento & SemVer',
+    icon: 'GitBranch',
+    badge: 'SemVer 2.0 Resolver',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'dependencies-sbom-suite',
+    suiteTab: 'semver-resolver',
+    tags: ['semver', 'semantic versioning', 'caret version', 'tilde semver', 'npm range', 'resolucao pacotes']
+  },
+  {
+    id: 'dockerfile-multi-stage-optimizer-tool',
+    title: 'Otimizador & Linter de Dockerfile Multi-Stage (Next.js & Python)',
+    description: 'Acelere builds e reduza imagens de 1.2GB para 130MB: cache de camadas com reordenação de COPY, imagens Alpine enxutas e usuário não-root (CIS Benchmark).',
+    category: 'dev-4devs',
+    categoryLabel: 'Contêineres & Docker',
+    icon: 'Box',
+    badge: 'Dockerfile Optimizer',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'dependencies-sbom-suite',
+    suiteTab: 'dockerfile-optimizer',
+    tags: ['dockerfile', 'multi stage build', 'otimizacao docker', 'docker cache', 'nextjs docker', 'alpine container']
   }
 ];
