@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -3823,5 +3823,75 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'iot-hardware-suite',
     suiteTab: 'battery-life',
     tags: ['bateria iot', 'autonomia bateria', 'deep sleep', 'mah', 'esp32 sleep', 'consumo energetico']
+  },
+  {
+    id: 'sql-formatter-linter-client',
+    title: 'Formatador & Linter SQL Client-Side (PostgreSQL / MySQL)',
+    description: 'Embeleze e formate consultas SQL com indentação automática de SELECT, JOIN, WHERE e GROUP BY, conversão de palavras-chave para UPPERCASE e modo minificado.',
+    category: 'dev-4devs',
+    categoryLabel: 'Banco de Dados & SQL',
+    icon: 'Code2',
+    badge: 'SQL Formatter',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'database-sql-suite',
+    suiteTab: 'sql-formatter',
+    tags: ['sql formatter', 'formatador sql', 'linter sql', 'beautify sql', 'postgresql', 'mysql']
+  },
+  {
+    id: 'sql-explain-cost-analyzer-tool',
+    title: 'Analisador Visual de Planos EXPLAIN & Custo de Queries',
+    description: 'Identifique gargalos de performance em planos EXPLAIN de PostgreSQL/MySQL: detecção de Sequential Scans (Seq Scan), estimativa de custo e sugestão de índices B-Tree.',
+    category: 'dev-4devs',
+    categoryLabel: 'Performance & Banco de Dados',
+    icon: 'Search',
+    badge: 'EXPLAIN Optimizer',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'database-sql-suite',
+    suiteTab: 'explain-analyzer',
+    tags: ['explain analyze', 'seq scan', 'otimizacao sql', 'dba', 'indices b-tree', 'query cost']
+  },
+  {
+    id: 'orm-schema-converter-prisma-drizzle',
+    title: 'Conversor SQL CREATE TABLE para Prisma & Drizzle ORM',
+    description: 'Transforme definições SQL de tabelas (CREATE TABLE) em schemas de produção para Prisma (.prisma), Drizzle ORM (PostgreSQL) e interfaces nativas TypeScript.',
+    category: 'dev-4devs',
+    categoryLabel: 'ORMs & Backend',
+    icon: 'Layers',
+    badge: 'Prisma & Drizzle',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'database-sql-suite',
+    suiteTab: 'orm-converter',
+    tags: ['prisma schema', 'drizzle orm', 'create table to orm', 'sql to prisma', 'typescript interface']
+  },
+  {
+    id: 'db-connection-string-parser-mask',
+    title: 'Parser & Sanitizador de Connection Strings de Banco',
+    description: 'Decomponha URIs de conexão (Postgres, MySQL, Mongo, Redis) em host, porta, db e parâmetros; sanitize strings para logs públicos e converta para variáveis de ambiente .env.',
+    category: 'dev-4devs',
+    categoryLabel: 'Segurança & Banco de Dados',
+    icon: 'Key',
+    badge: 'Conn String Mask',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'database-sql-suite',
+    suiteTab: 'conn-string',
+    tags: ['connection string', 'database uri', 'postgres url', 'mascarar senha', 'dotenv db']
+  },
+  {
+    id: 'uuid-v4-v7-generator-time-ordered',
+    title: 'Gerador & Inspetor de UUID v4 & UUID v7 (Time-Ordered)',
+    description: 'Gere UUIDs aleatórios v4 ou UUIDs ordenados no tempo v7 (RFC 9562) para índices B-Tree sem fragmentação; inspecione a data e hora Unix embutidas na chave.',
+    category: 'dev-4devs',
+    categoryLabel: 'Identificadores & Chaves',
+    icon: 'Clock',
+    badge: 'UUID v7 RFC 9562',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'database-sql-suite',
+    suiteTab: 'uuid-generator',
+    tags: ['uuid v7', 'uuid v4', 'time ordered uuid', 'chaves primarias', 'rfc 9562', 'b-tree performance']
   }
 ];

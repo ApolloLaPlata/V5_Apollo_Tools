@@ -69,6 +69,7 @@ import { VectorAndPixelOptimizationSuite } from '@/components/tools/VectorAndPix
 import { PerformanceAssetsAndVitalsSuite } from '@/components/tools/PerformanceAssetsAndVitalsSuite';
 import { TerminalAndSysAdminSuite } from '@/components/tools/TerminalAndSysAdminSuite';
 import { IoTAndHardwareSensorsSuite } from '@/components/tools/IoTAndHardwareSensorsSuite';
+import { DatabaseSqlOptimizerSuite } from '@/components/tools/DatabaseSqlOptimizerSuite';
 
 import { 
   Search, 
@@ -676,6 +677,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'iot-hardware-suite' && (
               <IoTAndHardwareSensorsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'database-sql-suite' && (
+              <DatabaseSqlOptimizerSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
