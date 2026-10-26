@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -2028,5 +2028,77 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'data-dev-formats-suite',
     suiteTab: 'side-by-side-diff',
     tags: ['diff', 'comparador', 'código', 'git', 'qa', 'revisão', 'texto']
+  },
+  // ==========================================
+  // CATEGORIA: DESIGN SYSTEM, FRONTEND & TIPOGRAFIA (ETAPA 25)
+  // ==========================================
+  {
+    id: 'wcag-contrast-checker',
+    title: 'Validador de Contraste WCAG 2.1 (Acessibilidade)',
+    description: 'Calcule a razão exata de contraste entre cores de texto e fundo segundo as normas W3C WCAG 2.1 com selos AA e AAA.',
+    category: 'dev-4devs',
+    categoryLabel: 'Design & Acessibilidade',
+    icon: 'Eye',
+    badge: 'WCAG 2.1 AA/AAA',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'design-frontend-suite',
+    suiteTab: 'wcag-contrast',
+    tags: ['wcag', 'contraste', 'acessibilidade', 'cores', 'w3c', 'design', 'ui', 'ux']
+  },
+  {
+    id: 'css-units-converter',
+    title: 'Conversor de Unidades CSS & Tipografia Fluida (clamp)',
+    description: 'Converta px para rem, em, vw, % e pt instantaneamente e gere funções CSS clamp() para tipografia responsiva.',
+    category: 'dev-4devs',
+    categoryLabel: 'CSS & Frontend',
+    icon: 'Type',
+    badge: 'px / rem / clamp()',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'design-frontend-suite',
+    suiteTab: 'css-units',
+    tags: ['css', 'rem', 'px', 'clamp', 'responsivo', 'tipografia', 'unidades', 'frontend']
+  },
+  {
+    id: 'glassmorphism-shadow-generator',
+    title: 'Gerador de Glassmorphism & Box-Shadow Cyber',
+    description: 'Ajuste desfoque (blur), opacidade, bordas e sombras com glow neon em tempo real e copie o código CSS com 1 clique.',
+    category: 'dev-4devs',
+    categoryLabel: 'Design System & CSS',
+    icon: 'Layers',
+    badge: 'Glassmorphism',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'design-frontend-suite',
+    suiteTab: 'glassmorphism',
+    tags: ['glassmorphism', 'css', 'box shadow', 'blur', 'cyber', 'obsidian', 'ui']
+  },
+  {
+    id: 'fake-credit-card-qa',
+    title: 'Gerador de Cartões Fictícios para Testes QA (Luhn)',
+    description: 'Gere números de cartão de crédito matematicamente válidos (Luhn Módulo 10) para sandbox e homologação com CVV e validade.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (QA)',
+    icon: 'CreditCard',
+    badge: 'Sandbox Luhn',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'design-frontend-suite',
+    suiteTab: 'fake-card-qa',
+    tags: ['cartao', 'luhn', 'sandbox', 'qa', 'testes', 'checkout', 'visa', 'mastercard']
+  },
+  {
+    id: 'exif-metadata-cleaner',
+    title: 'Inspetor & Limpador de Metadados EXIF de Imagens',
+    description: 'Remova coordenadas GPS, modelo de câmera e data de fotos antes de publicar em redes sociais com download 100% higienizado.',
+    category: 'invertexto',
+    categoryLabel: 'Privacidade & Mídia',
+    icon: 'FileImage',
+    badge: 'Zero GPS / EXIF',
+    isInteractive: true,
+    suiteTarget: 'design-frontend-suite',
+    suiteTab: 'exif-cleaner',
+    tags: ['exif', 'privacidade', 'gps', 'metadados', 'fotos', 'limpador', 'camera']
   }
 ];
