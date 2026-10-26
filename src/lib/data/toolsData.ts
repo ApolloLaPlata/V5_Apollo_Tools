@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -3184,5 +3184,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'email-transactional-suite',
     suiteTab: 'mailto-builder',
     tags: ['mailto', 'link email', 'rfc 6068', 'gerador mailto', 'cc bcc', 'html mailto']
+  },
+  // ==========================================
+  // ETAPA 41: SUÍTE DE DEVOPS, GIT & AMBIENTES DE INFRAESTRUTURA (215 FERRAMENTAS)
+  // ==========================================
+  {
+    id: 'smart-gitignore-generator',
+    title: 'Gerador Inteligente de .gitignore Multi-Stack',
+    description: 'Combine templates oficiais de .gitignore para Next.js, Node.js, Python, Go, Rust, Docker, VS Code, macOS e Windows com download direto.',
+    category: 'dev-4devs',
+    categoryLabel: 'Git & DevOps',
+    icon: 'Layers',
+    badge: 'Multi-Stack Preset',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'devops-git-suite',
+    suiteTab: 'gitignore-gen',
+    tags: ['gitignore', 'git', 'ignorar arquivos', 'node_modules', 'nextjs', 'python', 'docker']
+  },
+  {
+    id: 'conventional-commits-builder',
+    title: 'Construtor de Conventional Commits (Angular / Git)',
+    description: 'Monte mensagens de commit padronizadas (feat, fix, chore, docs, refactor) com escopo, flag de breaking change (!) e linter de 72 caracteres.',
+    category: 'dev-4devs',
+    categoryLabel: 'Git & Código',
+    icon: 'Terminal',
+    badge: 'Conventional Spec',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'devops-git-suite',
+    suiteTab: 'commit-builder',
+    tags: ['conventional commits', 'git commit', 'feat fix chore', 'padrao commit', 'linter git']
+  },
+  {
+    id: 'dockerfile-best-practices-linter',
+    title: 'Auditor de Boas Práticas & Otimização de Dockerfile',
+    description: 'Audite Dockerfiles com verificação de multi-stage builds, cache de camadas de dependências, usuários não-root e variantes leves Alpine/Slim com nota 0 a 100.',
+    category: 'dev-4devs',
+    categoryLabel: 'DevOps & Containers',
+    icon: 'Server',
+    badge: 'Docker Security & Cache',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'devops-git-suite',
+    suiteTab: 'dockerfile-audit',
+    tags: ['docker', 'dockerfile', 'containers', 'linter docker', 'multi-stage', 'alpine', 'seguranca']
+  },
+  {
+    id: 'env-example-sanitizer-comparator',
+    title: 'Sanitizador & Comparador .env vs .env.example',
+    description: 'Compare variáveis de ambiente entre ambientes local e homologação, encontre chaves ausentes e gere um .env.example limpo e sem senhas para o GitHub.',
+    category: 'dev-4devs',
+    categoryLabel: 'Segurança & Config',
+    icon: 'Lock',
+    badge: 'Auditoria de Segredos',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'devops-git-suite',
+    suiteTab: 'env-sanitizer',
+    tags: ['env', 'dotenv', 'env example', 'sanitizador', 'segredos', 'variaveis de ambiente', 'git security']
+  },
+  {
+    id: 'semver-versioning-calculator',
+    title: 'Calculadora de Versionamento Semântico (SemVer 2.0.0)',
+    description: 'Calcule incrementos matemáticos de versões Major, Minor, Patch e Pre-release tags (alpha, beta, rc) com orientações da especificação SemVer 2.0.0.',
+    category: 'dev-4devs',
+    categoryLabel: 'Engenharia & Releases',
+    icon: 'Tag',
+    badge: 'SemVer 2.0.0 RFC',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'devops-git-suite',
+    suiteTab: 'semver-calc',
+    tags: ['semver', 'versionamento', 'major minor patch', 'release', 'npm version', 'git tag']
   }
 ];

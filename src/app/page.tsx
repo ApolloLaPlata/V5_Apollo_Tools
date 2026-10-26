@@ -60,6 +60,7 @@ import { ApiAndNetworkTestingSuite } from '@/components/tools/ApiAndNetworkTesti
 import { DocumentAndOpenSourceSuite } from '@/components/tools/DocumentAndOpenSourceSuite';
 import { MediaAndAudioStudioSuite } from '@/components/tools/MediaAndAudioStudioSuite';
 import { EmailAndTransactionalSuite } from '@/components/tools/EmailAndTransactionalSuite';
+import { DevOpsAndGitSuite } from '@/components/tools/DevOpsAndGitSuite';
 
 import { 
   Search, 
@@ -640,6 +641,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'email-transactional-suite' && (
               <EmailAndTransactionalSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'devops-git-suite' && (
+              <DevOpsAndGitSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
