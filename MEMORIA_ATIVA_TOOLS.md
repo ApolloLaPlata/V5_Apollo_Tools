@@ -108,6 +108,17 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **Text Manipulator** | `TextManipulatorSuite.tsx` | Letras Diferentes, Texto Invertido (Flip), Comparador Diff, Localizar & Substituir, Sem Acentos, Lorem Ipsum |
 | **Crypto & Web** | `CryptoWebSuite.tsx` | Código de Barras (EAN-13/Code 128), QR Code Wi-Fi, Criptografia (Base64/Morse/Binário), Sorteios |
 | **Apollo La Plata** | `ApolloLaPlataSuite.tsx` | Roteiros Virais 30-60s, Prompts Veo 3/Sora, Descrições SEO, Hashtags Segmentadas |
+| **Geometry Suite** | `GeometrySuite.tsx` | 13 Formas Geométricas com cálculo de Área/Perímetro e visualizador SVG dinâmico |
+| **Dev & CV Suite** | `DevAndCvSuite.tsx` | Gerador de Currículo A4 para impressão, Gerador de Nicks, Nomes IBGE e Imagem Dummy SVG |
+| **Lottery & Games** | `LotteryAndGamesSuite.tsx` | Loterias Caixa (Mega-Sena, Quina, etc.), Roleta da Sorte Interativa SVG, Sorteador Fisher-Yates |
+| **Time & Focus** | `TimeAndFocusSuite.tsx` | Cronômetro com Laps, Pomodoro 25/5 com Web Audio sintetizado, Calculadora de Ponto/Extras |
+| **Calendar & Astronomy** | `CalendarAndAstronomySuite.tsx` | Calculadora de Idade Exata, Signos Ocidental/Chinês, Calendário Anual Feriados/Páscoa Meeus, Fases da Lua, Estações |
+| **Units & Converters** | `UnitsAndConvertersSuite.tsx` | Conversores de Base (Dec/Bin/Oct/Hex com nibbles), Medidas Físicas (Métrico/Imperial), Frações MDC, Timestamp UNIX & UUID v4 |
+| **Finance & Economy** | `FinanceAndEconomySuite.tsx` | Juros Compostos com Gráfico SVG, Calculadora do Milhão, Price vs SAC, Gasolina vs Etanol, Calculadora de Viagem |
+| **Health & Everyday** | `HealthAndEverydaySuite.tsx` | IMC OMS & Peso Devine, Calculadora Gestacional Naegele, Churrascômetro Completo, Emissor de Recibo e Nota Promissória A4 |
+| **Media & Utility** | `MediaAndUtilitySuite.tsx` | Editor Canvas & Filtros P&B/Sépia, WPM Typing Test em tempo real, Testador de Monitor (Dead Pixels), Bloco de Notas Local |
+| **Text Specialized** | `TextSpecializedSuite.tsx` | Modificadores Unicode, Prefixo/Sufixo em Massa, Cifra Secreta com Senha, Símbolos/Emojis |
+| **V5 AI Gateway** | `V5AiGatewaySuite.tsx` | Playground LLM & Gemini Roleta, Despachador ComfyUI Modal H100 (2.8s cold-start), Telemetria de Frota (20 contas), Ponte V5 Apollo API |
 
 ---
 

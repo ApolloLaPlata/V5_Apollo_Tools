@@ -37,6 +37,7 @@ import { FinanceAndEconomySuite } from '@/components/tools/FinanceAndEconomySuit
 import { HealthAndEverydaySuite } from '@/components/tools/HealthAndEverydaySuite';
 import { MediaAndUtilitySuite } from '@/components/tools/MediaAndUtilitySuite';
 import { TextSpecializedSuite } from '@/components/tools/TextSpecializedSuite';
+import { V5AiGatewaySuite } from '@/components/tools/V5AiGatewaySuite';
 
 import { 
   Search, 
@@ -118,6 +119,11 @@ import {
   ListOrdered,
   Lock,
   Unlock,
+  Activity,
+  Server,
+  Zap,
+  Play,
+  Send,
   X
 } from 'lucide-react';
 
@@ -194,7 +200,12 @@ const ICON_MAP: Record<string, React.ElementType> = {
   FileEdit,
   ListOrdered,
   Lock,
-  Unlock
+  Unlock,
+  Activity,
+  Server,
+  Zap,
+  Play,
+  Send
 };
 
 export default function ApolloToolsPage() {
@@ -341,6 +352,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'text-specialized-suite' && (
               <TextSpecializedSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'ai-gateway-suite' && (
+              <V5AiGatewaySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

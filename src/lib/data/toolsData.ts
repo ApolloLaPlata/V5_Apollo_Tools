@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -1552,5 +1552,63 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'apollo-suite',
     suiteTab: 'hashtags',
     tags: ['apollo', 'hashtags', 'instagram', 'tiktok', 'seo']
+  },
+
+  // ==========================================
+  // CATEGORIA 5: V5 AI GATEWAY & GPU MODAL H100 (ORQUESTRAÇÃO V5 APOLLO API)
+  // ==========================================
+  {
+    id: 'v5-ai-playground',
+    title: 'V5 AI Gateway & Playground LLM',
+    description: 'Inferência multimodal com suporte à frota de chaves Gemini com roteamento Dual Roulette e conexão à V5 Apollo API.',
+    category: 'prompts',
+    categoryLabel: 'IA Gateway (V5 Apollo API)',
+    icon: 'Sparkles',
+    badge: 'LLM Gateway',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'ai-gateway-suite',
+    suiteTab: 'ai-playground',
+    tags: ['ia', 'gateway', 'llm', 'gemini', 'v5 apollo api', 'playground', 'prompts']
+  },
+  {
+    id: 'comfy-cloud-runner',
+    title: 'ComfyUI Cloud Runner (Modal H100)',
+    description: 'Despachador assíncrono de pipelines ComfyUI para GPU dedicada com Memory Snapshot (2.8s cold-start) e logs em tempo real.',
+    category: 'comfyui',
+    categoryLabel: 'ComfyUI Cloud (Modal H100)',
+    icon: 'Cpu',
+    badge: 'Cloud Runner H100',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'ai-gateway-suite',
+    suiteTab: 'comfy-cloud-runner',
+    tags: ['comfyui', 'modal', 'h100', 'gpu', 'cloud', 'runner', 'despacho', 'ia']
+  },
+  {
+    id: 'v5-fleet-telemetry',
+    title: 'Telemetria da Frota Modal H100 & Roteador',
+    description: 'Monitoramento de nós ativos, latência média, rotação de contas da pasta FERRAMENTAS e saúde da infraestrutura de IA.',
+    category: 'dev-4devs',
+    categoryLabel: 'Infra & GPU (V5 Apollo)',
+    icon: 'Activity',
+    badge: 'Telemetria GPU',
+    isInteractive: true,
+    suiteTarget: 'ai-gateway-suite',
+    suiteTab: 'fleet-telemetry',
+    tags: ['telemetria', 'gpu', 'modal', 'h100', 'frota', 'infra', 'roteador']
+  },
+  {
+    id: 'api-agent-bridge',
+    title: 'Ponte & Orquestrador com V5 Apollo API',
+    description: 'Prompt Mestre e especificações de contrato prontas para copiar e enviar ao agente da V5_APOLLO_API no ecossistema Colmeia.',
+    category: 'prompts',
+    categoryLabel: 'Orquestração Colmeia',
+    icon: 'Terminal',
+    badge: 'Agent Bridge',
+    isInteractive: true,
+    suiteTarget: 'ai-gateway-suite',
+    suiteTab: 'api-agent-bridge',
+    tags: ['orquestrador', 'agente', 'colmeia', 'v5 apollo api', 'bridge', 'prompt']
   }
 ];
