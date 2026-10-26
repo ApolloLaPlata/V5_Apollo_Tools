@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -914,6 +914,62 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'health-everyday-suite',
     suiteTab: 'recibo-promissoria',
     tags: ['invertexto', 'recibo', 'recibo de pagamento', 'nota promissória', 'promissória', 'por extenso', 'impressão', 'documento']
+  },
+  {
+    id: 'editor-imagem-canvas',
+    title: 'Editor de Imagem & Filtros Canvas',
+    description: 'Redimensione imagens mantendo proporções e aplique filtros P&B, sépia, inverter e brilho 100% no navegador via HTML5 Canvas.',
+    category: 'invertexto',
+    categoryLabel: 'Mídia & Imagem (Invertexto)',
+    icon: 'Image',
+    badge: 'HTML5 Canvas',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'media-utility-suite',
+    suiteTab: 'canvas-image',
+    tags: ['invertexto', 'imagem', 'redimensionar', 'crop', 'canvas', 'foto', 'filtro', 'preto e branco']
+  },
+  {
+    id: 'teste-digitacao-wpm',
+    title: 'Teste de Digitação WPM (Palavras por Minuto)',
+    description: 'Meça sua velocidade e precisão de digitação em tempo real em português com cálculo instantâneo de palavras por minuto (WPM).',
+    category: 'invertexto',
+    categoryLabel: 'Hardware & Testes (Invertexto)',
+    icon: 'Keyboard',
+    badge: 'PPM / WPM Realtime',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'media-utility-suite',
+    suiteTab: 'typing-wpm',
+    tags: ['invertexto', 'digitação', 'wpm', 'ppm', 'teclado', 'velocidade de digitação', 'teste']
+  },
+  {
+    id: 'testador-monitor-tela',
+    title: 'Testador de Tela & Dead Pixels',
+    description: 'Inspeção de cores puras em tela cheia para detectar dead pixels, stuck pixels e vazamentos de backlight no display.',
+    category: 'invertexto',
+    categoryLabel: 'Hardware & Testes (Invertexto)',
+    icon: 'Monitor',
+    badge: 'Dead Pixel Check',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'media-utility-suite',
+    suiteTab: 'monitor-tester',
+    tags: ['invertexto', 'monitor', 'tela', 'dead pixel', 'stuck pixel', 'display', 'fullscreen']
+  },
+  {
+    id: 'bloco-de-notas-online',
+    title: 'Bloco de Notas Online (Auto-Save Local)',
+    description: 'Anotações rápidas sem distração com salvamento automático local no navegador via localStorage e exportação para .txt.',
+    category: 'invertexto',
+    categoryLabel: 'Produtividade (Invertexto)',
+    icon: 'FileEdit',
+    badge: 'Auto-Save Local',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'media-utility-suite',
+    suiteTab: 'notepad-local',
+    tags: ['invertexto', 'bloco de notas', 'notepad', 'anotações', 'texto', 'notas', 'localstorage']
   },
   {
     id: 'char-counter',

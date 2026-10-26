@@ -35,6 +35,7 @@ import { CalendarAndAstronomySuite } from '@/components/tools/CalendarAndAstrono
 import { UnitsAndConvertersSuite } from '@/components/tools/UnitsAndConvertersSuite';
 import { FinanceAndEconomySuite } from '@/components/tools/FinanceAndEconomySuite';
 import { HealthAndEverydaySuite } from '@/components/tools/HealthAndEverydaySuite';
+import { MediaAndUtilitySuite } from '@/components/tools/MediaAndUtilitySuite';
 
 import { 
   Search, 
@@ -110,6 +111,9 @@ import {
   Baby,
   Flame,
   Scale,
+  Keyboard,
+  Monitor,
+  FileEdit,
   X
 } from 'lucide-react';
 
@@ -180,7 +184,10 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Heart,
   Baby,
   Flame,
-  Scale
+  Scale,
+  Keyboard,
+  Monitor,
+  FileEdit
 };
 
 export default function ApolloToolsPage() {
@@ -321,6 +328,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'health-everyday-suite' && (
               <HealthAndEverydaySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'media-utility-suite' && (
+              <MediaAndUtilitySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
