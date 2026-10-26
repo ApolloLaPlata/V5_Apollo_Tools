@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -1956,5 +1956,77 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'audio-video-social-suite',
     suiteTab: 'engagement-calc',
     tags: ['engajamento', 'instagram', 'tiktok', 'youtube', 'social media', 'taxa', 'growth']
+  },
+  // ==========================================
+  // CATEGORIA: DADOS, FORMATOS & DEV QA SUITE (ETAPA 24)
+  // ==========================================
+  {
+    id: 'csv-to-json-sql',
+    title: 'Conversor CSV para JSON & SQL Inserts',
+    description: 'Importe dados tabulares ou cole CSV para converter instantaneamente em array de objetos JSON ou comandos SQL INSERT formatados.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Dados (4Devs)',
+    icon: 'Table',
+    badge: 'CSV / JSON / SQL',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'data-dev-formats-suite',
+    suiteTab: 'csv-json-sql',
+    tags: ['csv', 'json', 'sql', 'inserts', 'banco de dados', 'conversor', 'tabela', 'dev']
+  },
+  {
+    id: 'markdown-live-editor',
+    title: 'Editor & Visualizador de Markdown ao Vivo',
+    description: 'Escreva e pré-visualize Markdown com suporte a títulos, tabelas, código, listas, negrito e itálico em tempo real com exportação HTML.',
+    category: 'invertexto',
+    categoryLabel: 'Texto & Produtividade',
+    icon: 'FileText',
+    badge: 'Live Preview',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'data-dev-formats-suite',
+    suiteTab: 'markdown-preview',
+    tags: ['markdown', 'md', 'preview', 'editor', 'html', 'docs', 'texto']
+  },
+  {
+    id: 'base64-file-encoder',
+    title: 'Conversor de Arquivos & Imagens para Base64 (Data URI)',
+    description: 'Converta imagens PNG/JPEG/SVG e arquivos em Data URI Base64 pronto para uso direto em CSS, HTML <img> ou chamadas de API.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Mídia',
+    icon: 'Binary',
+    badge: 'Data URI',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'data-dev-formats-suite',
+    suiteTab: 'base64-file',
+    tags: ['base64', 'data uri', 'imagem', 'codificador', 'dev', 'css', 'html']
+  },
+  {
+    id: 'xml-svg-beautifier',
+    title: 'Formatador & Validador de XML e SVG',
+    description: 'Indente, formate e valide a estrutura hierárquica de arquivos XML, feeds RSS e códigos vetoriais SVG com contagem de nós e tags.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Formatos',
+    icon: 'FileCode2',
+    badge: 'XML & SVG',
+    isInteractive: true,
+    suiteTarget: 'data-dev-formats-suite',
+    suiteTab: 'xml-beautifier',
+    tags: ['xml', 'svg', 'beautifier', 'formatador', 'validador', 'rss', 'dev']
+  },
+  {
+    id: 'code-diff-checker',
+    title: 'Comparador Visual de Código & Texto (Diff Checker)',
+    description: 'Compare duas versões de código ou texto lado a lado com detecção visual de adições, remoções e linhas modificadas.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & QA',
+    icon: 'GitCompare',
+    badge: 'Diff Lado a Lado',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'data-dev-formats-suite',
+    suiteTab: 'side-by-side-diff',
+    tags: ['diff', 'comparador', 'código', 'git', 'qa', 'revisão', 'texto']
   }
 ];

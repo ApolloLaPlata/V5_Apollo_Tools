@@ -43,6 +43,7 @@ import { DevWebAndMediaSuite } from '@/components/tools/DevWebAndMediaSuite';
 import { SecurityAndInfraSuite } from '@/components/tools/SecurityAndInfraSuite';
 import { LegalAndWorkplaceSuite } from '@/components/tools/LegalAndWorkplaceSuite';
 import { AudioVideoAndSocialSuite } from '@/components/tools/AudioVideoAndSocialSuite';
+import { DataAndDevFormatsSuite } from '@/components/tools/DataAndDevFormatsSuite';
 
 import { 
   Search, 
@@ -148,6 +149,8 @@ import {
   Radio,
   Music,
   Maximize,
+  FileCode2,
+  GitCompare,
   X
 } from 'lucide-react';
 
@@ -245,7 +248,9 @@ const ICON_MAP: Record<string, React.ElementType> = {
   FileSpreadsheet,
   Radio,
   Music,
-  Maximize
+  Maximize,
+  FileCode2,
+  GitCompare
 };
 
 export default function ApolloToolsPage() {
@@ -540,6 +545,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'audio-video-social-suite' && (
               <AudioVideoAndSocialSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'data-dev-formats-suite' && (
+              <DataAndDevFormatsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
