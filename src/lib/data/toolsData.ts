@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -2893,5 +2893,76 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'regex-lexical-suite',
     suiteTab: 'hidden-char-detector',
     tags: ['zero width', 'caracteres invisiveis', 'bom', 'nbsp', 'limpador', 'unicode', 'bugs']
+  },
+  // ==========================================
+  // ETAPA 37: SUÍTE DE APIS REST, WEBHOOKS & TESTES DE REDE HTTP
+  // ==========================================
+  {
+    id: 'curl-to-code-converter',
+    title: 'Conversor de cURL para Fetch, Axios, Python, Go e PHP',
+    description: 'Transforme comandos cURL em código executável para JavaScript (Fetch/Axios), Python (Requests), Go e PHP cURL com cabeçalhos e body.',
+    category: 'dev-4devs',
+    categoryLabel: 'APIs & Rede',
+    icon: 'Terminal',
+    badge: 'Multi-Linguagem',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'api-network-suite',
+    suiteTab: 'curl-to-code',
+    tags: ['curl', 'fetch', 'axios', 'python', 'requests', 'golang', 'php', 'api', 'http']
+  },
+  {
+    id: 'http-auth-header-builder',
+    title: 'Gerador de Cabeçalhos de Autenticação HTTP (Basic & Bearer)',
+    description: 'Gere cabeçalhos Authorization padrão RFC 7235: Basic Auth (Base64 codificado), Bearer Tokens JWT e chaves de API personalizadas.',
+    category: 'dev-4devs',
+    categoryLabel: 'APIs & Segurança',
+    icon: 'ShieldCheck',
+    badge: 'Basic / Bearer / Key',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'api-network-suite',
+    suiteTab: 'http-auth',
+    tags: ['authorization', 'bearer', 'basic auth', 'jwt', 'header', 'api key', 'rest']
+  },
+  {
+    id: 'query-string-param-parser',
+    title: 'Inspetor & Construtor de Query Strings RFC 3986',
+    description: 'Analise, decodifique e monte URLSearchParams dinâmicos com codificação RFC 3986, suporte a arrays e exportação para JSON de parâmetros.',
+    category: 'dev-4devs',
+    categoryLabel: 'APIs & URL',
+    icon: 'Filter',
+    badge: 'RFC 3986 Parser',
+    isInteractive: true,
+    suiteTarget: 'api-network-suite',
+    suiteTab: 'query-params',
+    tags: ['query string', 'searchparams', 'url params', 'encode uri', 'decode uri', 'rfc 3986']
+  },
+  {
+    id: 'webhook-hmac-simulator',
+    title: 'Simulador de Webhooks & Assinaturas HMAC (Stripe/GitHub)',
+    description: 'Simule eventos e gere assinaturas de verificação HMAC-SHA256 (Stripe-Signature, X-Hub-Signature-256) nativamente via Web Crypto API.',
+    category: 'dev-4devs',
+    categoryLabel: 'APIs & Webhooks',
+    icon: 'Send',
+    badge: 'HMAC-SHA256',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'api-network-suite',
+    suiteTab: 'webhook-sim',
+    tags: ['webhook', 'hmac', 'sha256', 'stripe', 'github', 'mercadopago', 'assinatura payload']
+  },
+  {
+    id: 'tcp-udp-ports-catalog',
+    title: 'Catálogo de Portas de Rede TCP/UDP & Segurança',
+    description: 'Guia de referência rápida das principais portas de rede da IANA (21, 22, 80, 443, 3306, 5432, 6379, 8080) com protocolos, categorias e riscos.',
+    category: 'dev-4devs',
+    categoryLabel: 'Infra & Redes',
+    icon: 'Server',
+    badge: 'IANA Ports Catalog',
+    isInteractive: true,
+    suiteTarget: 'api-network-suite',
+    suiteTab: 'ports-catalog',
+    tags: ['portas tcp', 'udp', 'iana', 'http', 'https', 'ssh', 'mysql', 'postgres', 'redis', 'redes']
   }
 ];
