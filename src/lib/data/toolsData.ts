@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -4386,5 +4386,79 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'ai-telemetry-suite',
     suiteTab: 'rag-similarity',
     tags: ['rag', 'cosine similarity', 'dot product', 'embeddings', 'pgvector', 'chromadb', 'busca vetorial', 'distancia euclidiana']
+  },
+  // ==========================================
+  // ETAPA 58: O GRANDE MARCO DOS 300 UTILITÁRIOS!
+  // SUÍTE DE ENGENHARIA DE PROMPT, RACIOCÍNIO & CHAIN OF THOUGHT
+  // ==========================================
+  {
+    id: 'system-prompt-xml-formatter-tool',
+    title: 'Formatador de Prompts em Tags XML (Padrão Anthropic & Claude)',
+    description: 'Estruture prompts profissionais com delimitadores semânticos XML (<instructions>, <context>, <constraints>, <output_format>) eliminando alucinações de LLM.',
+    category: 'prompts',
+    categoryLabel: 'Engenharia de Prompt',
+    icon: 'Code2',
+    badge: 'Padrão Anthropic',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'prompt-engineering-suite',
+    suiteTab: 'xml-formatter',
+    tags: ['prompt xml', 'anthropic', 'claude 3.5', 'system prompt', 'tags semanticas', 'engenharia de prompt']
+  },
+  {
+    id: 'chain-of-thought-cot-builder-tool',
+    title: 'Construtor de Prompt Chain-of-Thought (CoT & Tree of Thoughts)',
+    description: 'Gere prompts de raciocínio passo a passo com seções <thinking>, exemplos few-shot, árvores de pensamentos (ToT) e ciclo ReAct (Reason + Act).',
+    category: 'prompts',
+    categoryLabel: 'Raciocínio & CoT',
+    icon: 'Brain',
+    badge: 'CoT & ToT Reasoning',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'prompt-engineering-suite',
+    suiteTab: 'cot-builder',
+    tags: ['chain of thought', 'cot', 'few shot', 'tree of thoughts', 'react framework', 'raciocinio llm', 'thinking']
+  },
+  {
+    id: 'strict-json-schema-builder-tool',
+    title: 'Construtor de Strict JSON Schema para LLMs & Function Calling',
+    description: 'Crie esquemas JSON rigorosos com strict: true e additionalProperties: false compatíveis com Structured Outputs da OpenAI, Anthropic e Gemini.',
+    category: 'dev-4devs',
+    categoryLabel: 'Structured Outputs',
+    icon: 'FileCode',
+    badge: 'Strict JSON Schema',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'prompt-engineering-suite',
+    suiteTab: 'json-schema',
+    tags: ['json schema', 'structured outputs', 'openai strict', 'function calling', 'validacao json', 'tool calling']
+  },
+  {
+    id: 'prompt-jailbreak-security-scanner-tool',
+    title: 'Scanner Heurístico de Vulnerabilidades & Prompt Injection',
+    description: 'Audite entradas de usuários contra vetores de ataque: tentativas de override de instrução, personas DAN, extração de prompt mestre e tags falsas.',
+    category: 'dev-4devs',
+    categoryLabel: 'Segurança de IA',
+    icon: 'ShieldAlert',
+    badge: 'AI Security Scanner',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'prompt-engineering-suite',
+    suiteTab: 'jailbreak-scanner',
+    tags: ['prompt injection', 'jailbreak', 'segurança ia', 'dan', 'system override', 'red teaming', 'auditoria prompt']
+  },
+  {
+    id: 'eval-prompt-matrix-ab-testing-tool',
+    title: 'Gerador de Matriz de Variações de Prompt para Testes A/B',
+    description: 'Crie produtos cartesianos de variações de personas, tons e temperaturas para alimentar baterias de benchmark de qualidade e avaliações de LLM.',
+    category: 'prompts',
+    categoryLabel: 'Benchmarking & A/B',
+    icon: 'Grid',
+    badge: 'A/B Testing Matrix',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'prompt-engineering-suite',
+    suiteTab: 'matrix-generator',
+    tags: ['testes a/b', 'matriz prompt', 'benchmark ia', 'avaliacao llm', 'promptfoo', 'permutacoes']
   }
 ];

@@ -77,6 +77,7 @@ import { ApiDocsOpenApiMockSuite } from '@/components/tools/ApiDocsOpenApiMockSu
 import { DependenciesSbomLicensingSuite } from '@/components/tools/DependenciesSbomLicensingSuite';
 import { ServerBenchmarksAndMetricsSuite } from '@/components/tools/ServerBenchmarksAndMetricsSuite';
 import { AiTelemetryAndTokenEconomicsSuite } from '@/components/tools/AiTelemetryAndTokenEconomicsSuite';
+import { PromptEngineeringReasoningSuite } from '@/components/tools/PromptEngineeringReasoningSuite';
 
 import { 
   Search, 
@@ -708,6 +709,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'ai-telemetry-suite' && (
               <AiTelemetryAndTokenEconomicsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'prompt-engineering-suite' && (
+              <PromptEngineeringReasoningSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
