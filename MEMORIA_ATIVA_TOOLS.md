@@ -120,6 +120,7 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **Text Specialized** | `TextSpecializedSuite.tsx` | Modificadores Unicode, Prefixo/Sufixo em Massa, Cifra Secreta com Senha, Símbolos/Emojis |
 | **V5 AI Gateway** | `V5AiGatewaySuite.tsx` | Playground LLM & Gemini Roleta, Despachador ComfyUI Modal H100 (2.8s cold-start), Telemetria de Frota (20 contas), Ponte V5 Apollo API |
 | **Creative & Speed** | `CreativeAndSpeedSuite.tsx` | Lousa Digital / Whiteboard Canvas GPU, Leitor Dinâmico RSVP (150-800 WPM Spritz), Relógio Mundial 7 Fusos UTC, Rimas PT-BR, Tabela Histórica Salário Mínimo (1994-2026) |
+| **Dev Web & Media** | `DevWebAndMediaSuite.tsx` | Compressor de Imagens (WebP/JPEG até -85%), Gerador de Metatags SEO & Open Graph Preview, Extrator de Cores de Imagem (Canvas Hex), Inspetor & Decodificador JWT (RFC 7519), Gerador de Favicons PWA em Lote |
 
 ---
 

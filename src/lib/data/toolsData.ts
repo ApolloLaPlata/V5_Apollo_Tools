@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -1681,5 +1681,77 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'creative-speed-suite',
     suiteTab: 'min-salary',
     tags: ['salário mínimo', 'economia', 'histórico', 'legislação', 'decretos', 'inpc']
+  },
+
+  // ==========================================
+  // CATEGORIA 7: SUÍTE WEBMASTER, SEO & MÍDIA (COMPRESSÃO, METATAGS, CORES & JWT)
+  // ==========================================
+  {
+    id: 'image-compressor-tool',
+    title: 'Compressor & Conversor de Imagens (WebP/JPEG)',
+    description: 'Reduza até 85% do tamanho de imagens direto no navegador com ajuste de qualidade, escala e exportação WebP/JPEG.',
+    category: 'invertexto',
+    categoryLabel: 'Mídia & Otimização',
+    icon: 'FileImage',
+    badge: 'Até -85%',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'dev-web-media-suite',
+    suiteTab: 'image-compressor',
+    tags: ['compressor', 'imagem', 'webp', 'jpeg', 'otimização', 'tinypng', 'canvas']
+  },
+  {
+    id: 'seo-metatags-generator',
+    title: 'Gerador de Metatags SEO & Open Graph Preview',
+    description: 'Crie tags para Google, WhatsApp e Twitter/X com visualização de cards em tempo real e código pronto para o <head>.',
+    category: 'dev-4devs',
+    categoryLabel: 'SEO & Webmaster',
+    icon: 'Search',
+    badge: 'SERP & Social',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'dev-web-media-suite',
+    suiteTab: 'seo-meta-preview',
+    tags: ['seo', 'metatags', 'open graph', 'google', 'whatsapp', 'twitter', 'cards']
+  },
+  {
+    id: 'color-palette-extractor',
+    title: 'Extrator de Paleta de Cores de Imagem',
+    description: 'Carregue fotos ou logos e obtenha automaticamente as 6 cores primárias dominantes em códigos Hex com cópia em 1 clique.',
+    category: 'invertexto',
+    categoryLabel: 'Design & Cores',
+    icon: 'Pipette',
+    badge: 'Hex & Palette',
+    isInteractive: true,
+    suiteTarget: 'dev-web-media-suite',
+    suiteTab: 'color-palette',
+    tags: ['cores', 'paleta', 'eyedropper', 'hex', 'design', 'coolors', 'canvas']
+  },
+  {
+    id: 'jwt-token-inspector',
+    title: 'Inspetor & Decodificador JWT Soberano',
+    description: 'Decodifique tokens JWT (Header, Payload, Claims e Assinatura) no navegador com verificação de data de expiração (RFC 7519).',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Segurança',
+    icon: 'Key',
+    badge: 'RFC 7519',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'dev-web-media-suite',
+    suiteTab: 'jwt-inspector',
+    tags: ['jwt', 'token', 'autenticação', 'decode', 'payload', 'claims', 'segurança']
+  },
+  {
+    id: 'favicon-icon-generator',
+    title: 'Gerador de Favicon & Ícones Web em Lote',
+    description: 'Crie favicons e ícones PWA a partir de iniciais, formatos e cores com downloads instantâneos em 32x32, 192x192 e 512x512.',
+    category: 'dev-4devs',
+    categoryLabel: 'Webmaster & PWA',
+    icon: 'Layers',
+    badge: 'Favicon PWA',
+    isInteractive: true,
+    suiteTarget: 'dev-web-media-suite',
+    suiteTab: 'favicon-gen',
+    tags: ['favicon', 'ícones', 'pwa', 'png', 'webmaster', 'design']
   }
 ];
