@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 26/10/2026 · **Status:** Operacional (Build 100% Green · 150 Ferramentas Ativas · 28 Etapas Concluídas)
+**Data de Atualização:** 26/10/2026 · **Status:** Operacional (Build 100% Green · 155 Ferramentas Ativas · 29 Etapas Concluídas)
 
 ---
 
@@ -129,6 +129,7 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **Productivity & Types** | `ProductivityAndTypesSuite.tsx` | Conversor de Cores Universal (HEX/RGB/HSL/CMYK/HSV), JSON to TypeScript Interfaces/Types, Custo de Viagem & Pedágios com Rateio, Sanitizador de Slugs SEO, Gerador de Mockdown em Markdown |
 | **Network & Identifiers** | `NetworkAndIdentifiersSuite.tsx` | Gerador de UUID v7 (Time-Ordered) & Nanoid, Inspetor de Headers HTTP & Status RFC 9110, Calculadora de Taxas de Gateways (Stripe/MP/Pagar.me), Cron Expression Tester, Simulador de Zona DNS |
 | **Crypto & Security** | `CryptoTokensAndSecuritySuite.tsx` | Par de Chaves RSA/ECDSA PEM, Assinaturas HMAC-SHA256/512 para Webhooks, API Keys de Alta Entropia, Inspetor PEM X.509, Entropia de Senhas em Bits de Shannon |
+| **Web Assets & Diagnostics** | `WebAssetsAndDiagnosticsSuite.tsx` | Otimizador de SVG, Parser User-Agent com Detecção de Bots/OS, Base32 RFC 4648 & Crockford (2FA), Entidades HTML, Simulador DNS Global |
 
 ---
 
