@@ -66,6 +66,7 @@ import { TypographyAndDesignSuite } from '@/components/tools/TypographyAndDesign
 import { InvestmentAndFinanceBrasilSuite } from '@/components/tools/InvestmentAndFinanceBrasilSuite';
 import { WebSecurityAndDiagnosticsSuite } from '@/components/tools/WebSecurityAndDiagnosticsSuite';
 import { VectorAndPixelOptimizationSuite } from '@/components/tools/VectorAndPixelOptimizationSuite';
+import { PerformanceAssetsAndVitalsSuite } from '@/components/tools/PerformanceAssetsAndVitalsSuite';
 
 import { 
   Search, 
@@ -664,6 +665,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'vector-pixel-suite' && (
               <VectorAndPixelOptimizationSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'performance-vitals-suite' && (
+              <PerformanceAssetsAndVitalsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -3613,5 +3613,75 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'vector-pixel-suite',
     suiteTab: 'aspect-cropper',
     tags: ['cortador de imagem', 'enquadramento instagram', 'proporcao 9 16', 'youtube thumbnail', 'cropper canvas']
+  },
+  {
+    id: 'webp-avif-compression-estimator',
+    title: 'Estimador e Comparador de Compressão WebP & AVIF',
+    description: 'Calcule a redução percentual de peso de imagens JPEG/PNG convertidas para WebP e AVIF, estimando economia de largura de banda e custo de CDN com snippet <picture>.',
+    category: 'dev-4devs',
+    categoryLabel: 'Performance & Imagens',
+    icon: 'TrendingDown',
+    badge: 'WebP vs AVIF Math',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'performance-vitals-suite',
+    suiteTab: 'webp-avif',
+    tags: ['webp', 'avif', 'compressao de imagem', 'core web vitals', 'cdn bandwidth', 'picture html']
+  },
+  {
+    id: 'critical-css-inliner-extractor',
+    title: 'Extrator & Inliner de Critical CSS Above-the-Fold',
+    description: 'Elimine recursos que bloqueiam a renderização (Render-Blocking) extraindo regras essenciais para injeção inline no <head>, acelerando FCP e LCP no Google Lighthouse.',
+    category: 'dev-4devs',
+    categoryLabel: 'CSS & Core Web Vitals',
+    icon: 'FileCode',
+    badge: 'FCP / LCP Speedup',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'performance-vitals-suite',
+    suiteTab: 'critical-css',
+    tags: ['critical css', 'render blocking', 'fcp', 'lcp', 'lighthouse 100', 'inline css']
+  },
+  {
+    id: 'resource-hints-preload-generator',
+    title: 'Gerador de Resource Hints (Preload, Preconnect & Prefetch)',
+    description: 'Construa tags <link rel="preconnect"> e <link rel="preload"> para CDNs, fontes WOFF2 e scripts críticos com validação de atributos crossorigin e dns-prefetch.',
+    category: 'dev-4devs',
+    categoryLabel: 'HTML & Otimização',
+    icon: 'Globe',
+    badge: 'Resource Hints RFC',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'performance-vitals-suite',
+    suiteTab: 'resource-hints',
+    tags: ['preconnect', 'preload', 'prefetch', 'dns prefetch', 'google fonts cdn', 'web vitals']
+  },
+  {
+    id: 'font-display-cls-simulator',
+    title: 'Simulador de font-display & Impacto no CLS',
+    description: 'Analise o comportamento de fontes web com swap, optional, fallback e block; elimine o Cumulative Layout Shift (CLS) com regras de override métrico (@font-face).',
+    category: 'dev-4devs',
+    categoryLabel: 'Tipografia & Web Vitals',
+    icon: 'Type',
+    badge: 'Eliminador de CLS',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'performance-vitals-suite',
+    suiteTab: 'font-display',
+    tags: ['font display', 'cls', 'cumulative layout shift', 'foit', 'fout', 'font face metrics']
+  },
+  {
+    id: 'bundle-performance-budget-calc',
+    title: 'Calculadora de Performance Budget (3G, 4G & 5G)',
+    description: 'Defina limites de peso em KB para JS, CSS, Imagens e Fontes; estime o tempo de download em conexões móveis lentas e exporte arquivo de configuração para Lighthouse CI.',
+    category: 'dev-4devs',
+    categoryLabel: 'DevOps & Performance',
+    icon: 'HardDrive',
+    badge: 'Performance Budget CI',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'performance-vitals-suite',
+    suiteTab: 'bundle-budget',
+    tags: ['performance budget', 'bundle size', 'lighthouse ci', '3g download time', 'tti', 'web budget']
   }
 ];
