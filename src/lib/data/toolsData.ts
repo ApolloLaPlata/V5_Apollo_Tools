@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -3257,5 +3257,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'devops-git-suite',
     suiteTab: 'semver-calc',
     tags: ['semver', 'versionamento', 'major minor patch', 'release', 'npm version', 'git tag']
+  },
+  // ==========================================
+  // ETAPA 42: SUÍTE DE CRIPTOGRAFIA WEB & HASHING DE INTEGRIDADE (220 FERRAMENTAS)
+  // ==========================================
+  {
+    id: 'file-checksum-sha256-512-calculator',
+    title: 'Calculador de Checksum de Arquivos (SHA-256 / SHA-512)',
+    description: 'Calcule a assinatura hash de qualquer arquivo local (SHA-256, SHA-512, SHA-1) via Web Crypto API nativa sem upload de dados e compare integridade.',
+    category: 'dev-4devs',
+    categoryLabel: 'Segurança & Arquivos',
+    icon: 'ShieldCheck',
+    badge: 'Web Crypto Subtle',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'crypto-hash-suite',
+    suiteTab: 'file-checksum',
+    tags: ['checksum', 'sha256', 'sha512', 'integridade arquivo', 'hash arquivo', 'web crypto']
+  },
+  {
+    id: 'password-hashing-cost-estimator',
+    title: 'Estimador de Custo de Hashing (Bcrypt / Argon2id / PBKDF2)',
+    description: 'Simule o tempo por login, memória alocada e throughput de hashes para Bcrypt (work factor 10-14), Argon2id (memory-hard) e PBKDF2 (OWASP 2026).',
+    category: 'dev-4devs',
+    categoryLabel: 'Segurança & Auth',
+    icon: 'Cpu',
+    badge: 'OWASP 2026 Spec',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'crypto-hash-suite',
+    suiteTab: 'hash-estimator',
+    tags: ['bcrypt', 'argon2id', 'pbkdf2', 'hashing senhas', 'work factor', 'owasp', 'seguranca']
+  },
+  {
+    id: 'jwt-token-forge-signer-debugger',
+    title: 'Construtor & Assinador de JWT (HS256 Web Crypto)',
+    description: 'Edite Header, Payload claims e Chave Secreta com cálculo de assinatura HMAC-SHA256 real no browser e monitor de expiração exp.',
+    category: 'dev-4devs',
+    categoryLabel: 'APIs & Segurança',
+    icon: 'KeyRound',
+    badge: 'HS256 Signature',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'crypto-hash-suite',
+    suiteTab: 'jwt-forge',
+    tags: ['jwt', 'hs256', 'assinador jwt', 'hmac sha256', 'token debugger', 'claims exp']
+  },
+  {
+    id: 'base58-bitcoin-ipfs-encoder',
+    title: 'Codificador & Decodificador Base58 (Bitcoin / IPFS)',
+    description: 'Codifique textos e bytes no alfabeto Base58 do Bitcoin e IPFS, livre de caracteres ambíguos (0, O, I, l) para identificadores criptográficos.',
+    category: 'invertexto',
+    categoryLabel: 'Criptografia & Web',
+    icon: 'Binary',
+    badge: 'Bitcoin & IPFS Base58',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'crypto-hash-suite',
+    suiteTab: 'base58-codec',
+    tags: ['base58', 'bitcoin', 'ipfs', 'codificador base58', 'cripto', 'alfabeto base58']
+  },
+  {
+    id: 'credit-card-bin-iin-inspector',
+    title: 'Inspetor & Identificador de BIN / IIN de Cartões',
+    description: 'Identifique a bandeira (Visa, Mastercard, Elo, Amex, Hipercard), categoria e país de emissão através dos primeiros 6 a 8 dígitos do cartão.',
+    category: 'dev-4devs',
+    categoryLabel: 'Pagamentos & QA',
+    icon: 'CreditCard',
+    badge: 'BIN / IIN Lookup',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'crypto-hash-suite',
+    suiteTab: 'bin-lookup',
+    tags: ['bin lookup', 'iin', 'bandeira cartao', 'visa mastercard elo', 'teste pagamentos', 'qa']
   }
 ];
