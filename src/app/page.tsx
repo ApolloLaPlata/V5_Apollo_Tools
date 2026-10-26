@@ -67,6 +67,7 @@ import { InvestmentAndFinanceBrasilSuite } from '@/components/tools/InvestmentAn
 import { WebSecurityAndDiagnosticsSuite } from '@/components/tools/WebSecurityAndDiagnosticsSuite';
 import { VectorAndPixelOptimizationSuite } from '@/components/tools/VectorAndPixelOptimizationSuite';
 import { PerformanceAssetsAndVitalsSuite } from '@/components/tools/PerformanceAssetsAndVitalsSuite';
+import { TerminalAndSysAdminSuite } from '@/components/tools/TerminalAndSysAdminSuite';
 
 import { 
   Search, 
@@ -668,6 +669,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'performance-vitals-suite' && (
               <PerformanceAssetsAndVitalsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'terminal-sysadmin-suite' && (
+              <TerminalAndSysAdminSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

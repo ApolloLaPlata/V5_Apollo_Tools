@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -3683,5 +3683,75 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'performance-vitals-suite',
     suiteTab: 'bundle-budget',
     tags: ['performance budget', 'bundle size', 'lighthouse ci', '3g download time', 'tti', 'web budget']
+  },
+  {
+    id: 'chmod-permissions-calculator-linux',
+    title: 'Calculadora de Permissões Chmod Linux (Octal & Simbólico)',
+    description: 'Configure permissões de leitura, escrita e execução (rwx) para Usuário, Grupo e Outros; calcule notação octal (755, 644, 600, 777) e gere comandos recursivos.',
+    category: 'dev-4devs',
+    categoryLabel: 'Terminal & SysAdmin',
+    icon: 'ShieldAlert',
+    badge: 'Chmod Octal 755',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'terminal-sysadmin-suite',
+    suiteTab: 'chmod-calc',
+    tags: ['chmod', 'permissoes linux', 'chmod 755', 'chmod 644', 'octal unix', 'sysadmin']
+  },
+  {
+    id: 'cron-expression-human-decoder-br',
+    title: 'Decodificador & Construtor Cron em Português Claro',
+    description: 'Converta expressões crontab de 5 campos em linguagem humana compreensível e simule com precisão os próximos 5 horários exatos de execução agendada.',
+    category: 'dev-4devs',
+    categoryLabel: 'Automação & Agendamentos',
+    icon: 'Clock',
+    badge: 'Crontab Traduzido',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'terminal-sysadmin-suite',
+    suiteTab: 'cron-decoder',
+    tags: ['cron', 'crontab', 'agendador', 'cron em portugues', 'expressao cron', 'automacao linux']
+  },
+  {
+    id: 'systemd-service-generator-linux',
+    title: 'Gerador de Arquivos de Serviço Systemd Linux (.service)',
+    description: 'Crie unidades systemd para Node.js, Python e Next.js com ExecStart, WorkingDirectory, políticas de Restart automático e comandos systemctl prontos.',
+    category: 'dev-4devs',
+    categoryLabel: 'Linux & Servidores',
+    icon: 'Server',
+    badge: 'Systemd .service',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'terminal-sysadmin-suite',
+    suiteTab: 'systemd-service',
+    tags: ['systemd', 'service linux', 'systemctl', 'daemon linux', 'deploy node', 'sysadmin']
+  },
+  {
+    id: 'kill-process-port-command-builder',
+    title: 'Liberador de Portas & Construtor de Comandos Kill Process',
+    description: 'Descubra qual processo está travando portas TCP (como :3009, :8080) e encerre-o com 1 comando no Windows PowerShell (Stop-Process) ou Linux/macOS (lsof/kill -9).',
+    category: 'dev-4devs',
+    categoryLabel: 'Terminal & Diagnóstico',
+    icon: 'Cpu',
+    badge: 'Kill Port / PID',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'terminal-sysadmin-suite',
+    suiteTab: 'kill-process',
+    tags: ['kill process', 'liberar porta', 'porta ocupada 3009', 'lsof kill', 'powershell stop process', 'netstat']
+  },
+  {
+    id: 'ssh-keygen-config-builder-tool',
+    title: 'Construtor de Chaves SSH-Keygen & Configuração ~/.ssh/config',
+    description: 'Gere comandos para criar chaves modernas Ed25519 ou RSA 4096, copie para servidores com ssh-copy-id e monte configurações de Host no arquivo ~/.ssh/config.',
+    category: 'dev-4devs',
+    categoryLabel: 'Segurança & SSH',
+    icon: 'Key',
+    badge: 'SSH Ed25519 & Config',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'terminal-sysadmin-suite',
+    suiteTab: 'ssh-keygen',
+    tags: ['ssh keygen', 'ed25519', 'ssh config', 'ssh copy id', 'chave privada ssh', 'acesso remoto']
   }
 ];
