@@ -1381,6 +1381,97 @@ export const TOOLS_CATALOG: ToolItem[] = [
     modelTarget: 'Flux Inpaint',
     tags: ['nordy', 'comfyui', 'produto', 'marketplace', 'fotografia', 'ecommerce']
   },
+  {
+    id: 'comfy-animatediff',
+    title: 'AnimateDiff v3 Motion LoRA (Text-to-Video Fluido)',
+    description: 'Animações fluidas em loop e câmera orbital com controle de densidade de movimento e Motion LoRA.',
+    category: 'comfyui',
+    categoryLabel: 'ComfyUI Workflow (Nordy.ai)',
+    icon: 'Film',
+    badge: 'Motion LoRA',
+    modelTarget: 'AnimateDiff + SD1.5',
+    popular: true,
+    tags: ['nordy', 'comfyui', 'animatediff', 'video', 'motion', 'loop']
+  },
+  {
+    id: 'comfy-controlnet-studio',
+    title: 'Multi-ControlNet Studio (Pose, Depth & Canny)',
+    description: 'Controle anatômico e arquitetônico milimétrico alinhando malha de profundidade, linhas e esqueleto OpenPose.',
+    category: 'comfyui',
+    categoryLabel: 'ComfyUI Workflow (Nordy.ai)',
+    icon: 'Maximize2',
+    badge: 'Multi-ControlNet',
+    modelTarget: 'SDXL / Flux',
+    tags: ['nordy', 'comfyui', 'controlnet', 'openpose', 'depth', 'canny']
+  },
+  {
+    id: 'comfy-flux-schnell',
+    title: 'FLUX.1 Schnell Turbo (Geração em 4 Steps)',
+    description: 'Pipeline ultra-rápido de alta resolução gerado em menos de 2 segundos na Modal H100.',
+    category: 'comfyui',
+    categoryLabel: 'ComfyUI Workflow (Nordy.ai)',
+    icon: 'Sparkles',
+    badge: '4 Steps Turbo',
+    modelTarget: 'Flux.1 Schnell',
+    popular: true,
+    tags: ['nordy', 'comfyui', 'flux', 'schnell', 'turbo', 'rápido']
+  },
+  {
+    id: 'comfy-pulid-identity',
+    title: 'PuLID / InstantID Preservação Total de Identidade',
+    description: 'Consistência facial absoluta de pessoas reais em qualquer cenário artístico sem necessidade de treinar LoRA.',
+    category: 'comfyui',
+    categoryLabel: 'ComfyUI Workflow (Nordy.ai)',
+    icon: 'Users',
+    badge: 'InstantID / PuLID',
+    modelTarget: 'InsightFace + Flux',
+    popular: true,
+    tags: ['nordy', 'comfyui', 'pulid', 'instantid', 'consistência', 'face', 'identidade']
+  },
+  {
+    id: 'comfy-supir-upscale',
+    title: 'SUPIR Restauração & Upscale Extremo de Detalhes',
+    description: 'Restauração fotográfica de fotos antigas e borradas com injeção de textura fotorrealista em escala 8K.',
+    category: 'comfyui',
+    categoryLabel: 'ComfyUI Workflow (Nordy.ai)',
+    icon: 'Maximize2',
+    badge: 'SUPIR 8K',
+    modelTarget: 'SUPIR + SDXL',
+    tags: ['nordy', 'comfyui', 'supir', 'restauração', 'upscale', 'textura', '8k']
+  },
+  {
+    id: 'comfy-cogvideo-video',
+    title: 'CogVideoX 5B Video Generator',
+    description: 'Modelo de difusão de vídeo com dinâmica física realista e excelente transição de cena.',
+    category: 'comfyui',
+    categoryLabel: 'ComfyUI Workflow (Nordy.ai)',
+    icon: 'Video',
+    badge: 'CogVideoX 5B',
+    modelTarget: 'THUDM / Modal GPU',
+    tags: ['nordy', 'comfyui', 'cogvideox', 'video', 'ia', 'modal']
+  },
+  {
+    id: 'comfy-layer-diffusion',
+    title: 'LayerDiffusion (Geração com Fundo Transparente)',
+    description: 'Criação nativa de assets, personagens e objetos com canal Alpha transparente para design e UI.',
+    category: 'comfyui',
+    categoryLabel: 'ComfyUI Workflow (Nordy.ai)',
+    icon: 'Layers',
+    badge: 'PNG Transparente',
+    modelTarget: 'LayerDiffuse',
+    tags: ['nordy', 'comfyui', 'layerdiffusion', 'transparente', 'png', 'alpha', 'design']
+  },
+  {
+    id: 'comfy-florence-caption',
+    title: 'Florence-2 Auto-Captioning & Dense Detector',
+    description: 'Visão computacional que gera legendas detalhadas e bounding boxes precisos para treinamento de datasets.',
+    category: 'comfyui',
+    categoryLabel: 'ComfyUI Workflow (Nordy.ai)',
+    icon: 'FileText',
+    badge: 'Vision AI',
+    modelTarget: 'Microsoft Florence-2',
+    tags: ['nordy', 'comfyui', 'florence-2', 'captioning', 'visão', 'datasets', 'labels']
+  },
 
   // ==========================================
   // CATEGORIA 4: IA CRIATIVA & PROMPTS (APOLLO La PLATA FERRAMENTAS)
