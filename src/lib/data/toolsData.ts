@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -2533,5 +2533,77 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'ecommerce-traffic-suite',
     suiteTab: 'unit-profit',
     tags: ['unit economics', 'lucro liquido', 'margem', 'taxa shopee', 'taxa mercado livre', 'impostos', 'dre']
+  },
+  // ==========================================
+  // ETAPA 32: SUÍTE DE PRODUTIVIDADE ACADÊMICA, CITAÇÕES ABNT & ESTUDO
+  // ==========================================
+  {
+    id: 'abnt-citations-formatter',
+    title: 'Formatador de Citações & Referências ABNT NBR 6023',
+    description: 'Gere referências bibliográficas (livros, artigos, teses e web) e citações diretas/indiretas no padrão oficial ABNT NBR 6023:2020.',
+    category: 'invertexto',
+    categoryLabel: 'Acadêmico & Pesquisa',
+    icon: 'GraduationCap',
+    badge: 'ABNT NBR 6023',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'academic-study-suite',
+    suiteTab: 'abnt-citations',
+    tags: ['abnt', 'citacao', 'referencias', 'nbr 6023', 'tcc', 'artigo', 'academico', 'monografia']
+  },
+  {
+    id: 'weighted-gpa-calculator',
+    title: 'Calculadora de Média Ponderada & Simulador SISU / ENEM',
+    description: 'Cálculo dinâmico de médias acadêmicas com pesos, status de aprovação e simulador de nota final ENEM com pesos por curso e bônus regional.',
+    category: 'invertexto',
+    categoryLabel: 'Acadêmico & Exames',
+    icon: 'Calculator',
+    badge: 'ENEM & Universitário',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'academic-study-suite',
+    suiteTab: 'weighted-gpa',
+    tags: ['media ponderada', 'enem', 'sisu', 'nota de corte', 'faculdade', 'gpa', 'calculadora']
+  },
+  {
+    id: 'study-pomodoro-timer',
+    title: 'Pomodoro Acadêmico 50/10 com Ruído Marrom & Foco',
+    description: 'Temporizador de estudo profundo com sintetizador de ruído marrom/branco via Web Audio API para isolamento acústico total.',
+    category: 'invertexto',
+    categoryLabel: 'Produtividade & Foco',
+    icon: 'Timer',
+    badge: 'Ruído de Foco 1/f²',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'academic-study-suite',
+    suiteTab: 'study-pomodoro',
+    tags: ['pomodoro', 'estudo', 'ruido marrom', 'ruido branco', 'foco', 'timer', 'hiperfoco']
+  },
+  {
+    id: 'flashcards-anki-maker',
+    title: 'Gerador de Flashcards & Exportador Anki (.tsv)',
+    description: 'Crie baralhos de memorização ativa espaçada com flip card 3D interativo e exportação direta em formato TSV para o Anki.',
+    category: 'invertexto',
+    categoryLabel: 'Memorização & Estudo',
+    icon: 'Layers',
+    badge: 'Compatível com Anki',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'academic-study-suite',
+    suiteTab: 'flashcards-maker',
+    tags: ['flashcards', 'anki', 'memorizacao', 'estudo espacado', 'revisao', 'cartoes']
+  },
+  {
+    id: 'poetic-meter-analyzer',
+    title: 'Analisador de Métrica Poética & Sílabas (Escansão)',
+    description: 'Análise métrica verso a verso de poemas com classificação de redondilha menor/maior, decassílabos e versos alexandrinos.',
+    category: 'invertexto',
+    categoryLabel: 'Literatura & Linguística',
+    icon: 'Feather',
+    badge: 'Escansão Automática',
+    isInteractive: true,
+    suiteTarget: 'academic-study-suite',
+    suiteTab: 'poetic-meter',
+    tags: ['poesia', 'metrica', 'escasao', 'silabas poeticas', 'decassilabo', 'redondilha', 'versos']
   }
 ];

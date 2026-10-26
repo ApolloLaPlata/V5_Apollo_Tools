@@ -51,6 +51,7 @@ import { CryptoTokensAndSecuritySuite } from '@/components/tools/CryptoTokensAnd
 import { WebAssetsAndDiagnosticsSuite } from '@/components/tools/WebAssetsAndDiagnosticsSuite';
 import { AiPromptAndViralSuite } from '@/components/tools/AiPromptAndViralSuite';
 import { EcommerceTrafficAndConversionSuite } from '@/components/tools/EcommerceTrafficAndConversionSuite';
+import { AcademicAndStudySuite } from '@/components/tools/AcademicAndStudySuite';
 
 import { 
   Search, 
@@ -164,6 +165,8 @@ import {
   Target,
   UserCheck,
   Tag,
+  GraduationCap,
+  Feather,
   X
 } from 'lucide-react';
 
@@ -269,7 +272,9 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Code,
   Target,
   UserCheck,
-  Tag
+  Tag,
+  GraduationCap,
+  Feather
 };
 
 export default function ApolloToolsPage() {
@@ -588,6 +593,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'ecommerce-traffic-suite' && (
               <EcommerceTrafficAndConversionSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'academic-study-suite' && (
+              <AcademicAndStudySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
