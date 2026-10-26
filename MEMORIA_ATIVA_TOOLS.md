@@ -123,6 +123,7 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **Dev Web & Media** | `DevWebAndMediaSuite.tsx` | Compressor de Imagens (WebP/JPEG até -85%), Gerador de Metatags SEO & Open Graph Preview, Extrator de Cores de Imagem (Canvas Hex), Inspetor & Decodificador JWT (RFC 7519), Gerador de Favicons PWA em Lote |
 | **Security & Infra** | `SecurityAndInfraSuite.tsx` | Hashes Criptográficos (SHA-256, SHA-512, MD5 Web Crypto API), Testador de Regex com Destaque e Biblioteca, Conversor YAML <-> JSON, Calculadora IPv4 CIDR, Formatador SQL Beautifier |
 | **Legal & Workplace** | `LegalAndWorkplaceSuite.tsx` | Gerador & Validador de Cartão SUS (CNS Módulo 11 oficial), Simulador de Rescisão Trabalhista CLT (Saldo, Férias, 13º, FGTS 40%), Margem de Lucro & Markup Shopee/ML, Emissor de Contrato de Serviços A4 |
+| **Audio, Video & Social** | `AudioVideoAndSocialSuite.tsx` | Gerador de Frequências (20Hz-20kHz Web Audio API), Calculadora de Aspect Ratio (16:9, 9:16 Shorts/Reels), Metrônomo Digital & Tap Tempo BPM, Prompts Negativos para IA (FLUX/ComfyUI), Calculadora de Engajamento Social |
 
 ---
 

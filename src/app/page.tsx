@@ -42,6 +42,7 @@ import { CreativeAndSpeedSuite } from '@/components/tools/CreativeAndSpeedSuite'
 import { DevWebAndMediaSuite } from '@/components/tools/DevWebAndMediaSuite';
 import { SecurityAndInfraSuite } from '@/components/tools/SecurityAndInfraSuite';
 import { LegalAndWorkplaceSuite } from '@/components/tools/LegalAndWorkplaceSuite';
+import { AudioVideoAndSocialSuite } from '@/components/tools/AudioVideoAndSocialSuite';
 
 import { 
   Search, 
@@ -144,6 +145,9 @@ import {
   Stethoscope,
   ShoppingCart,
   FileSpreadsheet,
+  Radio,
+  Music,
+  Maximize,
   X
 } from 'lucide-react';
 
@@ -238,7 +242,10 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Database,
   Stethoscope,
   ShoppingCart,
-  FileSpreadsheet
+  FileSpreadsheet,
+  Radio,
+  Music,
+  Maximize
 };
 
 export default function ApolloToolsPage() {
@@ -530,6 +537,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'legal-workplace-suite' && (
               <LegalAndWorkplaceSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'audio-video-social-suite' && (
+              <AudioVideoAndSocialSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

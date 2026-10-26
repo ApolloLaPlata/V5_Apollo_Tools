@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -1884,5 +1884,77 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'legal-workplace-suite',
     suiteTab: 'simple-contract',
     tags: ['contrato', 'prestação de serviços', 'jurídico', 'impressão', 'a4', 'termo']
+  },
+
+  // ==========================================
+  // CATEGORIA 10: SUÍTE AUDIOVISUAL, FREQUÊNCIAS & SOCIAL (ÁUDIO, VÍDEO, BPM, PROMPTS)
+  // ==========================================
+  {
+    id: 'audio-tone-generator',
+    title: 'Gerador de Frequências Sonoras & Ruído Branco',
+    description: 'Emita frequências de 20Hz a 20kHz com ondas senoidal, quadrada e dente de serra para testes acústicos e afinação.',
+    category: 'invertexto',
+    categoryLabel: 'Áudio & Frequências',
+    icon: 'Radio',
+    badge: 'Web Audio API',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'audio-video-social-suite',
+    suiteTab: 'tone-generator',
+    tags: ['áudio', 'frequência', 'som', 'hertz', 'hz', 'afinação', 'ruído branco', '440hz']
+  },
+  {
+    id: 'aspect-ratio-calculator',
+    title: 'Calculadora de Aspect Ratio & Dimensões de Vídeo',
+    description: 'Cálculo de proporções (16:9, 9:16 Shorts/Reels, 1:1, 4:5, 21:9), dimensões em pixels, megapixels e bitrate recomendado.',
+    category: 'prompts',
+    categoryLabel: 'Vídeo & Renderização',
+    icon: 'Maximize',
+    badge: '16:9 & 9:16',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'audio-video-social-suite',
+    suiteTab: 'aspect-ratio',
+    tags: ['aspect ratio', 'proporção', 'vídeo', 'shorts', 'reels', 'tiktok', '4k', '1080p']
+  },
+  {
+    id: 'bpm-metronome-tool',
+    title: 'Metrônomo Digital & Tap Tempo BPM',
+    description: 'Metrônomo com sintetizador triangular sonoro, medição de BPM por clique (Tap Tempo) e tabela de delays/reverbs em milissegundos.',
+    category: 'invertexto',
+    categoryLabel: 'Música & Ritmo',
+    icon: 'Music',
+    badge: 'Tap Tempo',
+    isInteractive: true,
+    suiteTarget: 'audio-video-social-suite',
+    suiteTab: 'bpm-metronome',
+    tags: ['metrônomo', 'bpm', 'música', 'ritmo', 'tap tempo', 'delay', 'ms']
+  },
+  {
+    id: 'negative-prompt-builder',
+    title: 'Construtor de Prompts Negativos para IA Generativa',
+    description: 'Monte prompts negativos otimizados para FLUX, Stable Diffusion e ComfyUI com termos selecionáveis anti-artefatos.',
+    category: 'prompts',
+    categoryLabel: 'IA Criativa & Prompts',
+    icon: 'Zap',
+    badge: 'Anti-Artefatos',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'audio-video-social-suite',
+    suiteTab: 'negative-prompts',
+    tags: ['prompt negativo', 'comfyui', 'stable diffusion', 'flux', 'ia', 'artefatos']
+  },
+  {
+    id: 'social-engagement-calc',
+    title: 'Calculadora de Taxa de Engajamento para Redes Sociais',
+    description: 'Descubra a taxa percentual de engajamento no Instagram, TikTok e YouTube a partir de curtidas, comentários e seguidores.',
+    category: 'prompts',
+    categoryLabel: 'Social Media & Growth',
+    icon: 'TrendingUp',
+    badge: 'Métricas Reais',
+    isInteractive: true,
+    suiteTarget: 'audio-video-social-suite',
+    suiteTab: 'engagement-calc',
+    tags: ['engajamento', 'instagram', 'tiktok', 'youtube', 'social media', 'taxa', 'growth']
   }
 ];
