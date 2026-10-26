@@ -73,6 +73,7 @@ import { DatabaseSqlOptimizerSuite } from '@/components/tools/DatabaseSqlOptimiz
 import { ModernCryptoAndSignaturesSuite } from '@/components/tools/ModernCryptoAndSignaturesSuite';
 import { NetworkDnsDiagnosticsSuite } from '@/components/tools/NetworkDnsDiagnosticsSuite';
 import { BinaryBuffersAndHexDumpSuite } from '@/components/tools/BinaryBuffersAndHexDumpSuite';
+import { ApiDocsOpenApiMockSuite } from '@/components/tools/ApiDocsOpenApiMockSuite';
 
 import { 
   Search, 
@@ -692,6 +693,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'binary-buffers-suite' && (
               <BinaryBuffersAndHexDumpSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'api-docs-mock-suite' && (
+              <ApiDocsOpenApiMockSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

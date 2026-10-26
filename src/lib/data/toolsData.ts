@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -4103,5 +4103,75 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'binary-buffers-suite',
     suiteTab: 'ascii-inspector',
     tags: ['tabela ascii', 'codigos de controle', 'crlf', 'escape ansi', 'ascii hex', 'caracteres especiais']
+  },
+  {
+    id: 'openapi-swagger-viewer-tool',
+    title: 'Visualizador & Renderizador OpenAPI / Swagger 3.0',
+    description: 'Renderize especificações OpenAPI 3.0 e 3.1 com visualização interativa de rotas, métodos HTTP, schemas de request body e respostas de erro.',
+    category: 'dev-4devs',
+    categoryLabel: 'Documentação & APIs',
+    icon: 'Globe',
+    badge: 'OpenAPI 3.0',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'api-docs-mock-suite',
+    suiteTab: 'openapi-viewer',
+    tags: ['openapi', 'swagger', 'api docs', 'documentacao api', 'endpoints rest', 'schemas json']
+  },
+  {
+    id: 'json-mock-data-generator-tool',
+    title: 'Gerador de Massa de Dados JSON & Mock Client-Side',
+    description: 'Crie massas realistas de dados com faker brasileiro (nomes, CPFs, e-mails, endereços, transações em R$ e status) para testes de QA com exportação JSON/CSV.',
+    category: 'dev-4devs',
+    categoryLabel: 'Mock & Testes',
+    icon: 'Database',
+    badge: 'JSON Mock Maker',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'api-docs-mock-suite',
+    suiteTab: 'json-mock',
+    tags: ['mock data', 'json fake', 'dados ficticios', 'massa de testes', 'faker json', 'exportar csv']
+  },
+  {
+    id: 'http-status-codes-rfc-matrix-tool',
+    title: 'Matriz Completa de Status Codes HTTP (RFC 9110)',
+    description: 'Catálogo técnico interativo com todos os códigos 1xx a 5xx: regras de idempotência, segurança, cacheabilidade e guia comparativo de boas práticas.',
+    category: 'dev-4devs',
+    categoryLabel: 'Padrões Web & HTTP',
+    icon: 'Layers',
+    badge: 'RFC 9110 Status',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'api-docs-mock-suite',
+    suiteTab: 'status-matrix',
+    tags: ['status codes', 'http status', 'rfc 9110', '404 not found', 'idempotencia', 'cache http']
+  },
+  {
+    id: 'graphql-query-prettifier-linter-tool',
+    title: 'Formatador, Minificador & Linter de Consultas GraphQL',
+    description: 'Embeleze queries, mutations e subscriptions com indentação de 2 espaços, minifique payloads para chamadas de rede e verifique chaves desbalanceadas.',
+    category: 'dev-4devs',
+    categoryLabel: 'GraphQL & APIs',
+    icon: 'Code',
+    badge: 'GraphQL Linter',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'api-docs-mock-suite',
+    suiteTab: 'graphql-linter',
+    tags: ['graphql formatter', 'linter graphql', 'minificar query', 'graphql prettifier', 'chaves balanceadas']
+  },
+  {
+    id: 'grpc-protobuf-schema-inspector-tool',
+    title: 'Inspetor Protobuf (Proto3) & Conversor para TypeScript',
+    description: 'Compile esquemas Google Protocol Buffers (.proto) em interfaces TypeScript tipadas e schemas de cliente gRPC com mapeamento nativo de tipos escalares.',
+    category: 'dev-4devs',
+    categoryLabel: 'gRPC & Microserviços',
+    icon: 'FileCode',
+    badge: 'Proto3 to TS',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'api-docs-mock-suite',
+    suiteTab: 'protobuf-inspector',
+    tags: ['protobuf', 'proto3', 'grpc', 'typescript interface', 'schema converter', 'microservicos']
   }
 ];
