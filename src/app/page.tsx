@@ -70,6 +70,7 @@ import { PerformanceAssetsAndVitalsSuite } from '@/components/tools/PerformanceA
 import { TerminalAndSysAdminSuite } from '@/components/tools/TerminalAndSysAdminSuite';
 import { IoTAndHardwareSensorsSuite } from '@/components/tools/IoTAndHardwareSensorsSuite';
 import { DatabaseSqlOptimizerSuite } from '@/components/tools/DatabaseSqlOptimizerSuite';
+import { ModernCryptoAndSignaturesSuite } from '@/components/tools/ModernCryptoAndSignaturesSuite';
 
 import { 
   Search, 
@@ -680,6 +681,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'database-sql-suite' && (
               <DatabaseSqlOptimizerSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'modern-crypto-suite' && (
+              <ModernCryptoAndSignaturesSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

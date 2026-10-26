@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -3893,5 +3893,75 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'database-sql-suite',
     suiteTab: 'uuid-generator',
     tags: ['uuid v7', 'uuid v4', 'time ordered uuid', 'chaves primarias', 'rfc 9562', 'b-tree performance']
+  },
+  {
+    id: 'hmac-sha512-signer-tool',
+    title: 'Assinador & Validador de HMAC (SHA-512 / SHA-256 / SHA-384)',
+    description: 'Calcule assinaturas criptográficas de mensagens e payloads de webhook (Stripe, GitHub, Asaas) usando Web Crypto API pura, com verificação de integridade timing-safe.',
+    category: 'dev-4devs',
+    categoryLabel: 'Criptografia & Assinaturas',
+    icon: 'ShieldCheck',
+    badge: 'HMAC SHA-512',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'modern-crypto-suite',
+    suiteTab: 'hmac-signer',
+    tags: ['hmac', 'sha512', 'sha256', 'webhook signature', 'assinatura digital', 'integridade']
+  },
+  {
+    id: 'argon2-scrypt-params-calc',
+    title: 'Calculadora de Parâmetros Argon2id & Scrypt (OWASP 2026)',
+    description: 'Dimensione tempo (iterations), memória (MiB) e paralelismo para hashing seguro de senhas contra GPUs/ASICs com estimativa de latência e snippets de código.',
+    category: 'dev-4devs',
+    categoryLabel: 'Segurança & Hashing',
+    icon: 'Cpu',
+    badge: 'OWASP Argon2',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'modern-crypto-suite',
+    suiteTab: 'argon2-calc',
+    tags: ['argon2id', 'scrypt', 'hash senha', 'owasp', 'kdf', 'seguranca senhas']
+  },
+  {
+    id: 'totp-2fa-authenticator-tool',
+    title: 'Gerador & Validador de Códigos 2FA TOTP (RFC 6238)',
+    description: 'Emulador soberano de Google Authenticator client-side: gera códigos OTP de 6 a 8 dígitos a partir de segredos Base32 com barra regressiva de 30s e validação de tokens.',
+    category: 'dev-4devs',
+    categoryLabel: 'Autenticação & 2FA',
+    icon: 'Clock',
+    badge: 'TOTP RFC 6238',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'modern-crypto-suite',
+    suiteTab: 'totp-generator',
+    tags: ['totp', '2fa', 'google authenticator', 'mfa', 'otpauth', 'rfc 6238']
+  },
+  {
+    id: 'pgp-gpg-key-fingerprint-tool',
+    title: 'Inspecionador de Chaves Públicas PGP / GPG (RFC 4880)',
+    description: 'Analise blocos armored de chave pública OpenPGP: extraia Key ID, Fingerprint hexadecimal formatado, algoritmos suportados e metadados de identidade.',
+    category: 'dev-4devs',
+    categoryLabel: 'Criptografia Assemétrica',
+    icon: 'Key',
+    badge: 'PGP RFC 4880',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'modern-crypto-suite',
+    suiteTab: 'pgp-inspector',
+    tags: ['pgp', 'gpg', 'fingerprint', 'key id', 'openpgp', 'chave publica']
+  },
+  {
+    id: 'shamir-secret-sharing-tool',
+    title: 'Simulador de Compartilhamento de Segredos de Shamir (SSS)',
+    description: 'Divida credenciais mestras em N partes com quórum mínimo K para reconstrução: simule esquemas de governança multifirmas e custódia segura client-side.',
+    category: 'dev-4devs',
+    categoryLabel: 'Criptografia Avançada',
+    icon: 'Share2',
+    badge: 'Shamir Secret',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'modern-crypto-suite',
+    suiteTab: 'shamir-simulator',
+    tags: ['shamir secret', 'sss', 'threshold cryptography', 'recuperacao segredo', 'governance']
   }
 ];
