@@ -131,16 +131,17 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **Crypto & Security** | `CryptoTokensAndSecuritySuite.tsx` | Par de Chaves RSA/ECDSA PEM, Assinaturas HMAC-SHA256/512 para Webhooks, API Keys de Alta Entropia, Inspetor PEM X.509, Entropia de Senhas em Bits de Shannon |
 | **Web Assets & Diagnostics** | `WebAssetsAndDiagnosticsSuite.tsx` | Otimizador de SVG, Parser User-Agent com Detecção de Bots/OS, Base32 RFC 4648 & Crockford (2FA), Entidades HTML, Simulador DNS Global |
 | **AI Prompt & Viral Content** | `AiPromptAndViralSuite.tsx` | Prompt Frameworks (RTF, RISEN, CoT), 20 Ganchos Virais CTR, Matriz de CTAs, Bíblia de Personagem & Seed, Tags YouTube SEO |
+| **E-commerce & Traffic** | `EcommerceTrafficAndConversionSuite.tsx` | ROAS & CPA Máximo (Break-Even), URLs com UTM GA4, Preço Psicológico & Desconto De/Por, Copy Promo VIP Telegram/WhatsApp, Unit Economics & Margem Líquida |
 
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário
 - **Sistema de Favoritos Local:** Usuário pode favoritar ferramentas com 1 clique (persistência no `localStorage`).
 - **Histórico Recente de Uso:** Barra de acesso rápido às últimas ferramentas utilizadas com persistência local.
-- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 115+ ferramentas.
+- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 165+ ferramentas.
 - **Deep-linking Universal:** Compartilhamento direto via URL (`?tool=id`) com cópia em 1 clique e ativação automática com scroll suave.
 - **Filtro Rápido:** Aba instantânea para ferramentas favoritadas na barra de categorias.
-- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 115+ rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
+- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 165+ rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
 - **Suporte a PWA Standalone:** Arquivo `manifest.json` com paleta Cyber Obsidian (`#020617` / `#06b6d4`) para instalação como app nativo no Desktop e Mobile.
 
 ---
