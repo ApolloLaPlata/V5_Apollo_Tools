@@ -65,6 +65,7 @@ import { CryptoHashAndChecksumSuite } from '@/components/tools/CryptoHashAndChec
 import { TypographyAndDesignSuite } from '@/components/tools/TypographyAndDesignSuite';
 import { InvestmentAndFinanceBrasilSuite } from '@/components/tools/InvestmentAndFinanceBrasilSuite';
 import { WebSecurityAndDiagnosticsSuite } from '@/components/tools/WebSecurityAndDiagnosticsSuite';
+import { VectorAndPixelOptimizationSuite } from '@/components/tools/VectorAndPixelOptimizationSuite';
 
 import { 
   Search, 
@@ -660,6 +661,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'web-security-diag-suite' && (
               <WebSecurityAndDiagnosticsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'vector-pixel-suite' && (
+              <VectorAndPixelOptimizationSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

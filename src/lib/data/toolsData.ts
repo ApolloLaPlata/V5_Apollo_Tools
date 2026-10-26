@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -3543,5 +3543,75 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'web-security-diag-suite',
     suiteTab: 'rot13-vigenere',
     tags: ['rot13', 'cifra de cesar', 'vigenere', 'criptografia classica', 'forca bruta', 'decifrador']
+  },
+  {
+    id: 'svg-path-optimizer-sanitizer',
+    title: 'Otimizador & Sanitizador de SVG / Path',
+    description: 'Reduza o peso de arquivos SVG removendo metadados inúteis do Illustrator/Inkscape, comentários, tags vazias e ajustando a precisão decimal com preview visual antes/depois.',
+    category: 'dev-4devs',
+    categoryLabel: 'Design & Vetores',
+    icon: 'FileCode',
+    badge: 'SVG Minifier',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'vector-pixel-suite',
+    suiteTab: 'svg-optimizer',
+    tags: ['svg optimizer', 'minificar svg', 'sanitizar svg', 'path svg', 'vetor leve', 'frontend design']
+  },
+  {
+    id: 'svg-to-css-data-uri-converter',
+    title: 'Conversor de SVG para CSS Background Data URI',
+    description: 'Transforme ícones SVG em Data URIs otimizados em URL percent-encoded para background-image e mask-image em CSS, eliminando o inchaço de 33% do Base64.',
+    category: 'dev-4devs',
+    categoryLabel: 'CSS & Frontend',
+    icon: 'Copy',
+    badge: 'CSS Data URI',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'vector-pixel-suite',
+    suiteTab: 'svg-data-uri',
+    tags: ['svg to data uri', 'css background svg', 'mask image', 'percent encoded', 'base64 svg', 'css icons']
+  },
+  {
+    id: 'pixel-art-grid-builder-canvas',
+    title: 'Construtor e Exportador de Pixel Art Canvas (16x16 / 32x32)',
+    description: 'Desenhe sprites e ícones retrô pixel art com ferramentas de pincel, borracha, preenchimento, paleta Cyber Obsidian e exporte PNG de 512px nítido sem desfoque.',
+    category: 'invertexto',
+    categoryLabel: 'Gráficos & Arte Digital',
+    icon: 'Grid',
+    badge: 'Pixel Art 512px',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'vector-pixel-suite',
+    suiteTab: 'pixel-art',
+    tags: ['pixel art', 'grade 16x16', 'sprite editor', 'retro art', 'canvas pixelated', 'exportar png']
+  },
+  {
+    id: 'css-mesh-gradient-generator',
+    title: 'Gerador Visual de Mesh Gradients CSS Orgânicos',
+    description: 'Crie gradientes fluidos multidimensionais com 4 pontos de difusão de cores posicionáveis, ajuste de raio e geração de regras CSS prontas para copiar.',
+    category: 'dev-4devs',
+    categoryLabel: 'CSS & Design',
+    icon: 'Sliders',
+    badge: 'Mesh Gradients CSS',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'vector-pixel-suite',
+    suiteTab: 'mesh-gradient',
+    tags: ['mesh gradient', 'gradiente organico', 'radial gradient css', 'design moderno', 'background css']
+  },
+  {
+    id: 'image-aspect-cropper-social-preview',
+    title: 'Simulador e Cortador de Proporções para Redes Sociais',
+    description: 'Enquadre imagens para Instagram (1:1 e 4:5), TikTok/Shorts (9:16), YouTube (16:9) e Ultrawide (21:9) com zoom, pan e exportação de PNG recortado em alta resolução.',
+    category: 'invertexto',
+    categoryLabel: 'Mídia & Redes Sociais',
+    icon: 'Crop',
+    badge: 'Corte 1:1 / 9:16 / 16:9',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'vector-pixel-suite',
+    suiteTab: 'aspect-cropper',
+    tags: ['cortador de imagem', 'enquadramento instagram', 'proporcao 9 16', 'youtube thumbnail', 'cropper canvas']
   }
 ];
