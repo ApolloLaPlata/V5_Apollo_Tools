@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -1825,5 +1825,64 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'security-infra-suite',
     suiteTab: 'sql-beautifier',
     tags: ['sql', 'query', 'formatador', 'beautifier', 'select', 'join', 'database']
+  },
+
+  // ==========================================
+  // CATEGORIA 9: SUÍTE TRABALHISTA, SAÚDE & E-COMMERCE (SUS, CLT, MARKUP, CONTRATOS)
+  // ==========================================
+  {
+    id: 'sus-card-tool',
+    title: 'Gerador & Validador de Cartão SUS (CNS)',
+    description: 'Validação e geração oficial de CNS (15 dígitos) pelo algoritmo de Módulo 11 do Ministério da Saúde para testes de QA e sistemas.',
+    category: 'dev-4devs',
+    categoryLabel: 'Saúde & Cadastros (4Devs)',
+    icon: 'Stethoscope',
+    badge: 'Padrão CNS',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'legal-workplace-suite',
+    suiteTab: 'sus-cns',
+    tags: ['sus', 'cns', 'cartão sus', 'saúde', 'validador', 'gerador', '4devs']
+  },
+  {
+    id: 'clt-rescission-calc',
+    title: 'Simulador de Rescisão Trabalhista CLT',
+    description: 'Cálculo de verbas rescisórias: saldo de salário, 13º proporcional, férias + 1/3, aviso prévio e multa de 40% do FGTS.',
+    category: 'invertexto',
+    categoryLabel: 'Trabalhista & Finanças',
+    icon: 'Briefcase',
+    badge: 'CLT Oficial',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'legal-workplace-suite',
+    suiteTab: 'clt-rescission',
+    tags: ['clt', 'rescisão', 'trabalhista', 'fgts', 'férias', '13º', 'salário', 'invertexto']
+  },
+  {
+    id: 'ecommerce-margin-calc',
+    title: 'Calculadora de Margem de Lucro & Marketplace',
+    description: 'Precificação ideal para Shopee e Mercado Livre considerando comissão, taxa fixa, frete e imposto com cálculo de Markup real.',
+    category: 'invertexto',
+    categoryLabel: 'E-commerce & Vendas',
+    icon: 'ShoppingCart',
+    badge: 'Shopee & ML',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'legal-workplace-suite',
+    suiteTab: 'ecommerce-markup',
+    tags: ['ecommerce', 'shopee', 'mercado livre', 'markup', 'margem', 'lucro', 'vendas']
+  },
+  {
+    id: 'simple-contract-generator',
+    title: 'Emissor de Contrato de Serviços & Termos A4',
+    description: 'Minuta oficial de prestação de serviços pronta para preenchimento dos dados das partes e impressão imediata em formato A4.',
+    category: 'dev-4devs',
+    categoryLabel: 'Jurídico & Documentos',
+    icon: 'FileSpreadsheet',
+    badge: 'Impressão A4',
+    isInteractive: true,
+    suiteTarget: 'legal-workplace-suite',
+    suiteTab: 'simple-contract',
+    tags: ['contrato', 'prestação de serviços', 'jurídico', 'impressão', 'a4', 'termo']
   }
 ];

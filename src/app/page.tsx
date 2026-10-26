@@ -41,6 +41,7 @@ import { V5AiGatewaySuite } from '@/components/tools/V5AiGatewaySuite';
 import { CreativeAndSpeedSuite } from '@/components/tools/CreativeAndSpeedSuite';
 import { DevWebAndMediaSuite } from '@/components/tools/DevWebAndMediaSuite';
 import { SecurityAndInfraSuite } from '@/components/tools/SecurityAndInfraSuite';
+import { LegalAndWorkplaceSuite } from '@/components/tools/LegalAndWorkplaceSuite';
 
 import { 
   Search, 
@@ -140,6 +141,9 @@ import {
   Network,
   Code2,
   Database,
+  Stethoscope,
+  ShoppingCart,
+  FileSpreadsheet,
   X
 } from 'lucide-react';
 
@@ -231,7 +235,10 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Shield,
   Network,
   Code2,
-  Database
+  Database,
+  Stethoscope,
+  ShoppingCart,
+  FileSpreadsheet
 };
 
 export default function ApolloToolsPage() {
@@ -520,6 +527,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'security-infra-suite' && (
               <SecurityAndInfraSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'legal-workplace-suite' && (
+              <LegalAndWorkplaceSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
