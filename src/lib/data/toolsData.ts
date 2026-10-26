@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -2316,5 +2316,77 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'crypto-security-suite',
     suiteTab: 'password-entropy',
     tags: ['senha', 'entropia', 'shannon', 'seguranca', 'forca bruta', 'bits']
+  },
+  // ==========================================
+  // CATEGORIA: ASSETS WEB, DIAGNÓSTICO & CODIFICAÇÃO (ETAPA 29)
+  // ==========================================
+  {
+    id: 'svg-optimizer-cleaner',
+    title: 'Otimizador & Higienizador de SVG (SVG Cleaner)',
+    description: 'Remova metadados inúteis de Illustrator e Figma, minifique coordenadas de paths e reduza o peso do SVG com preview visual.',
+    category: 'dev-4devs',
+    categoryLabel: 'Design & Vetores',
+    icon: 'FileCode',
+    badge: 'SVG Minifier',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-assets-suite',
+    suiteTab: 'svg-optimizer',
+    tags: ['svg', 'vetor', 'otimizador', 'minificador', 'cleaner', 'design', 'figma']
+  },
+  {
+    id: 'user-agent-parser',
+    title: 'Parser & Diagnóstico de User-Agent de Navegadores',
+    description: 'Identifique sistema operacional, navegador, engine de renderização, tipo de dispositivo e detecção de bots e crawlers de busca.',
+    category: 'dev-4devs',
+    categoryLabel: 'Rede & Navegação',
+    icon: 'Monitor',
+    badge: 'Device & Bot Detect',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-assets-suite',
+    suiteTab: 'user-agent',
+    tags: ['user agent', 'navegador', 'bot', 'crawler', 'os', 'dispositivo', 'dev']
+  },
+  {
+    id: 'base32-crockford-tool',
+    title: 'Codificador & Decodificador Base32 e Crockford (2FA)',
+    description: 'Converta strings para Base32 padrão RFC 4648 (usado em chaves secretas 2FA/TOTP) e variante Crockford de alta legibilidade.',
+    category: 'invertexto',
+    categoryLabel: 'Cripto & Codificação',
+    icon: 'Binary',
+    badge: '2FA / TOTP Base32',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-assets-suite',
+    suiteTab: 'base32-crockford',
+    tags: ['base32', 'crockford', '2fa', 'totp', 'codificador', 'seguranca']
+  },
+  {
+    id: 'html-entities-encoder',
+    title: 'Codificador & Decodificador de Entidades HTML',
+    description: 'Converta caracteres reservados e especiais em entidades HTML seguras contra injeção XSS e decodifique para texto puro.',
+    category: 'dev-4devs',
+    categoryLabel: 'Web & Segurança',
+    icon: 'Code',
+    badge: 'Anti-XSS',
+    isInteractive: true,
+    suiteTarget: 'web-assets-suite',
+    suiteTab: 'html-entities',
+    tags: ['html', 'entidades', 'xss', 'encoder', 'decoder', 'seguranca', 'web']
+  },
+  {
+    id: 'dns-propagation-checker',
+    title: 'Simulador de Propagação DNS Global (Anycast)',
+    description: 'Consulte o status simulado de resolução DNS e latência em nós estratégicos globais (São Paulo, Virgínia, Frankfurt, Tóquio, etc).',
+    category: 'dev-4devs',
+    categoryLabel: 'Infra & Redes',
+    icon: 'Globe',
+    badge: '8 Nós Globais',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-assets-suite',
+    suiteTab: 'dns-propagation',
+    tags: ['dns', 'propagacao', 'anycast', 'rede', 'cloudflare', 'google dns', 'latencia']
   }
 ];

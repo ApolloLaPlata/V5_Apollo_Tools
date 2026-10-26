@@ -48,6 +48,7 @@ import { DesignAndFrontendSuite } from '@/components/tools/DesignAndFrontendSuit
 import { ProductivityAndTypesSuite } from '@/components/tools/ProductivityAndTypesSuite';
 import { NetworkAndIdentifiersSuite } from '@/components/tools/NetworkAndIdentifiersSuite';
 import { CryptoTokensAndSecuritySuite } from '@/components/tools/CryptoTokensAndSecuritySuite';
+import { WebAssetsAndDiagnosticsSuite } from '@/components/tools/WebAssetsAndDiagnosticsSuite';
 
 import { 
   Search, 
@@ -157,6 +158,7 @@ import {
   GitCompare,
   Eye,
   Link2,
+  Code,
   X
 } from 'lucide-react';
 
@@ -258,7 +260,8 @@ const ICON_MAP: Record<string, React.ElementType> = {
   FileCode2,
   GitCompare,
   Eye,
-  Link2
+  Link2,
+  Code
 };
 
 export default function ApolloToolsPage() {
@@ -568,6 +571,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'crypto-security-suite' && (
               <CryptoTokensAndSecuritySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'web-assets-suite' && (
+              <WebAssetsAndDiagnosticsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
