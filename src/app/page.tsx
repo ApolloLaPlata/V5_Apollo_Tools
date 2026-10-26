@@ -47,6 +47,7 @@ import { DataAndDevFormatsSuite } from '@/components/tools/DataAndDevFormatsSuit
 import { DesignAndFrontendSuite } from '@/components/tools/DesignAndFrontendSuite';
 import { ProductivityAndTypesSuite } from '@/components/tools/ProductivityAndTypesSuite';
 import { NetworkAndIdentifiersSuite } from '@/components/tools/NetworkAndIdentifiersSuite';
+import { CryptoTokensAndSecuritySuite } from '@/components/tools/CryptoTokensAndSecuritySuite';
 
 import { 
   Search, 
@@ -564,6 +565,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'network-identifiers-suite' && (
               <NetworkAndIdentifiersSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'crypto-security-suite' && (
+              <CryptoTokensAndSecuritySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

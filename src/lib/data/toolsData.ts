@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -2244,5 +2244,77 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'network-identifiers-suite',
     suiteTab: 'dns-records',
     tags: ['dns', 'bind', 'cloudflare', 'spf', 'dmarc', 'mx', 'cname', 'dominio', 'redes']
+  },
+  // ==========================================
+  // CATEGORIA: CRIPTOGRAFIA, ASSINATURA & TOKENS (ETAPA 28)
+  // ==========================================
+  {
+    id: 'rsa-keypair-generator',
+    title: 'Gerador de Par de Chaves RSA & ECDSA (PEM)',
+    description: 'Gere pares de chaves assimétricas RSA (2048/4096 bits) e ECDSA (P-256) diretamente no navegador com exportação em formato PEM.',
+    category: 'dev-4devs',
+    categoryLabel: 'Segurança & Criptografia',
+    icon: 'Key',
+    badge: 'RSA & ECDSA PEM',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'crypto-security-suite',
+    suiteTab: 'rsa-keys',
+    tags: ['rsa', 'ecdsa', 'chaves', 'pem', 'criptografia', 'pkcs8', 'spki', 'seguranca']
+  },
+  {
+    id: 'hmac-signature-builder',
+    title: 'Gerador & Validador de Assinaturas HMAC (Webhooks)',
+    description: 'Calcule assinaturas criptográficas HMAC-SHA256 e HMAC-SHA512 para validação e autenticação de Webhooks em Hex e Base64.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Webhooks',
+    icon: 'ShieldCheck',
+    badge: 'HMAC-SHA256/512',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'crypto-security-suite',
+    suiteTab: 'hmac-signatures',
+    tags: ['hmac', 'sha256', 'webhooks', 'stripe', 'assinatura', 'seguranca', 'api']
+  },
+  {
+    id: 'api-key-secrets-generator',
+    title: 'Gerador de Chaves de API & Webhooks Secret',
+    description: 'Crie tokens de autenticação criptograficamente seguros de alta entropia com prefixos customizáveis (ex: v5_live_).',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Autenticação',
+    icon: 'Fingerprint',
+    badge: 'Tokens de Alta Entropia',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'crypto-security-suite',
+    suiteTab: 'api-keys',
+    tags: ['api key', 'secret', 'token', 'auth', 'entropia', 'segurança', 'dev']
+  },
+  {
+    id: 'pem-certificate-inspector',
+    title: 'Inspetor & Decodificador de Certificados PEM (X.509)',
+    description: 'Inspecione e diagnostique envelopes PEM de certificados SSL/TLS e chaves criptográficas com validação de integridade Base64.',
+    category: 'dev-4devs',
+    categoryLabel: 'Infra & Segurança',
+    icon: 'FileText',
+    badge: 'PEM & X.509',
+    isInteractive: true,
+    suiteTarget: 'crypto-security-suite',
+    suiteTab: 'pem-inspector',
+    tags: ['pem', 'certificado', 'x509', 'ssl', 'tls', 'chave', 'diagnostico']
+  },
+  {
+    id: 'password-entropy-calculator',
+    title: 'Calculadora de Entropia de Senhas & Força Bruta',
+    description: 'Calcule a entropia de Shannon em bits de qualquer senha e estime o tempo teórico necessário para quebra por força bruta.',
+    category: 'invertexto',
+    categoryLabel: 'Segurança & Senhas',
+    icon: 'Lock',
+    badge: 'Bits de Shannon',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'crypto-security-suite',
+    suiteTab: 'password-entropy',
+    tags: ['senha', 'entropia', 'shannon', 'seguranca', 'forca bruta', 'bits']
   }
 ];
