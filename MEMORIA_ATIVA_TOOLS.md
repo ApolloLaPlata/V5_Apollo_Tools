@@ -133,16 +133,17 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **AI Prompt & Viral Content** | `AiPromptAndViralSuite.tsx` | Prompt Frameworks (RTF, RISEN, CoT), 20 Ganchos Virais CTR, Matriz de CTAs, Bíblia de Personagem & Seed, Tags YouTube SEO |
 | **E-commerce & Traffic** | `EcommerceTrafficAndConversionSuite.tsx` | ROAS & CPA Máximo (Break-Even), URLs com UTM GA4, Preço Psicológico & Desconto De/Por, Copy Promo VIP Telegram/WhatsApp, Unit Economics & Margem Líquida |
 | **Academic & Study** | `AcademicAndStudySuite.tsx` | Formatador ABNT NBR 6023 (Livros/Artigos/Teses/Web), Média Ponderada & ENEM/SISU, Pomodoro 50/10 com Ruído Marrom Web Audio, Flashcards Anki TSV, Métrica Poética & Escansão |
+| **Legal Documents A4** | `LegalDocumentsA4Suite.tsx` | Procuração Particular A4, Contrato de Locação Residencial (Lei 8.245/91), Notificação Extrajudicial, Declaração de Residência (Lei 7.115/83) & Hipossuficiência, Entrega de Chaves & Quitação |
 
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário
 - **Sistema de Favoritos Local:** Usuário pode favoritar ferramentas com 1 clique (persistência no `localStorage`).
 - **Histórico Recente de Uso:** Barra de acesso rápido às últimas ferramentas utilizadas com persistência local.
-- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 170+ ferramentas.
+- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 175+ ferramentas.
 - **Deep-linking Universal:** Compartilhamento direto via URL (`?tool=id`) com cópia em 1 clique e ativação automática com scroll suave.
 - **Filtro Rápido:** Aba instantânea para ferramentas favoritadas na barra de categorias.
-- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 170+ rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
+- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 175+ rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
 - **Suporte a PWA Standalone:** Arquivo `manifest.json` com paleta Cyber Obsidian (`#020617` / `#06b6d4`) para instalação como app nativo no Desktop e Mobile.
 
 ---
