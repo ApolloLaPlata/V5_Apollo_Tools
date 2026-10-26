@@ -40,6 +40,7 @@ import { TextSpecializedSuite } from '@/components/tools/TextSpecializedSuite';
 import { V5AiGatewaySuite } from '@/components/tools/V5AiGatewaySuite';
 import { CreativeAndSpeedSuite } from '@/components/tools/CreativeAndSpeedSuite';
 import { DevWebAndMediaSuite } from '@/components/tools/DevWebAndMediaSuite';
+import { SecurityAndInfraSuite } from '@/components/tools/SecurityAndInfraSuite';
 
 import { 
   Search, 
@@ -135,6 +136,10 @@ import {
   FileImage,
   Pipette,
   Key,
+  Shield,
+  Network,
+  Code2,
+  Database,
   X
 } from 'lucide-react';
 
@@ -222,7 +227,11 @@ const ICON_MAP: Record<string, React.ElementType> = {
   BookOpen,
   FileImage,
   Pipette,
-  Key
+  Key,
+  Shield,
+  Network,
+  Code2,
+  Database
 };
 
 export default function ApolloToolsPage() {
@@ -437,6 +446,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'dev-web-media-suite' && (
               <DevWebAndMediaSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'security-infra-suite' && (
+              <SecurityAndInfraSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

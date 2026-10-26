@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -1753,5 +1753,77 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'dev-web-media-suite',
     suiteTab: 'favicon-gen',
     tags: ['favicon', 'ícones', 'pwa', 'png', 'webmaster', 'design']
+  },
+
+  // ==========================================
+  // CATEGORIA 8: SUÍTE DE SEGURANÇA, REDES & INFRA DEV (HASH, REGEX, YAML, IPV4, SQL)
+  // ==========================================
+  {
+    id: 'hash-crypto-generator',
+    title: 'Gerador de Hashes Criptográficos (SHA/MD5)',
+    description: 'Cálculo instantâneo de SHA-256, SHA-512, SHA-384, SHA-1 e MD5 no cliente usando a Web Crypto API nativa.',
+    category: 'dev-4devs',
+    categoryLabel: 'Segurança & Cripto',
+    icon: 'Shield',
+    badge: 'Web Crypto API',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'security-infra-suite',
+    suiteTab: 'crypto-hash',
+    tags: ['hash', 'sha256', 'sha512', 'md5', 'criptografia', 'segurança', '4devs']
+  },
+  {
+    id: 'regex-tester-pro',
+    title: 'Testador & Validador de Expressões Regulares (Regex)',
+    description: 'Teste expressões regulares em tempo real com destaque de correspondências, suporte a flags e biblioteca de padrões prontos.',
+    category: 'dev-4devs',
+    categoryLabel: 'Dev & Testes (4Devs)',
+    icon: 'Code2',
+    badge: 'Regex Pro',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'security-infra-suite',
+    suiteTab: 'regex-tester',
+    tags: ['regex', 'expressão regular', 'validador', 'email', 'cpf', 'teste', 'qa']
+  },
+  {
+    id: 'yaml-json-converter',
+    title: 'Conversor Bidirecional YAML <-> JSON',
+    description: 'Converta arquivos de configuração Kubernetes, Docker Compose e CI/CD entre YAML e JSON com validação sintática imediata.',
+    category: 'dev-4devs',
+    categoryLabel: 'DevOps & Infra',
+    icon: 'Layers',
+    badge: 'YAML / JSON',
+    isInteractive: true,
+    suiteTarget: 'security-infra-suite',
+    suiteTab: 'yaml-json',
+    tags: ['yaml', 'json', 'conversor', 'devops', 'kubernetes', 'docker', 'config']
+  },
+  {
+    id: 'ipv4-subnet-calculator',
+    title: 'Calculadora de Sub-rede IPv4 & CIDR',
+    description: 'Cálculo de máscara de rede, broadcast, primeiro/último IP útil e quantidade de hosts utilizáveis com notação binária.',
+    category: 'dev-4devs',
+    categoryLabel: 'Redes & Infra',
+    icon: 'Network',
+    badge: 'CIDR & Subnet',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'security-infra-suite',
+    suiteTab: 'ipv4-cidr',
+    tags: ['ip', 'ipv4', 'subnet', 'cidr', 'rede', 'broadcast', 'hosts', 'mascara']
+  },
+  {
+    id: 'sql-query-formatter',
+    title: 'Formatador & Beautifier de Consultas SQL',
+    description: 'Indentação, organização e formatação limpa de consultas SELECT, INSERT, UPDATE, JOINs e GROUP BY com syntax highlight.',
+    category: 'dev-4devs',
+    categoryLabel: 'Banco de Dados',
+    icon: 'Database',
+    badge: 'SQL Beautifier',
+    isInteractive: true,
+    suiteTarget: 'security-infra-suite',
+    suiteTab: 'sql-beautifier',
+    tags: ['sql', 'query', 'formatador', 'beautifier', 'select', 'join', 'database']
   }
 ];
