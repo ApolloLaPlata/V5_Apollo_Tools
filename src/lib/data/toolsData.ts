@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -2677,5 +2677,77 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'legal-documents-a4-suite',
     suiteTab: 'receipt-keys-handover',
     tags: ['entrega de chaves', 'quitacao', 'vistoria', 'desocupacao', 'termo', 'aluguel']
+  },
+  // ==========================================
+  // ETAPA 34: SUÍTE DE CÁLCULOS FISCAIS, MEI & TRIBUTOS BRASIL
+  // ==========================================
+  {
+    id: 'das-mei-calculator',
+    title: 'Calculadora DAS-MEI 2026 & Monitor de Limite',
+    description: 'Cálculo mensal da guia DAS por categoria (Comércio, Serviços, Misto e Caminhoneiro) e monitor com barra de limite proporcional (R$ 81.000).',
+    category: 'invertexto',
+    categoryLabel: 'MEI & Microempresa',
+    icon: 'Building2',
+    badge: 'DAS 2026',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'tax-fiscal-suite',
+    suiteTab: 'das-mei',
+    tags: ['mei', 'das', 'das-mei', 'impostos', 'limite faturamento', 'desenquadramento', 'tributos']
+  },
+  {
+    id: 'irrf-carne-leao-calculator',
+    title: 'Calculadora de IRRF & Carnê-Leão Mensal RFB',
+    description: 'Simulação exata pela tabela progressiva oficial da Receita Federal com deduções de dependentes, INSS e alíquota efetiva real.',
+    category: 'invertexto',
+    categoryLabel: 'Imposto de Renda & PF',
+    icon: 'Calculator',
+    badge: 'Tabela RFB',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'tax-fiscal-suite',
+    suiteTab: 'irrf-carne-leao',
+    tags: ['irrf', 'carne leao', 'imposto de renda', 'receita federal', 'tabela progressiva', 'tributos']
+  },
+  {
+    id: 'difal-icms-calculator',
+    title: 'Calculadora DIFAL ICMS Interestadual (EC 87/15)',
+    description: 'Cálculo do Diferencial de Alíquota de ICMS para e-commerce em vendas a consumidor final não contribuinte com Fundo de Combate à Pobreza (FCP).',
+    category: 'invertexto',
+    categoryLabel: 'E-commerce & ICMS',
+    icon: 'Truck',
+    badge: 'EC 87/15 & LC 190',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'tax-fiscal-suite',
+    suiteTab: 'difal-icms',
+    tags: ['difal', 'icms', 'interestadual', 'fcp', 'ecommerce', 'tributacao', 'partilha']
+  },
+  {
+    id: 'simples-fator-r-calculator',
+    title: 'Consultor de Fator R do Simples Nacional (Anexo III vs V)',
+    description: 'Calcule se sua empresa se enquadra no Anexo III (6%) ou Anexo V (15,5%) com simulador de economia tributária por Pró-labore.',
+    category: 'invertexto',
+    categoryLabel: 'Simples Nacional & PJ',
+    icon: 'Percent',
+    badge: 'Anexo III vs V',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'tax-fiscal-suite',
+    suiteTab: 'simples-fator-r',
+    tags: ['fator r', 'simples nacional', 'anexo iii', 'anexo v', 'pro labore', 'planejamento tributario']
+  },
+  {
+    id: 'lucro-presumido-simulator',
+    title: 'Simulador de Carga Tributária no Lucro Presumido',
+    description: 'Demonstrativo completo de tributos federais trimestrais (IRPJ com adicional, CSLL, PIS e COFINS cumulativos) e ISS/ICMS estimado.',
+    category: 'invertexto',
+    categoryLabel: 'Empresarial & Fiscal',
+    icon: 'FileSpreadsheet',
+    badge: 'Demonstrativo Fiscal',
+    isInteractive: true,
+    suiteTarget: 'tax-fiscal-suite',
+    suiteTab: 'lucro-presumido',
+    tags: ['lucro presumido', 'irpj', 'csll', 'pis', 'cofins', 'tributacao', 'contabilidade']
   }
 ];
