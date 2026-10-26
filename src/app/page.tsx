@@ -36,6 +36,7 @@ import { UnitsAndConvertersSuite } from '@/components/tools/UnitsAndConvertersSu
 import { FinanceAndEconomySuite } from '@/components/tools/FinanceAndEconomySuite';
 import { HealthAndEverydaySuite } from '@/components/tools/HealthAndEverydaySuite';
 import { MediaAndUtilitySuite } from '@/components/tools/MediaAndUtilitySuite';
+import { TextSpecializedSuite } from '@/components/tools/TextSpecializedSuite';
 
 import { 
   Search, 
@@ -114,6 +115,9 @@ import {
   Keyboard,
   Monitor,
   FileEdit,
+  ListOrdered,
+  Lock,
+  Unlock,
   X
 } from 'lucide-react';
 
@@ -187,7 +191,10 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Scale,
   Keyboard,
   Monitor,
-  FileEdit
+  FileEdit,
+  ListOrdered,
+  Lock,
+  Unlock
 };
 
 export default function ApolloToolsPage() {
@@ -331,6 +338,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'media-utility-suite' && (
               <MediaAndUtilitySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'text-specialized-suite' && (
+              <TextSpecializedSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
