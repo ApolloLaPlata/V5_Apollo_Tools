@@ -68,6 +68,7 @@ import { WebSecurityAndDiagnosticsSuite } from '@/components/tools/WebSecurityAn
 import { VectorAndPixelOptimizationSuite } from '@/components/tools/VectorAndPixelOptimizationSuite';
 import { PerformanceAssetsAndVitalsSuite } from '@/components/tools/PerformanceAssetsAndVitalsSuite';
 import { TerminalAndSysAdminSuite } from '@/components/tools/TerminalAndSysAdminSuite';
+import { IoTAndHardwareSensorsSuite } from '@/components/tools/IoTAndHardwareSensorsSuite';
 
 import { 
   Search, 
@@ -672,6 +673,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'terminal-sysadmin-suite' && (
               <TerminalAndSysAdminSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'iot-hardware-suite' && (
+              <IoTAndHardwareSensorsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

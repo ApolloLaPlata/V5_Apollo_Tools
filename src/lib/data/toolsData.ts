@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -3753,5 +3753,75 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'terminal-sysadmin-suite',
     suiteTab: 'ssh-keygen',
     tags: ['ssh keygen', 'ed25519', 'ssh config', 'ssh copy id', 'chave privada ssh', 'acesso remoto']
+  },
+  {
+    id: 'celsius-fahrenheit-kelvin-precision',
+    title: 'Conversor Termodinâmico & Gerador de Código C++ Arduino',
+    description: 'Converta temperaturas com alta precisão entre Celsius, Fahrenheit, Kelvin e Rankine com exibição de fórmulas e snippets de firmware C++ para ESP32 e Arduino.',
+    category: 'invertexto',
+    categoryLabel: 'Hardware & Sensores',
+    icon: 'Thermometer',
+    badge: 'Termodinâmica & C++',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'iot-hardware-suite',
+    suiteTab: 'thermo-temp',
+    tags: ['celsius', 'fahrenheit', 'kelvin', 'rankine', 'temperatura', 'arduino c++', 'sensores']
+  },
+  {
+    id: 'pressure-bar-psi-pascal-calc',
+    title: 'Calculadora de Pressão Barométrica & Altitude ICAO',
+    description: 'Converta hPa, bar, PSI, atm e mmHg; calcule a altitude barométrica em metros e pés pela fórmula internacional ICAO e analise tendências de tempo meteorológico.',
+    category: 'invertexto',
+    categoryLabel: 'Sensores & Barometria',
+    icon: 'Gauge',
+    badge: 'Altitude ICAO Bar',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'iot-hardware-suite',
+    suiteTab: 'pressure-calc',
+    tags: ['pressao barometrica', 'hpa', 'altitude icao', 'psi', 'barometro', 'meteorologia', 'sensores']
+  },
+  {
+    id: 'resistor-color-code-calculator',
+    title: 'Calculadora Visual de Código de Cores de Resistores (4/5 Faixas)',
+    description: 'Identifique o valor de resistores em Ohms (kΩ, MΩ), multiplicador e tolerância percentual a partir das faixas coloridas com simulação gráfica do componente físico.',
+    category: 'dev-4devs',
+    categoryLabel: 'Eletrônica & Hardware',
+    icon: 'Sliders',
+    badge: 'Resistor 4/5 Faixas',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'iot-hardware-suite',
+    suiteTab: 'resistor-calc',
+    tags: ['resistor', 'codigo de cores', 'ohms', 'tolerancia resistor', 'eletronica', 'hardware']
+  },
+  {
+    id: 'baud-rate-uart-bitrate-calc',
+    title: 'Calculadora de Baud Rate UART & Throughput Serial',
+    description: 'Calcule a velocidade real de transmissão em Bytes/s e KB/s, bits por caractere (8N1) e latência de payload para taxas de 9600 a 921600 baud em conexões seriais.',
+    category: 'dev-4devs',
+    categoryLabel: 'Comunicação Serial & IoT',
+    icon: 'Radio',
+    badge: 'UART Serial 8N1',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'iot-hardware-suite',
+    suiteTab: 'uart-baud',
+    tags: ['baud rate', 'uart', 'serial port', 'throughput serial', 'comunicacao iot', 'embarcados']
+  },
+  {
+    id: 'battery-life-runtime-estimator',
+    title: 'Estimador de Autonomia de Bateria para Projetos IoT',
+    description: 'Calcule o tempo de vida útil de baterias (CR2032, 18650, LiPo) em horas, dias e anos com base no ciclo de trabalho (Duty Cycle), corrente ativa e Deep Sleep.',
+    category: 'dev-4devs',
+    categoryLabel: 'Energia & Baterias IoT',
+    icon: 'BatteryCharging',
+    badge: 'Deep Sleep & mAh',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'iot-hardware-suite',
+    suiteTab: 'battery-life',
+    tags: ['bateria iot', 'autonomia bateria', 'deep sleep', 'mah', 'esp32 sleep', 'consumo energetico']
   }
 ];
