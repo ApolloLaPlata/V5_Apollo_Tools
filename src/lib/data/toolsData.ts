@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -2460,5 +2460,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'ai-prompt-viral-suite',
     suiteTab: 'youtube-tags',
     tags: ['youtube', 'tags', 'seo', 'palavras chave', 'video', 'ranqueamento']
+  },
+  // ==========================================
+  // ETAPA 31: SUÍTE DE E-COMMERCE, TRÁFEGO PAGO & CONVERSÃO
+  // ==========================================
+  {
+    id: 'roas-cpa-calculator',
+    title: 'Calculadora de ROAS & CPA Máximo (Break-Even)',
+    description: 'Calcule o ponto de equilíbrio de campanhas pagas (Meta, Google, TikTok Ads), ROAS mínimo viável e CPA teto por margem de lucro.',
+    category: 'invertexto',
+    categoryLabel: 'Tráfego Pago & ROI',
+    icon: 'TrendingUp',
+    badge: 'Break-Even & ROI',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'ecommerce-traffic-suite',
+    suiteTab: 'roas-cpa',
+    tags: ['roas', 'cpa', 'trafego pago', 'ads', 'meta ads', 'google ads', 'roi', 'break-even']
+  },
+  {
+    id: 'utm-campaign-builder',
+    title: 'Gerador de URLs com Parâmetros UTM (GA4 & Ads)',
+    description: 'Gere links rastreados com utm_source, utm_medium, utm_campaign, term e content com validação automática para Google Analytics 4.',
+    category: 'invertexto',
+    categoryLabel: 'Analytics & Campanhas',
+    icon: 'Link2',
+    badge: 'Padrão GA4',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'ecommerce-traffic-suite',
+    suiteTab: 'utm-builder',
+    tags: ['utm', 'url builder', 'analytics', 'ga4', 'links', 'rastreamento', 'campanha']
+  },
+  {
+    id: 'psychological-pricing-sim',
+    title: 'Simulador de Preço Psicológico & Descontos',
+    description: 'Simule estratégias de ancoragem de preços com terminações .90, .99, número 7 e cálculo automático de desconto De/Por.',
+    category: 'invertexto',
+    categoryLabel: 'Pricing & Conversão',
+    icon: 'Tag',
+    badge: 'Estratégia De/Por',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'ecommerce-traffic-suite',
+    suiteTab: 'pricing-sim',
+    tags: ['preco psicologico', 'pricing', 'desconto', 'ancoragem', 'de por', 'conversao']
+  },
+  {
+    id: 'promo-copy-formatter',
+    title: 'Formatador de Ofertas para Telegram & WhatsApp',
+    description: 'Formate mensagens promocionais de alta conversão prontas para colar em canais e grupos VIP com formatação Markdown nativa.',
+    category: 'invertexto',
+    categoryLabel: 'Copywriting & Mensageria',
+    icon: 'MessageSquare',
+    badge: 'Markdown VIP',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'ecommerce-traffic-suite',
+    suiteTab: 'promo-copy',
+    tags: ['copy', 'telegram', 'whatsapp', 'oferta', 'promocao', 'grupos vip', 'mensageria']
+  },
+  {
+    id: 'unit-profit-calculator',
+    title: 'Calculadora de Lucro Líquido por Venda (Unit Economics)',
+    description: 'Demonstrativo completo de margem real: custo de mercadoria, taxas de marketplace (Shopee/ML), impostos, frete e embalagem.',
+    category: 'invertexto',
+    categoryLabel: 'E-commerce & Margens',
+    icon: 'DollarSign',
+    badge: 'Unit Economics',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'ecommerce-traffic-suite',
+    suiteTab: 'unit-profit',
+    tags: ['unit economics', 'lucro liquido', 'margem', 'taxa shopee', 'taxa mercado livre', 'impostos', 'dre']
   }
 ];

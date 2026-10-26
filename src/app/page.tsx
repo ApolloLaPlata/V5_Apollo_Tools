@@ -50,6 +50,7 @@ import { NetworkAndIdentifiersSuite } from '@/components/tools/NetworkAndIdentif
 import { CryptoTokensAndSecuritySuite } from '@/components/tools/CryptoTokensAndSecuritySuite';
 import { WebAssetsAndDiagnosticsSuite } from '@/components/tools/WebAssetsAndDiagnosticsSuite';
 import { AiPromptAndViralSuite } from '@/components/tools/AiPromptAndViralSuite';
+import { EcommerceTrafficAndConversionSuite } from '@/components/tools/EcommerceTrafficAndConversionSuite';
 
 import { 
   Search, 
@@ -584,6 +585,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'ai-prompt-viral-suite' && (
               <AiPromptAndViralSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'ecommerce-traffic-suite' && (
+              <EcommerceTrafficAndConversionSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
