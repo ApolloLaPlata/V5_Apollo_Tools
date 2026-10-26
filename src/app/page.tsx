@@ -58,6 +58,7 @@ import { AccessibilityAndWebPerfSuite } from '@/components/tools/AccessibilityAn
 import { RegexAndLexicalSuite } from '@/components/tools/RegexAndLexicalSuite';
 import { ApiAndNetworkTestingSuite } from '@/components/tools/ApiAndNetworkTestingSuite';
 import { DocumentAndOpenSourceSuite } from '@/components/tools/DocumentAndOpenSourceSuite';
+import { MediaAndAudioStudioSuite } from '@/components/tools/MediaAndAudioStudioSuite';
 
 import { 
   Search, 
@@ -632,6 +633,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'document-opensource-suite' && (
               <DocumentAndOpenSourceSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'media-audio-studio-suite' && (
+              <MediaAndAudioStudioSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

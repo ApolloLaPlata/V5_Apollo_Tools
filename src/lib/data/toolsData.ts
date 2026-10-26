@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -3038,5 +3038,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'document-opensource-suite',
     suiteTab: 'opensource-license',
     tags: ['licenca open source', 'mit', 'apache 2.0', 'gpl v3', 'bsd', 'spdx', 'github license', 'legal']
+  },
+  // ==========================================
+  // ETAPA 39: SUÍTE DE MÍDIA, VÍDEO & ÁUDIO STUDIO (205 FERRAMENTAS)
+  // ==========================================
+  {
+    id: 'wav-pcm-audio-synthesizer',
+    title: 'Sintetizador & Exportador de Áudio WAV (16-bit PCM)',
+    description: 'Gere ondas sonoras puras (senoidal, quadrada, ruído branco para foco e bips) e baixe arquivos binários RIFF/WAV 44.1kHz gerados nativamente.',
+    category: 'invertexto',
+    categoryLabel: 'Áudio & Som',
+    icon: 'Music',
+    badge: '16-bit PCM 44.1kHz',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'media-audio-studio-suite',
+    suiteTab: 'audio-synthesizer',
+    tags: ['sintetizador', 'audio wav', 'tom puro', 'ruido branco', '440hz', 'som', 'web audio']
+  },
+  {
+    id: 'svg-audio-waveform-generator',
+    title: 'Visualizador & Construtor de Formas de Onda SVG',
+    description: 'Renderize formas de onda harmônicas personalizadas para podcasts e players com gradientes de cores, controle de densidade e exportação de código SVG.',
+    category: 'dev-4devs',
+    categoryLabel: 'Design & Vetor',
+    icon: 'Activity',
+    badge: 'SVG Vetorial',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'media-audio-studio-suite',
+    suiteTab: 'waveform-visualizer',
+    tags: ['waveform', 'forma de onda', 'audio svg', 'podcast', 'visualizador som', 'vetor']
+  },
+  {
+    id: 'video-frame-extractor-tool',
+    title: 'Extrator de Frames de Vídeo em Alta Resolução (Canvas)',
+    description: 'Navegue frame a frame em arquivos de vídeo locais (MP4, WebM, MOV) e capture quadros exatos em resolução nativa para download em PNG.',
+    category: 'dev-4devs',
+    categoryLabel: 'Vídeo & Imagem',
+    icon: 'Video',
+    badge: 'HTML5 + Canvas',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'media-audio-studio-suite',
+    suiteTab: 'video-frames',
+    tags: ['video frame', 'captura quadro', 'screenshot video', 'canvas', 'extrator frames', 'mp4']
+  },
+  {
+    id: 'gpu-render-cost-calculator',
+    title: 'Calculadora de Tempo & Custo de Render GPU/CPU',
+    description: 'Calcule o tempo total e compare custos de renderização 3D/ComfyUI: consumo elétrico local em kWh vs aceleração em instâncias Modal H100 na nuvem.',
+    category: 'dev-4devs',
+    categoryLabel: 'Infra & GPU',
+    icon: 'Cpu',
+    badge: 'H100 vs Local GPU',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'media-audio-studio-suite',
+    suiteTab: 'render-calculator',
+    tags: ['render', 'gpu', 'h100', 'rtx 4090', 'custo eletricidade', 'tempo renderizacao', 'comfyui']
+  },
+  {
+    id: 'favicon-pack-multi-size-generator',
+    title: 'Gerador de Pacote de Favicons em Lote (Web & PWA)',
+    description: 'Transforme qualquer imagem em um pacote de Favicons completos (16x16, 32x32, 48x48, 180x180 Apple Touch e 192x192 Android) com código HTML pronto.',
+    category: 'dev-4devs',
+    categoryLabel: 'Design & Frontend',
+    icon: 'Image',
+    badge: 'Multi-Resolução',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'media-audio-studio-suite',
+    suiteTab: 'favicon-pack',
+    tags: ['favicon', 'apple touch icon', 'pwa icon', '16x16', '32x32', '192x192', 'gerador favicon']
   }
 ];
