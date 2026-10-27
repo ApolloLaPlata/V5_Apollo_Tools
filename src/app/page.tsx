@@ -117,6 +117,7 @@ import { CosmologyAndFlrwCosmicExpansionSuite } from '@/components/tools/Cosmolo
 import { QuantumElectrodynamicsAndVacuumSuite } from '@/components/tools/QuantumElectrodynamicsAndVacuumSuite';
 import { QuantumChromodynamicsAndQuarkGluonSuite } from '@/components/tools/QuantumChromodynamicsAndQuarkGluonSuite';
 import { StringTheoryAndQuantumGravitySuite } from '@/components/tools/StringTheoryAndQuantumGravitySuite';
+import { TheoryOfEverythingAndSupersymmetrySuite } from '@/components/tools/TheoryOfEverythingAndSupersymmetrySuite';
 
 import { 
   Search, 
@@ -868,6 +869,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'string-theory-quantum-gravity-suite' && (
               <StringTheoryAndQuantumGravitySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'theory-of-everything-susy-suite' && (
+              <TheoryOfEverythingAndSupersymmetrySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
