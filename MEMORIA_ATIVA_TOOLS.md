@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 385 Ferramentas Ativas · 75 Etapas Concluídas)
+**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 390 Ferramentas Ativas · 76 Etapas Concluídas)
 
 ---
 
@@ -176,16 +176,17 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **WebGPU Compute Shaders & Matrizes Paralelas** | `WebGpuComputeShadersSuite.tsx` | Multiplicador de Matrizes Paralelo em WGSL (Tiled GEMM com Shared Memory), Simulador de Dimensões de Workgroup & Ocupação de Subgroups/Warps, Gerador de Ruído Procedural Perlin/Simplex Compute, Inspecionador de BindGroupLayouts WebGPU, Benchmark Paralelo Float32 (CPU vs GPU Compute) |
 | **WebCodecs & MP4 Box Demuxer Client-Side** | `WebCodecsAndMediaMuxerSuite.tsx` | Decodificador de Quadros VideoFrame (WebCodecs & Planos YUV BT.709), Inspecionador de AudioData & Osciloscópio PCM Float32 (Canvas dBFS), Desmontador de Árvore de Caixas MP4 (ISO-BMFF ftyp/moov/mdat), Transmuxador Soberano WebM ↔ MP4 (Zero Re-Encode), Extrator & Analisador de Estrutura GOP (Quadros I/P/B) |
 | **Web Speech, Síntese de Voz & Fonética** | `WebSpeechAndVoiceSuite.tsx` | Reconhecimento de Fala Contínuo (STT Web Speech W3C), Síntese de Voz & Modulador de Prosódia (TTS SpeechSynthesis Pitch/Rate), Construtor de Tags SSML W3C (Polly/Azure), Transcritor Fonético OTAN & Fonemas IPA, Calculador de WPM & Temporizador de Roteiros Vídeo |
+| **WebGPU Render Pipelines & Shaders 3D** | `WebGpuRenderingAndShadersSuite.tsx` | Editor/Compilador Shaders WGSL (Vértice/Fragmento), Simulador Z-Buffer & Early-Z Test, Matriz GPUTexture & VRAM (MSAA 4x/Mipmaps), Construtor GPUVertexBufferLayout, Benchmark Instanced Draw (100k) |
 
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário
 - **Sistema de Favoritos Local:** Usuário pode favoritar ferramentas com 1 clique (persistência no `localStorage`).
 - **Histórico Recente de Uso:** Barra de acesso rápido às últimas ferramentas utilizadas com persistência local.
-- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 385 ferramentas.
+- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 390 ferramentas.
 - **Deep-linking Universal:** Compartilhamento direto via URL (`?tool=id`) com cópia em 1 clique e ativação automática com scroll suave.
 - **Filtro Rápido:** Aba instantânea para ferramentas favoritadas na barra de categorias.
-- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 385 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
+- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 390 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
 - **Suporte a PWA Standalone:** Arquivo `manifest.json` com paleta Cyber Obsidian (`#020617` / `#06b6d4`) para instalação como app nativo no Desktop e Mobile.
 
 ---
@@ -207,5 +208,5 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 ---
 
 ## 6. Próximos Passos
-1. Prosseguir com a Esteira Determinística de Expansão (Etapa 76: Suíte de WebGPU Render Pipelines, Shaders de Vértice/Fragmento & Rasterização 3D Client-Side - Marco 390 Ferramentas).
+1. Prosseguir com a Esteira Determinística de Expansão (Etapa 77: Suíte de WebXR, VR/AR & Sensores Espaciais - Marco 395 Ferramentas).
 2. Manter monitoramento contínuo via Shadow Logger e Colmeia.
