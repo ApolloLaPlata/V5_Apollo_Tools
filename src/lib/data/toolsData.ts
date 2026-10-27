@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite' | 'webrtc-media-codecs-suite' | 'oauth-security-oidc-suite' | 'webgl-canvas-diagnostics-suite' | 'post-quantum-crypto-suite' | 'web-bluetooth-hardware-suite' | 'webtransport-http3-suite' | 'homomorphic-zkp-suite' | 'webgpu-compute-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite' | 'webrtc-media-codecs-suite' | 'oauth-security-oidc-suite' | 'webgl-canvas-diagnostics-suite' | 'post-quantum-crypto-suite' | 'web-bluetooth-hardware-suite' | 'webtransport-http3-suite' | 'homomorphic-zkp-suite' | 'webgpu-compute-suite' | 'webcodecs-media-muxer-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -5555,5 +5555,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'webgpu-compute-suite',
     suiteTab: 'cpu-vs-gpu-bench',
     tags: ['cpu vs gpu benchmark', 'webgpu speedup', 'float32 benchmark', 'mops', 'processamento paralelo', 'v8 performance']
+  },
+  // ==========================================
+  // ETAPA 74: SUÍTE DE WEBCODECS, MEDIA CHUNKS & MP4 BOX DEMUXER (MARCO 380 FERRAMENTAS!)
+  // ==========================================
+  {
+    id: 'webcodecs-video-frame-decoder-tool',
+    title: 'Decodificador de VideoFrame (WebCodecs API & Planos YUV)',
+    description: 'Inspecione quadros brutos de vídeo decodificados por hardware no cliente: metadados visibleRect, espaço de cor BT.709, planos YUV (I420, NV12) com strides e timestamps em microssegundos.',
+    category: 'dev-4devs',
+    categoryLabel: 'Mídia & Áudio Studio',
+    icon: 'Film',
+    badge: 'WebCodecs VideoFrame',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webcodecs-media-muxer-suite',
+    suiteTab: 'video-frame',
+    tags: ['webcodecs', 'videoframe', 'planos yuv i420', 'nv12', 'h264 avc1', 'vp9', 'av1', 'timestamp us']
+  },
+  {
+    id: 'webcodecs-audio-data-inspector-tool',
+    title: 'Inspecionador de AudioData & Osciloscópio PCM Float32',
+    description: 'Analise buffers de áudio não-comprimido AudioData (f32-planar, taxas de 44.1 a 96 kHz, mono/estéreo/surround) com osciloscópio senoidal em tempo real via Canvas e medição em dBFS.',
+    category: 'dev-4devs',
+    categoryLabel: 'Mídia & Áudio Studio',
+    icon: 'Volume2',
+    badge: 'AudioData Osciloscópio',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webcodecs-media-muxer-suite',
+    suiteTab: 'audio-data',
+    tags: ['audiodata', 'pcm float32', 'osciloscopio canvas', 'dbfs', 'sample rate 48khz', 'webcodecs audio', 'audio planar']
+  },
+  {
+    id: 'isobmff-mp4-box-demuxer-tool',
+    title: 'Desmontador de Árvore de Caixas MP4 (ISO-BMFF / ISO 14496-12)',
+    description: 'Navegue na hierarquia de átomos e caixas de arquivos MP4 (ftyp, moov, mvhd, trak, stbl, stsd, stss e mdat) com inspeção detalhada de offsets hexadecimais, tamanhos e tabelas de tracks.',
+    category: 'dev-4devs',
+    categoryLabel: 'Mídia & Áudio Studio',
+    icon: 'FolderTree',
+    badge: 'ISO-BMFF MP4 Demuxer',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webcodecs-media-muxer-suite',
+    suiteTab: 'mp4-demuxer',
+    tags: ['mp4 demuxer', 'isobmff', 'caixas mp4', 'moov atom', 'trak stbl', 'stss keyframes', 'mdat payload']
+  },
+  {
+    id: 'fast-webm-mp4-transmuxer-tool',
+    title: 'Transmuxador Soberano WebM ↔ MP4 (Zero Re-Encode / Zero Loss)',
+    description: 'Converta gravações de tela WebM (MediaRecorder) para contêiner MP4 compatível com Apple QuickTime sem recodificação de vídeo: zero perda geracional de pixels e 100x mais rápido que FFmpeg.',
+    category: 'dev-4devs',
+    categoryLabel: 'Mídia & Áudio Studio',
+    icon: 'Zap',
+    badge: 'WebM ↔ MP4 Transmuxer',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webcodecs-media-muxer-suite',
+    suiteTab: 'transmuxer',
+    tags: ['webm para mp4', 'transmuxer', 'zero reencode', 'lossless media', 'fmp4', 'mediarecorder transmux', 'nal units']
+  },
+  {
+    id: 'video-gop-keyframe-extractor-tool',
+    title: 'Extrator & Analisador de Estrutura de GOP (Quadros I / P / B)',
+    description: 'Inspecione a cadência e distribuição temporal de quadros em vídeos H.264/HEVC: identifique IDR Keyframes (I), quadros preditivos (P) e bidirecionais (B), e calcule intervalos de seek para streaming.',
+    category: 'dev-4devs',
+    categoryLabel: 'Mídia & Áudio Studio',
+    icon: 'Activity',
+    badge: 'Análise de GOP (I/P/B)',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webcodecs-media-muxer-suite',
+    suiteTab: 'gop-analyzer',
+    tags: ['gop structure', 'keyframes idr', 'i-frame', 'p-frame', 'b-frame', 'seek interval', 'hls streaming']
   }
 ];

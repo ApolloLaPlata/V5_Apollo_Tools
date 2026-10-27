@@ -93,6 +93,7 @@ import { WebBluetoothAndHardwareSuite } from '@/components/tools/WebBluetoothAnd
 import { WebTransportAndHttp3Suite } from '@/components/tools/WebTransportAndHttp3Suite';
 import { HomomorphicAndZkpSuite } from '@/components/tools/HomomorphicAndZkpSuite';
 import { WebGpuComputeShadersSuite } from '@/components/tools/WebGpuComputeShadersSuite';
+import { WebCodecsAndMediaMuxerSuite } from '@/components/tools/WebCodecsAndMediaMuxerSuite';
 
 import { 
   Search, 
@@ -772,6 +773,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'webgpu-compute-suite' && (
               <WebGpuComputeShadersSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'webcodecs-media-muxer-suite' && (
+              <WebCodecsAndMediaMuxerSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
