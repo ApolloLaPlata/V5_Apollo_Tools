@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite' | 'webrtc-media-codecs-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -4971,5 +4971,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'binary-serialization-protobuf-suite',
     suiteTab: 'tlv-asn1',
     tags: ['tlv', 'asn1', 'emv', 'iso 7816', 'tag length value', 'cartao inteligente', 'pagamentos']
+  },
+  // ==========================================
+  // ETAPA 66: SUÍTE DE WEBRTC REAL-TIME MEDIA & CODECS (MARCO 340 FERRAMENTAS)
+  // ==========================================
+  {
+    id: 'jitter-buffer-latency-calculator-tool',
+    title: 'Calculadora de Jitter Buffer, RTT & MOS Score (ITU-T G.107)',
+    description: 'Calcule a latência efetiva, retardo do jitter buffer adaptativo e a pontuação de qualidade de voz MOS (Mean Opinion Score de 1.0 a 4.5) usando o modelo E-Model da ITU-T.',
+    category: 'dev-4devs',
+    categoryLabel: 'Protocolos & Redes P2P',
+    icon: 'Activity',
+    badge: 'Jitter & MOS Score',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webrtc-media-codecs-suite',
+    suiteTab: 'jitter-buffer',
+    tags: ['jitter buffer', 'mos score', 'rtt latencia', 'packet loss', 'webrtc audio', 'itu-t g.107', 'voip quality']
+  },
+  {
+    id: 'audio-codec-bitrate-comparator-tool',
+    title: 'Comparador de Codecs de Áudio & Overhead RTP/UDP/IP',
+    description: 'Compare largura de banda e overhead de empacotamento IP/UDP/RTP (54 bytes/pacote) para codecs Opus (48kHz), G.711 PCMU (64k), G.722 HD Voice e AAC-LC com consumo em MB/hora.',
+    category: 'dev-4devs',
+    categoryLabel: 'Protocolos & Redes P2P',
+    icon: 'Headphones',
+    badge: 'Codecs de Áudio',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webrtc-media-codecs-suite',
+    suiteTab: 'audio-codecs',
+    tags: ['opus', 'g711', 'g722', 'audio codec', 'ptime', 'rtp overhead', 'voip bandwidth']
+  },
+  {
+    id: 'video-frame-rate-bitrate-matrix-tool',
+    title: 'Matriz de Bitrates de Vídeo (AV1, VP9, H.265, H.264)',
+    description: 'Dimensione bitrates ideais para conferências WebRTC e streaming em 4K, 1080p, 720p a 30fps e 60fps com comparativo de eficiência entre codecs AV1 (-45%), VP9 (-30%) e H.264.',
+    category: 'dev-4devs',
+    categoryLabel: 'Protocolos & Redes P2P',
+    icon: 'Video',
+    badge: 'Matriz de Vídeo',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webrtc-media-codecs-suite',
+    suiteTab: 'video-matrix',
+    tags: ['av1', 'vp9', 'h264', 'video bitrate', 'webrtc video', 'fps streaming', 'consumo gigabytes']
+  },
+  {
+    id: 'stun-turn-relay-overhead-calc-tool',
+    title: 'Calculadora de Custos & Egress de Servidores TURN Relay',
+    description: 'Projete o volume de tráfego de dados (TB/mês) e custos de servidores coturn / TURN Relay (RFC 5766) para conexões P2P bloqueadas por CGNAT simétrico (AWS vs Baremetal).',
+    category: 'dev-4devs',
+    categoryLabel: 'Protocolos & Redes P2P',
+    icon: 'Server',
+    badge: 'Custos TURN Relay',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webrtc-media-codecs-suite',
+    suiteTab: 'turn-relay',
+    tags: ['turn relay', 'stun', 'coturn', 'cgnat', 'webrtc egress', 'custo aws turn', 'bandwidth pricing']
+  },
+  {
+    id: 'rtp-packet-header-inspector-tool',
+    title: 'Inspecionador & Parser de Cabeçalhos RTP (RFC 3550)',
+    description: 'Decodifique pacotes brutos RTP de 12 bytes no navegador, inspecione flags de versão, padding, extension, marker bit, payload type (PT 96-127), Sequence Number, Timestamp e SSRC.',
+    category: 'dev-4devs',
+    categoryLabel: 'Protocolos & Redes P2P',
+    icon: 'Layers',
+    badge: 'Cabeçalho RTP RFC 3550',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webrtc-media-codecs-suite',
+    suiteTab: 'rtp-inspector',
+    tags: ['rtp', 'rfc 3550', 'ssrc', 'sequence number', 'rtp payload type', 'webrtc packet dump', 'wireshark rtp']
   }
 ];

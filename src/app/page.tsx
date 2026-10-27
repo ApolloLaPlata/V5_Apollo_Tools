@@ -85,6 +85,7 @@ import { V8MemoryAndGarbageCollectionSuite } from '@/components/tools/V8MemoryAn
 import { WebCryptoSymmetricAndWebRtcSuite } from '@/components/tools/WebCryptoSymmetricAndWebRtcSuite';
 import { WebAssemblyAndAstBytecodeSuite } from '@/components/tools/WebAssemblyAndAstBytecodeSuite';
 import { BinarySerializationProtobufSuite } from '@/components/tools/BinarySerializationProtobufSuite';
+import { WebRtcMediaAndCodecsSuite } from '@/components/tools/WebRtcMediaAndCodecsSuite';
 
 import { 
   Search, 
@@ -740,6 +741,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'binary-serialization-protobuf-suite' && (
               <BinarySerializationProtobufSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'webrtc-media-codecs-suite' && (
+              <WebRtcMediaAndCodecsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
