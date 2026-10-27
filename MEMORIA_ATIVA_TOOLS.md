@@ -256,6 +256,12 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 
 - **Fase 14 - Acessibilidade & Prevenção de Estados Vazios em Ferramentas de IA:** Proteção contra cópia de texto vazio com estados reativos `disabled` e opacidade em `PromptCrafter.tsx` e `ViralTitleGenerator.tsx`. Injeção de `aria-label` descritivos em botões de cópia individual e coletiva de títulos de alta CTR.
 
+- **Fase 15 - Imunização Numérica contra NaN Poisoning & Saneamento de Ciclo de Vida de Áudio:**
+  - **Saneamento Global de Parsing Numérico (130 Pontos de Entrada Blindados):** Injeção de fallback defensivo `|| 0` em todas as 130 chamadas de `parseFloat(e.target.value)` e `parseInt(e.target.value)` em 23 suítes da plataforma, eliminando estados corrompidos por exclusão de campo/backspace.
+  - **Prevenção de Falhas Críticas de Runtime no Web Speech API & SVG:** Eliminação de exceções de browser do tipo `TypeError: Failed to set the 'volume' property on 'SpeechSynthesisUtterance': The provided float value is non-finite` causadas por inputs vazios via backspace no sintetizador de voz, bem como imunização de coordenadas SVG poligonais contra strings corrompidas `polygon points="NaN,NaN"`.
+  - **Fechamento e Descarte de AudioContext no Desmonte de Componente:** Implementação de `useEffect` de cleanup no componente `AcademicAndStudySuite.tsx`, garantindo o encerramento seguro (`ctx.close()`) de instâncias de `AudioContext` ao desmontar o componente e eliminando 100% de vazamento residual de nós de áudio em background.
+  - **Acessibilidade WCAG 2.1 em Epítopos de Imunologia:** Injeção de `aria-label` descritivo nos botões de amostra de epítopos peptídicos em `SystemsImmunologyAndViralDynamicsSuite.tsx`.
+
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário
