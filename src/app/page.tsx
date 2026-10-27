@@ -96,6 +96,7 @@ import { WebGpuComputeShadersSuite } from '@/components/tools/WebGpuComputeShade
 import { WebCodecsAndMediaMuxerSuite } from '@/components/tools/WebCodecsAndMediaMuxerSuite';
 import { WebSpeechAndVoiceSuite } from '@/components/tools/WebSpeechAndVoiceSuite';
 import { WebGpuRenderingAndShadersSuite } from '@/components/tools/WebGpuRenderingAndShadersSuite';
+import { WebXrSpatialAndSensorsSuite } from '@/components/tools/WebXrSpatialAndSensorsSuite';
 
 import { 
   Search, 
@@ -784,6 +785,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'webgpu-render-shaders-suite' && (
               <WebGpuRenderingAndShadersSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'webxr-spatial-sensors-suite' && (
+              <WebXrSpatialAndSensorsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
