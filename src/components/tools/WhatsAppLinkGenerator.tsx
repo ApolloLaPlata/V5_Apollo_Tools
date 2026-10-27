@@ -12,8 +12,12 @@ export function WhatsAppLinkGenerator() {
 
   // Formatted Clean Phone
   const cleanPhone = useMemo(() => {
-    return phone.replace(/\D/g, '');
-  }, [phone]);
+    let clean = phone.replace(/\D/g, '');
+    if (ddi === '55' && clean.startsWith('55') && clean.length >= 12) {
+      clean = clean.slice(2);
+    }
+    return clean;
+  }, [phone, ddi]);
 
   const fullNumber = useMemo(() => {
     return `${ddi}${cleanPhone}`;
@@ -162,9 +166,10 @@ export function WhatsAppLinkGenerator() {
                 <a
                   href={generatedLink}
                   target="_blank"
-                  rel="noreferrer"
-                  className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition shrink-0"
+                  rel="noopener noreferrer"
+                  aria-label="Testar link em nova aba"
                   title="Testar link em nova aba"
+                  className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition shrink-0 cursor-pointer"
                 >
                   <ExternalLink className="w-4 h-4" />
                 </a>

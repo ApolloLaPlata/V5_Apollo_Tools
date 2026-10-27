@@ -250,6 +250,8 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 
 - **Fase 11 - Blindagem Anti-Freeze e Acessibilidade em Utilitários Matemáticos e Criptográficos:** Limitação de teto numérico defensivo (1 bilhão) no algoritmo de fatoração em números primos (`MathUtilsSuite.tsx`) para proteger a thread principal contra travamentos por números colossais. Injeção de `disabled={!password}` e tratamento de estado vazio no Gerador de Senhas (`PasswordGenerator.tsx`), eliminando cópia de strings vazias, e aplicação de `aria-label` semânticos em todos os botões de ação das suítes.
 
+- **Fase 12 - Prevenção de DDI Duplicado e Hardening de Segurança no WhatsApp:** Tratamento inteligente em `WhatsAppLinkGenerator.tsx` para sanitizar números internacionais já colados com prefixo `55`, impedindo a formação de links corrompidos (`5555...`). Injeção de `rel="noopener noreferrer"` e acessibilidade via `aria-label` no botão de teste do link em nova aba.
+
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário
