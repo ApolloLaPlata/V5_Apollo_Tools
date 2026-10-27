@@ -78,6 +78,7 @@ import { DependenciesSbomLicensingSuite } from '@/components/tools/DependenciesS
 import { ServerBenchmarksAndMetricsSuite } from '@/components/tools/ServerBenchmarksAndMetricsSuite';
 import { AiTelemetryAndTokenEconomicsSuite } from '@/components/tools/AiTelemetryAndTokenEconomicsSuite';
 import { PromptEngineeringReasoningSuite } from '@/components/tools/PromptEngineeringReasoningSuite';
+import { SvgVectorAndDesignTokensSuite } from '@/components/tools/SvgVectorAndDesignTokensSuite';
 
 import { 
   Search, 
@@ -712,6 +713,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'prompt-engineering-suite' && (
               <PromptEngineeringReasoningSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'svg-design-tokens-suite' && (
+              <SvgVectorAndDesignTokensSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

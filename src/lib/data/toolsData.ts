@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -4460,5 +4460,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'prompt-engineering-suite',
     suiteTab: 'matrix-generator',
     tags: ['testes a/b', 'matriz prompt', 'benchmark ia', 'avaliacao llm', 'promptfoo', 'permutacoes']
+  },
+  // ==========================================
+  // ETAPA 59: SUÍTE DE OTIMIZAÇÃO VETORIAL SVG, DESIGN TOKENS & CSS MODERNO
+  // ==========================================
+  {
+    id: 'svg-path-optimizer-tool',
+    title: 'Otimizador & Minificador de Paths SVG',
+    description: 'Elimine metadados inúteis, arredonde coordenadas decimais e reduza o peso de vetores SVG em até 70% preservando fidelidade geométrica visual.',
+    category: 'dev-4devs',
+    categoryLabel: 'Vetores & SVG',
+    icon: 'FileCode2',
+    badge: 'SVG Optimizer',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'svg-design-tokens-suite',
+    suiteTab: 'svg-optimizer',
+    tags: ['svg', 'vetor', 'otimizador svg', 'minificador', 'path svg', 'compressao vetor', 'web performance']
+  },
+  {
+    id: 'css-design-tokens-generator-tool',
+    title: 'Gerador de Design Tokens (W3C DTCG & Tailwind v4 @theme)',
+    description: 'Converta variáveis de cores, raios e tipografia para CSS Custom Properties, especificação oficial W3C DTCG e diretivas @theme do Tailwind CSS v4.',
+    category: 'dev-4devs',
+    categoryLabel: 'Design System & CSS',
+    icon: 'Layers',
+    badge: 'Tailwind v4 & W3C',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'svg-design-tokens-suite',
+    suiteTab: 'design-tokens',
+    tags: ['design tokens', 'tailwind v4', 'w3c dtcg', 'css variables', 'tokens figma', 'design system']
+  },
+  {
+    id: 'contrast-ratio-apca-calculator-tool',
+    title: 'Calculadora de Contraste Perceptivo APCA & WCAG 2.1',
+    description: 'Avalie a legibilidade de textos com o algoritmo de luminosidade percebida APCA (WCAG 3.0 draft) e conformidade clássica WCAG 2.1 AA/AAA.',
+    category: 'dev-4devs',
+    categoryLabel: 'Acessibilidade & Cores',
+    icon: 'Eye',
+    badge: 'APCA & WCAG 2.1',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'svg-design-tokens-suite',
+    suiteTab: 'apca-contrast',
+    tags: ['apca', 'wcag', 'contraste cores', 'acessibilidade', 'wcag 3.0', 'legibilidade texto', 'dark mode']
+  },
+  {
+    id: 'fluid-typography-clamp-calc-tool',
+    title: 'Calculadora de Tipografia Fluida CSS clamp()',
+    description: 'Calcule a inclinação e interseção de viewport (vw + rem) para textos dinâmicos responsivos que escalam suavemente de mobile a ultra-wide sem media queries.',
+    category: 'dev-4devs',
+    categoryLabel: 'CSS Moderno & Tipografia',
+    icon: 'Type',
+    badge: 'CSS clamp() Calc',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'svg-design-tokens-suite',
+    suiteTab: 'fluid-clamp',
+    tags: ['clamp', 'tipografia fluida', 'css responsivo', 'font size clamp', 'viewport scaling', 'calc rem vw']
+  },
+  {
+    id: 'cubic-bezier-easing-visualizer-tool',
+    title: 'Visualizador & Gerador de Curvas Cubic Bézier CSS',
+    description: 'Ajuste curvas de transição e aceleração cubic-bezier(x1, y1, x2, y2) com simulação visual de movimento, efeitos spring e presets do Material Design.',
+    category: 'dev-4devs',
+    categoryLabel: 'Animação & Easing',
+    icon: 'Activity',
+    badge: 'Cubic Bézier Easing',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'svg-design-tokens-suite',
+    suiteTab: 'bezier-easing',
+    tags: ['cubic bezier', 'easing css', 'transicoes animacao', 'spring easing', 'material easing', 'css motion']
   }
 ];
