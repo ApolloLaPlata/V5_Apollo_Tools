@@ -110,6 +110,7 @@ import { GeospatialAndCartographySuite } from '@/components/tools/GeospatialAndC
 import { NextGenVideoAndHdrColorSuite } from '@/components/tools/NextGenVideoAndHdrColorSuite';
 import { OrbitalMechanicsAndAstrophysicsSuite } from '@/components/tools/OrbitalMechanicsAndAstrophysicsSuite';
 import { PlasmaPhysicsAndFusionSuite } from '@/components/tools/PlasmaPhysicsAndFusionSuite';
+import { BioinformaticsAndStructuralGenomicsSuite } from '@/components/tools/BioinformaticsAndStructuralGenomicsSuite';
 
 import { 
   Search, 
@@ -840,6 +841,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'plasma-physics-fusion-suite' && (
               <PlasmaPhysicsAndFusionSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'bioinformatics-structural-genomics-suite' && (
+              <BioinformaticsAndStructuralGenomicsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
