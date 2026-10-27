@@ -81,6 +81,7 @@ import { PromptEngineeringReasoningSuite } from '@/components/tools/PromptEngine
 import { SvgVectorAndDesignTokensSuite } from '@/components/tools/SvgVectorAndDesignTokensSuite';
 import { ModernImageCompressionWasmSuite } from '@/components/tools/ModernImageCompressionWasmSuite';
 import { DataCompressionStreamsSuite } from '@/components/tools/DataCompressionStreamsSuite';
+import { V8MemoryAndGarbageCollectionSuite } from '@/components/tools/V8MemoryAndGarbageCollectionSuite';
 
 import { 
   Search, 
@@ -724,6 +725,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'data-compression-streams-suite' && (
               <DataCompressionStreamsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'v8-memory-suite' && (
+              <V8MemoryAndGarbageCollectionSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

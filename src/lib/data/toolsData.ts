@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -4679,5 +4679,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'data-compression-streams-suite',
     suiteTab: 'chunked-http',
     tags: ['chunked transfer', 'http chunked', 'streaming http', 'transfer encoding', 'rfc 9112', 'overhead hex']
+  },
+  // ==========================================
+  // ETAPA 62: SUÍTE V8 MEMORY & GARBAGE COLLECTION PROFILER (MARCO 320 FERRAMENTAS)
+  // ==========================================
+  {
+    id: 'v8-heap-size-profiler-tool',
+    title: 'Profiler de Memória Heap V8 & Alocação',
+    description: 'Monitore o consumo de memória JavaScript (performance.memory) em tempo real, limite de Heap de 4GB, alocação de buffers e simulação das fases Scavenger e Major GC do motor V8.',
+    category: 'dev-4devs',
+    categoryLabel: 'Performance & V8 Internals',
+    icon: 'Cpu',
+    badge: 'V8 Heap Profiler',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'v8-memory-suite',
+    suiteTab: 'v8-heap',
+    tags: ['v8 heap', 'garbage collection', 'heap size', 'performance memory', 'scavenger gc', 'mark sweep', 'v8 engine']
+  },
+  {
+    id: 'event-loop-lag-visualizer-tool',
+    title: 'Visualizador de Event Loop Lag & Long Tasks',
+    description: 'Meça o congelamento da thread principal em milissegundos via requestAnimationFrame delta contínuo e identifique bloqueios de frame (>50ms Long Tasks).',
+    category: 'dev-4devs',
+    categoryLabel: 'Performance & V8 Internals',
+    icon: 'Activity',
+    badge: 'Event Loop Lag',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'v8-memory-suite',
+    suiteTab: 'event-loop-lag',
+    tags: ['event loop', 'lag main thread', 'long tasks', 'raf delta', 'bloqueio thread', 'fps drop', 'jank']
+  },
+  {
+    id: 'memory-leak-detector-patterns-tool',
+    title: 'Detector de Padrões de Memory Leak JS',
+    description: 'Identifique causas raízes comuns de vazamento de memória em JavaScript: closures retidas, event listeners órfãos, timers esquecidos e nós DOM desanexados com código de correção.',
+    category: 'dev-4devs',
+    categoryLabel: 'Performance & V8 Internals',
+    icon: 'AlertTriangle',
+    badge: 'Memory Leaks',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'v8-memory-suite',
+    suiteTab: 'leak-patterns',
+    tags: ['memory leak', 'vazamento memoria', 'detached dom', 'closures leak', 'listeners orfaos', 'v8 gc leak']
+  },
+  {
+    id: 'arraybuffer-dataview-allocator-tool',
+    title: 'Calculadora de Memória TypedArrays vs JS Objects',
+    description: 'Compare a densidade de memória de objetos JSON genéricos vs buffers binários nativos (Uint8Array, Float32Array, BigInt64Array) e economize até 90% de RAM no V8.',
+    category: 'dev-4devs',
+    categoryLabel: 'Performance & V8 Internals',
+    icon: 'Binary',
+    badge: 'TypedArrays',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'v8-memory-suite',
+    suiteTab: 'typedarrays',
+    tags: ['typedarrays', 'arraybuffer', 'dataview', 'uint8array', 'float32array', 'ram savings', 'v8 memory layout']
+  },
+  {
+    id: 'microtask-macrotask-queue-simulator-tool',
+    title: 'Simulador de Microtasks vs Macrotasks (Job Queue)',
+    description: 'Visualize a ordem exata de execução do Event Loop do V8: Call Stack síncrona, Fila de Microtarefas (Promise.then, queueMicrotask) e Macrotarefas (setTimeout, setImmediate).',
+    category: 'dev-4devs',
+    categoryLabel: 'Performance & V8 Internals',
+    icon: 'Layers',
+    badge: 'Job Queue V8',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'v8-memory-suite',
+    suiteTab: 'microtasks',
+    tags: ['microtask', 'macrotask', 'job queue', 'promise then', 'queuemicrotask', 'settimeout order', 'event loop order']
   }
 ];

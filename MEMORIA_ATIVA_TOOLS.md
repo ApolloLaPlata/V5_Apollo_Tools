@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 315 Ferramentas Ativas · 61 Etapas Concluídas)
+**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 320 Ferramentas Ativas · 62 Etapas Concluídas)
 
 ---
 
@@ -162,6 +162,7 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **SVG, Design Tokens & Modern CSS** | `SvgVectorAndDesignTokensSuite.tsx` | Otimizador/Minificador de SVG (Paths & Decimais), Gerador de Design Tokens (W3C DTCG / Tailwind v4 @theme), Calculadora de Contraste Perceptual APCA & WCAG 2.1, Tipografia Fluida CSS clamp(), Visualizador Cubic Bézier Easing |
 | **Modern Image Compression & Web** | `ModernImageCompressionWasmSuite.tsx` | Compressor WebP/AVIF em Lote Client-Side, Gerador <picture> & srcset Responsivo, Gerador de LQIP BlurHash (Anti-CLS), Empacotador de Favicon .ico & PWA Webmanifest, Calculadora Aspect Ratio & Padding Hack |
 | **Data Compression & Web Streams** | `DataCompressionStreamsSuite.tsx` | Compressor Gzip/Deflate via Web Streams API, Simulador Brotli vs Gzip (Payloads JSON/HTML/CSS), Gerador Tarball (.tar) POSIX UStar puro, Calculadora CRC-32 & Adler-32, Simulador Transfer-Encoding: chunked |
+| **V8 Memory & Garbage Collection Profiler** | `V8MemoryAndGarbageCollectionSuite.tsx` | Profiler de Memória Heap V8 & Alocação, Visualizador de Event Loop Lag & Long Tasks, Detector de Padrões de Memory Leak JS, Calculadora de Memória TypedArrays vs JS Objects, Simulador de Microtasks vs Macrotasks (Job Queue) |
 
 ---
 
@@ -193,5 +194,5 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 ---
 
 ## 6. Próximos Passos
-1. Prosseguir com a Esteira Determinística de Expansão (Etapa 62: Suíte de Profiling de Memória, Garbage Collection & Performance do V8/JavaScript).
+1. Prosseguir com a Esteira Determinística de Expansão (Etapa 63: Suíte de Criptografia Simétrica Web Crypto AES-GCM / PBKDF2 / ChaCha20-Poly1305 & WebRTC P2P Data Channels).
 2. Manter monitoramento contínuo via Shadow Logger e Colmeia.
