@@ -246,6 +246,8 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 
 - **Fase 9 - Normalização NFD Soberana em Filtros Internos (Busca Insensível a Acentos):** Criação de `src/lib/utils/stringUtils.ts` com o utilitário `normalizeStr`. Atualização de todos os 8 filtros locais de dados (`ApiAndNetworkTestingSuite.tsx`, `NetworkAndIdentifiersSuite.tsx`, `TextManipulatorSuite.tsx`, `ApiDocsOpenApiMockSuite.tsx`, `WebAssemblyAndAstBytecodeSuite.tsx`, `WebBluetoothAndHardwareSuite.tsx`, `WebCryptoSymmetricAndWebRtcSuite.tsx` e `BinaryBuffersAndHexDumpSuite.tsx`), permitindo encontrar termos acentuados mesmo digitando sem acento ou cedilha.
 
+- **Fase 10 - Exportação Viewport Next.js 14 & Ancoragem Responsiva de Bancada:** Migração de configurações de Viewport para exportação dedicada `export const viewport: Viewport` em `src/app/layout.tsx` (com `themeColor: '#020617'` e escala mobile). Implementação de `workbenchRef.scrollIntoView` em `src/app/page.tsx` para ancoragem precisa em qualquer resolução de tela (mobile e desktop) e proteção defensiva com `Array.isArray` para evitar corrupção de tipos ao ler `localStorage`.
+
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário

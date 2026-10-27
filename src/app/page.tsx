@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import Apollo5RocketLogo from '@/components/ui/Apollo5RocketLogo';
 import V5AppActivationBanner from '@/components/ui/V5AppActivationBanner';
 import { TOOLS_CATALOG, ToolItem } from '@/lib/data/toolsData';
@@ -455,17 +455,20 @@ export default function ApolloToolsPage() {
   const [copiedLinkToolId, setCopiedLinkToolId] = useState<string | null>(null);
   const [isCommandOpen, setIsCommandOpen] = useState(false);
   const [commandQuery, setCommandQuery] = useState('');
+  const workbenchRef = useRef<HTMLDivElement>(null);
 
   // Inicialização no client: ler favoritos, recentes e query param ?tool=...
-  React.useEffect(() => {
+  useEffect(() => {
     try {
       const savedFavs = localStorage.getItem('v5_tools_favorites');
       if (savedFavs) {
-        setFavorites(JSON.parse(savedFavs));
+        const parsed = JSON.parse(savedFavs);
+        if (Array.isArray(parsed)) setFavorites(parsed);
       }
       const savedRecents = localStorage.getItem('v5_tools_recents');
       if (savedRecents) {
-        setRecentTools(JSON.parse(savedRecents));
+        const parsed = JSON.parse(savedRecents);
+        if (Array.isArray(parsed)) setRecentTools(parsed);
       }
     } catch {
       // Ignora erro de storage
@@ -495,8 +498,12 @@ export default function ApolloToolsPage() {
           } else {
             setActiveInteractiveTool(found.id);
             setTimeout(() => {
-              window.scrollTo({ top: 380, behavior: 'smooth' });
-            }, 300);
+              if (workbenchRef.current) {
+                workbenchRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              } else {
+                window.scrollTo({ top: 380, behavior: 'smooth' });
+              }
+            }, 150);
           }
         }
       }
@@ -591,7 +598,13 @@ export default function ApolloToolsPage() {
       setActiveComfyModal(tool);
     } else if (tool.isInteractive) {
       setActiveInteractiveTool(tool.id);
-      window.scrollTo({ top: 380, behavior: 'smooth' });
+      setTimeout(() => {
+        if (workbenchRef.current) {
+          workbenchRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          window.scrollTo({ top: 380, behavior: 'smooth' });
+        }
+      }, 100);
     }
     setIsCommandOpen(false);
     setCommandQuery('');
@@ -677,7 +690,7 @@ export default function ApolloToolsPage() {
 
         {/* Workbench Ativo (Ferramenta Interativa Selecionada) */}
         {activeInteractiveTool && (
-          <div className="mb-10 transition-all duration-300 relative">
+          <div ref={workbenchRef} id="active-workbench" className="mb-10 transition-all duration-300 relative">
             <div className="flex items-center justify-between mb-3 px-2">
               <div className="flex items-center gap-2 text-xs font-mono text-cyan-400">
                 <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
