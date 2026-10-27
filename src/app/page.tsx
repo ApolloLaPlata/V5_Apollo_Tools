@@ -98,6 +98,7 @@ import { WebSpeechAndVoiceSuite } from '@/components/tools/WebSpeechAndVoiceSuit
 import { WebGpuRenderingAndShadersSuite } from '@/components/tools/WebGpuRenderingAndShadersSuite';
 import { WebXrSpatialAndSensorsSuite } from '@/components/tools/WebXrSpatialAndSensorsSuite';
 import { WebNnAndOnnxGraphSuite } from '@/components/tools/WebNnAndOnnxGraphSuite';
+import { WebGpuParallelAlgorithmsSuite } from '@/components/tools/WebGpuParallelAlgorithmsSuite';
 
 import { 
   Search, 
@@ -792,6 +793,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'webnn-onnx-suite' && (
               <WebNnAndOnnxGraphSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'webgpu-parallel-suite' && (
+              <WebGpuParallelAlgorithmsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

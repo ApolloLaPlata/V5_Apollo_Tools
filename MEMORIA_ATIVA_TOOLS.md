@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 400 Ferramentas Ativas · 78 Etapas Concluídas)
+**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 405 Ferramentas Ativas · 79 Etapas Concluídas)
 
 ---
 
@@ -179,16 +179,17 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **WebGPU Render Pipelines & Shaders 3D** | `WebGpuRenderingAndShadersSuite.tsx` | Editor/Compilador Shaders WGSL (Vértice/Fragmento), Simulador Z-Buffer & Early-Z Test, Matriz GPUTexture & VRAM (MSAA 4x/Mipmaps), Construtor GPUVertexBufferLayout, Benchmark Instanced Draw (100k) |
 | **WebXR, VR/AR & Sensores Espaciais** | `WebXrSpatialAndSensorsSuite.tsx` | Testador Sessões WebXR Device API (immersive-vr/ar), Conversor Poses 6DoF & Quatérnions, Calculadora IPD & FOV Estereoscópico HMD, Simulador Raycast AR Hit-Test (Matriz 4x4), Inspecionador Controladores XR & Hand-Tracking (25 Juntas) |
 | **Web Neural Network (WebNN) & Grafos ONNX** | `WebNnAndOnnxGraphSuite.tsx` | Compilador de Grafos WebNN (MLGraphBuilder NPU/DirectML), Quantização INT8/FP16 (-75% VRAM), Transformador N-D Shape & Strides, Benchmark Inferência CPU vs GPU vs NPU, Inspetor de Modelos ONNX Operators |
+| **Algoritmos Paralelos WebGPU & GPU Scan** | `WebGpuParallelAlgorithmsSuite.tsx` | Prefix Sum Blelloch Scan WGSL, Radix Sort 32-bit Paralelo (416 M/s), Redução Paralela em Árvore (Sum/Min/Max), Compactação de Fluxo Esparso (Stream Compaction), Histograma com atomicAdd (4K) |
 
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário
 - **Sistema de Favoritos Local:** Usuário pode favoritar ferramentas com 1 clique (persistência no `localStorage`).
 - **Histórico Recente de Uso:** Barra de acesso rápido às últimas ferramentas utilizadas com persistência local.
-- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 400 ferramentas.
+- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 405 ferramentas.
 - **Deep-linking Universal:** Compartilhamento direto via URL (`?tool=id`) com cópia em 1 clique e ativação automática com scroll suave.
 - **Filtro Rápido:** Aba instantânea para ferramentas favoritadas na barra de categorias.
-- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 400 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
+- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 405 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
 - **Suporte a PWA Standalone:** Arquivo `manifest.json` com paleta Cyber Obsidian (`#020617` / `#06b6d4`) para instalação como app nativo no Desktop e Mobile.
 
 ---
@@ -210,5 +211,5 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 ---
 
 ## 6. Próximos Passos
-1. Prosseguir com a Esteira Determinística de Expansão (Etapa 79: Suíte de Algoritmos Paralelos WebGPU, Prefix Sum & Radix Sort - Marco 405 Ferramentas).
+1. Prosseguir com a Esteira Determinística de Expansão (Etapa 80: Suíte de Ray Tracing em Tempo Real, Árvores BVH & Shaders PBR - Marco 410 Ferramentas).
 2. Manter monitoramento contínuo via Shadow Logger e Colmeia.
