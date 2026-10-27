@@ -82,6 +82,7 @@ import { SvgVectorAndDesignTokensSuite } from '@/components/tools/SvgVectorAndDe
 import { ModernImageCompressionWasmSuite } from '@/components/tools/ModernImageCompressionWasmSuite';
 import { DataCompressionStreamsSuite } from '@/components/tools/DataCompressionStreamsSuite';
 import { V8MemoryAndGarbageCollectionSuite } from '@/components/tools/V8MemoryAndGarbageCollectionSuite';
+import { WebCryptoSymmetricAndWebRtcSuite } from '@/components/tools/WebCryptoSymmetricAndWebRtcSuite';
 
 import { 
   Search, 
@@ -728,6 +729,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'v8-memory-suite' && (
               <V8MemoryAndGarbageCollectionSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'web-crypto-webrtc-suite' && (
+              <WebCryptoSymmetricAndWebRtcSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

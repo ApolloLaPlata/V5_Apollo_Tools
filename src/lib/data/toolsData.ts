@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -4752,5 +4752,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'v8-memory-suite',
     suiteTab: 'microtasks',
     tags: ['microtask', 'macrotask', 'job queue', 'promise then', 'queuemicrotask', 'settimeout order', 'event loop order']
+  },
+  // ==========================================
+  // ETAPA 63: SUÍTE DE CRIPTOGRAFIA SIMÉTRICA WEB CRYPTO & WEBRTC P2P (MARCO 325 FERRAMENTAS)
+  // ==========================================
+  {
+    id: 'aes-gcm-cipher-tool',
+    title: 'Cifrador & Decifrador AES-GCM (128 / 256 bits)',
+    description: 'Cifre e decifre dados com autenticação de integridade AEAD via SubtleCrypto, geração de IV de 12 bytes (96 bits) e validação de Auth Tag de 128 bits com saídas em Hex e Base64.',
+    category: 'dev-4devs',
+    categoryLabel: 'Criptografia & Web Security',
+    icon: 'Lock',
+    badge: 'AES-GCM AEAD',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-crypto-webrtc-suite',
+    suiteTab: 'aes-gcm',
+    tags: ['aes-gcm', 'subtlecrypto', 'cifrador simetrico', 'aead', 'auth tag', 'iv 96-bit', 'aes-256']
+  },
+  {
+    id: 'pbkdf2-hkdf-derivation-tool',
+    title: 'Derivador de Chaves PBKDF2 & HKDF (RFC 5869)',
+    description: 'Derive chaves criptográficas fortes a partir de senhas mestras utilizando PBKDF2 (SHA-256/512 com até 600k iterações OWASP) e HKDF Extract-and-Expand para tokens e chaves de sessão.',
+    category: 'dev-4devs',
+    categoryLabel: 'Criptografia & Web Security',
+    icon: 'Key',
+    badge: 'PBKDF2 & HKDF',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-crypto-webrtc-suite',
+    suiteTab: 'pbkdf2-hkdf',
+    tags: ['pbkdf2', 'hkdf', 'key derivation', 'rfc 5869', 'salt criptografico', 'owasp 2026', 'derivacao chaves']
+  },
+  {
+    id: 'webrtc-sdp-ice-inspector-tool',
+    title: 'Inspecionador de Sessões WebRTC SDP & ICE Candidates',
+    description: 'Faça o parsing e diagnósticos de ofertas/respostas SDP (RFC 4566) e candidatos ICE (RFC 8445), inspecione codecs Opus/VP8/VP9/H264 e tipos de candidatos host, srflx e relay.',
+    category: 'dev-4devs',
+    categoryLabel: 'Protocolos & Redes P2P',
+    icon: 'Radio',
+    badge: 'WebRTC SDP / ICE',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-crypto-webrtc-suite',
+    suiteTab: 'webrtc-sdp',
+    tags: ['webrtc', 'sdp', 'ice candidates', 'rfc 4566', 'rfc 8445', 'opus', 'vp9', 'stun turn']
+  },
+  {
+    id: 'pkcs7-padding-calculator-tool',
+    title: 'Calculadora de Padding Criptográfico PKCS#7 & ANSI X9.23',
+    description: 'Calcule o alinhamento de blocos de 8 e 16 bytes para cifras de bloco (AES, DES), visualize os bytes de preenchimento em hexadecimal e evite ataques de Padding Oracle.',
+    category: 'dev-4devs',
+    categoryLabel: 'Criptografia & Web Security',
+    icon: 'Binary',
+    badge: 'PKCS#7 Padding',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-crypto-webrtc-suite',
+    suiteTab: 'pkcs7-padding',
+    tags: ['pkcs7', 'padding', 'ansi x923', 'cifras de bloco', 'aes block size', 'padding oracle', 'hex dump']
+  },
+  {
+    id: 'tls-cipher-suite-evaluator-tool',
+    title: 'Avaliador & Comparador de Cipher Suites TLS 1.3 / 1.2',
+    description: 'Avalie a segurança de suites de cifras TLS, identifique suporte a Forward Secrecy (PFS), cifras AEAD modernas (AES-GCM, ChaCha20-Poly1305) e algoritmos depreciados (RC4, 3DES, CBC).',
+    category: 'dev-4devs',
+    categoryLabel: 'Criptografia & Web Security',
+    icon: 'ShieldCheck',
+    badge: 'TLS Ciphersuites',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-crypto-webrtc-suite',
+    suiteTab: 'tls-ciphers',
+    tags: ['tls 1.3', 'ciphersuites', 'chacha20-poly1305', 'forward secrecy', 'sweet32', 'ssl security', 'owasp tls']
   }
 ];
