@@ -108,6 +108,7 @@ import { CrossShaderCompilerAndReflectionSuite } from '@/components/tools/CrossS
 import { QuantumCircuitAndBlochSphereSuite } from '@/components/tools/QuantumCircuitAndBlochSphereSuite';
 import { GeospatialAndCartographySuite } from '@/components/tools/GeospatialAndCartographySuite';
 import { NextGenVideoAndHdrColorSuite } from '@/components/tools/NextGenVideoAndHdrColorSuite';
+import { OrbitalMechanicsAndAstrophysicsSuite } from '@/components/tools/OrbitalMechanicsAndAstrophysicsSuite';
 
 import { 
   Search, 
@@ -832,6 +833,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'nextgen-video-hdr-suite' && (
               <NextGenVideoAndHdrColorSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'orbital-mechanics-astrophysics-suite' && (
+              <OrbitalMechanicsAndAstrophysicsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
