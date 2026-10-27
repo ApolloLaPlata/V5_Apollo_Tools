@@ -215,7 +215,7 @@ fn intersect_triangle(ray_orig: vec3<f32>, ray_dir: vec3<f32>, v0: vec3<f32>, v1
                   max="128"
                   step="4"
                   value={bvhTrianglesCount}
-                  onChange={(e) => setBvhTrianglesCount(parseInt(e.target.value))}
+                  onChange={(e) => setBvhTrianglesCount(parseInt(e.target.value) || 0)}
                   className="w-full accent-cyan-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                 />
               </div>
@@ -376,7 +376,7 @@ fn intersect_triangle(ray_orig: vec3<f32>, ray_dir: vec3<f32>, v0: vec3<f32>, v1
                   min="1"
                   max="6"
                   value={bounces}
-                  onChange={(e) => setBounces(parseInt(e.target.value))}
+                  onChange={(e) => setBounces(parseInt(e.target.value) || 0)}
                   className="w-full accent-cyan-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                 />
               </div>
@@ -392,7 +392,7 @@ fn intersect_triangle(ray_orig: vec3<f32>, ray_dir: vec3<f32>, v0: vec3<f32>, v1
                   max="256"
                   step="4"
                   value={samplesPerPixel}
-                  onChange={(e) => setSamplesPerPixel(parseInt(e.target.value))}
+                  onChange={(e) => setSamplesPerPixel(parseInt(e.target.value) || 0)}
                   className="w-full accent-indigo-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                 />
               </div>
@@ -448,7 +448,7 @@ fn intersect_triangle(ray_orig: vec3<f32>, ray_dir: vec3<f32>, v0: vec3<f32>, v1
                   max="1.0"
                   step="0.02"
                   value={roughness}
-                  onChange={(e) => setRoughness(parseFloat(e.target.value))}
+                  onChange={(e) => setRoughness(parseFloat(e.target.value) || 0)}
                   className="w-full accent-cyan-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                 />
               </div>
@@ -464,7 +464,7 @@ fn intersect_triangle(ray_orig: vec3<f32>, ray_dir: vec3<f32>, v0: vec3<f32>, v1
                   max="1.0"
                   step="0.05"
                   value={metalness}
-                  onChange={(e) => setMetalness(parseFloat(e.target.value))}
+                  onChange={(e) => setMetalness(parseFloat(e.target.value) || 0)}
                   className="w-full accent-indigo-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                 />
               </div>
@@ -534,7 +534,7 @@ fn intersect_triangle(ray_orig: vec3<f32>, ray_dir: vec3<f32>, v0: vec3<f32>, v1
                   max="11"
                   step="2"
                   value={denoiseRadius}
-                  onChange={(e) => setDenoiseRadius(parseInt(e.target.value))}
+                  onChange={(e) => setDenoiseRadius(parseInt(e.target.value) || 0)}
                   className="w-full accent-cyan-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                 />
               </div>
@@ -550,7 +550,7 @@ fn intersect_triangle(ray_orig: vec3<f32>, ray_dir: vec3<f32>, v0: vec3<f32>, v1
                   max="0.30"
                   step="0.01"
                   value={sigmaDepth}
-                  onChange={(e) => setSigmaDepth(parseFloat(e.target.value))}
+                  onChange={(e) => setSigmaDepth(parseFloat(e.target.value) || 0)}
                   className="w-full accent-indigo-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                 />
               </div>

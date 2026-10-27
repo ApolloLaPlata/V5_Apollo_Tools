@@ -432,7 +432,7 @@ export function HybridPqcAndStatefulHashSuite({ defaultTab = 'hybrid-kem-xwing-s
                   min="5"
                   max="200"
                   value={rttLatencyMs}
-                  onChange={(e) => setRttLatencyMs(parseInt(e.target.value))}
+                  onChange={(e) => setRttLatencyMs(parseInt(e.target.value) || 0)}
                   className="w-full accent-cyan-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                 />
               </div>

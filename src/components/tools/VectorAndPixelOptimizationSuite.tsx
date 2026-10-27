@@ -876,7 +876,7 @@ export const VectorAndPixelOptimizationSuite: React.FC<VectorAndPixelOptimizatio
                     max={3}
                     step={0.05}
                     value={cropZoom}
-                    onChange={(e) => setCropZoom(parseFloat(e.target.value))}
+                    onChange={(e) => setCropZoom(parseFloat(e.target.value) || 0)}
                     className="w-full accent-teal-500"
                   />
                 </div>

@@ -575,7 +575,7 @@ module.exports = {
                 </label>
                 <select
                   value={customResolverLatency}
-                  onChange={(e) => setCustomResolverLatency(parseInt(e.target.value))}
+                  onChange={(e) => setCustomResolverLatency(parseInt(e.target.value) || 0)}
                   className="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg text-xs text-white focus:outline-none focus:border-cyan-400"
                 >
                   <option value={60}>1 Hora (ISPs de Grande Porte - Vivo/Claro)</option>
@@ -940,7 +940,7 @@ module.exports = {
                 </label>
                 <select
                   value={hstsMaxAge}
-                  onChange={(e) => setHstsMaxAge(parseInt(e.target.value))}
+                  onChange={(e) => setHstsMaxAge(parseInt(e.target.value) || 0)}
                   className="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg text-xs text-white focus:outline-none focus:border-cyan-400"
                 >
                   <option value={31536000}>31536000s (1 Ano - Requisito Chrome Preload)</option>

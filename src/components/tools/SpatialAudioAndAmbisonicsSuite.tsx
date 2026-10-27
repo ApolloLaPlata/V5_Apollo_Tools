@@ -363,7 +363,7 @@ export function SpatialAudioAndAmbisonicsSuite({ defaultTab = 'spatial-binaural-
                     max="4.0"
                     step="0.1"
                     value={sourcePos.x}
-                    onChange={(e) => setSourcePos({ ...sourcePos, x: parseFloat(e.target.value) })}
+                    onChange={(e) => setSourcePos({ ...sourcePos, x: parseFloat(e.target.value) || 0 })}
                     className="w-full accent-cyan-500"
                   />
                 </div>
@@ -379,7 +379,7 @@ export function SpatialAudioAndAmbisonicsSuite({ defaultTab = 'spatial-binaural-
                     max="4.0"
                     step="0.1"
                     value={sourcePos.z}
-                    onChange={(e) => setSourcePos({ ...sourcePos, z: parseFloat(e.target.value) })}
+                    onChange={(e) => setSourcePos({ ...sourcePos, z: parseFloat(e.target.value) || 0 })}
                     className="w-full accent-pink-500"
                   />
                 </div>
@@ -395,7 +395,7 @@ export function SpatialAudioAndAmbisonicsSuite({ defaultTab = 'spatial-binaural-
                     max="2.0"
                     step="0.1"
                     value={sourcePos.y}
-                    onChange={(e) => setSourcePos({ ...sourcePos, y: parseFloat(e.target.value) })}
+                    onChange={(e) => setSourcePos({ ...sourcePos, y: parseFloat(e.target.value) || 0 })}
                     className="w-full accent-purple-500"
                   />
                 </div>
@@ -411,7 +411,7 @@ export function SpatialAudioAndAmbisonicsSuite({ defaultTab = 'spatial-binaural-
                     max="180"
                     step="5"
                     value={listenerAngle}
-                    onChange={(e) => setListenerAngle(parseInt(e.target.value))}
+                    onChange={(e) => setListenerAngle(parseInt(e.target.value) || 0)}
                     className="w-full accent-amber-500"
                   />
                 </div>
@@ -451,7 +451,7 @@ export function SpatialAudioAndAmbisonicsSuite({ defaultTab = 'spatial-binaural-
                     max="180"
                     step="5"
                     value={ambiAzimuth}
-                    onChange={(e) => setAmbiAzimuth(parseInt(e.target.value))}
+                    onChange={(e) => setAmbiAzimuth(parseInt(e.target.value) || 0)}
                     className="w-full accent-cyan-500"
                   />
                 </div>
@@ -467,7 +467,7 @@ export function SpatialAudioAndAmbisonicsSuite({ defaultTab = 'spatial-binaural-
                     max="90"
                     step="5"
                     value={ambiElevation}
-                    onChange={(e) => setAmbiElevation(parseInt(e.target.value))}
+                    onChange={(e) => setAmbiElevation(parseInt(e.target.value) || 0)}
                     className="w-full accent-purple-500"
                   />
                 </div>
@@ -574,7 +574,7 @@ export function SpatialAudioAndAmbisonicsSuite({ defaultTab = 'spatial-binaural-
                     max="90"
                     step="5"
                     value={hrtfAzimuth}
-                    onChange={(e) => setHrtfAzimuth(parseInt(e.target.value))}
+                    onChange={(e) => setHrtfAzimuth(parseInt(e.target.value) || 0)}
                     className="w-full accent-cyan-500"
                   />
                   <div className="flex justify-between text-[10px] text-slate-500 mt-1">
@@ -595,7 +595,7 @@ export function SpatialAudioAndAmbisonicsSuite({ defaultTab = 'spatial-binaural-
                     max="22.0"
                     step="0.5"
                     value={headDiameterCm}
-                    onChange={(e) => setHeadDiameterCm(parseFloat(e.target.value))}
+                    onChange={(e) => setHeadDiameterCm(parseFloat(e.target.value) || 0)}
                     className="w-full accent-purple-500"
                   />
                 </div>
@@ -824,7 +824,7 @@ registerProcessor('fm-synth-processor', FmSynthProcessor);`,
                   max="880"
                   step="5"
                   value={carrierFreq}
-                  onChange={(e) => setCarrierFreq(parseInt(e.target.value))}
+                  onChange={(e) => setCarrierFreq(parseInt(e.target.value) || 0)}
                   className="w-full accent-cyan-500"
                 />
 
@@ -838,7 +838,7 @@ registerProcessor('fm-synth-processor', FmSynthProcessor);`,
                   max="8.0"
                   step="0.5"
                   value={modulatorRatio}
-                  onChange={(e) => setModulatorRatio(parseFloat(e.target.value))}
+                  onChange={(e) => setModulatorRatio(parseFloat(e.target.value) || 0)}
                   className="w-full accent-purple-500"
                 />
 
@@ -852,7 +852,7 @@ registerProcessor('fm-synth-processor', FmSynthProcessor);`,
                   max="12.0"
                   step="0.2"
                   value={modIndex}
-                  onChange={(e) => setModIndex(parseFloat(e.target.value))}
+                  onChange={(e) => setModIndex(parseFloat(e.target.value) || 0)}
                   className="w-full accent-emerald-500"
                 />
               </div>

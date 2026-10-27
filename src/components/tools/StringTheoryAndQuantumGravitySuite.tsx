@@ -387,7 +387,7 @@ export function StringTheoryAndQuantumGravitySuite({
                         step="0.1"
                         value={Math.log10(stringData.Ms_Gev)}
                         onChange={(e) => {
-                          const ms = Math.pow(10, parseFloat(e.target.value));
+                          const ms = Math.pow(10, parseFloat(e.target.value) || 0);
                           setStringReggeSlopeGev2(1 / (ms * ms));
                         }}
                         className="w-full accent-indigo-500 cursor-pointer"
@@ -410,7 +410,7 @@ export function StringTheoryAndQuantumGravitySuite({
                         max="1.3"
                         step="0.05"
                         value={Math.log10(stringCouplingGs)}
-                        onChange={(e) => setStringCouplingGs(Math.pow(10, parseFloat(e.target.value)))}
+                        onChange={(e) => setStringCouplingGs(Math.pow(10, parseFloat(e.target.value) || 0))}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                       <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-0.5">
@@ -544,7 +544,7 @@ export function StringTheoryAndQuantumGravitySuite({
                         max="120"
                         step="1"
                         value={h11Kähler}
-                        onChange={(e) => setH11Kähler(parseInt(e.target.value))}
+                        onChange={(e) => setH11Kähler(parseInt(e.target.value) || 0)}
                         className="w-full accent-indigo-500 cursor-pointer"
                       />
                     </div>
@@ -560,7 +560,7 @@ export function StringTheoryAndQuantumGravitySuite({
                         max="120"
                         step="1"
                         value={h21Complex}
-                        onChange={(e) => setH21Complex(parseInt(e.target.value))}
+                        onChange={(e) => setH21Complex(parseInt(e.target.value) || 0)}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                     </div>
@@ -576,7 +576,7 @@ export function StringTheoryAndQuantumGravitySuite({
                         max="6"
                         step="1"
                         value={discreteQuotientZ}
-                        onChange={(e) => setDiscreteQuotientZ(parseInt(e.target.value))}
+                        onChange={(e) => setDiscreteQuotientZ(parseInt(e.target.value) || 0)}
                         className="w-full accent-amber-500 cursor-pointer"
                       />
                     </div>
@@ -709,7 +709,7 @@ export function StringTheoryAndQuantumGravitySuite({
                         max="2000"
                         step="5"
                         value={numColorsN}
-                        onChange={(e) => setNumColorsN(parseInt(e.target.value))}
+                        onChange={(e) => setNumColorsN(parseInt(e.target.value) || 0)}
                         className="w-full accent-indigo-500 cursor-pointer"
                       />
                     </div>
@@ -725,7 +725,7 @@ export function StringTheoryAndQuantumGravitySuite({
                         max="200"
                         step="0.5"
                         value={thooftCouplingLambda}
-                        onChange={(e) => setThooftCouplingLambda(parseFloat(e.target.value))}
+                        onChange={(e) => setThooftCouplingLambda(parseFloat(e.target.value) || 0)}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                     </div>
@@ -854,7 +854,7 @@ export function StringTheoryAndQuantumGravitySuite({
                         max="7"
                         step="1"
                         value={spatialDimensionP}
-                        onChange={(e) => setSpatialDimensionP(parseInt(e.target.value))}
+                        onChange={(e) => setSpatialDimensionP(parseInt(e.target.value) || 0)}
                         className="w-full accent-indigo-500 cursor-pointer"
                       />
                       <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-0.5">
@@ -876,7 +876,7 @@ export function StringTheoryAndQuantumGravitySuite({
                         max="10"
                         step="1"
                         value={dBraneCountN}
-                        onChange={(e) => setDBraneCountN(parseInt(e.target.value))}
+                        onChange={(e) => setDBraneCountN(parseInt(e.target.value) || 0)}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                     </div>
@@ -998,7 +998,7 @@ export function StringTheoryAndQuantumGravitySuite({
                         max="0.5"
                         step="0.005"
                         value={immirziGamma}
-                        onChange={(e) => setImmirziGamma(parseFloat(e.target.value))}
+                        onChange={(e) => setImmirziGamma(parseFloat(e.target.value) || 0)}
                         className="w-full accent-indigo-500 cursor-pointer"
                       />
                       <span className="text-[10px] text-slate-500">

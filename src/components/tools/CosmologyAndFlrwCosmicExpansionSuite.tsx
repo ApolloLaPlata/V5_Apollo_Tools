@@ -493,7 +493,7 @@ export function CosmologyAndFlrwCosmicExpansionSuite({
                         max="100"
                         step="0.1"
                         value={hubbleH0}
-                        onChange={(e) => setHubbleH0(parseFloat(e.target.value))}
+                        onChange={(e) => setHubbleH0(parseFloat(e.target.value) || 0)}
                         className="w-full accent-purple-500 cursor-pointer"
                       />
                     </div>
@@ -509,7 +509,7 @@ export function CosmologyAndFlrwCosmicExpansionSuite({
                         max="1.5"
                         step="0.005"
                         value={omegaMatter}
-                        onChange={(e) => setOmegaMatter(parseFloat(e.target.value))}
+                        onChange={(e) => setOmegaMatter(parseFloat(e.target.value) || 0)}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                     </div>
@@ -525,7 +525,7 @@ export function CosmologyAndFlrwCosmicExpansionSuite({
                         max="1.5"
                         step="0.005"
                         value={omegaLambda}
-                        onChange={(e) => setOmegaLambda(parseFloat(e.target.value))}
+                        onChange={(e) => setOmegaLambda(parseFloat(e.target.value) || 0)}
                         className="w-full accent-amber-500 cursor-pointer"
                       />
                     </div>
@@ -700,7 +700,7 @@ export function CosmologyAndFlrwCosmicExpansionSuite({
                         max="3.04"
                         step="0.01"
                         value={Math.log10(Math.max(0.01, targetRedshift))}
-                        onChange={(e) => setTargetRedshift(Math.pow(10, parseFloat(e.target.value)))}
+                        onChange={(e) => setTargetRedshift(Math.pow(10, parseFloat(e.target.value) || 0))}
                         className="w-full accent-purple-500 cursor-pointer"
                       />
                       <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-0.5">
@@ -722,7 +722,7 @@ export function CosmologyAndFlrwCosmicExpansionSuite({
                         max="200"
                         step="0.5"
                         value={sourcePhysicalSizeKpc}
-                        onChange={(e) => setSourcePhysicalSizeKpc(parseFloat(e.target.value))}
+                        onChange={(e) => setSourcePhysicalSizeKpc(parseFloat(e.target.value) || 0)}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                     </div>
@@ -853,7 +853,7 @@ export function CosmologyAndFlrwCosmicExpansionSuite({
                         max="0.035"
                         step="0.0005"
                         value={baryonDensity}
-                        onChange={(e) => setBaryonDensity(parseFloat(e.target.value))}
+                        onChange={(e) => setBaryonDensity(parseFloat(e.target.value) || 0)}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                       <span className="text-[10px] text-slate-500">
@@ -872,7 +872,7 @@ export function CosmologyAndFlrwCosmicExpansionSuite({
                         max="0.18"
                         step="0.002"
                         value={cdmDensity}
-                        onChange={(e) => setCdmDensity(parseFloat(e.target.value))}
+                        onChange={(e) => setCdmDensity(parseFloat(e.target.value) || 0)}
                         className="w-full accent-purple-500 cursor-pointer"
                       />
                       <span className="text-[10px] text-slate-500">
@@ -891,7 +891,7 @@ export function CosmologyAndFlrwCosmicExpansionSuite({
                         max="1.05"
                         step="0.005"
                         value={spectralIndex}
-                        onChange={(e) => setSpectralIndex(parseFloat(e.target.value))}
+                        onChange={(e) => setSpectralIndex(parseFloat(e.target.value) || 0)}
                         className="w-full accent-amber-500 cursor-pointer"
                       />
                     </div>
@@ -907,7 +907,7 @@ export function CosmologyAndFlrwCosmicExpansionSuite({
                         max="2"
                         step="0.1"
                         value={curvShift}
-                        onChange={(e) => setCurvShift(parseFloat(e.target.value))}
+                        onChange={(e) => setCurvShift(parseFloat(e.target.value) || 0)}
                         className="w-full accent-emerald-500 cursor-pointer"
                       />
                       <span className="text-[10px] text-slate-500">
@@ -1012,7 +1012,7 @@ export function CosmologyAndFlrwCosmicExpansionSuite({
                         max="165"
                         step="0.2"
                         value={soundHorizonMpc}
-                        onChange={(e) => setSoundHorizonMpc(parseFloat(e.target.value))}
+                        onChange={(e) => setSoundHorizonMpc(parseFloat(e.target.value) || 0)}
                         className="w-full accent-purple-500 cursor-pointer"
                       />
                       <span className="text-[10px] text-slate-500">
@@ -1031,7 +1031,7 @@ export function CosmologyAndFlrwCosmicExpansionSuite({
                         max="2.5"
                         step="0.01"
                         value={baoProbeRedshift}
-                        onChange={(e) => setBaoProbeRedshift(parseFloat(e.target.value))}
+                        onChange={(e) => setBaoProbeRedshift(parseFloat(e.target.value) || 0)}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                     </div>
@@ -1160,7 +1160,7 @@ export function CosmologyAndFlrwCosmicExpansionSuite({
                         max="-0.4"
                         step="0.01"
                         value={w0Param}
-                        onChange={(e) => setW0Param(parseFloat(e.target.value))}
+                        onChange={(e) => setW0Param(parseFloat(e.target.value) || 0)}
                         className="w-full accent-purple-500 cursor-pointer"
                       />
                       <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-0.5">
@@ -1181,7 +1181,7 @@ export function CosmologyAndFlrwCosmicExpansionSuite({
                         max="1.5"
                         step="0.02"
                         value={waParam}
-                        onChange={(e) => setWaParam(parseFloat(e.target.value))}
+                        onChange={(e) => setWaParam(parseFloat(e.target.value) || 0)}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                     </div>

@@ -515,7 +515,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                         max="10"
                         step="0.01"
                         value={Math.log10(Math.max(1e-10, bhMassSolar))}
-                        onChange={(e) => setBhMassSolar(Math.pow(10, parseFloat(e.target.value)))}
+                        onChange={(e) => setBhMassSolar(Math.pow(10, parseFloat(e.target.value) || 0))}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                       <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-0.5">
@@ -537,7 +537,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                         max="0.999"
                         step="0.001"
                         value={bhSpin}
-                        onChange={(e) => setBhSpin(parseFloat(e.target.value))}
+                        onChange={(e) => setBhSpin(parseFloat(e.target.value) || 0)}
                         className="w-full accent-amber-500 cursor-pointer"
                       />
                       <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-0.5">
@@ -766,7 +766,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                         max="7"
                         step="0.05"
                         value={Math.log10(Math.max(0.1, centralMassSolar))}
-                        onChange={(e) => setCentralMassSolar(Math.pow(10, parseFloat(e.target.value)))}
+                        onChange={(e) => setCentralMassSolar(Math.pow(10, parseFloat(e.target.value) || 0))}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                     </div>
@@ -782,7 +782,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                         max="3"
                         step="0.05"
                         value={Math.log10(Math.max(1e-5, semiMajorAxisAU))}
-                        onChange={(e) => setSemiMajorAxisAU(Math.pow(10, parseFloat(e.target.value)))}
+                        onChange={(e) => setSemiMajorAxisAU(Math.pow(10, parseFloat(e.target.value) || 0))}
                         className="w-full accent-amber-500 cursor-pointer"
                       />
                     </div>
@@ -798,7 +798,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                         max="0.95"
                         step="0.01"
                         value={eccentricity}
-                        onChange={(e) => setEccentricity(parseFloat(e.target.value))}
+                        onChange={(e) => setEccentricity(parseFloat(e.target.value) || 0)}
                         className="w-full accent-purple-500 cursor-pointer"
                       />
                     </div>
@@ -814,7 +814,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                         max="1000"
                         step="1"
                         value={relCouplingMult}
-                        onChange={(e) => setRelCouplingMult(parseInt(e.target.value))}
+                        onChange={(e) => setRelCouplingMult(parseInt(e.target.value) || 0)}
                         className="w-full accent-emerald-500 cursor-pointer"
                       />
                       <span className="text-[10px] text-slate-500">
@@ -960,7 +960,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                         max="31"
                         step="0.1"
                         value={Math.log10(sourceMassKg)}
-                        onChange={(e) => setSourceMassKg(Math.pow(10, parseFloat(e.target.value)))}
+                        onChange={(e) => setSourceMassKg(Math.pow(10, parseFloat(e.target.value) || 0))}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                     </div>
@@ -976,7 +976,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                         max="9"
                         step="0.05"
                         value={Math.log10(sourceRadiusM)}
-                        onChange={(e) => setSourceRadiusM(Math.pow(10, parseFloat(e.target.value)))}
+                        onChange={(e) => setSourceRadiusM(Math.pow(10, parseFloat(e.target.value) || 0))}
                         className="w-full accent-amber-500 cursor-pointer"
                       />
                     </div>
@@ -992,7 +992,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                         max="50000"
                         step="100"
                         value={clockAltitudeKm}
-                        onChange={(e) => setClockAltitudeKm(parseFloat(e.target.value))}
+                        onChange={(e) => setClockAltitudeKm(parseFloat(e.target.value) || 0)}
                         className="w-full accent-purple-500 cursor-pointer"
                       />
                     </div>
@@ -1008,7 +1008,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                         max="30"
                         step="0.1"
                         value={clockSpeedKmS}
-                        onChange={(e) => setClockSpeedKmS(parseFloat(e.target.value))}
+                        onChange={(e) => setClockSpeedKmS(parseFloat(e.target.value) || 0)}
                         className="w-full accent-emerald-500 cursor-pointer"
                       />
                     </div>
@@ -1155,7 +1155,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                         max="16"
                         step="0.1"
                         value={Math.log10(lensMassSolar)}
-                        onChange={(e) => setLensMassSolar(Math.pow(10, parseFloat(e.target.value)))}
+                        onChange={(e) => setLensMassSolar(Math.pow(10, parseFloat(e.target.value) || 0))}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                     </div>
@@ -1172,7 +1172,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                           max="4000"
                           step="10"
                           value={distLensMpc}
-                          onChange={(e) => setDistLensMpc(parseInt(e.target.value))}
+                          onChange={(e) => setDistLensMpc(parseInt(e.target.value) || 0)}
                           className="w-full accent-amber-500 cursor-pointer"
                         />
                       </div>
@@ -1187,7 +1187,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                           max="8000"
                           step="50"
                           value={distSourceMpc}
-                          onChange={(e) => setDistSourceMpc(parseInt(e.target.value))}
+                          onChange={(e) => setDistSourceMpc(parseInt(e.target.value) || 0)}
                           className="w-full accent-amber-500 cursor-pointer"
                         />
                       </div>
@@ -1204,7 +1204,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                         max="3"
                         step="0.02"
                         value={sourceOffsetXArcsec}
-                        onChange={(e) => setSourceOffsetXArcsec(parseFloat(e.target.value))}
+                        onChange={(e) => setSourceOffsetXArcsec(parseFloat(e.target.value) || 0)}
                         className="w-full accent-purple-500 cursor-pointer"
                       />
                     </div>
@@ -1220,7 +1220,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                         max="3"
                         step="0.02"
                         value={sourceOffsetYArcsec}
-                        onChange={(e) => setSourceOffsetYArcsec(parseFloat(e.target.value))}
+                        onChange={(e) => setSourceOffsetYArcsec(parseFloat(e.target.value) || 0)}
                         className="w-full accent-purple-500 cursor-pointer"
                       />
                     </div>
@@ -1403,7 +1403,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                           max="150"
                           step="0.5"
                           value={mass1Solar}
-                          onChange={(e) => setMass1Solar(parseFloat(e.target.value))}
+                          onChange={(e) => setMass1Solar(parseFloat(e.target.value) || 0)}
                           className="w-full accent-cyan-500 cursor-pointer"
                         />
                       </div>
@@ -1418,7 +1418,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                           max="150"
                           step="0.5"
                           value={mass2Solar}
-                          onChange={(e) => setMass2Solar(parseFloat(e.target.value))}
+                          onChange={(e) => setMass2Solar(parseFloat(e.target.value) || 0)}
                           className="w-full accent-cyan-500 cursor-pointer"
                         />
                       </div>
@@ -1435,7 +1435,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                         max="6000"
                         step="10"
                         value={gwDistMpc}
-                        onChange={(e) => setGwDistMpc(parseInt(e.target.value))}
+                        onChange={(e) => setGwDistMpc(parseInt(e.target.value) || 0)}
                         className="w-full accent-amber-500 cursor-pointer"
                       />
                     </div>
@@ -1451,7 +1451,7 @@ export function GeneralRelativityAndGravitationalWavesSuite({
                         max="1000"
                         step="5"
                         value={currGwFreqHz}
-                        onChange={(e) => setCurrGwFreqHz(parseInt(e.target.value))}
+                        onChange={(e) => setCurrGwFreqHz(parseInt(e.target.value) || 0)}
                         className="w-full accent-purple-500 cursor-pointer"
                       />
                       <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-0.5">

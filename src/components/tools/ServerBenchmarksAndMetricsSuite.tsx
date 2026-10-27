@@ -373,7 +373,7 @@ export const ServerBenchmarksAndMetricsSuite: React.FC<ServerBenchmarksAndMetric
                   max="6.0"
                   step="0.5"
                   value={p99Multiplier}
-                  onChange={(e) => setP99Multiplier(parseFloat(e.target.value))}
+                  onChange={(e) => setP99Multiplier(parseFloat(e.target.value) || 0)}
                   className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
                 />
               </div>
@@ -496,7 +496,7 @@ export const ServerBenchmarksAndMetricsSuite: React.FC<ServerBenchmarksAndMetric
                 <label className="block text-xs font-medium text-slate-300 mb-1">Largura de Banda da Conexão</label>
                 <select
                   value={bandwidthSpeedMbps}
-                  onChange={(e) => setBandwidthSpeedMbps(parseInt(e.target.value))}
+                  onChange={(e) => setBandwidthSpeedMbps(parseInt(e.target.value) || 0)}
                   className="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg text-xs text-white focus:outline-none focus:border-cyan-400"
                 >
                   <option value={50}>50 Mbps (Banda Larga Básica)</option>
@@ -516,7 +516,7 @@ export const ServerBenchmarksAndMetricsSuite: React.FC<ServerBenchmarksAndMetric
                   min="1"
                   max="300"
                   value={networkRttMs}
-                  onChange={(e) => setNetworkRttMs(parseInt(e.target.value))}
+                  onChange={(e) => setNetworkRttMs(parseInt(e.target.value) || 0)}
                   className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
                 />
                 <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
@@ -595,7 +595,7 @@ export const ServerBenchmarksAndMetricsSuite: React.FC<ServerBenchmarksAndMetric
                   min="1"
                   max="24"
                   value={runtimeHoursPerDay}
-                  onChange={(e) => setRuntimeHoursPerDay(parseInt(e.target.value))}
+                  onChange={(e) => setRuntimeHoursPerDay(parseInt(e.target.value) || 0)}
                   className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
                 />
               </div>
@@ -704,7 +704,7 @@ export const ServerBenchmarksAndMetricsSuite: React.FC<ServerBenchmarksAndMetric
                 <label className="block text-xs font-medium text-slate-300 mb-1">Armazenamento / Discos</label>
                 <select
                   value={spindleType}
-                  onChange={(e) => setSpindleType(parseInt(e.target.value))}
+                  onChange={(e) => setSpindleType(parseInt(e.target.value) || 0)}
                   className="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg text-xs text-white focus:outline-none focus:border-cyan-400"
                 >
                   <option value={1}>SSD NVMe Moderno / AWS gp3 (Spindle = 1)</option>
@@ -777,7 +777,7 @@ export const ServerBenchmarksAndMetricsSuite: React.FC<ServerBenchmarksAndMetric
                 </label>
                 <select
                   value={slaPercentage}
-                  onChange={(e) => setSlaPercentage(parseFloat(e.target.value))}
+                  onChange={(e) => setSlaPercentage(parseFloat(e.target.value) || 0)}
                   className="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg text-sm text-white focus:outline-none focus:border-cyan-400 font-mono"
                 >
                   <option value={99.0}>99.0% (Dois Noves - Padrão Básico)</option>

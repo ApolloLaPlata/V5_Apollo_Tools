@@ -412,7 +412,7 @@ export function QuantumChromodynamicsAndQuarkGluonSuite({
                         max="2.5"
                         step="0.02"
                         value={Math.log10(Math.max(0.5, energyScaleQGev))}
-                        onChange={(e) => setEnergyScaleQGev(Math.pow(10, parseFloat(e.target.value)))}
+                        onChange={(e) => setEnergyScaleQGev(Math.pow(10, parseFloat(e.target.value) || 0))}
                         className="w-full accent-rose-500 cursor-pointer"
                       />
                       <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-0.5">
@@ -434,7 +434,7 @@ export function QuantumChromodynamicsAndQuarkGluonSuite({
                         max="6"
                         step="1"
                         value={numFlavors}
-                        onChange={(e) => setNumFlavors(parseInt(e.target.value))}
+                        onChange={(e) => setNumFlavors(parseInt(e.target.value) || 0)}
                         className="w-full accent-amber-500 cursor-pointer"
                       />
                     </div>
@@ -450,7 +450,7 @@ export function QuantumChromodynamicsAndQuarkGluonSuite({
                         max="300"
                         step="5"
                         value={lambdaQcdMev}
-                        onChange={(e) => setLambdaQcdMev(parseInt(e.target.value))}
+                        onChange={(e) => setLambdaQcdMev(parseInt(e.target.value) || 0)}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                     </div>
@@ -608,7 +608,7 @@ export function QuantumChromodynamicsAndQuarkGluonSuite({
                         max="1.5"
                         step="0.02"
                         value={probeDistanceFm}
-                        onChange={(e) => setProbeDistanceFm(parseFloat(e.target.value))}
+                        onChange={(e) => setProbeDistanceFm(parseFloat(e.target.value) || 0)}
                         className="w-full accent-rose-500 cursor-pointer"
                       />
                       <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-0.5">
@@ -629,7 +629,7 @@ export function QuantumChromodynamicsAndQuarkGluonSuite({
                         max="1.5"
                         step="0.05"
                         value={stringTensionGevFm}
-                        onChange={(e) => setStringTensionGevFm(parseFloat(e.target.value))}
+                        onChange={(e) => setStringTensionGevFm(parseFloat(e.target.value) || 0)}
                         className="w-full accent-amber-500 cursor-pointer"
                       />
                       <span className="text-[10px] text-slate-500 font-mono">
@@ -648,7 +648,7 @@ export function QuantumChromodynamicsAndQuarkGluonSuite({
                         max="0.5"
                         step="0.01"
                         value={coulombAlphaS}
-                        onChange={(e) => setCoulombAlphaS(parseFloat(e.target.value))}
+                        onChange={(e) => setCoulombAlphaS(parseFloat(e.target.value) || 0)}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                     </div>
@@ -788,7 +788,7 @@ export function QuantumChromodynamicsAndQuarkGluonSuite({
                         max="600"
                         step="5"
                         value={qgpTempMev}
-                        onChange={(e) => setQgpTempMev(parseInt(e.target.value))}
+                        onChange={(e) => setQgpTempMev(parseInt(e.target.value) || 0)}
                         className="w-full accent-rose-500 cursor-pointer"
                       />
                       <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-0.5">
@@ -943,7 +943,7 @@ export function QuantumChromodynamicsAndQuarkGluonSuite({
                         max="-0.05"
                         step="0.02"
                         value={Math.log10(Math.max(0.001, bjorkenX))}
-                        onChange={(e) => setBjorkenX(Math.pow(10, parseFloat(e.target.value)))}
+                        onChange={(e) => setBjorkenX(Math.pow(10, parseFloat(e.target.value) || 0))}
                         className="w-full accent-rose-500 cursor-pointer"
                       />
                       <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-0.5">
@@ -964,7 +964,7 @@ export function QuantumChromodynamicsAndQuarkGluonSuite({
                         max="4"
                         step="0.05"
                         value={Math.log10(transferQ2Gev2)}
-                        onChange={(e) => setTransferQ2Gev2(Math.pow(10, parseFloat(e.target.value)))}
+                        onChange={(e) => setTransferQ2Gev2(Math.pow(10, parseFloat(e.target.value) || 0))}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                     </div>
@@ -1087,7 +1087,7 @@ export function QuantumChromodynamicsAndQuarkGluonSuite({
                         max="20"
                         step="0.1"
                         value={quarkUpMassMev}
-                        onChange={(e) => setQuarkUpMassMev(parseFloat(e.target.value))}
+                        onChange={(e) => setQuarkUpMassMev(parseFloat(e.target.value) || 0)}
                         className="w-full accent-rose-500 cursor-pointer"
                       />
                     </div>
@@ -1103,7 +1103,7 @@ export function QuantumChromodynamicsAndQuarkGluonSuite({
                         max="100"
                         step="0.5"
                         value={quarkDownMassMev}
-                        onChange={(e) => setQuarkDownMassMev(parseFloat(e.target.value))}
+                        onChange={(e) => setQuarkDownMassMev(parseFloat(e.target.value) || 0)}
                         className="w-full accent-amber-500 cursor-pointer"
                       />
                     </div>
@@ -1119,7 +1119,7 @@ export function QuantumChromodynamicsAndQuarkGluonSuite({
                         max="350"
                         step="5"
                         value={quarkCondensateMev}
-                        onChange={(e) => setQuarkCondensateMev(parseInt(e.target.value))}
+                        onChange={(e) => setQuarkCondensateMev(parseInt(e.target.value) || 0)}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                     </div>

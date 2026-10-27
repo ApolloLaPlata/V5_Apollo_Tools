@@ -642,7 +642,7 @@ export function WebGpuPhysicsAndFluidSuite({ defaultTab = 'nbody-gravitational-s
                     max="4.0"
                     step="0.1"
                     value={gravityG}
-                    onChange={(e) => setGravityG(parseFloat(e.target.value))}
+                    onChange={(e) => setGravityG(parseFloat(e.target.value) || 0)}
                     className="w-full accent-cyan-500"
                   />
                 </div>
@@ -658,7 +658,7 @@ export function WebGpuPhysicsAndFluidSuite({ defaultTab = 'nbody-gravitational-s
                     max="600"
                     step="25"
                     value={nBodyCount}
-                    onChange={(e) => setNBodyCount(parseInt(e.target.value))}
+                    onChange={(e) => setNBodyCount(parseInt(e.target.value) || 0)}
                     className="w-full accent-purple-500"
                   />
                 </div>
@@ -674,7 +674,7 @@ export function WebGpuPhysicsAndFluidSuite({ defaultTab = 'nbody-gravitational-s
                     max="30"
                     step="1"
                     value={softening}
-                    onChange={(e) => setSoftening(parseInt(e.target.value))}
+                    onChange={(e) => setSoftening(parseInt(e.target.value) || 0)}
                     className="w-full accent-emerald-500"
                   />
                 </div>
@@ -762,7 +762,7 @@ export function WebGpuPhysicsAndFluidSuite({ defaultTab = 'nbody-gravitational-s
                     max="1.5"
                     step="0.05"
                     value={sphViscosity}
-                    onChange={(e) => setSphViscosity(parseFloat(e.target.value))}
+                    onChange={(e) => setSphViscosity(parseFloat(e.target.value) || 0)}
                     className="w-full accent-cyan-500"
                   />
                 </div>
@@ -778,7 +778,7 @@ export function WebGpuPhysicsAndFluidSuite({ defaultTab = 'nbody-gravitational-s
                     max="2.5"
                     step="0.1"
                     value={sphRestDensity}
-                    onChange={(e) => setSphRestDensity(parseFloat(e.target.value))}
+                    onChange={(e) => setSphRestDensity(parseFloat(e.target.value) || 0)}
                     className="w-full accent-purple-500"
                   />
                 </div>
@@ -794,7 +794,7 @@ export function WebGpuPhysicsAndFluidSuite({ defaultTab = 'nbody-gravitational-s
                     max="1.0"
                     step="0.05"
                     value={sphGravity}
-                    onChange={(e) => setSphGravity(parseFloat(e.target.value))}
+                    onChange={(e) => setSphGravity(parseFloat(e.target.value) || 0)}
                     className="w-full accent-emerald-500"
                   />
                 </div>
@@ -882,7 +882,7 @@ export function WebGpuPhysicsAndFluidSuite({ defaultTab = 'nbody-gravitational-s
                     max="1.0"
                     step="0.05"
                     value={restitution}
-                    onChange={(e) => setRestitution(parseFloat(e.target.value))}
+                    onChange={(e) => setRestitution(parseFloat(e.target.value) || 0)}
                     className="w-full accent-cyan-500"
                   />
                   <div className="text-[10px] text-slate-500 mt-1">1.0 = Colisão perfeitamente elástica · 0.1 = Inelástica</div>
@@ -899,7 +899,7 @@ export function WebGpuPhysicsAndFluidSuite({ defaultTab = 'nbody-gravitational-s
                     max="1.5"
                     step="0.1"
                     value={verletGravity}
-                    onChange={(e) => setVerletGravity(parseFloat(e.target.value))}
+                    onChange={(e) => setVerletGravity(parseFloat(e.target.value) || 0)}
                     className="w-full accent-emerald-500"
                   />
                 </div>
@@ -938,7 +938,7 @@ export function WebGpuPhysicsAndFluidSuite({ defaultTab = 'nbody-gravitational-s
                   max="80"
                   step="5"
                   value={spatialCellSize}
-                  onChange={(e) => setSpatialCellSize(parseInt(e.target.value))}
+                  onChange={(e) => setSpatialCellSize(parseInt(e.target.value) || 0)}
                   className="w-full accent-cyan-500"
                 />
 
@@ -952,7 +952,7 @@ export function WebGpuPhysicsAndFluidSuite({ defaultTab = 'nbody-gravitational-s
                   max="500"
                   step="25"
                   value={spatialItemCount}
-                  onChange={(e) => setSpatialItemCount(parseInt(e.target.value))}
+                  onChange={(e) => setSpatialItemCount(parseInt(e.target.value) || 0)}
                   className="w-full accent-purple-500"
                 />
               </div>
@@ -1072,7 +1072,7 @@ export function WebGpuPhysicsAndFluidSuite({ defaultTab = 'nbody-gravitational-s
                 max="100000"
                 step="5000"
                 value={benchParticles}
-                onChange={(e) => setBenchParticles(parseInt(e.target.value))}
+                onChange={(e) => setBenchParticles(parseInt(e.target.value) || 0)}
                 disabled={benchRunning}
                 className="w-full accent-cyan-500"
               />

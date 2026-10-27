@@ -607,7 +607,7 @@ export function GeospatialAndCartographySuite({ defaultTab = 'wgs84-utm-mercator
                     max="11"
                     step="1"
                     value={h3Resolution}
-                    onChange={(e) => setH3Resolution(parseInt(e.target.value))}
+                    onChange={(e) => setH3Resolution(parseInt(e.target.value) || 0)}
                     className="w-full accent-cyan-500"
                   />
                   <div className="flex justify-between text-[10px] text-slate-500 mt-1">
@@ -641,7 +641,7 @@ export function GeospatialAndCartographySuite({ defaultTab = 'wgs84-utm-mercator
                     max="8"
                     step="1"
                     value={geohashPrecision}
-                    onChange={(e) => setGeohashPrecision(parseInt(e.target.value))}
+                    onChange={(e) => setGeohashPrecision(parseInt(e.target.value) || 0)}
                     className="w-full accent-purple-500"
                   />
                 </div>

@@ -663,7 +663,7 @@ Com a arquitetura da Holding V5 Apollo, executamos modelos matemáticos, decodif
                     max="2.0"
                     step="0.1"
                     value={ttsPitch}
-                    onChange={(e) => setTtsPitch(parseFloat(e.target.value))}
+                    onChange={(e) => setTtsPitch(parseFloat(e.target.value) || 0)}
                     className="w-full accent-cyan-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                   />
                   <div className="flex justify-between text-[10px] text-slate-500">
@@ -685,7 +685,7 @@ Com a arquitetura da Holding V5 Apollo, executamos modelos matemáticos, decodif
                     max="2.5"
                     step="0.1"
                     value={ttsRate}
-                    onChange={(e) => setTtsRate(parseFloat(e.target.value))}
+                    onChange={(e) => setTtsRate(parseFloat(e.target.value) || 0)}
                     className="w-full accent-indigo-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                   />
                   <div className="flex justify-between text-[10px] text-slate-500">
@@ -707,7 +707,7 @@ Com a arquitetura da Holding V5 Apollo, executamos modelos matemáticos, decodif
                     max="1"
                     step="0.05"
                     value={ttsVolume}
-                    onChange={(e) => setTtsVolume(parseFloat(e.target.value))}
+                    onChange={(e) => setTtsVolume(parseFloat(e.target.value) || 0)}
                     className="w-full accent-emerald-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                   />
                 </div>
@@ -1076,7 +1076,7 @@ Com a arquitetura da Holding V5 Apollo, executamos modelos matemáticos, decodif
                   max="260"
                   step="5"
                   value={customWpm}
-                  onChange={(e) => setCustomWpm(parseInt(e.target.value))}
+                  onChange={(e) => setCustomWpm(parseInt(e.target.value) || 0)}
                   className="w-full accent-cyan-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                 />
               </div>

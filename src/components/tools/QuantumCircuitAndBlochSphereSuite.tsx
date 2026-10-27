@@ -519,7 +519,7 @@ ${qasmIncludeMeasure ? '// 4. Medicao projetiva na base computacional Z\nc = mea
                     max="180"
                     step="5"
                     value={blochTheta}
-                    onChange={(e) => setBlochTheta(parseInt(e.target.value))}
+                    onChange={(e) => setBlochTheta(parseInt(e.target.value) || 0)}
                     className="w-full accent-cyan-500"
                   />
                   <div className="flex justify-between text-[10px] text-slate-500 mt-1">
@@ -539,7 +539,7 @@ ${qasmIncludeMeasure ? '// 4. Medicao projetiva na base computacional Z\nc = mea
                     max="360"
                     step="5"
                     value={blochPhi}
-                    onChange={(e) => setBlochPhi(parseInt(e.target.value))}
+                    onChange={(e) => setBlochPhi(parseInt(e.target.value) || 0)}
                     className="w-full accent-purple-500"
                   />
                 </div>
@@ -749,7 +749,7 @@ ${qasmIncludeMeasure ? '// 4. Medicao projetiva na base computacional Z\nc = mea
                   max="8"
                   step="1"
                   value={qasmQubits}
-                  onChange={(e) => setQasmQubits(parseInt(e.target.value))}
+                  onChange={(e) => setQasmQubits(parseInt(e.target.value) || 0)}
                   className="w-48 accent-cyan-500"
                 />
               </div>

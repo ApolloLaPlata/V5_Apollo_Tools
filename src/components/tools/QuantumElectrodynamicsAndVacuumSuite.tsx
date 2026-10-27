@@ -407,7 +407,7 @@ export function QuantumElectrodynamicsAndVacuumSuite({
                         max="3.3"
                         step="0.02"
                         value={Math.log10(Math.max(1, plateDistanceNm))}
-                        onChange={(e) => setPlateDistanceNm(Math.pow(10, parseFloat(e.target.value)))}
+                        onChange={(e) => setPlateDistanceNm(Math.pow(10, parseFloat(e.target.value) || 0))}
                         className="w-full accent-emerald-500 cursor-pointer"
                       />
                       <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-0.5">
@@ -453,7 +453,7 @@ export function QuantumElectrodynamicsAndVacuumSuite({
                           max="10"
                           step="0.05"
                           value={plateAreaCm2}
-                          onChange={(e) => setPlateAreaCm2(parseFloat(e.target.value))}
+                          onChange={(e) => setPlateAreaCm2(parseFloat(e.target.value) || 0)}
                           className="w-full accent-cyan-500 cursor-pointer"
                         />
                       </div>
@@ -469,7 +469,7 @@ export function QuantumElectrodynamicsAndVacuumSuite({
                           max="500"
                           step="5"
                           value={sphereRadiusUm}
-                          onChange={(e) => setSphereRadiusUm(parseInt(e.target.value))}
+                          onChange={(e) => setSphereRadiusUm(parseInt(e.target.value) || 0)}
                           className="w-full accent-purple-500 cursor-pointer"
                         />
                       </div>
@@ -638,7 +638,7 @@ export function QuantumElectrodynamicsAndVacuumSuite({
                         max="19"
                         step="0.05"
                         value={Math.log10(electricFieldVm)}
-                        onChange={(e) => setElectricFieldVm(Math.pow(10, parseFloat(e.target.value)))}
+                        onChange={(e) => setElectricFieldVm(Math.pow(10, parseFloat(e.target.value) || 0))}
                         className="w-full accent-emerald-500 cursor-pointer"
                       />
                       <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-0.5">
@@ -659,7 +659,7 @@ export function QuantumElectrodynamicsAndVacuumSuite({
                         max="1200"
                         step="10"
                         value={laserWavelengthNm}
-                        onChange={(e) => setLaserWavelengthNm(parseInt(e.target.value))}
+                        onChange={(e) => setLaserWavelengthNm(parseInt(e.target.value) || 0)}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                     </div>
@@ -787,7 +787,7 @@ export function QuantumElectrodynamicsAndVacuumSuite({
                         max="95"
                         step="0.005"
                         value={mzBosonGev}
-                        onChange={(e) => setMzBosonGev(parseFloat(e.target.value))}
+                        onChange={(e) => setMzBosonGev(parseFloat(e.target.value) || 0)}
                         className="w-full accent-emerald-500 cursor-pointer"
                       />
                     </div>
@@ -803,7 +803,7 @@ export function QuantumElectrodynamicsAndVacuumSuite({
                         max="85"
                         step="0.005"
                         value={mwBosonGev}
-                        onChange={(e) => setMwBosonGev(parseFloat(e.target.value))}
+                        onChange={(e) => setMwBosonGev(parseFloat(e.target.value) || 0)}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                     </div>
@@ -935,7 +935,7 @@ export function QuantumElectrodynamicsAndVacuumSuite({
                         max="92"
                         step="1"
                         value={atomicNumberZ}
-                        onChange={(e) => setAtomicNumberZ(parseInt(e.target.value))}
+                        onChange={(e) => setAtomicNumberZ(parseInt(e.target.value) || 0)}
                         className="w-full accent-emerald-500 cursor-pointer"
                       />
                     </div>
@@ -1115,7 +1115,7 @@ export function QuantumElectrodynamicsAndVacuumSuite({
                         max="5"
                         step="1"
                         value={numQedLoops}
-                        onChange={(e) => setNumQedLoops(parseInt(e.target.value))}
+                        onChange={(e) => setNumQedLoops(parseInt(e.target.value) || 0)}
                         className="w-full accent-cyan-500 cursor-pointer"
                       />
                     </div>

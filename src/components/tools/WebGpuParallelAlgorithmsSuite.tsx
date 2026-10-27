@@ -447,7 +447,7 @@ fn blelloch_scan(@builtin(local_invocation_id) local_id: vec3<u32>) {
                   min="10"
                   max="80"
                   value={compactionThreshold}
-                  onChange={(e) => setCompactionThreshold(parseInt(e.target.value))}
+                  onChange={(e) => setCompactionThreshold(parseInt(e.target.value) || 0)}
                   className="w-full accent-cyan-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                 />
               </div>

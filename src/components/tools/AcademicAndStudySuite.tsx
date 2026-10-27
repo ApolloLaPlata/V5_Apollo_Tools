@@ -187,6 +187,16 @@ export function AcademicAndStudySuite({ defaultTab = 'abnt-citations' }: Academi
   const gainNodeRef = useRef<GainNode | null>(null);
 
   useEffect(() => {
+    return () => {
+      if (audioCtxRef.current && audioCtxRef.current.state !== 'closed') {
+        try {
+          audioCtxRef.current.close().catch(() => {});
+        } catch {}
+      }
+    };
+  }, []);
+
+  useEffect(() => {
     let interval: NodeJS.Timeout;
     if (isTimerRunning && timeLeftSeconds > 0) {
       interval = setInterval(() => {
@@ -1211,7 +1221,7 @@ export function AcademicAndStudySuite({ defaultTab = 'abnt-citations' }: Academi
                       max="0.5"
                       step="0.01"
                       value={volumeLevel}
-                      onChange={(e) => handleVolumeChange(parseFloat(e.target.value))}
+                      onChange={(e) => handleVolumeChange(parseFloat(e.target.value) || 0)}
                       className="w-full accent-cyan-400 cursor-pointer"
                     />
                   </div>

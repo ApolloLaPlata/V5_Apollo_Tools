@@ -573,7 +573,7 @@ module.exports = {
                     max="6.0"
                     step="0.1"
                     value={lcpValue}
-                    onChange={(e) => setLcpValue(parseFloat(e.target.value))}
+                    onChange={(e) => setLcpValue(parseFloat(e.target.value) || 0)}
                     className="w-full accent-cyan-400 cursor-pointer"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-slate-500">
@@ -595,7 +595,7 @@ module.exports = {
                     max="800"
                     step="10"
                     value={inpValue}
-                    onChange={(e) => setInpValue(parseInt(e.target.value))}
+                    onChange={(e) => setInpValue(parseInt(e.target.value) || 0)}
                     className="w-full accent-cyan-400 cursor-pointer"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-slate-500">
@@ -617,7 +617,7 @@ module.exports = {
                     max="0.50"
                     step="0.01"
                     value={clsValue}
-                    onChange={(e) => setClsValue(parseFloat(e.target.value))}
+                    onChange={(e) => setClsValue(parseFloat(e.target.value) || 0)}
                     className="w-full accent-cyan-400 cursor-pointer"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-slate-500">

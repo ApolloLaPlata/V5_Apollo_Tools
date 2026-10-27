@@ -403,7 +403,7 @@ async function compileAttention() {
                   max="1000"
                   step="10"
                   value={modelParamCountM}
-                  onChange={(e) => setModelParamCountM(parseInt(e.target.value))}
+                  onChange={(e) => setModelParamCountM(parseInt(e.target.value) || 0)}
                   className="w-full accent-cyan-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                 />
                 <div className="flex justify-between text-[10px] text-slate-500">

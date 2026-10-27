@@ -199,7 +199,7 @@ export function PairingCryptoAndThresholdSuite({ defaultTab = 'bls12-381-signatu
                     max="16"
                     step="1"
                     value={signersCount}
-                    onChange={(e) => setSignersCount(parseInt(e.target.value))}
+                    onChange={(e) => setSignersCount(parseInt(e.target.value) || 0)}
                     className="w-full accent-purple-500"
                   />
                 </div>
@@ -420,7 +420,7 @@ export function PairingCryptoAndThresholdSuite({ defaultTab = 'bls12-381-signatu
                     max="10"
                     step="1"
                     value={scalarA}
-                    onChange={(e) => setScalarA(parseInt(e.target.value))}
+                    onChange={(e) => setScalarA(parseInt(e.target.value) || 0)}
                     className="w-full accent-purple-500"
                   />
                 </div>
@@ -436,7 +436,7 @@ export function PairingCryptoAndThresholdSuite({ defaultTab = 'bls12-381-signatu
                     max="10"
                     step="1"
                     value={scalarB}
-                    onChange={(e) => setScalarB(parseInt(e.target.value))}
+                    onChange={(e) => setScalarB(parseInt(e.target.value) || 0)}
                     className="w-full accent-cyan-500"
                   />
                 </div>

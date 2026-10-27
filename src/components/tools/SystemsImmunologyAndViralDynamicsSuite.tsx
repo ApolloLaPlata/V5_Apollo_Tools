@@ -892,6 +892,7 @@ export function SystemsImmunologyAndViralDynamicsSuite({
                     {['NLVPMVATV', 'GILGFVFTL', 'SLYNTVATL'].map((sample) => (
                       <button
                         key={sample}
+                        aria-label={`Usar sequência de amostra ${sample}`}
                         onClick={() => setPeptideSequence(sample)}
                         className="text-[10px] font-mono text-slate-400 hover:text-cyan-400 bg-slate-900 px-2 py-0.5 rounded border border-slate-800 cursor-pointer"
                       >

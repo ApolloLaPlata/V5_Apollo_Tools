@@ -854,7 +854,7 @@ ${attributes.map(a => `    {
                   max="100000"
                   step="1000"
                   value={instanceCount}
-                  onChange={(e) => setInstanceCount(parseInt(e.target.value))}
+                  onChange={(e) => setInstanceCount(parseInt(e.target.value) || 0)}
                   className="w-full accent-cyan-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                 />
               </div>
@@ -863,7 +863,7 @@ ${attributes.map(a => `    {
                 <label className="text-xs text-slate-400 mb-1.5 block">Geometria por Instância</label>
                 <select
                   value={verticesPerInstance}
-                  onChange={(e) => setVerticesPerInstance(parseInt(e.target.value))}
+                  onChange={(e) => setVerticesPerInstance(parseInt(e.target.value) || 0)}
                   className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-200"
                 >
                   <option value={3}>Triângulo (3 vértices / 1 triângulo)</option>

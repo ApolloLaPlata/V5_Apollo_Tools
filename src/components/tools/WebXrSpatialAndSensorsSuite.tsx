@@ -381,7 +381,7 @@ export function WebXrSpatialAndSensorsSuite({ defaultTab = 'webxr-device-session
                     min="-180"
                     max="180"
                     value={yawDeg}
-                    onChange={(e) => setYawDeg(parseInt(e.target.value))}
+                    onChange={(e) => setYawDeg(parseInt(e.target.value) || 0)}
                     className="w-full accent-cyan-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                   />
                 </div>
@@ -396,7 +396,7 @@ export function WebXrSpatialAndSensorsSuite({ defaultTab = 'webxr-device-session
                     min="-90"
                     max="90"
                     value={pitchDeg}
-                    onChange={(e) => setPitchDeg(parseInt(e.target.value))}
+                    onChange={(e) => setPitchDeg(parseInt(e.target.value) || 0)}
                     className="w-full accent-indigo-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                   />
                 </div>
@@ -411,7 +411,7 @@ export function WebXrSpatialAndSensorsSuite({ defaultTab = 'webxr-device-session
                     min="-90"
                     max="90"
                     value={rollDeg}
-                    onChange={(e) => setRollDeg(parseInt(e.target.value))}
+                    onChange={(e) => setRollDeg(parseInt(e.target.value) || 0)}
                     className="w-full accent-emerald-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                   />
                 </div>
@@ -503,7 +503,7 @@ export function WebXrSpatialAndSensorsSuite({ defaultTab = 'webxr-device-session
                   min="55"
                   max="74"
                   value={ipdMm}
-                  onChange={(e) => setIpdMm(parseInt(e.target.value))}
+                  onChange={(e) => setIpdMm(parseInt(e.target.value) || 0)}
                   className="w-full accent-cyan-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                 />
                 <div className="flex justify-between text-[10px] text-slate-500">
@@ -523,7 +523,7 @@ export function WebXrSpatialAndSensorsSuite({ defaultTab = 'webxr-device-session
                   min="80"
                   max="140"
                   value={fovH}
-                  onChange={(e) => setFovH(parseInt(e.target.value))}
+                  onChange={(e) => setFovH(parseInt(e.target.value) || 0)}
                   className="w-full accent-indigo-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                 />
               </div>
@@ -614,7 +614,7 @@ export function WebXrSpatialAndSensorsSuite({ defaultTab = 'webxr-device-session
                   max="5.0"
                   step="0.05"
                   value={rayDistance}
-                  onChange={(e) => setRayDistance(parseFloat(e.target.value))}
+                  onChange={(e) => setRayDistance(parseFloat(e.target.value) || 0)}
                   className="w-full accent-cyan-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                 />
               </div>
@@ -699,7 +699,7 @@ export function WebXrSpatialAndSensorsSuite({ defaultTab = 'webxr-device-session
                     max="1"
                     step="0.05"
                     value={triggerValue}
-                    onChange={(e) => setTriggerValue(parseFloat(e.target.value))}
+                    onChange={(e) => setTriggerValue(parseFloat(e.target.value) || 0)}
                     className="w-full accent-cyan-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                   />
                 </div>
@@ -715,7 +715,7 @@ export function WebXrSpatialAndSensorsSuite({ defaultTab = 'webxr-device-session
                     max="1"
                     step="0.05"
                     value={gripValue}
-                    onChange={(e) => setGripValue(parseFloat(e.target.value))}
+                    onChange={(e) => setGripValue(parseFloat(e.target.value) || 0)}
                     className="w-full accent-indigo-400 bg-slate-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                   />
                 </div>
