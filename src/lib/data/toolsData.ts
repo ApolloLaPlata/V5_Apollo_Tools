@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite' | 'webrtc-media-codecs-suite' | 'oauth-security-oidc-suite' | 'webgl-canvas-diagnostics-suite' | 'post-quantum-crypto-suite' | 'web-bluetooth-hardware-suite' | 'webtransport-http3-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite' | 'webrtc-media-codecs-suite' | 'oauth-security-oidc-suite' | 'webgl-canvas-diagnostics-suite' | 'post-quantum-crypto-suite' | 'web-bluetooth-hardware-suite' | 'webtransport-http3-suite' | 'homomorphic-zkp-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -5409,5 +5409,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'webtransport-http3-suite',
     suiteTab: 'conn-migration',
     tags: ['connection migration', 'quic path validation', 'path_challenge', 'wi-fi para 5g', 'zero rtt', 'resiliencia de rede']
+  },
+  // ==========================================
+  // ETAPA 72: SUÍTE DE CRIPTOGRAFIA HOMOMÓRFICA & ZERO-KNOWLEDGE PROOFS (MARCO 370 FERRAMENTAS!)
+  // ==========================================
+  {
+    id: 'paillier-additive-homomorphic-calc-tool',
+    title: 'Calculadora Homomórfica Aditiva de Paillier (1999)',
+    description: 'Execute somas e multiplicações por escalares diretamente sobre dados cifrados em BigInt sem decifrá-los: comprove matematicamente que D(E(m1) * E(m2) mod n^2) = m1 + m2 no navegador.',
+    category: 'dev-4devs',
+    categoryLabel: 'Criptografia & Privacidade',
+    icon: 'Lock',
+    badge: 'Paillier Homomórfico',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'homomorphic-zkp-suite',
+    suiteTab: 'paillier-homomorphic',
+    tags: ['paillier homomorphic', 'criptografia homomorfica', 'soma sobre cifrados', 'bigint crypto', 'privacidade de dados', 'fhe aditivo']
+  },
+  {
+    id: 'bfv-ring-lwe-evaluator-tool',
+    title: 'Avaliador BFV Ring-LWE & Noise Budget (FHE)',
+    description: 'Monitore o consumo de ruído em operações totalmente homomórficas BFV sobre anéis polinomiais R_q: analise a profundidade multiplicativa L, grau polinomial N e o ponto de saturação para Bootstrapping.',
+    category: 'dev-4devs',
+    categoryLabel: 'Criptografia & Privacidade',
+    icon: 'Binary',
+    badge: 'BFV Ring-LWE FHE',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'homomorphic-zkp-suite',
+    suiteTab: 'bfv-ring-lwe',
+    tags: ['bfv scheme', 'ring-lwe', 'noise budget', 'fully homomorphic encryption', 'fhe bootstrapping', 'profundidade multiplicativa']
+  },
+  {
+    id: 'zk-snarks-groth16-verifier-tool',
+    title: 'Verificador zk-SNARKs Groth16 (Curva Elíptica BN254)',
+    description: 'Valide provas não-interativas de conhecimento zero baseadas no protocolo Groth16 com pareamentos bilineares em curvas elípticas, provando posse de segredos matemáticos com zero vazamento de informação.',
+    category: 'dev-4devs',
+    categoryLabel: 'Criptografia & Privacidade',
+    icon: 'EyeOff',
+    badge: 'zk-SNARKs Groth16',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'homomorphic-zkp-suite',
+    suiteTab: 'zk-snarks',
+    tags: ['zk-snarks', 'groth16', 'bn254', 'bilinear pairings', 'conhecimento zero', 'zero knowledge proof', 'r1cs']
+  },
+  {
+    id: 'bulletproofs-range-proof-generator-tool',
+    title: 'Gerador de Provas de Intervalo Bulletproofs (Zero Trusted Setup)',
+    description: 'Gere e valide provas matemáticas de intervalo O(log n) sem trusted setup: comprove que valores e saldos financeiros secretos estão no range [0, 2^n - 1] usando compromissos de Pedersen.',
+    category: 'dev-4devs',
+    categoryLabel: 'Criptografia & Privacidade',
+    icon: 'Activity',
+    badge: 'Bulletproofs Range Proof',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'homomorphic-zkp-suite',
+    suiteTab: 'bulletproofs',
+    tags: ['bulletproofs', 'range proof', 'compromisso pedersen', 'zero trusted setup', 'transacoes confidenciais', 'ristretto']
+  },
+  {
+    id: 'fhe-zkp-privacy-paradigm-comparator-tool',
+    title: 'Comparador de Paradigmas de Privacidade: FHE vs ZKP vs MPC vs TEE',
+    description: 'Compare exaustivamente os trade-offs arquiteturais entre Computação Homomórfica (FHE), Provas de Conhecimento Zero (ZKP), Multi-Party Computation (MPC) e Enclaves de Hardware (TEE).',
+    category: 'dev-4devs',
+    categoryLabel: 'Criptografia & Privacidade',
+    icon: 'Layers',
+    badge: 'FHE vs ZKP vs MPC',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'homomorphic-zkp-suite',
+    suiteTab: 'privacy-paradigms',
+    tags: ['fhe vs zkp', 'mpc shamir', 'tee intel sgx', 'computacao confidencial', 'arquitetura de privacidade', 'benchmarks privacidade']
   }
 ];

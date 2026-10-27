@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 365 Ferramentas Ativas · 71 Etapas Concluídas)
+**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 370 Ferramentas Ativas · 72 Etapas Concluídas)
 
 ---
 
@@ -172,16 +172,17 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **Criptografia Pós-Quântica (PQC) NIST** | `PostQuantumCryptographySuite.tsx` | Simulador ML-KEM FIPS 203 (Kyber-512/768/1024), Assinador Digital ML-DSA FIPS 204 (Dilithium-44/65/87), Inspetor SLH-DSA FIPS 205 (SPHINCS+ Stateless Hash), Comparador de Overhead Clássico vs PQC (MTU 1500B), Calculadora de Recursos Quânticos Algoritmo de Shor (Qubits Lógicos/Físicos Surface Code) |
 | **Web Bluetooth, WebHID & Hardware Diagnostics** | `WebBluetoothAndHardwareSuite.tsx` | Explorador GATT Web Bluetooth (Services, Characteristics DataView & CCCD), Parser de Descritores USB HID Reports, Simulador de Enquadramento UART / Serial RS-232, Calculadora de Autonomia BLE Battery Service (0x180F CR2032), Dicionário de UUIDs Bluetooth SIG |
 | **WebTransport, HTTP/3 QUIC & UDP Client-Side** | `WebTransportAndHttp3Suite.tsx` | Simulador WebTransport W3C (Datagrams UDP vs Streams), Decodificador de Frames HTTP/3 RFC 9114 & QPACK RFC 9204, Calculadora de Eliminação de Head-of-Line Blocking (TCP vs QUIC), Inspecionador de Cabeçalhos e Connection ID (CID) QUIC RFC 9000, Simulador de Migração de Conexão (Wi-Fi ↔ 5G) |
+| **Criptografia Homomórfica & Zero-Knowledge Proofs (ZKP)** | `HomomorphicAndZkpSuite.tsx` | Calculadora Homomórfica Aditiva de Paillier (1999 BigInt), Avaliador BFV Ring-LWE & Noise Budget FHE, Verificador zk-SNARKs Groth16 (Curva BN254 Pareamento Bilinear), Gerador de Bulletproofs Range Proofs (Zero Setup), Comparador FHE vs ZKP vs MPC vs TEE |
 
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário
 - **Sistema de Favoritos Local:** Usuário pode favoritar ferramentas com 1 clique (persistência no `localStorage`).
 - **Histórico Recente de Uso:** Barra de acesso rápido às últimas ferramentas utilizadas com persistência local.
-- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 365 ferramentas.
+- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 370 ferramentas.
 - **Deep-linking Universal:** Compartilhamento direto via URL (`?tool=id`) com cópia em 1 clique e ativação automática com scroll suave.
 - **Filtro Rápido:** Aba instantânea para ferramentas favoritadas na barra de categorias.
-- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 365 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
+- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 370 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
 - **Suporte a PWA Standalone:** Arquivo `manifest.json` com paleta Cyber Obsidian (`#020617` / `#06b6d4`) para instalação como app nativo no Desktop e Mobile.
 
 ---
@@ -203,5 +204,5 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 ---
 
 ## 6. Próximos Passos
-1. Prosseguir com a Esteira Determinística de Expansão (Etapa 72: Suíte de Criptografia Homomórfica & Zero-Knowledge Proofs ZKP - Paillier, BFV, zk-SNARKs & Bulletproofs - Marco 370 Ferramentas).
+1. Prosseguir com a Esteira Determinística de Expansão (Etapa 73: Suíte de WebGPU Compute Shaders, WGSL & Matrizes Paralelas - Marco 375 Ferramentas).
 2. Manter monitoramento contínuo via Shadow Logger e Colmeia.

@@ -91,6 +91,7 @@ import { WebGlAndCanvasDiagnosticsSuite } from '@/components/tools/WebGlAndCanva
 import { PostQuantumCryptographySuite } from '@/components/tools/PostQuantumCryptographySuite';
 import { WebBluetoothAndHardwareSuite } from '@/components/tools/WebBluetoothAndHardwareSuite';
 import { WebTransportAndHttp3Suite } from '@/components/tools/WebTransportAndHttp3Suite';
+import { HomomorphicAndZkpSuite } from '@/components/tools/HomomorphicAndZkpSuite';
 
 import { 
   Search, 
@@ -764,6 +765,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'webtransport-http3-suite' && (
               <WebTransportAndHttp3Suite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'homomorphic-zkp-suite' && (
+              <HomomorphicAndZkpSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
