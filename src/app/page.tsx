@@ -112,6 +112,7 @@ import { OrbitalMechanicsAndAstrophysicsSuite } from '@/components/tools/Orbital
 import { PlasmaPhysicsAndFusionSuite } from '@/components/tools/PlasmaPhysicsAndFusionSuite';
 import { BioinformaticsAndStructuralGenomicsSuite } from '@/components/tools/BioinformaticsAndStructuralGenomicsSuite';
 import { ParticlePhysicsAndRelativisticKinematicsSuite } from '@/components/tools/ParticlePhysicsAndRelativisticKinematicsSuite';
+import { GeneralRelativityAndGravitationalWavesSuite } from '@/components/tools/GeneralRelativityAndGravitationalWavesSuite';
 
 import { 
   Search, 
@@ -848,6 +849,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'particle-physics-relativistic-suite' && (
               <ParticlePhysicsAndRelativisticKinematicsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'general-relativity-gravitational-waves-suite' && (
+              <GeneralRelativityAndGravitationalWavesSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
