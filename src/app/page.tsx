@@ -116,6 +116,7 @@ import { GeneralRelativityAndGravitationalWavesSuite } from '@/components/tools/
 import { CosmologyAndFlrwCosmicExpansionSuite } from '@/components/tools/CosmologyAndFlrwCosmicExpansionSuite';
 import { QuantumElectrodynamicsAndVacuumSuite } from '@/components/tools/QuantumElectrodynamicsAndVacuumSuite';
 import { QuantumChromodynamicsAndQuarkGluonSuite } from '@/components/tools/QuantumChromodynamicsAndQuarkGluonSuite';
+import { StringTheoryAndQuantumGravitySuite } from '@/components/tools/StringTheoryAndQuantumGravitySuite';
 
 import { 
   Search, 
@@ -864,6 +865,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'qcd-quark-gluon-suite' && (
               <QuantumChromodynamicsAndQuarkGluonSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'string-theory-quantum-gravity-suite' && (
+              <StringTheoryAndQuantumGravitySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
