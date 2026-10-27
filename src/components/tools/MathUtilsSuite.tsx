@@ -249,7 +249,7 @@ export function MathUtilsSuite({ defaultTab = 'porcentagem' }: { defaultTab?: Ma
   // --- 4DEVS: FATORAÇÃO EM PRIMOS COMPUTED ---
   const fatoracao = useMemo(() => {
     const n = parseInt(numFatorar, 10);
-    if (isNaN(n) || n <= 0) return null;
+    if (isNaN(n) || n <= 0 || n > 1000000000) return null;
     if (n === 1) {
       return {
         n: 1,
@@ -527,7 +527,8 @@ export function MathUtilsSuite({ defaultTab = 'porcentagem' }: { defaultTab?: Ma
                     </span>
                     <button
                       onClick={() => copyToClipboard(fatoracao.divisores.join(', '), 'divisores')}
-                      className="text-[10px] text-cyan-400 hover:underline flex items-center gap-1"
+                      aria-label="Copiar todos os divisores"
+                      className="text-[10px] text-cyan-400 hover:underline flex items-center gap-1 cursor-pointer"
                     >
                       Copiar todos
                     </button>
@@ -601,8 +602,9 @@ export function MathUtilsSuite({ defaultTab = 'porcentagem' }: { defaultTab?: Ma
                 <span className="text-base font-mono font-bold text-cyan-300">{restoDivisao.provaReal}</span>
                 <button
                   onClick={() => copyToClipboard(restoDivisao.provaReal, 'provaReal')}
-                  className="absolute top-3 right-3 p-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition-all cursor-pointer"
+                  aria-label="Copiar Prova Real Euclidiana"
                   title="Copiar Prova Real"
+                  className="absolute top-3 right-3 p-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition-all cursor-pointer"
                 >
                   {copiedKey === 'provaReal' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
                 </button>
@@ -717,8 +719,9 @@ export function MathUtilsSuite({ defaultTab = 'porcentagem' }: { defaultTab?: Ma
               </p>
               <button
                 onClick={() => copyToClipboard(dataCalculada.dataFormatada, 'dataCalculada')}
-                className="absolute top-4 right-4 p-2 rounded-xl bg-slate-800 text-slate-400 hover:text-white transition-all cursor-pointer"
+                aria-label="Copiar Data Resultante Calculada"
                 title="Copiar Data"
+                className="absolute top-4 right-4 p-2 rounded-xl bg-slate-800 text-slate-400 hover:text-white transition-all cursor-pointer"
               >
                 {copiedKey === 'dataCalculada' ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
               </button>

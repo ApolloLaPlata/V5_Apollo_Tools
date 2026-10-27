@@ -131,14 +131,17 @@ export function PasswordGenerator() {
           <div className="flex items-center gap-2 shrink-0">
             <button
               onClick={generatePassword}
-              className="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition cursor-pointer"
+              aria-label="Gerar nova senha"
               title="Gerar nova senha"
+              className="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition cursor-pointer"
             >
               <RefreshCw className="w-4 h-4" />
             </button>
             <button
               onClick={handleCopy}
-              className="px-4 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs flex items-center gap-2 shadow-lg shadow-cyan-500/20 transition cursor-pointer"
+              disabled={!password}
+              aria-label="Copiar Senha Gerada"
+              className={`px-4 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs flex items-center gap-2 shadow-lg shadow-cyan-500/20 transition cursor-pointer ${!password ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
               {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
               {copied ? 'Copiado!' : 'Copiar Senha'}
