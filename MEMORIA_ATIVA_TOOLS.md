@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 370 Ferramentas Ativas · 72 Etapas Concluídas)
+**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 375 Ferramentas Ativas · 73 Etapas Concluídas)
 
 ---
 
@@ -173,16 +173,17 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **Web Bluetooth, WebHID & Hardware Diagnostics** | `WebBluetoothAndHardwareSuite.tsx` | Explorador GATT Web Bluetooth (Services, Characteristics DataView & CCCD), Parser de Descritores USB HID Reports, Simulador de Enquadramento UART / Serial RS-232, Calculadora de Autonomia BLE Battery Service (0x180F CR2032), Dicionário de UUIDs Bluetooth SIG |
 | **WebTransport, HTTP/3 QUIC & UDP Client-Side** | `WebTransportAndHttp3Suite.tsx` | Simulador WebTransport W3C (Datagrams UDP vs Streams), Decodificador de Frames HTTP/3 RFC 9114 & QPACK RFC 9204, Calculadora de Eliminação de Head-of-Line Blocking (TCP vs QUIC), Inspecionador de Cabeçalhos e Connection ID (CID) QUIC RFC 9000, Simulador de Migração de Conexão (Wi-Fi ↔ 5G) |
 | **Criptografia Homomórfica & Zero-Knowledge Proofs (ZKP)** | `HomomorphicAndZkpSuite.tsx` | Calculadora Homomórfica Aditiva de Paillier (1999 BigInt), Avaliador BFV Ring-LWE & Noise Budget FHE, Verificador zk-SNARKs Groth16 (Curva BN254 Pareamento Bilinear), Gerador de Bulletproofs Range Proofs (Zero Setup), Comparador FHE vs ZKP vs MPC vs TEE |
+| **WebGPU Compute Shaders & Matrizes Paralelas** | `WebGpuComputeShadersSuite.tsx` | Multiplicador de Matrizes Paralelo em WGSL (Tiled GEMM com Shared Memory), Simulador de Dimensões de Workgroup & Ocupação de Subgroups/Warps, Gerador de Ruído Procedural Perlin/Simplex Compute, Inspecionador de BindGroupLayouts WebGPU, Benchmark Paralelo Float32 (CPU vs GPU Compute) |
 
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário
 - **Sistema de Favoritos Local:** Usuário pode favoritar ferramentas com 1 clique (persistência no `localStorage`).
 - **Histórico Recente de Uso:** Barra de acesso rápido às últimas ferramentas utilizadas com persistência local.
-- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 370 ferramentas.
+- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 375 ferramentas.
 - **Deep-linking Universal:** Compartilhamento direto via URL (`?tool=id`) com cópia em 1 clique e ativação automática com scroll suave.
 - **Filtro Rápido:** Aba instantânea para ferramentas favoritadas na barra de categorias.
-- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 370 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
+- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 375 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
 - **Suporte a PWA Standalone:** Arquivo `manifest.json` com paleta Cyber Obsidian (`#020617` / `#06b6d4`) para instalação como app nativo no Desktop e Mobile.
 
 ---
@@ -204,5 +205,5 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 ---
 
 ## 6. Próximos Passos
-1. Prosseguir com a Esteira Determinística de Expansão (Etapa 73: Suíte de WebGPU Compute Shaders, WGSL & Matrizes Paralelas - Marco 375 Ferramentas).
+1. Prosseguir com a Esteira Determinística de Expansão (Etapa 74: Suíte de Web Codecs & Encapsulamento MP4/WebM Client-Side - VideoFrame, AudioData, MP4Box & Transmuxer - Marco 380 Ferramentas).
 2. Manter monitoramento contínuo via Shadow Logger e Colmeia.

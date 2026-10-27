@@ -92,6 +92,7 @@ import { PostQuantumCryptographySuite } from '@/components/tools/PostQuantumCryp
 import { WebBluetoothAndHardwareSuite } from '@/components/tools/WebBluetoothAndHardwareSuite';
 import { WebTransportAndHttp3Suite } from '@/components/tools/WebTransportAndHttp3Suite';
 import { HomomorphicAndZkpSuite } from '@/components/tools/HomomorphicAndZkpSuite';
+import { WebGpuComputeShadersSuite } from '@/components/tools/WebGpuComputeShadersSuite';
 
 import { 
   Search, 
@@ -768,6 +769,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'homomorphic-zkp-suite' && (
               <HomomorphicAndZkpSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'webgpu-compute-suite' && (
+              <WebGpuComputeShadersSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite' | 'webrtc-media-codecs-suite' | 'oauth-security-oidc-suite' | 'webgl-canvas-diagnostics-suite' | 'post-quantum-crypto-suite' | 'web-bluetooth-hardware-suite' | 'webtransport-http3-suite' | 'homomorphic-zkp-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite' | 'webrtc-media-codecs-suite' | 'oauth-security-oidc-suite' | 'webgl-canvas-diagnostics-suite' | 'post-quantum-crypto-suite' | 'web-bluetooth-hardware-suite' | 'webtransport-http3-suite' | 'homomorphic-zkp-suite' | 'webgpu-compute-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -5482,5 +5482,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'homomorphic-zkp-suite',
     suiteTab: 'privacy-paradigms',
     tags: ['fhe vs zkp', 'mpc shamir', 'tee intel sgx', 'computacao confidencial', 'arquitetura de privacidade', 'benchmarks privacidade']
+  },
+  // ==========================================
+  // ETAPA 73: SUÍTE DE WEBGPU COMPUTE SHADERS & MATRIZES PARALELAS (MARCO 375 FERRAMENTAS!)
+  // ==========================================
+  {
+    id: 'webgpu-matrix-multiplication-wgsl-tool',
+    title: 'Multiplicador de Matrizes Paralelo em WGSL (Tiled GEMM)',
+    description: 'Otimize computação tensorial na GPU via WGSL com memória compartilhada de workgroup (workgroupBarrier): multiplique matrizes densas Float32 com medição de GFLOPs e VRAM.',
+    category: 'dev-4devs',
+    categoryLabel: 'Gráficos & WebGL (4Devs)',
+    icon: 'Grid',
+    badge: 'WGSL Tiled GEMM',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webgpu-compute-suite',
+    suiteTab: 'wgsl-gemm',
+    tags: ['webgpu compute', 'wgsl', 'gemm', 'multiplicacao matriz gpu', 'workgroupbarrier', 'shared memory tile', 'gflops']
+  },
+  {
+    id: 'webgpu-workgroup-subgroup-simulator-tool',
+    title: 'Simulador de Workgroups & Ocupação de Subgroups WebGPU',
+    description: 'Calcule o dimensionamento ótimo de threads @workgroup_size(X, Y, Z), occupancy de hardware da GPU e previna thread waste em Warps da NVIDIA (32) ou Wavefronts da AMD (64).',
+    category: 'dev-4devs',
+    categoryLabel: 'Gráficos & WebGL (4Devs)',
+    icon: 'Binary',
+    badge: 'Workgroups & Warps',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webgpu-compute-suite',
+    suiteTab: 'workgroups-subgroups',
+    tags: ['webgpu workgroups', 'subgroups', 'warp 32', 'wavefront 64', 'gpu occupancy', 'thread waste', 'dispatchworkgroups']
+  },
+  {
+    id: 'webgpu-compute-perlin-noise-tool',
+    title: 'Gerador de Ruído Procedural Perlin/Simplex via Compute Shader',
+    description: 'Gere mapas de relevo e texturas procedurais fractais de alta velocidade escrevendo diretamente em buffers de memória paralelos com controle de frequência, oitavas e semente.',
+    category: 'dev-4devs',
+    categoryLabel: 'Gráficos & WebGL (4Devs)',
+    icon: 'Sparkles',
+    badge: 'Compute Perlin Noise',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webgpu-compute-suite',
+    suiteTab: 'compute-perlin',
+    tags: ['perlin noise gpu', 'compute shader textura', 'procedural generation', 'storage buffer', 'ruido fractal', 'convolucao paralela']
+  },
+  {
+    id: 'webgpu-bindgroup-layout-visualizer-tool',
+    title: 'Validador e Boilerplate de BindGroupLayouts WebGPU',
+    description: 'Inspecione a arquitetura de vinculação de recursos do pipeline WebGPU (Uniform Buffers com alinhamento de 256 bytes e Storage Buffers ReadOnly/ReadWrite) com geração de código TypeScript.',
+    category: 'dev-4devs',
+    categoryLabel: 'Gráficos & WebGL (4Devs)',
+    icon: 'Layers',
+    badge: 'BindGroupLayouts WebGPU',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webgpu-compute-suite',
+    suiteTab: 'bindgroups-layout',
+    tags: ['bindgrouplayout', 'webgpu pipeline', 'uniform buffer alignment', 'storage buffer', 'gpushaderstage.compute', 'gpu boilerplate']
+  },
+  {
+    id: 'webgpu-cpu-gpu-float32-benchmark-tool',
+    title: 'Benchmark Paralelo Float32: CPU (V8 Single-Thread) vs GPU Compute',
+    description: 'Execute em tempo real até 1 milhão de operações matemáticas vetoriais trigonométricas e compare a latência em milissegundos da CPU contra a aceleração massiva da GPU WebGPU.',
+    category: 'dev-4devs',
+    categoryLabel: 'Gráficos & WebGL (4Devs)',
+    icon: 'Zap',
+    badge: 'Benchmark CPU vs GPU',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webgpu-compute-suite',
+    suiteTab: 'cpu-vs-gpu-bench',
+    tags: ['cpu vs gpu benchmark', 'webgpu speedup', 'float32 benchmark', 'mops', 'processamento paralelo', 'v8 performance']
   }
 ];
