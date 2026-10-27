@@ -2754,7 +2754,7 @@ export const TOOLS_CATALOG: ToolItem[] = [
   // ETAPA 35: SUÍTE DE ACESSIBILIDADE DIGITAL & PERFORMANCE WEB (CORE WEB VITALS)
   // ==========================================
   {
-    id: 'wcag-contrast-checker',
+    id: 'wcag-22-touch-target-checker',
     title: 'Verificador de Contraste WCAG 2.2 & Touch Target',
     description: 'Cálculo exato de contraste W3C (níveis AA/AAA para texto normal e grande) e validador de área mínima de toque mobile (44x44px).',
     category: 'dev-4devs',

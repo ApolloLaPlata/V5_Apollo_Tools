@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'V5 Apollo Tools • Canivete Suíço de Produtividade, Dev & Workflows ComfyUI',
-  description: 'Mais de 115 ferramentas soberanas client-side: 4Devs, Invertexto, Workflows ComfyUI e IA Criativa Apollo La Plata. Zero custo de API e privacidade total.',
+  description: 'Mais de 530 ferramentas soberanas client-side: 4Devs, Invertexto, Workflows ComfyUI e IA Criativa Apollo La Plata. Zero custo de API e privacidade total.',
   keywords: [
     '4devs',
     'invertexto',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'V5 Apollo Tools • Canivete Suíço de Produtividade & IA',
-    description: 'Mais de 115 ferramentas gratuitas e soberanas para desenvolvedores, QA e criadores de conteúdo.',
+    description: 'Mais de 530 ferramentas gratuitas e soberanas para desenvolvedores, QA e criadores de conteúdo.',
   },
   robots: {
     index: true,
@@ -59,7 +59,7 @@ export default function RootLayout({
     '@type': 'WebApplication',
     name: 'V5 Apollo Tools',
     url: 'https://tools.v5apollo.com',
-    description: 'Central unificada com mais de 115 ferramentas de produtividade, desenvolvimento e workflows ComfyUI.',
+    description: 'Central unificada com mais de 530 ferramentas de produtividade, desenvolvimento e workflows ComfyUI.',
     applicationCategory: 'UtilitiesApplication',
     operatingSystem: 'All',
     offers: {

@@ -223,6 +223,10 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
   - `WebBluetoothAndHardwareSuite.tsx`: Remoção de parênteses em comentário que executava literal numérico como função `1(/* start bit */)`.
   - `PerformanceAssetsAndVitalsSuite.tsx`: Inclusão de `'dns-prefetch'` no tipo de preset CDN e fallback de string.
   - `ModernImageCompressionWasmSuite.tsx`: Importação do ícone `Code2`.
+- **Eliminação de IDs Duplicados no Catálogo:** Desambiguação de `wcag-contrast-checker` da Etapa 35 para `wcag-22-touch-target-checker` (garantindo 0 duplicatas em 539 ferramentas).
+- **Busca Resiliente a Acentos (Normalização Unicode NFD):** Implementação de normalizador em `src/app/page.tsx` para busca rápida e Command Palette (Ctrl+K), permitindo que termos digitados sem acento encontrem ferramentas acentuadas e vice-versa.
+- **Auditoria de `suiteTab` (0 Divergências):** Verificação de que todos os 539 utilitários mapeiam para abas válidas e ativas em suas suítes.
+- **Atualização de Metadados SEO, PWA & OpenGraph:** Sincronização de contadores em `layout.tsx` e `manifest.json` para refletir com exatidão mais de 530 ferramentas.
 
 ---
 

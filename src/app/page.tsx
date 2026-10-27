@@ -529,7 +529,11 @@ export default function ApolloToolsPage() {
     return TOOLS_CATALOG.find((t) => t.id === activeInteractiveTool) || null;
   }, [activeInteractiveTool]);
 
+  const normalize = (str: string) =>
+    str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
   const filteredTools = useMemo(() => {
+    const q = normalize(searchTerm);
     return TOOLS_CATALOG.filter((tool) => {
       const matchesCategory =
         selectedCategory === 'all'
@@ -537,22 +541,33 @@ export default function ApolloToolsPage() {
           : selectedCategory === 'favorites'
           ? favorites.includes(tool.id)
           : tool.category === selectedCategory;
+
+      if (!q) return matchesCategory;
+
+      const titleNorm = normalize(tool.title);
+      const descNorm = normalize(tool.description);
+      const tagsNorm = tool.tags.map(normalize);
+
       const matchesSearch =
-        tool.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        tool.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        tool.tags.some((t) => t.toLowerCase().includes(searchTerm.toLowerCase()));
+        titleNorm.includes(q) ||
+        descNorm.includes(q) ||
+        tagsNorm.some((t) => t.includes(q));
+
       return matchesCategory && matchesSearch;
     });
   }, [searchTerm, selectedCategory, favorites]);
 
   const commandResults = useMemo(() => {
-    if (!commandQuery.trim()) return TOOLS_CATALOG.slice(0, 10);
+    const q = normalize(commandQuery);
+    if (!q) return TOOLS_CATALOG.slice(0, 10);
     return TOOLS_CATALOG.filter((tool) => {
-      const q = commandQuery.toLowerCase();
+      const titleNorm = normalize(tool.title);
+      const descNorm = normalize(tool.description);
+      const tagsNorm = tool.tags.map(normalize);
       return (
-        tool.title.toLowerCase().includes(q) ||
-        tool.description.toLowerCase().includes(q) ||
-        tool.tags.some((t) => t.toLowerCase().includes(q))
+        titleNorm.includes(q) ||
+        descNorm.includes(q) ||
+        tagsNorm.some((t) => t.includes(q))
       );
     }).slice(0, 12);
   }, [commandQuery]);
