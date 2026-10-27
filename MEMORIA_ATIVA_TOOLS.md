@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 420 Ferramentas Ativas · 82 Etapas Concluídas)
+**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 425 Ferramentas Ativas · 83 Etapas Concluídas)
 
 ---
 
@@ -183,16 +183,17 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **Ray Tracing na GPU, BVH & PBR Shaders** | `WebGpuRayTracingAndBvhSuite.tsx` | Construtor Árvores BVH (AABB & SAH), Simulador Möller-Trumbore WGSL, Path Tracer Monte Carlo (Global Illumination), Materiais PBR GGX Microfacet (Cook-Torrance BRDF), Denoiser Espacial Bilateral SVGF |
 | **KEM Híbrido PQC & Assinaturas Stateful Hash** | `HybridPqcAndStatefulHashSuite.tsx` | Simulador KEM Híbrido X-Wing (X25519 + ML-KEM-768), Assinador Stateful Hash XMSS (RFC 8391) & LMS (RFC 8554), Auditor de Conformidade NSA CNSA 2.0 (FIPS 203/204/205), Calculador de Sobrecarga TLS 1.3 PQC, Visualizador de Árvores WOTS+ (Winternitz OTS) |
 | **Física de Partículas na GPU & Fluidos SPH** | `WebGpuPhysicsAndFluidSuite.tsx` | Simulador Gravitacional N-Body Barnes-Hut, Hidrodinâmica SPH Navier-Stokes (Tait EOS), Integrador de Verlet & Colisões Elásticas, Grade Espacial de Hashing Uniforme O(1), Benchmark 100k Partículas GPU |
+| **Áudio Espacial 3D, Ambisonics & Convolução HRTF** | `SpatialAudioAndAmbisonicsSuite.tsx` | Panner Espacial Binaural 3D Web Audio, Decodificador Ambisonics B-Format (W/X/Y/Z), Convolutor HRTF (Atraso ITD / Nível ILD), Reverberação Acústica de Salas (Sabine RT60), Sintetizador Modular FM AudioWorklet |
 
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário
 - **Sistema de Favoritos Local:** Usuário pode favoritar ferramentas com 1 clique (persistência no `localStorage`).
 - **Histórico Recente de Uso:** Barra de acesso rápido às últimas ferramentas utilizadas com persistência local.
-- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 420 ferramentas.
+- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 425 ferramentas.
 - **Deep-linking Universal:** Compartilhamento direto via URL (`?tool=id`) com cópia em 1 clique e ativação automática com scroll suave.
 - **Filtro Rápido:** Aba instantânea para ferramentas favoritadas na barra de categorias.
-- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 420 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
+- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 425 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
 - **Suporte a PWA Standalone:** Arquivo `manifest.json` com paleta Cyber Obsidian (`#020617` / `#06b6d4`) para instalação como app nativo no Desktop e Mobile.
 
 ---
@@ -214,5 +215,5 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 ---
 
 ## 6. Próximos Passos
-1. Prosseguir com a Esteira Determinística de Expansão (Etapa 83: Suíte de Áudio Espacial 3D, Síntese Ambisonics B-Format & Convolução HRTF na Web - Marco 425 Ferramentas).
+1. Prosseguir com a Esteira Determinística de Expansão (Etapa 84: Suíte de Criptografia de Curvas Elípticas Emparelhadas Bilineares, BLS Signatures & Threshold Cryptography - Marco 430 Ferramentas).
 2. Manter monitoramento contínuo via Shadow Logger e Colmeia.

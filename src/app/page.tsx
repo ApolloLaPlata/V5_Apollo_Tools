@@ -102,6 +102,7 @@ import { WebGpuParallelAlgorithmsSuite } from '@/components/tools/WebGpuParallel
 import { WebGpuRayTracingAndBvhSuite } from '@/components/tools/WebGpuRayTracingAndBvhSuite';
 import { HybridPqcAndStatefulHashSuite } from '@/components/tools/HybridPqcAndStatefulHashSuite';
 import { WebGpuPhysicsAndFluidSuite } from '@/components/tools/WebGpuPhysicsAndFluidSuite';
+import { SpatialAudioAndAmbisonicsSuite } from '@/components/tools/SpatialAudioAndAmbisonicsSuite';
 
 import { 
   Search, 
@@ -808,6 +809,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'webgpu-physics-fluid-suite' && (
               <WebGpuPhysicsAndFluidSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'spatial-audio-ambisonics-suite' && (
+              <SpatialAudioAndAmbisonicsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
