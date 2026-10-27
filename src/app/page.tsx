@@ -88,6 +88,7 @@ import { BinarySerializationProtobufSuite } from '@/components/tools/BinarySeria
 import { WebRtcMediaAndCodecsSuite } from '@/components/tools/WebRtcMediaAndCodecsSuite';
 import { OAuthSecurityAndOidcSuite } from '@/components/tools/OAuthSecurityAndOidcSuite';
 import { WebGlAndCanvasDiagnosticsSuite } from '@/components/tools/WebGlAndCanvasDiagnosticsSuite';
+import { PostQuantumCryptographySuite } from '@/components/tools/PostQuantumCryptographySuite';
 
 import { 
   Search, 
@@ -752,6 +753,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'webgl-canvas-diagnostics-suite' && (
               <WebGlAndCanvasDiagnosticsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'post-quantum-crypto-suite' && (
+              <PostQuantumCryptographySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

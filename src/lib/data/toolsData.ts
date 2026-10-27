@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite' | 'webrtc-media-codecs-suite' | 'oauth-security-oidc-suite' | 'webgl-canvas-diagnostics-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite' | 'webrtc-media-codecs-suite' | 'oauth-security-oidc-suite' | 'webgl-canvas-diagnostics-suite' | 'post-quantum-crypto-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -5190,5 +5190,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'webgl-canvas-diagnostics-suite',
     suiteTab: 'matrix-3d',
     tags: ['matrix3d', 'css 3d transform', 'matriz afim 4x4', 'perspectiva 3d', 'rotacao euler', 'webgl matrix', 'geometria projetiva']
+  },
+  // ==========================================
+  // ETAPA 69: SUÍTE DE CRIPTOGRAFIA PÓS-QUÂNTICA (PQC) & PADRÕES NIST (MARCO 355 FERRAMENTAS!)
+  // ==========================================
+  {
+    id: 'kyber-ml-kem-simulator-tool',
+    title: 'Simulador ML-KEM FIPS 203 (CRYSTALS-Kyber)',
+    description: 'Simule o mecanismo de encapsulamento de chaves quântico-resistente padronizado pelo NIST baseado no anel de polinômios Module-LWE (Kyber-512, 768 e 1024) com derivação de segredo compartilhado AES-256.',
+    category: 'dev-4devs',
+    categoryLabel: 'Criptografia & Segurança',
+    icon: 'Key',
+    badge: 'ML-KEM FIPS 203',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'post-quantum-crypto-suite',
+    suiteTab: 'kyber-kem',
+    tags: ['ml-kem', 'crystals-kyber', 'fips 203', 'post-quantum kem', 'reticulados algebraicos', 'module-lwe', 'segredo compartilhado']
+  },
+  {
+    id: 'dilithium-ml-dsa-signer-tool',
+    title: 'Assinador Digital Pós-Quântico ML-DSA FIPS 204 (Dilithium)',
+    description: 'Gere pares de chaves e assinaturas digitais resistentes a computadores quânticos baseadas em reticulados (ML-DSA-44, 65 e 87) com amostragem de rejeição e verificação de adulteração de integridade.',
+    category: 'dev-4devs',
+    categoryLabel: 'Criptografia & Segurança',
+    icon: 'Lock',
+    badge: 'ML-DSA FIPS 204',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'post-quantum-crypto-suite',
+    suiteTab: 'dilithium-dsa',
+    tags: ['ml-dsa', 'crystals-dilithium', 'fips 204', 'assinatura pos-quantica', 'fiat-shamir', 'amostragem rejeicao', 'integridade quantica']
+  },
+  {
+    id: 'sphincs-slh-dsa-inspector-tool',
+    title: 'Inspetor SLH-DSA FIPS 205 (SPHINCS+ Stateless Hash)',
+    description: 'Inspecione a arquitetura em camadas de assinaturas digitais baseadas exclusivamente em funções de hash (SHAKE-256 / SHA-256) sem dependência de reticulados, com Hypertree, WOTS+ e árvores FORS.',
+    category: 'dev-4devs',
+    categoryLabel: 'Criptografia & Segurança',
+    icon: 'Hash',
+    badge: 'SLH-DSA FIPS 205',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'post-quantum-crypto-suite',
+    suiteTab: 'sphincs-hash',
+    tags: ['slh-dsa', 'sphincs+', 'fips 205', 'stateless hash signature', 'hypertree', 'wots+', 'fors trees', 'hash quantum safe']
+  },
+  {
+    id: 'pqc-key-size-overhead-comparator-tool',
+    title: 'Comparador de Overhead: Criptografia Clássica vs Pós-Quântica',
+    description: 'Compare o tamanho de chaves públicas, ciphertexts e assinaturas entre algoritmos clássicos (RSA 2048/4096, ECC P-256, Ed25519) e PQC (Kyber, Dilithium, Falcon, SPHINCS+) e avalie pacotes MTU / TLS 1.3.',
+    category: 'dev-4devs',
+    categoryLabel: 'Criptografia & Segurança',
+    icon: 'Layers',
+    badge: 'Overhead PQC vs Clássico',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'post-quantum-crypto-suite',
+    suiteTab: 'pqc-overhead',
+    tags: ['pqc overhead', 'tls 1.3 quantum', 'tamanho chaves rsa ecc', 'pacotes mtu 1500', 'fragmentacao tcp', 'benchmark pqc']
+  },
+  {
+    id: 'shor-quantum-qubit-threat-calc-tool',
+    title: 'Calculadora de Qubits e Ameaça do Algoritmo de Shor',
+    description: 'Calcule a quantidade exata de Qubits Lógicos, Portas Toffoli e Qubits Físicos com correção de erro de superfície (Surface Code) necessários para quebrar chaves RSA e curvas elípticas clássicas.',
+    category: 'dev-4devs',
+    categoryLabel: 'Criptografia & Segurança',
+    icon: 'Cpu',
+    badge: 'Algoritmo de Shor',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'post-quantum-crypto-suite',
+    suiteTab: 'shor-threat',
+    tags: ['algoritmo de shor', 'qubits logicos', 'qubits fisicos', 'surface code', 'quebra rsa', 'q-day', 'store now decrypt later']
   }
 ];
