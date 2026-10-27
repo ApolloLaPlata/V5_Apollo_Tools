@@ -103,6 +103,7 @@ import { WebGpuRayTracingAndBvhSuite } from '@/components/tools/WebGpuRayTracing
 import { HybridPqcAndStatefulHashSuite } from '@/components/tools/HybridPqcAndStatefulHashSuite';
 import { WebGpuPhysicsAndFluidSuite } from '@/components/tools/WebGpuPhysicsAndFluidSuite';
 import { SpatialAudioAndAmbisonicsSuite } from '@/components/tools/SpatialAudioAndAmbisonicsSuite';
+import { PairingCryptoAndThresholdSuite } from '@/components/tools/PairingCryptoAndThresholdSuite';
 
 import { 
   Search, 
@@ -812,6 +813,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'spatial-audio-ambisonics-suite' && (
               <SpatialAudioAndAmbisonicsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'pairing-crypto-threshold-suite' && (
+              <PairingCryptoAndThresholdSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
