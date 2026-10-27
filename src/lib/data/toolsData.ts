@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite' | 'webrtc-media-codecs-suite' | 'oauth-security-oidc-suite' | 'webgl-canvas-diagnostics-suite' | 'post-quantum-crypto-suite' | 'web-bluetooth-hardware-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite' | 'webrtc-media-codecs-suite' | 'oauth-security-oidc-suite' | 'webgl-canvas-diagnostics-suite' | 'post-quantum-crypto-suite' | 'web-bluetooth-hardware-suite' | 'webtransport-http3-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -5336,5 +5336,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'web-bluetooth-hardware-suite',
     suiteTab: 'sig-numbers',
     tags: ['bluetooth sig', 'assigned numbers', 'uuid 16-bit', 'gatt dictionary', 'heart rate 0x180d', 'battery service 0x180f', 'cccd 0x2902']
+  },
+  // ==========================================
+  // ETAPA 71: SUÍTE DE WEBTRANSPORT, HTTP/3 QUIC & UDP (MARCO 365 FERRAMENTAS!)
+  // ==========================================
+  {
+    id: 'webtransport-datagram-stream-simulator-tool',
+    title: 'Simulador WebTransport W3C (Datagrams vs Streams Multiplexados)',
+    description: 'Experimente a API WebTransport nativa sobre HTTP/3: escolha entre Datagramas UDP de latência ultra-baixa sem retransmissão ou Streams confiáveis bidirecionais/unidirecionais com medição de throughput.',
+    category: 'dev-4devs',
+    categoryLabel: 'Redes & Protocolos (4Devs)',
+    icon: 'Send',
+    badge: 'WebTransport W3C',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webtransport-http3-suite',
+    suiteTab: 'webtransport-sim',
+    tags: ['webtransport', 'http/3', 'quic datagrams', 'unreliable udp', 'unidirectional stream', 'bidirectional stream', 'baixa latencia']
+  },
+  {
+    id: 'http3-frame-type-decoder-tool',
+    title: 'Decodificador de Frames HTTP/3 RFC 9114 & QPACK',
+    description: 'Desmonte o bytecode binário dos frames fundamentais de HTTP/3 (DATA 0x00, HEADERS 0x01 com QPACK, SETTINGS 0x04 e GOAWAY 0x07) encapsulados em streams QUIC com decodificação de Varint.',
+    category: 'dev-4devs',
+    categoryLabel: 'Redes & Protocolos (4Devs)',
+    icon: 'Layers',
+    badge: 'HTTP/3 RFC 9114',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webtransport-http3-suite',
+    suiteTab: 'http3-frames',
+    tags: ['http/3 frames', 'rfc 9114', 'qpack rfc 9204', 'data frame', 'headers frame', 'settings frame', 'varint quic']
+  },
+  {
+    id: 'head-of-line-blocking-calculator-tool',
+    title: 'Calculadora de Head-of-Line Blocking: TCP vs HTTP/3 QUIC',
+    description: 'Compare matematicamente como a perda de pacotes em redes móveis/Wi-Fi paralisa todas as streams simultâneas no TCP (HTTP/2) enquanto o QUIC mantém isolamento estrito com zero HoL blocking.',
+    category: 'dev-4devs',
+    categoryLabel: 'Redes & Protocolos (4Devs)',
+    icon: 'Activity',
+    badge: 'Eliminação HoL Blocking',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webtransport-http3-suite',
+    suiteTab: 'hol-blocking',
+    tags: ['head of line blocking', 'hol tcp vs quic', 'perda de pacotes', 'http/2 vs http/3', 'streams multiplexados', 'latencia de transporte']
+  },
+  {
+    id: 'quic-cid-packet-header-inspector-tool',
+    title: 'Inspecionador de Cabeçalhos e Connection ID (CID) QUIC RFC 9000',
+    description: 'Analise a estrutura binária dos cabeçalhos QUIC: Long Header (Initial/Handshake com DCID e SCID) vs Short Header (1-RTT Protected Data com Spin Bit para medição passiva de RTT).',
+    category: 'dev-4devs',
+    categoryLabel: 'Redes & Protocolos (4Devs)',
+    icon: 'ShieldCheck',
+    badge: 'QUIC CID RFC 9000',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webtransport-http3-suite',
+    suiteTab: 'quic-cid',
+    tags: ['quic cid', 'connection id', 'rfc 9000', 'short header 1-rtt', 'long header initial', 'spin bit', 'pacotes quic']
+  },
+  {
+    id: 'connection-migration-path-evaluator-tool',
+    title: 'Simulador de Migração de Conexão QUIC (Wi-Fi ↔ 5G)',
+    description: 'Visualize a transição contínua de rede entre Wi-Fi e celular 5G/LTE: compare a quebra de 4-tuple e reconexão lenta do TCP (~850ms) contra a resiliência instantânea do QUIC com PATH_CHALLENGE (0 RTT).',
+    category: 'dev-4devs',
+    categoryLabel: 'Redes & Protocolos (4Devs)',
+    icon: 'Smartphone',
+    badge: 'Migração de Conexão QUIC',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webtransport-http3-suite',
+    suiteTab: 'conn-migration',
+    tags: ['connection migration', 'quic path validation', 'path_challenge', 'wi-fi para 5g', 'zero rtt', 'resiliencia de rede']
   }
 ];

@@ -90,6 +90,7 @@ import { OAuthSecurityAndOidcSuite } from '@/components/tools/OAuthSecurityAndOi
 import { WebGlAndCanvasDiagnosticsSuite } from '@/components/tools/WebGlAndCanvasDiagnosticsSuite';
 import { PostQuantumCryptographySuite } from '@/components/tools/PostQuantumCryptographySuite';
 import { WebBluetoothAndHardwareSuite } from '@/components/tools/WebBluetoothAndHardwareSuite';
+import { WebTransportAndHttp3Suite } from '@/components/tools/WebTransportAndHttp3Suite';
 
 import { 
   Search, 
@@ -760,6 +761,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'web-bluetooth-hardware-suite' && (
               <WebBluetoothAndHardwareSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'webtransport-http3-suite' && (
+              <WebTransportAndHttp3Suite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
