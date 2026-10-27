@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -4898,5 +4898,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'wasm-ast-bytecode-suite',
     suiteTab: 'sourcemap-vlq',
     tags: ['source map', 'vlq base64', 'sourcemap v3', 'codigo minificado', 'depuracao bundle', 'variable length quantity']
+  },
+  // ==========================================
+  // ETAPA 65: SUÍTE DE SERIALIZAÇÃO BINÁRIA, PROTOBUF & FLATBUFFERS (MARCO 335 FERRAMENTAS)
+  // ==========================================
+  {
+    id: 'protobuf-proto3-schema-linter-tool',
+    title: 'Linter Proto3 & Gerador de Interfaces TypeScript',
+    description: 'Valide esquemas Protocol Buffers (.proto) em tempo real, verifique enums iniciando em 0, field numbers reservados (19000-19999) e gere interfaces TypeScript com tipagem estrita.',
+    category: 'dev-4devs',
+    categoryLabel: 'Serialização & Protocolos',
+    icon: 'FileCode2',
+    badge: 'Proto3 Linter & TS',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'binary-serialization-protobuf-suite',
+    suiteTab: 'proto3-linter',
+    tags: ['protobuf', 'proto3', 'grpc', 'schema linter', 'gerador typescript', 'field numbers', 'serializacao binaria']
+  },
+  {
+    id: 'varint-zigzag-encoder-tool',
+    title: 'Codificador & Decodificador Varint (LEB128) & ZigZag',
+    description: 'Codifique inteiros com sinal em ZigZag e Varint LEB128 conforme o padrão oficial do Google Protobuf, visualize a decomposição de 7 bits por byte e o bit MSB de continuação.',
+    category: 'dev-4devs',
+    categoryLabel: 'Serialização & Protocolos',
+    icon: 'Binary',
+    badge: 'Varint & ZigZag',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'binary-serialization-protobuf-suite',
+    suiteTab: 'varint-zigzag',
+    tags: ['varint', 'zigzag', 'leb128', 'protobuf encoding', 'inteiros compactos', 'msb bit', 'compactacao binaria']
+  },
+  {
+    id: 'msgpack-cbor-inspector-tool',
+    title: 'Comparador Binário: MessagePack vs CBOR vs JSON',
+    description: 'Compare o peso de payloads JSON contra formatos binários compactos MessagePack e CBOR (RFC 8949), calculando economia de banda em bytes e simulação de transferência HTTP Gzip.',
+    category: 'dev-4devs',
+    categoryLabel: 'Serialização & Protocolos',
+    icon: 'Zap',
+    badge: 'MsgPack vs CBOR',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'binary-serialization-protobuf-suite',
+    suiteTab: 'msgpack-cbor',
+    tags: ['msgpack', 'cbor', 'json binary', 'rfc 8949', 'economia banda', 'serializacao compacta', 'payload size']
+  },
+  {
+    id: 'flatbuffers-vtable-visualizer-tool',
+    title: 'Visualizador de Tabelas Virtuais FlatBuffers (Zero-Copy)',
+    description: 'Visualize a estrutura de memória zero-copy de FlatBuffers (Google), inspeção de offsets da VTable, tamanho de tabela e mapeamento direto de campos sem alocação extra no Heap.',
+    category: 'dev-4devs',
+    categoryLabel: 'Serialização & Protocolos',
+    icon: 'Layers',
+    badge: 'FlatBuffers VTable',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'binary-serialization-protobuf-suite',
+    suiteTab: 'flatbuffers-vtable',
+    tags: ['flatbuffers', 'vtable', 'zero-copy', 'google flatbuffers', 'memory layout', 'buffer offsets', 'desempenho heap']
+  },
+  {
+    id: 'binary-tlv-asn1-der-builder-tool',
+    title: 'Parser & Construtor de Estruturas TLV / ASN.1 BER',
+    description: 'Faça parsing e inspeção de estruturas binárias TLV (Tag-Length-Value) no padrão EMV de pagamentos e ASN.1 BER/DER de telecomunicações e smart cards com detecção de tags de 1 e 2 bytes.',
+    category: 'dev-4devs',
+    categoryLabel: 'Serialização & Protocolos',
+    icon: 'Table',
+    badge: 'TLV / EMV BER',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'binary-serialization-protobuf-suite',
+    suiteTab: 'tlv-asn1',
+    tags: ['tlv', 'asn1', 'emv', 'iso 7816', 'tag length value', 'cartao inteligente', 'pagamentos']
   }
 ];

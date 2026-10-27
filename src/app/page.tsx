@@ -84,6 +84,7 @@ import { DataCompressionStreamsSuite } from '@/components/tools/DataCompressionS
 import { V8MemoryAndGarbageCollectionSuite } from '@/components/tools/V8MemoryAndGarbageCollectionSuite';
 import { WebCryptoSymmetricAndWebRtcSuite } from '@/components/tools/WebCryptoSymmetricAndWebRtcSuite';
 import { WebAssemblyAndAstBytecodeSuite } from '@/components/tools/WebAssemblyAndAstBytecodeSuite';
+import { BinarySerializationProtobufSuite } from '@/components/tools/BinarySerializationProtobufSuite';
 
 import { 
   Search, 
@@ -736,6 +737,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'wasm-ast-bytecode-suite' && (
               <WebAssemblyAndAstBytecodeSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'binary-serialization-protobuf-suite' && (
+              <BinarySerializationProtobufSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
