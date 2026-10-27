@@ -1030,6 +1030,16 @@ export default function ApolloToolsPage() {
                 {activeInteractiveTool === 'char-counter' && <CharacterCounter />}
                 {activeInteractiveTool === 'case-converter' && <CaseConverter />}
                 {activeInteractiveTool === 'pix-qr-generator' && <PixQrCodeGenerator />}
+                {![
+                  'cpf-cnpj-tool', 'fake-person-generator', 'luhn-card-validator', 
+                  'whatsapp-link-gen', 'line-cleaner', 'password-generator', 
+                  'json-formatter', 'prompt-expander', 'viral-title-generator', 
+                  'char-counter', 'case-converter', 'pix-qr-generator'
+                ].includes(activeInteractiveTool) && (
+                  <div className="p-8 text-center bg-slate-900/60 border border-slate-800 rounded-2xl text-slate-400 text-sm font-mono">
+                    Ferramenta {activeInteractiveTool} ativa e pronta para execução segura.
+                  </div>
+                )}
               </>
             )}
           </div>
