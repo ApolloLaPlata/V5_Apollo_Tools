@@ -120,6 +120,7 @@ import { StringTheoryAndQuantumGravitySuite } from '@/components/tools/StringThe
 import { TheoryOfEverythingAndSupersymmetrySuite } from '@/components/tools/TheoryOfEverythingAndSupersymmetrySuite';
 import { HighEnergyAstrophysicsAndCosmicRaysSuite } from '@/components/tools/HighEnergyAstrophysicsAndCosmicRaysSuite';
 import { AstrobiologyExoplanetsAndHabitabilitySuite } from '@/components/tools/AstrobiologyExoplanetsAndHabitabilitySuite';
+import { BiologicalNeuralNetworksAndElectrophysiologySuite } from '@/components/tools/BiologicalNeuralNetworksAndElectrophysiologySuite';
 
 import { 
   Search, 
@@ -880,6 +881,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'astrobiology-exoplanets-suite' && (
               <AstrobiologyExoplanetsAndHabitabilitySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'biological-neural-networks-suite' && (
+              <BiologicalNeuralNetworksAndElectrophysiologySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
