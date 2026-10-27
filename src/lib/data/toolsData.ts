@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -4533,5 +4533,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'svg-design-tokens-suite',
     suiteTab: 'bezier-easing',
     tags: ['cubic bezier', 'easing css', 'transicoes animacao', 'spring easing', 'material easing', 'css motion']
+  },
+  // ==========================================
+  // ETAPA 60: SUÍTE DE COMPRESSÃO, WEBASSEMBLY & IMAGENS MODERNAS
+  // ==========================================
+  {
+    id: 'avif-webp-batch-compressor-tool',
+    title: 'Compressor e Conversor de Imagens WebP & AVIF',
+    description: 'Comprima imagens em lote no navegador com controle fino de qualidade cromática, redução de até 85% de peso e stripping de metadados EXIF sem backend.',
+    category: 'dev-4devs',
+    categoryLabel: 'Imagens & Compressão',
+    icon: 'ImageIcon',
+    badge: 'WebP & AVIF Compressor',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'modern-images-wasm-suite',
+    suiteTab: 'batch-compressor',
+    tags: ['webp', 'avif', 'compressor imagem', 'otimizador foto', 'canvas compress', 'reduzir peso foto']
+  },
+  {
+    id: 'responsive-picture-srcset-builder-tool',
+    title: 'Gerador de <picture> & srcset HTML Responsivo',
+    description: 'Crie tags <picture> com múltiplas resoluções e formatos AVIF/WebP, gerando carregamento assíncrono e economizando dados móveis em 4G/3G.',
+    category: 'dev-4devs',
+    categoryLabel: 'HTML & Performance Web',
+    icon: 'FileCode2',
+    badge: 'HTML Picture & srcset',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'modern-images-wasm-suite',
+    suiteTab: 'picture-srcset',
+    tags: ['srcset', 'picture tag', 'html responsivo', 'lazy loading', 'core web vitals', 'economia de dados']
+  },
+  {
+    id: 'blurhash-lqip-placeholder-generator-tool',
+    title: 'Gerador de LQIP & BlurHash (Zero Cumulative Layout Shift)',
+    description: 'Gere miniaturas borradas de 16x10px em Data URI Base64 (< 200 bytes) compatíveis com Next.js placeholder=blur para carregamento progressivo suave.',
+    category: 'dev-4devs',
+    categoryLabel: 'Next.js & Performance',
+    icon: 'Eye',
+    badge: 'LQIP Base64 Blur',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'modern-images-wasm-suite',
+    suiteTab: 'lqip-blurhash',
+    tags: ['lqip', 'blurhash', 'nextjs image blur', 'placeholder base64', 'zero cls', 'cumulative layout shift']
+  },
+  {
+    id: 'ico-favicon-multi-resolution-packer-tool',
+    title: 'Empacotador de Favicon .ico & PWA Webmanifest',
+    description: 'Configure tags <link> para favicon.ico, Apple Touch Icon 180x180 e baixe o manifesto PWA site.webmanifest compatível com Android e iOS.',
+    category: 'dev-4devs',
+    categoryLabel: 'PWA & Favicons',
+    icon: 'Layers',
+    badge: 'Favicon & PWA Manifest',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'modern-images-wasm-suite',
+    suiteTab: 'favicon-packer',
+    tags: ['favicon', 'ico packer', 'apple touch icon', 'webmanifest', 'pwa manifest', 'meta theme-color']
+  },
+  {
+    id: 'aspect-ratio-padding-hack-calculator-tool',
+    title: 'Calculadora de Aspect Ratio & Padding Hack (Anti-CLS)',
+    description: 'Calcule a porcentagem de padding-top e a regra moderna aspect-ratio (16:9, 1:1, 4:5, 9:16) para reservar espaço antes do carregamento e eliminar saltos de tela.',
+    category: 'dev-4devs',
+    categoryLabel: 'CSS & Layout Stability',
+    icon: 'Maximize2',
+    badge: 'Aspect Ratio Calc',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'modern-images-wasm-suite',
+    suiteTab: 'aspect-ratio-cls',
+    tags: ['aspect ratio', 'padding hack', 'cls', 'layout shift', '16:9', '9:16 reels', 'css proporcional']
   }
 ];

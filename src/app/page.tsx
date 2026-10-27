@@ -79,6 +79,7 @@ import { ServerBenchmarksAndMetricsSuite } from '@/components/tools/ServerBenchm
 import { AiTelemetryAndTokenEconomicsSuite } from '@/components/tools/AiTelemetryAndTokenEconomicsSuite';
 import { PromptEngineeringReasoningSuite } from '@/components/tools/PromptEngineeringReasoningSuite';
 import { SvgVectorAndDesignTokensSuite } from '@/components/tools/SvgVectorAndDesignTokensSuite';
+import { ModernImageCompressionWasmSuite } from '@/components/tools/ModernImageCompressionWasmSuite';
 
 import { 
   Search, 
@@ -716,6 +717,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'svg-design-tokens-suite' && (
               <SvgVectorAndDesignTokensSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'modern-images-wasm-suite' && (
+              <ModernImageCompressionWasmSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
