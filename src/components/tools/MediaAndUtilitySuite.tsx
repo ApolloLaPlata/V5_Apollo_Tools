@@ -215,15 +215,17 @@ export function MediaAndUtilitySuite({ defaultTab = 'canvas-image' }: { defaultT
   const [notepadText, setNotepadText] = useState<string>('');
 
   useEffect(() => {
-    const saved = localStorage.getItem('v5_tools_notepad');
-    if (saved) {
-      setNotepadText(saved);
-    }
+    try {
+      const saved = localStorage.getItem('v5_tools_notepad');
+      if (saved) {
+        setNotepadText(saved);
+      }
+    } catch {}
   }, []);
 
   const handleNotepadChange = (val: string) => {
     setNotepadText(val);
-    localStorage.setItem('v5_tools_notepad', val);
+    try { localStorage.setItem('v5_tools_notepad', val); } catch {}
   };
 
   const downloadNotepad = () => {
@@ -233,7 +235,7 @@ export function MediaAndUtilitySuite({ defaultTab = 'canvas-image' }: { defaultT
     link.download = `nota-apollo-${new Date().toISOString().slice(0, 10)}.txt`;
     link.href = url;
     link.click();
-    URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
 
   const notepadStats = useMemo(() => {

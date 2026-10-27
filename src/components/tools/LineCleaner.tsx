@@ -64,7 +64,7 @@ export function LineCleaner() {
     link.href = url;
     link.download = 'lista-limpa-v5.txt';
     link.click();
-    URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
 
   return (

@@ -110,7 +110,7 @@ export const DataCompressionStreamsSuite: React.FC<DataCompressionStreamsSuitePr
     a.href = url;
     a.download = `payload.${compressionFormat === 'gzip' ? 'gz' : 'deflate'}`;
     a.click();
-    URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
 
   // ==========================================
@@ -262,7 +262,7 @@ export const DataCompressionStreamsSuite: React.FC<DataCompressionStreamsSuitePr
     a.href = url;
     a.download = 'pacote-v5-tools.tar';
     a.click();
-    URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
 
   // ==========================================

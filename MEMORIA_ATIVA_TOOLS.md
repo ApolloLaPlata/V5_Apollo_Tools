@@ -234,6 +234,11 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 - **Prevenção de Esgotamento de Hardware de Áudio (AudioContext):** Fechamento automático de instâncias de `AudioContext` após reprodução em `TimeAndFocusSuite.tsx`, `AudioVideoAndSocialSuite.tsx` e `MediaAndAudioStudioSuite.tsx`, eliminando vazamento de contextos de áudio e erros de limite de hardware atingido no navegador.
 - **Dinamização de Contadores da Command Palette:** Rodapé do modal `Ctrl+K` atualizado para exibir `{TOOLS_CATALOG.length}` em tempo real.
 
+- **Fase 6 - Saneamento de Downloads de Blob (Prevenção de Cancelamento Prematuro):** Substituição de chamadas síncronas imediatas a `URL.revokeObjectURL(url)` por descarte assíncrono diferido com `setTimeout(() => URL.revokeObjectURL(url), 1000)` em 9 componentes (`ComfyWorkflowModal.tsx`, `DataCompressionStreamsSuite.tsx`, `DevAndCvSuite.tsx`, `DevOpsAndGitSuite.tsx`, `DocumentAndOpenSourceSuite.tsx`, `FakePersonGenerator.tsx`, `JsonFormatter.tsx`, `LineCleaner.tsx` e `MediaAndAudioStudioSuite.tsx`), eliminando falhas de download ('Failed - Network error') em navegadores restritivos.
+- **Fase 6 - Proteção de Armazenamento Local (localStorage Defensivo):** Blindagem com try/catch em chamadas de `localStorage.getItem` e `localStorage.setItem` no Bloco de Notas (`MediaAndUtilitySuite.tsx`), protegendo contra falhas em Modo Privado estrito ou `QuotaExceededError`.
+- **Fase 6 - Segurança Web e Sanitização Numérica no Pix:** Em `PixQrCodeGenerator.tsx`, sanitização de parsing para valores com vírgula (`amount.replace(',', '.')`), blindagem contra `NaN` e injeção de `rel="noopener noreferrer"` no link de download contra vulnerabilidades de reverse-tabnabbing.
+- **Fase 6 - Responsividade Mobile em Tabelas Densas:** Injeção de `overflow-x-auto` na tabela ASCII de 6 colunas (`TextManipulatorSuite.tsx`), garantindo rolagem horizontal suave em viewports mobile (< 640px) sem deformar a grade geral da aplicação.
+
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário

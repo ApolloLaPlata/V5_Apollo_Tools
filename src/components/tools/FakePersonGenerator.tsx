@@ -215,7 +215,7 @@ Senha Sugerida: ${person.senhaMock}`;
     a.href = url;
     a.download = `mock_pessoas_${Date.now()}.json`;
     a.click();
-    URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
 
   const downloadCsv = () => {
@@ -232,7 +232,7 @@ Senha Sugerida: ${person.senhaMock}`;
     a.href = url;
     a.download = `mock_pessoas_${Date.now()}.csv`;
     a.click();
-    URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
 
   return (

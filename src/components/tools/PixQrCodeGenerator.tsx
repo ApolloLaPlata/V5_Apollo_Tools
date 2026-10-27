@@ -33,7 +33,8 @@ export function PixQrCodeGenerator() {
 
     const cleanName = merchantName.trim().toUpperCase().slice(0, 25) || 'RECEBEDOR';
     const cleanCity = merchantCity.trim().toUpperCase().slice(0, 15) || 'SAO PAULO';
-    const numAmount = parseFloat(amount || '0');
+    const parsed = parseFloat((amount || '0').replace(',', '.'));
+    const numAmount = isNaN(parsed) || parsed < 0 ? 0 : parsed;
 
     // 00: Format Indicator (01)
     const f00 = '000201';
@@ -154,11 +155,12 @@ export function PixQrCodeGenerator() {
             <img src={qrCodeUrl} alt="QR Code Pix" className="w-44 h-44 object-contain" />
           </div>
           <span className="text-xs font-bold text-slate-200">
-            R$ {parseFloat(amount || '0').toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+            R$ {(isNaN(parseFloat((amount || '0').replace(',', '.'))) || parseFloat((amount || '0').replace(',', '.')) < 0 ? 0 : parseFloat((amount || '0').replace(',', '.'))).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
           </span>
           <a
             href={qrCodeUrl}
             target="_blank"
+            rel="noopener noreferrer"
             download="qrcode_pix.png"
             className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition flex items-center gap-1.5 cursor-pointer"
           >

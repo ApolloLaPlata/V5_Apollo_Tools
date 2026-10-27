@@ -151,7 +151,7 @@ export const MediaAndAudioStudioSuite: React.FC<MediaAndAudioStudioSuiteProps> =
     a.href = url;
     a.download = `apollo-${synthType}-${synthFreq}Hz.wav`;
     a.click();
-    URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
 
   // ==========================================
@@ -647,7 +647,7 @@ ${rects}
                     a.href = url;
                     a.download = `waveform-${Date.now()}.svg`;
                     a.click();
-                    URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
                   }}
                   className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-blue-600/20 text-blue-300 hover:bg-blue-600/30 border border-blue-500/30 text-xs font-medium transition-all"
                 >

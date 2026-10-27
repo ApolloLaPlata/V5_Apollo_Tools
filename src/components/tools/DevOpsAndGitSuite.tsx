@@ -76,7 +76,7 @@ export const DevOpsAndGitSuite: React.FC<DevOpsAndGitSuiteProps> = ({ defaultTab
     a.href = url;
     a.download = '.gitignore';
     a.click();
-    URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
 
   // ==========================================

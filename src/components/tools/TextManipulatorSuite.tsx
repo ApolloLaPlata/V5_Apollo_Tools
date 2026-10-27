@@ -905,7 +905,7 @@ export function TextManipulatorSuite({ defaultTab = 'fontes' }: { defaultTab?: T
               </div>
             </div>
 
-            <div className="max-h-60 overflow-y-auto rounded-xl border border-slate-800">
+            <div className="max-h-60 overflow-y-auto overflow-x-auto rounded-xl border border-slate-800">
               <table className="w-full text-left text-xs font-mono">
                 <thead className="bg-slate-900 text-slate-400 border-b border-slate-800 sticky top-0">
                   <tr>

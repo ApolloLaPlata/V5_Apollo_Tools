@@ -101,7 +101,7 @@ export const DocumentAndOpenSourceSuite: React.FC<DocumentAndOpenSourceSuiteProp
     a.href = url;
     a.download = fileName.endsWith('.txt') ? fileName : `${fileName}.txt`;
     a.click();
-    URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
 
   // ==========================================
@@ -129,7 +129,7 @@ export const DocumentAndOpenSourceSuite: React.FC<DocumentAndOpenSourceSuiteProp
       a.href = url;
       a.download = `qrcode-v5apollo-${Date.now()}.${format}`;
       a.click();
-      URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
     } catch {
       window.open(format === 'svg' ? qrSvgUrl : qrPngUrl, '_blank');
     }
@@ -314,7 +314,7 @@ export const DocumentAndOpenSourceSuite: React.FC<DocumentAndOpenSourceSuiteProp
     a.href = url;
     a.download = 'LICENSE';
     a.click();
-    URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
 
   return (
