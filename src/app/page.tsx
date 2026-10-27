@@ -122,6 +122,7 @@ import { HighEnergyAstrophysicsAndCosmicRaysSuite } from '@/components/tools/Hig
 import { AstrobiologyExoplanetsAndHabitabilitySuite } from '@/components/tools/AstrobiologyExoplanetsAndHabitabilitySuite';
 import { BiologicalNeuralNetworksAndElectrophysiologySuite } from '@/components/tools/BiologicalNeuralNetworksAndElectrophysiologySuite';
 import { QuantitativePharmacologyAndPbpkSuite } from '@/components/tools/QuantitativePharmacologyAndPbpkSuite';
+import { SystemsImmunologyAndViralDynamicsSuite } from '@/components/tools/SystemsImmunologyAndViralDynamicsSuite';
 
 import { 
   Search, 
@@ -1009,6 +1010,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'quantitative-pharmacology-pbpk-suite' && (
               <QuantitativePharmacologyAndPbpkSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'systems-immunology' && (
+              <SystemsImmunologyAndViralDynamicsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
