@@ -242,6 +242,8 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 - **Fase 7 - Sanitização Soberana de SVG e Markdown (Anti-XSS):** Implementação de `src/lib/utils/svgSanitizer.ts` com neutralização de scripts, foreignObjects e manipuladores de eventos inline em `SvgVectorAndDesignTokensSuite.tsx`, `VectorAndPixelOptimizationSuite.tsx` e `WebAssetsAndDiagnosticsSuite.tsx`. Sanitização prévia de entidades HTML no live preview de Markdown (`DataAndDevFormatsSuite.tsx`).
 - **Fase 7 - Acessibilidade por Teclado e Ciclo de Vida da Command Palette:** Suporte ao fechamento de todos os modais (ComfyUI Workflow e Command Palette) via tecla `Escape`, além de limpeza automática do estado de consulta (`commandQuery`) após ativação de ferramenta em `src/app/page.tsx`.
 
+- **Fase 8 - Homologação Universal de Acessibilidade WCAG 2.1 (Zero Botões Órfãos):** Eliminação de 100% dos botões puramente de ícone sem acessibilidade na plataforma, com injeção de `aria-label` e `title` semânticos em `BrazilianDocsSuite.tsx` (geradores de CNH, Título de Eleitor e Certidão de Nascimento), `VehiclesAndBanksSuite.tsx` (cópia e regeneração de Renavam), `ComfyWorkflowModal.tsx` (botão fechar) e `LotteryAndGamesSuite.tsx` (adição de itens na roleta). Blindagem de acessibilidade nos controles globais de `src/app/page.tsx` (atalho `⌘K`, fechar bancada, favoritar e copiar link direto).
+
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário

@@ -521,12 +521,16 @@ export function VehiclesAndBanksSuite({
                   </span>
                   <button
                     onClick={() => copyToClipboard(renavam, 'renavam')}
+                    aria-label="Copiar Renavam"
+                    title="Copiar Renavam"
                     className="p-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs transition cursor-pointer shrink-0"
                   >
                     {copiedKey === 'renavam' ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   </button>
                   <button
                     onClick={generateRenavam}
+                    aria-label="Gerar novo Renavam"
+                    title="Gerar novo Renavam"
                     className="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer shrink-0"
                   >
                     <RefreshCw className="w-4 h-4" />

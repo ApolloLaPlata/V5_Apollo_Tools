@@ -541,6 +541,8 @@ export function LotteryAndGamesSuite({ defaultTab = 'loterias' }: { defaultTab?:
                 />
                 <button
                   onClick={handleAdicionarItemRoleta}
+                  aria-label="Adicionar item à roleta"
+                  title="Adicionar Item"
                   className="px-3.5 py-2 rounded-xl bg-amber-500 text-slate-950 font-bold text-xs hover:bg-amber-400 transition cursor-pointer"
                 >
                   <Plus className="w-4 h-4" />

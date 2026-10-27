@@ -185,6 +185,8 @@ export function ComfyWorkflowModal({ tool, onClose }: ComfyWorkflowModalProps) {
 
           <button
             onClick={onClose}
+            aria-label="Fechar detalhes do workflow"
+            title="Fechar (Esc)"
             className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition cursor-pointer shrink-0"
           >
             <X className="w-5 h-5" />

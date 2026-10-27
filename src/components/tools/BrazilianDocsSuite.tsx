@@ -504,6 +504,8 @@ export function BrazilianDocsSuite({ defaultTab = 'cpf' }: { defaultTab?: 'cpf' 
               </button>
               <button
                 onClick={generateCnh}
+                aria-label="Gerar nova CNH fictícia"
+                title="Gerar nova CNH"
                 className="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer shrink-0"
               >
                 <RefreshCw className="w-4 h-4" />
@@ -598,6 +600,8 @@ export function BrazilianDocsSuite({ defaultTab = 'cpf' }: { defaultTab?: 'cpf' 
               </button>
               <button
                 onClick={generateTitulo}
+                aria-label="Gerar novo Título de Eleitor"
+                title="Gerar novo Título"
                 className="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer shrink-0"
               >
                 <RefreshCw className="w-4 h-4" />
@@ -662,6 +666,8 @@ export function BrazilianDocsSuite({ defaultTab = 'cpf' }: { defaultTab?: 'cpf' 
               </button>
               <button
                 onClick={generateCertidao}
+                aria-label="Gerar nova Certidão de Nascimento"
+                title="Gerar nova Certidão"
                 className="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer shrink-0"
               >
                 <RefreshCw className="w-4 h-4" />

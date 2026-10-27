@@ -685,6 +685,7 @@ export default function ApolloToolsPage() {
               </div>
               <button
                 onClick={() => setActiveInteractiveTool(null)}
+                aria-label="Fechar bancada de ferramenta interativa"
                 className="text-xs text-slate-400 hover:text-white flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 transition cursor-pointer"
               >
                 <X className="w-3.5 h-3.5" />
@@ -1135,6 +1136,7 @@ export default function ApolloToolsPage() {
                         <button
                           onClick={(e) => copyShareLink(tool.id, e)}
                           title="Copiar Link Direto"
+                          aria-label="Copiar Link Direto para ${tool.title}"
                           className="p-1 rounded-lg text-slate-500 hover:text-cyan-400 hover:bg-slate-800 transition cursor-pointer"
                         >
                           {copiedLinkToolId === tool.id ? (
@@ -1147,6 +1149,7 @@ export default function ApolloToolsPage() {
                         <button
                           onClick={(e) => toggleFavorite(tool.id, e)}
                           title={favorites.includes(tool.id) ? "Remover dos Favoritos" : "Favoritar Ferramenta"}
+                          aria-label={favorites.includes(tool.id) ? "Remover dos Favoritos" : "Favoritar Ferramenta"}
                           className="p-1 rounded-lg text-slate-500 hover:text-amber-400 hover:bg-slate-800 transition cursor-pointer"
                         >
                           <Star
@@ -1228,6 +1231,8 @@ export default function ApolloToolsPage() {
               />
               <button
                 onClick={() => setIsCommandOpen(false)}
+                aria-label="Fechar busca rápida"
+                title="Fechar (Esc)"
                 className="p-1 rounded-lg text-slate-500 hover:text-white bg-slate-800/60 text-xs font-mono"
               >
                 ESC
