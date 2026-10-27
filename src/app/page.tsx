@@ -97,6 +97,7 @@ import { WebCodecsAndMediaMuxerSuite } from '@/components/tools/WebCodecsAndMedi
 import { WebSpeechAndVoiceSuite } from '@/components/tools/WebSpeechAndVoiceSuite';
 import { WebGpuRenderingAndShadersSuite } from '@/components/tools/WebGpuRenderingAndShadersSuite';
 import { WebXrSpatialAndSensorsSuite } from '@/components/tools/WebXrSpatialAndSensorsSuite';
+import { WebNnAndOnnxGraphSuite } from '@/components/tools/WebNnAndOnnxGraphSuite';
 
 import { 
   Search, 
@@ -788,6 +789,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'webxr-spatial-sensors-suite' && (
               <WebXrSpatialAndSensorsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'webnn-onnx-suite' && (
+              <WebNnAndOnnxGraphSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
