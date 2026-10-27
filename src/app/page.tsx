@@ -94,6 +94,7 @@ import { WebTransportAndHttp3Suite } from '@/components/tools/WebTransportAndHtt
 import { HomomorphicAndZkpSuite } from '@/components/tools/HomomorphicAndZkpSuite';
 import { WebGpuComputeShadersSuite } from '@/components/tools/WebGpuComputeShadersSuite';
 import { WebCodecsAndMediaMuxerSuite } from '@/components/tools/WebCodecsAndMediaMuxerSuite';
+import { WebSpeechAndVoiceSuite } from '@/components/tools/WebSpeechAndVoiceSuite';
 
 import { 
   Search, 
@@ -776,6 +777,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'webcodecs-media-muxer-suite' && (
               <WebCodecsAndMediaMuxerSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'web-speech-voice-suite' && (
+              <WebSpeechAndVoiceSuite key={activeInteractiveTool} initialTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
