@@ -104,6 +104,7 @@ import { HybridPqcAndStatefulHashSuite } from '@/components/tools/HybridPqcAndSt
 import { WebGpuPhysicsAndFluidSuite } from '@/components/tools/WebGpuPhysicsAndFluidSuite';
 import { SpatialAudioAndAmbisonicsSuite } from '@/components/tools/SpatialAudioAndAmbisonicsSuite';
 import { PairingCryptoAndThresholdSuite } from '@/components/tools/PairingCryptoAndThresholdSuite';
+import { CrossShaderCompilerAndReflectionSuite } from '@/components/tools/CrossShaderCompilerAndReflectionSuite';
 
 import { 
   Search, 
@@ -816,6 +817,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'pairing-crypto-threshold-suite' && (
               <PairingCryptoAndThresholdSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'cross-shader-reflection-suite' && (
+              <CrossShaderCompilerAndReflectionSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
