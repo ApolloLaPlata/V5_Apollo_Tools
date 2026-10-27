@@ -373,7 +373,7 @@ export function NextGenVideoAndHdrColorSuite({ defaultTab, initialTool }: { defa
       newChildren.push(
         { id: `${selectedBlockId}_tv0_${ts}`, x: target.x, y: target.y, w: qW, h: target.h, splitType: 'none' },
         { id: `${selectedBlockId}_tv1_${ts}`, x: target.x + qW, y: target.y, w: mW, h: target.h, splitType: 'none' },
-        { id: `${selectedBlockId}_tv2_${ts}`, x: target.x + qW + mW, y: target.w, h: target.h, splitType: 'none' }
+        { id: `${selectedBlockId}_tv2_${ts}`, x: target.x + qW + mW, y: target.y, w: qW, h: target.h, splitType: 'none' }
       );
     }
 

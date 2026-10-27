@@ -226,7 +226,7 @@ footer {
   }, [hintType, hintUrl, asType, isCrossOrigin]);
 
   // Presets populares de CDNs
-  const applyCdnPreset = (url: string, type: 'preconnect' | 'preload', asVal: string = 'style', cross: boolean = true) => {
+  const applyCdnPreset = (url: string, type: 'preconnect' | 'preload' | 'dns-prefetch', asVal: string = 'style', cross: boolean = true) => {
     setHintUrl(url);
     setHintType(type);
     setAsType(asVal);
@@ -603,7 +603,7 @@ footer {
                 <div className="flex justify-between items-center">
                   <label className="text-xs font-semibold text-slate-300">Tag &lt;style id="critical-css"&gt; Inline:</label>
                   <button
-                    onClick={() => copyToClipboard(criticalCssResult.htmlTag, 'crit-css')}
+                    onClick={() => copyToClipboard(criticalCssResult.htmlTag || '', 'crit-css')}
                     className="text-xs text-slate-400 hover:text-white flex items-center gap-1"
                   >
                     {copiedKey === 'crit-css' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}

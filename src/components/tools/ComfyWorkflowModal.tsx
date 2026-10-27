@@ -47,7 +47,14 @@ export function ComfyWorkflowModal({ tool, onClose }: ComfyWorkflowModalProps) {
   const workflowDetails = useMemo(() => {
     if (!tool) return null;
 
-    let nodes = [
+    interface WorkflowNode {
+      id: string;
+      type: string;
+      title: string;
+      inputs: Record<string, any>;
+    }
+
+    let nodes: WorkflowNode[] = [
       { id: "1", type: "CheckpointLoaderSimple", title: "Carregador de Checkpoint", inputs: { ckpt_name: tool.modelTarget || "Flux1-Dev-Q8.safetensors" } },
       { id: "2", type: "CLIPTextEncode", title: "Prompt Positivo (CLIP)", inputs: { text: "high quality, ultra-detailed, photorealistic, 8k resolution" } },
       { id: "3", type: "CLIPTextEncode", title: "Prompt Negativo (CLIP)", inputs: { text: "blurry, low quality, distorted, artifacts, watermark" } },

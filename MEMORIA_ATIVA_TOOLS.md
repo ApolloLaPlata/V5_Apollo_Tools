@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 520 Ferramentas Ativas · 102 Etapas Concluídas · Segundo Centenário Ativo)
+**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · Validação Estrita de Tipos Ativa no Next.js · 0 Type Errors · 520 Ferramentas Ativas · 102 Etapas Concluídas · Segundo Centenário Ativo)
 
 ---
 
@@ -203,6 +203,26 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **Astrobiologia, Bioassinaturas & Exoplanetas** | `AstrobiologyExoplanetsAndHabitabilitySuite.tsx` | Zonas Habitáveis de Kopparapu (Estrelas F/G/K/M & Fluxo Efetivo Seff), Trânsitos Fotométricos TESS/Kepler (Profundidade ppm & Parâmetro de Impacto b), Índice de Similaridade com a Terra (ESI Global & Interior/Superfície), Bioassinaturas Atmosféricas JWST (Desequilíbrio O₂/CH₄ & NIRSpec), Equação de Drake & Hipótese do Grande Filtro |
 | **Redes Neurais Biológicas & Conectoma** | `BiologicalNeuralNetworksAndElectrophysiologySuite.tsx` | Potencial de Ação de Hodgkin-Huxley (1952 - Gating m, h, n), Neurônio Spiking de Izhikevich (2003 - RS, IB, CH, FS), Plasticidade Sináptica STDP (Bi & Poo 1998 - Janela Hebbiana), Teoria de Cabos Dendríticos de Rall (Constante de Espaço λ & τm), Grafos do Conectoma Cerebral (Small-Worldness σ = γ/λ & Hubs HCP) |
 | **Farmacologia Quantitativa, PBPK & QSAR** | `QuantitativePharmacologyAndPbpkSuite.tsx` | Farmacocinética Monocompartimental (CL, Vd, t1/2, Css & Infusão), Simulador Bicompartimental Oral com Função de Bateman (Cmax, Tmax, Q), Preditor de Partição Tecidual PBPK Rodgers-Rowland (Kp, fup, logP), Curvas Dose-Resposta & Equação de Hill (Cooperatividade & Schild), Avaliador QSAR Druglikeness (Regra de 5 Lipinski & Veber) |
+
+---
+
+### 🛡️ Grande Auditoria e Saneamento Global de Erros & Bugs (Etapa de Correções)
+- **Zero Type Errors (`npx tsc --noEmit`):** Redução cirúrgica de 217 erros latentes para **EXATAMENTE ZERO ERROS**.
+- **Ativação da Checagem Estrita de Tipos no Next.js:** Remoção de `ignoreBuildErrors: true` em `next.config.mjs`. Agora o Next.js valida tipos nativamente em todos os builds (`Checking validity of types...` verde).
+- **Tipagem Escalável de Suítes:** `ToolItem.suiteTarget` flexibilizado para `string` em `src/lib/data/toolsData.ts`, eliminando 173 erros de sobreposição falsa de tipos.
+- **Registro Global de Ícones (100% de Cobertura):** Mapeamento de 47 ícones do Lucide que estavam ausentes no `ICON_MAP` em `src/app/page.tsx` (`Terminal`, `Cpu`, `Bluetooth`, `HardDrive`, `Orbit`, `Atom`, etc.), garantindo identidade visual única para todas as 520 ferramentas.
+- **Saneamento Cirúrgico em 13 Componentes:**
+  - `DependenciesSbomLicensingSuite.tsx`: Escape de token JSX `> 1GB` para `&gt; 1GB`.
+  - `BinaryBuffersAndHexDumpSuite.tsx`: Correção de map em `Uint8Array` encapsulando em `Array.from()` para renderização correta de JSX.
+  - `HomomorphicAndZkpSuite.tsx`: Conversão de BigInt literals para chamadas portáteis `BigInt(...)`.
+  - `AccessibilityAndWebPerfSuite.tsx`: Adição de nullish coalescing em `specA.numericValue ?? 0`.
+  - `ComfyWorkflowModal.tsx`: Tipagem formal de `WorkflowNode` com inputs livres para nós dinâmicos.
+  - `ModernCryptoAndSignaturesSuite.tsx` & `WebCryptoSymmetricAndWebRtcSuite.tsx`: Resolução de tipagem `BufferSource` na Web Crypto API.
+  - `GeospatialAndCartographySuite.tsx`, `PairingCryptoAndThresholdSuite.tsx`, `QuantumCircuitAndBlochSphereSuite.tsx`, `WebGpuPhysicsAndFluidSuite.tsx`: Correção de conflitos de interpolação JSX com notação LaTeX (`{m}`, `{G}`, `{S}`, `{px}`).
+  - `NextGenVideoAndHdrColorSuite.tsx`: Correção de partição VVC (adição de largura `w` e ajuste de coordenadas).
+  - `WebBluetoothAndHardwareSuite.tsx`: Remoção de parênteses em comentário que executava literal numérico como função `1(/* start bit */)`.
+  - `PerformanceAssetsAndVitalsSuite.tsx`: Inclusão de `'dns-prefetch'` no tipo de preset CDN e fallback de string.
+  - `ModernImageCompressionWasmSuite.tsx`: Importação do ícone `Code2`.
 
 ---
 

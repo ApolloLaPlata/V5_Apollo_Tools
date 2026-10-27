@@ -93,7 +93,7 @@ export const WebCryptoSymmetricAndWebRtcSuite: React.FC<WebCryptoSymmetricAndWeb
       const ciphertextBuffer = await crypto.subtle.encrypt(
         {
           name: 'AES-GCM',
-          iv: ivBytes,
+          iv: ivBytes as any,
           tagLength: 128
         },
         key,
@@ -150,11 +150,11 @@ export const WebCryptoSymmetricAndWebRtcSuite: React.FC<WebCryptoSymmetricAndWeb
       const decryptedBuffer = await crypto.subtle.decrypt(
         {
           name: 'AES-GCM',
-          iv: ivBytes,
+          iv: ivBytes as any,
           tagLength: 128
         },
         key,
-        cipherBytes
+        cipherBytes as any
       );
 
       const dec = new TextDecoder();

@@ -239,7 +239,7 @@ export const ApiDocsOpenApiMockSuite: React.FC<ApiDocsOpenApiMockSuiteProps> = (
       return `${s.slice(0, 3)}.${s.slice(3, 6)}.${s.slice(6, 9)}-${(idx % 89 + 10)}`;
     };
 
-    const items = [];
+    const items: any[] = [];
     for (let i = 0; i < mockCount; i++) {
       const fn = firstNames[(i + mockSeed) % firstNames.length];
       const ln = lastNames[(i * 3 + mockSeed) % lastNames.length];

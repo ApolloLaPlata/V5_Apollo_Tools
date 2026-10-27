@@ -411,7 +411,7 @@ export function PairingCryptoAndThresholdSuite({ defaultTab = 'bls12-381-signatu
               <div className="space-y-3">
                 <div>
                   <div className="flex justify-between text-xs text-slate-400 mb-1.5">
-                    <span>Escalar $a$ (Ponto $P \in \mathbb{G}_1$)</span>
+                    <span>Escalar a (Ponto P no Grupo G₁)</span>
                     <span className="font-mono text-purple-400 font-bold">{scalarA}</span>
                   </div>
                   <input
@@ -427,7 +427,7 @@ export function PairingCryptoAndThresholdSuite({ defaultTab = 'bls12-381-signatu
 
                 <div>
                   <div className="flex justify-between text-xs text-slate-400 mb-1.5">
-                    <span>Escalar $b$ (Ponto $Q \in \mathbb{G}_2$)</span>
+                    <span>Escalar b (Ponto Q no Grupo G₂)</span>
                     <span className="font-mono text-cyan-400 font-bold">{scalarB}</span>
                   </div>
                   <input

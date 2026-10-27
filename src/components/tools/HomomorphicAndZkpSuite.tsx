@@ -40,7 +40,7 @@ export const HomomorphicAndZkpSuite: React.FC<HomomorphicAndZkpSuiteProps> = ({
 
   // Helper para MDC (Maior Divisor Comum)
   const gcd = (a: bigint, b: bigint): bigint => {
-    while (b > 0n) {
+    while (b > BigInt(0)) {
       const temp = b;
       b = a % b;
       a = temp;
@@ -50,9 +50,9 @@ export const HomomorphicAndZkpSuite: React.FC<HomomorphicAndZkpSuiteProps> = ({
 
   // Inverso modular
   const modInverse = (a: bigint, m: bigint): bigint => {
-    let [m0, x0, x1] = [m, 0n, 1n];
-    if (m === 1n) return 0n;
-    while (a > 1n) {
+    let [m0, x0, x1] = [m, BigInt(0), BigInt(1)];
+    if (m === BigInt(1)) return BigInt(0);
+    while (a > BigInt(1)) {
       const q = a / m;
       let t = m;
       m = a % m;
@@ -61,17 +61,17 @@ export const HomomorphicAndZkpSuite: React.FC<HomomorphicAndZkpSuiteProps> = ({
       x0 = x1 - q * x0;
       x1 = t;
     }
-    if (x1 < 0n) x1 += m0;
+    if (x1 < BigInt(0)) x1 += m0;
     return x1;
   };
 
   // Exponenciação modular segura
   const modPow = (base: bigint, exp: bigint, mod: bigint): bigint => {
-    let res = 1n;
+    let res = BigInt(1);
     base = base % mod;
-    while (exp > 0n) {
-      if (exp % 2n === 1n) res = (res * base) % mod;
-      exp = exp / 2n;
+    while (exp > BigInt(0)) {
+      if (exp % BigInt(2) === BigInt(1)) res = (res * base) % mod;
+      exp = exp / BigInt(2);
       base = (base * base) % mod;
     }
     return res;
@@ -86,21 +86,21 @@ export const HomomorphicAndZkpSuite: React.FC<HomomorphicAndZkpSuiteProps> = ({
 
   // Parâmetros Paillier simplificados para demonstração matemática exata
   const paillierData = useMemo(() => {
-    const p = 61n;
-    const q = 53n;
-    const n = p * q; // 3233n
-    const n2 = n * n; // 10452289n
-    const lambda = ((p - 1n) * (q - 1n)) / gcd(p - 1n, q - 1n); // 780n
-    const g = n + 1n; // 3234n
+    const p = BigInt(61);
+    const q = BigInt(53);
+    const n = p * q;
+    const n2 = n * n;
+    const lambda = ((p - BigInt(1)) * (q - BigInt(1))) / gcd(p - BigInt(1), q - BigInt(1));
+    const g = n + BigInt(1);
 
     // L(u) = (u - 1) / n
-    const L = (u: bigint) => (u - 1n) / n;
+    const L = (u: bigint) => (u - BigInt(1)) / n;
     const u = modPow(g, lambda, n2);
     const mu = modInverse(L(u), n);
 
     // Cifragem Paillier: c = g^m * r^n mod n^2
-    const r1 = 17n;
-    const r2 = 23n;
+    const r1 = BigInt(17);
+    const r2 = BigInt(23);
 
     const m1Big = BigInt(paillierM1);
     const m2Big = BigInt(paillierM2);

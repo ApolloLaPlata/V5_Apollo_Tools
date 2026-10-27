@@ -804,7 +804,7 @@ export function WebGpuPhysicsAndFluidSuite({ defaultTab = 'nbody-gravitational-s
                     <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400" /> Formulação de SPH
                   </div>
                   <p className="text-[11px] text-slate-400 leading-relaxed">
-                    A densidade de cada partícula é interpolada por um kernel cúbico spline de raio de suavização $h=28\text{px}$. O gradiente de pressão repele partículas colapsadas mantendo incompressibilidade.
+                    A densidade de cada partícula é interpolada por um kernel cúbico spline de raio de suavização h = 28 px. O gradiente de pressão repele partículas colapsadas mantendo incompressibilidade.
                   </p>
                 </div>
               </div>

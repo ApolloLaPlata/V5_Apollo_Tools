@@ -550,7 +550,7 @@ ${qasmIncludeMeasure ? '// 4. Medicao projetiva na base computacional Z\nc = mea
                 </div>
 
                 <div className="p-3 bg-cyan-950/20 border border-cyan-500/20 rounded-xl text-xs text-cyan-300">
-                  Todo estado puro de 1 Qubit mapeia exatamente para um ponto na superfície da esfera unitária $\mathbb{S}^2$.
+                  Todo estado puro de 1 Qubit mapeia exatamente para um ponto na superfície da esfera unitária S² (Bloch).
                 </div>
               </div>
             </div>

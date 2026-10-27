@@ -1003,7 +1003,7 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]`;
                   <AlertTriangle className="w-3.5 h-3.5" /> Problemas do Dockerfile Original:
                 </p>
                 <p className="text-amber-400/90 leading-relaxed">
-                  A linha <code>COPY . .</code> antes de <code>RUN npm install</code> invalida todo o cache de camadas do Docker a cada mudança de linha de código, forçando downloads repetidos e gerando contêineres gigantes (> 1GB).
+                  A linha <code>COPY . .</code> antes de <code>RUN npm install</code> invalida todo o cache de camadas do Docker a cada mudança de linha de código, forçando downloads repetidos e gerando contêineres gigantes (&gt; 1GB).
                 </p>
               </div>
             </div>

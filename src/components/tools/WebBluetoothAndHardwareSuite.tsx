@@ -224,7 +224,7 @@ export const WebBluetoothAndHardwareSuite: React.FC<WebBluetoothAndHardwareSuite
 
   const serialStats = useMemo(() => {
     const parityBits = parity === 'none' ? 0 : 1;
-    const totalBitsPerFrame = 1 (/* start bit */) + dataBits + parityBits + stopBits;
+    const totalBitsPerFrame = 1 /* start bit */ + dataBits + parityBits + stopBits;
     const payloadBytes = new TextEncoder().encode(serialPayload).length + 2; // + CRLF
     const totalFrameBits = payloadBytes * totalBitsPerFrame;
     const transmissionTimeMs = (totalFrameBits / baudRate) * 1000;

@@ -817,9 +817,9 @@ module.exports = {
                   </span>
 
                   <div className="text-2xl font-black font-mono">
-                    {specA.numericValue > specB.numericValue ? (
+                    {(specA.numericValue ?? 0) > (specB.numericValue ?? 0) ? (
                       <span className="text-cyan-400">✓ Seletor A Vence na Cascata!</span>
-                    ) : specB.numericValue > specA.numericValue ? (
+                    ) : (specB.numericValue ?? 0) > (specA.numericValue ?? 0) ? (
                       <span className="text-amber-400">✓ Seletor B Vence na Cascata!</span>
                     ) : (
                       <span className="text-slate-300">= Empate na Especificidade (A última regra no CSS prevalece)</span>

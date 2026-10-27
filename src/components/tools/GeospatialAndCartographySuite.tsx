@@ -281,7 +281,7 @@ export function GeospatialAndCartographySuite({ defaultTab = 'wgs84-utm-mercator
                   <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400" /> Elipsoide de Referência WGS 84
                 </div>
                 <div className="text-[11px] text-slate-400">
-                  Semieixo maior $a = 6.378.137,0\text{ m}$ · Achatamento $f = 1 / 298,257223563$.
+                  Semieixo maior a = 6.378.137,0 m · Achatamento f = 1 / 298,257223563.
                 </div>
               </div>
             </div>

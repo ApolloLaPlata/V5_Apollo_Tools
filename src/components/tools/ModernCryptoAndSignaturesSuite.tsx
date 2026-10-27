@@ -200,7 +200,7 @@ hashed = ph.hash("senha_usuario")`;
 
       const cryptoKey = await crypto.subtle.importKey(
         'raw',
-        keyBytes,
+        keyBytes as any,
         { name: 'HMAC', hash: { name: 'SHA-1' } },
         false,
         ['sign']

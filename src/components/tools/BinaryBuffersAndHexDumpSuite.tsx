@@ -619,7 +619,7 @@ export const BinaryBuffersAndHexDumpSuite: React.FC<BinaryBuffersAndHexDumpSuite
                 <div key={idx} className="flex hover:bg-slate-800/40 py-0.5 rounded px-1 transition">
                   <span className="text-slate-500 select-none w-20">{row.offset}</span>
                   <div className="text-cyan-300 w-56 flex gap-1">
-                    {row.chunk.slice(0, 8).map((b, bIdx) => (
+                    {Array.from(row.chunk.slice(0, 8)).map((b, bIdx) => (
                       <span
                         key={bIdx}
                         onClick={() => setSelectedByteOffset(row.baseIndex + bIdx)}
@@ -633,7 +633,7 @@ export const BinaryBuffersAndHexDumpSuite: React.FC<BinaryBuffersAndHexDumpSuite
                   </div>
                   <span className="text-slate-600 select-none mx-1.5"> </span>
                   <div className="text-cyan-300 w-56 flex gap-1">
-                    {row.chunk.slice(8, 16).map((b, bIdx) => (
+                    {Array.from(row.chunk.slice(8, 16)).map((b, bIdx) => (
                       <span
                         key={bIdx}
                         onClick={() => setSelectedByteOffset(row.baseIndex + 8 + bIdx)}

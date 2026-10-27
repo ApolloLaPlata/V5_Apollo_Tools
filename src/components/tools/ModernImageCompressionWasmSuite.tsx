@@ -19,6 +19,7 @@ import {
   Monitor, 
   Eye, 
   Zap,
+  Code2,
   Play
 } from 'lucide-react';
 

@@ -104,7 +104,7 @@ export const DataCompressionStreamsSuite: React.FC<DataCompressionStreamsSuitePr
   // Download do blob comprimido
   const downloadCompressedFile = () => {
     if (!compressedBytes) return;
-    const blob = new Blob([compressedBytes], { type: 'application/octet-stream' });
+    const blob = new Blob([compressedBytes as any], { type: 'application/octet-stream' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
