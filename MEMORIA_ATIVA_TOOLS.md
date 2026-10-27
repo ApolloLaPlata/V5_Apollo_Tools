@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 345 Ferramentas Ativas · 67 Etapas Concluídas)
+**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 350 Ferramentas Ativas · 68 Etapas Concluídas)
 
 ---
 
@@ -168,16 +168,17 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **Binary Serialization & Protobuf** | `BinarySerializationProtobufSuite.tsx` | Linter Proto3 & Gerador TypeScript, Codificador/Decodificador Varint LEB128 & ZigZag, Comparador MsgPack vs CBOR vs JSON, Visualizador FlatBuffers VTable, Parser TLV / EMV BER |
 | **WebRTC Media & Codecs Studio** | `WebRtcMediaAndCodecsSuite.tsx` | Calculadora Jitter Buffer & MOS ITU-T G.107, Comparador de Codecs de Áudio Opus/G.711/G.722, Matriz de Bitrates de Vídeo AV1/VP9/H.264, Custos e Egress TURN Relay, Inspecionador RTP RFC 3550 |
 | **OAuth 2.1 & OpenID Connect Security** | `OAuthSecurityAndOidcSuite.tsx` | Gerador/Validador PKCE S256 (RFC 7636), Auditor de Claims JWT/OIDC, Matriz de Escopos Least Privilege, Tokens State/Nonce (Entropia Shannon), Auditor OIDC Discovery (/.well-known) |
+| **WebGL 2.0 & Canvas 3D Diagnostics** | `WebGlAndCanvasDiagnosticsSuite.tsx` | Detector WebGL 1/2 (Unmasked Vendor & Limites), Manipulador de Pixels Canvas ImageData (Filtro Sobel BT.709), Simulador OffscreenCanvas & Workers (60 FPS), Analisador Color Gamut (Display-P3 vs sRGB), Construtor de Transformações 3D (matrix3d 4x4) |
 
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário
 - **Sistema de Favoritos Local:** Usuário pode favoritar ferramentas com 1 clique (persistência no `localStorage`).
 - **Histórico Recente de Uso:** Barra de acesso rápido às últimas ferramentas utilizadas com persistência local.
-- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 290 ferramentas.
+- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 350 ferramentas.
 - **Deep-linking Universal:** Compartilhamento direto via URL (`?tool=id`) com cópia em 1 clique e ativação automática com scroll suave.
 - **Filtro Rápido:** Aba instantânea para ferramentas favoritadas na barra de categorias.
-- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 290 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
+- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 350 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
 - **Suporte a PWA Standalone:** Arquivo `manifest.json` com paleta Cyber Obsidian (`#020617` / `#06b6d4`) para instalação como app nativo no Desktop e Mobile.
 
 ---
@@ -199,5 +200,5 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 ---
 
 ## 6. Próximos Passos
-1. Prosseguir com a Esteira Determinística de Expansão (Etapa 68: Suíte de WebGL 2.0 Diagnostics, Canvas Pixel Manipulation & Display-P3 Gamut).
+1. Prosseguir com a Esteira Determinística de Expansão (Etapa 69: Suíte de Criptografia Pós-Quântica & Algoritmos NIST - Kyber / ML-KEM, Dilithium / ML-DSA, SPHINCS+ e Análise Shor).
 2. Manter monitoramento contínuo via Shadow Logger e Colmeia.

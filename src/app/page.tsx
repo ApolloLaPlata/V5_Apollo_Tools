@@ -87,6 +87,7 @@ import { WebAssemblyAndAstBytecodeSuite } from '@/components/tools/WebAssemblyAn
 import { BinarySerializationProtobufSuite } from '@/components/tools/BinarySerializationProtobufSuite';
 import { WebRtcMediaAndCodecsSuite } from '@/components/tools/WebRtcMediaAndCodecsSuite';
 import { OAuthSecurityAndOidcSuite } from '@/components/tools/OAuthSecurityAndOidcSuite';
+import { WebGlAndCanvasDiagnosticsSuite } from '@/components/tools/WebGlAndCanvasDiagnosticsSuite';
 
 import { 
   Search, 
@@ -748,6 +749,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'oauth-security-oidc-suite' && (
               <OAuthSecurityAndOidcSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'webgl-canvas-diagnostics-suite' && (
+              <WebGlAndCanvasDiagnosticsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

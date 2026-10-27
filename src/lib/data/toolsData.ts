@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite' | 'webrtc-media-codecs-suite' | 'oauth-security-oidc-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite' | 'webrtc-media-codecs-suite' | 'oauth-security-oidc-suite' | 'webgl-canvas-diagnostics-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -5117,5 +5117,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'oauth-security-oidc-suite',
     suiteTab: 'oidc-discovery',
     tags: ['openid-configuration', 'oidc discovery', 'well-known', 'jwks_uri', 'issuer validation', 'authorization endpoint']
+  },
+  // ==========================================
+  // ETAPA 68: SUÍTE DE WEBGL, CANVAS IMAGEDATA & GRÁFICOS 3D CLIENT-SIDE (MARCO 350 FERRAMENTAS!)
+  // ==========================================
+  {
+    id: 'webgl-context-renderer-detector-tool',
+    title: 'Detector WebGL 1.0 & 2.0 (Renderer, Unmasked Vendor & Limites)',
+    description: 'Identifique em tempo real as capacidades da GPU do navegador: versão WebGL ativa, unmasked vendor/renderer via WEBGL_debug_renderer_info, tamanho máximo de texturas, MSAA e extensões suportadas.',
+    category: 'dev-4devs',
+    categoryLabel: 'Gráficos & WebGL (4Devs)',
+    icon: 'Cpu',
+    badge: 'WebGL 1 & 2 Diagnostics',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webgl-canvas-diagnostics-suite',
+    suiteTab: 'webgl-detector',
+    tags: ['webgl 2.0', 'gpu detector', 'unmasked renderer', 'unmasked vendor', 'webgl limits', 'max texture size', 'msaa samples']
+  },
+  {
+    id: 'canvas-image-data-matrix-manipulator-tool',
+    title: 'Manipulador de Matriz de Pixels ImageData Canvas (Sobel & Filtros)',
+    description: 'Manipule buffers UInt8ClampedArray de canvas em tempo real: inversão de cor, escala de cinza com luminância ITU-R BT.709, thresholding binarizado e detecção de bordas via convolução Sobel 3x3.',
+    category: 'dev-4devs',
+    categoryLabel: 'Gráficos & WebGL (4Devs)',
+    icon: 'Eye',
+    badge: 'Canvas ImageData & Convolução',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webgl-canvas-diagnostics-suite',
+    suiteTab: 'canvas-imagedata',
+    tags: ['canvas imagedata', 'pixel manipulation', 'uint8clampedarray', 'sobel edge detection', 'convolucao 3x3', 'bt.709 luminancia', 'filtros graficos']
+  },
+  {
+    id: 'offscreen-canvas-worker-simulator-tool',
+    title: 'Simulador de OffscreenCanvas & Web Workers (Thread vs 60 FPS)',
+    description: 'Compare renderização em Main Thread vs Background Worker com OffscreenCanvas: simule gargalos pesados de CPU e comprove visualmente a manutenção de 60 FPS com zero freezing de interface.',
+    category: 'dev-4devs',
+    categoryLabel: 'Gráficos & WebGL (4Devs)',
+    icon: 'Activity',
+    badge: 'OffscreenCanvas 60 FPS',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webgl-canvas-diagnostics-suite',
+    suiteTab: 'offscreencanvas-worker',
+    tags: ['offscreencanvas', 'web worker graphics', 'main thread blocking', '60 fps render', 'requestanimationframe', 'transfercontroltooffscreen']
+  },
+  {
+    id: 'color-space-gamut-checker-tool',
+    title: 'Analisador de Color Gamut (Display-P3 vs sRGB & CSS Color 4)',
+    description: 'Detecte suporte do monitor e navegador a amplas gamas de cores (P3 / Rec.2020 via media query color-gamut) e compare rendering visual de cores vibrantes com CSS color(display-p3 r g b).',
+    category: 'dev-4devs',
+    categoryLabel: 'Gráficos & WebGL (4Devs)',
+    icon: 'Palette',
+    badge: 'Display-P3 vs sRGB',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webgl-canvas-diagnostics-suite',
+    suiteTab: 'color-gamut',
+    tags: ['color gamut', 'display-p3', 'srgb', 'css color 4', 'wide color gamut', 'hdr web', 'matchmedia color-gamut']
+  },
+  {
+    id: 'css-matrix-3d-transform-builder-tool',
+    title: 'Construtor e Visualizador de Matrizes de Transformação 3D (matrix3d)',
+    description: 'Ajuste rotação nos eixos X, Y e Z, escala tridimensional, translação e perspectiva para calcular matematicamente a matriz afim 4x4 do CSS transform matrix3d() com preview 3D interativo.',
+    category: 'dev-4devs',
+    categoryLabel: 'Gráficos & WebGL (4Devs)',
+    icon: 'Box',
+    badge: 'CSS matrix3d() 4x4',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'webgl-canvas-diagnostics-suite',
+    suiteTab: 'matrix-3d',
+    tags: ['matrix3d', 'css 3d transform', 'matriz afim 4x4', 'perspectiva 3d', 'rotacao euler', 'webgl matrix', 'geometria projetiva']
   }
 ];
