@@ -252,6 +252,8 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 
 - **Fase 12 - Prevenção de DDI Duplicado e Hardening de Segurança no WhatsApp:** Tratamento inteligente em `WhatsAppLinkGenerator.tsx` para sanitizar números internacionais já colados com prefixo `55`, impedindo a formação de links corrompidos (`5555...`). Injeção de `rel="noopener noreferrer"` e acessibilidade via `aria-label` no botão de teste do link em nova aba.
 
+- **Fase 13 - Suporte Unicode Real & Regex com Acentuação em Manipulação de Texto:** Contagem real de glifos/grafemas via `Array.from(text).length` em `CharacterCounter.tsx`, suportando emojis e surrogate pairs sem distorção. Suporte a caracteres acentuados no conversor de Primeira Letra Maiúscula (`CaseConverter.tsx`) utilizando regex Unicode (`/(?:^|\s)\p{L}/gu`), inversão preservando glifos compostos e desativação reativa de botões de cópia com `disabled={!text}`.
+
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário

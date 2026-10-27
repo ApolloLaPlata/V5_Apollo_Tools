@@ -10,10 +10,10 @@ export function CaseConverter() {
   const toUpper = () => setText(text.toUpperCase());
   const toLower = () => setText(text.toLowerCase());
   const toTitle = () => {
-    setText(text.toLowerCase().replace(/(?:^|\s)\w/g, (match) => match.toUpperCase()));
+    setText(text.toLowerCase().replace(/(?:^|\s)\p{L}/gu, (match) => match.toUpperCase()));
   };
   const toInvert = () => {
-    setText(text.split('').reverse().join(''));
+    setText(Array.from(text).reverse().join(''));
   };
   const toSlug = () => {
     const slug = text
@@ -47,7 +47,9 @@ export function CaseConverter() {
 
         <button
           onClick={handleCopy}
-          className="px-3 py-1.5 rounded-xl bg-purple-500/20 hover:bg-purple-500/30 border border-purple-500/40 text-purple-300 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer"
+          disabled={!text}
+          aria-label="Copiar Texto Transformado"
+          className={`px-3 py-1.5 rounded-xl bg-purple-500/20 hover:bg-purple-500/30 border border-purple-500/40 text-purple-300 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer ${!text ? 'opacity-50 cursor-not-allowed' : ''}`}
         >
           {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
           <span>{copied ? 'Copiado!' : 'Copiar'}</span>

@@ -7,8 +7,8 @@ export function CharacterCounter() {
   const [text, setText] = useState('');
   const [copied, setCopied] = useState(false);
 
-  const charCount = text.length;
-  const charNoSpaces = text.replace(/\s/g, '').length;
+  const charCount = Array.from(text).length;
+  const charNoSpaces = Array.from(text.replace(/\s/g, '')).length;
   const wordCount = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
   const lineCount = text === '' ? 0 : text.split('\n').length;
   const paragraphCount = text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(Boolean).length;
@@ -40,14 +40,17 @@ export function CharacterCounter() {
         <div className="flex items-center gap-2">
           <button
             onClick={() => setText('')}
-            className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition cursor-pointer"
+            aria-label="Limpar texto"
             title="Limpar texto"
+            className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition cursor-pointer"
           >
             <Trash2 className="w-4 h-4" />
           </button>
           <button
             onClick={handleCopy}
-            className="px-3 py-1.5 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-500/40 text-cyan-300 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer"
+            disabled={!text}
+            aria-label="Copiar Texto"
+            className={`px-3 py-1.5 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-500/40 text-cyan-300 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer ${!text ? 'opacity-50 cursor-not-allowed' : ''}`}
           >
             {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
             <span>{copied ? 'Copiado!' : 'Copiar Texto'}</span>
