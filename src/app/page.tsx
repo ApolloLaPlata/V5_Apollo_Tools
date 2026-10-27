@@ -114,6 +114,7 @@ import { BioinformaticsAndStructuralGenomicsSuite } from '@/components/tools/Bio
 import { ParticlePhysicsAndRelativisticKinematicsSuite } from '@/components/tools/ParticlePhysicsAndRelativisticKinematicsSuite';
 import { GeneralRelativityAndGravitationalWavesSuite } from '@/components/tools/GeneralRelativityAndGravitationalWavesSuite';
 import { CosmologyAndFlrwCosmicExpansionSuite } from '@/components/tools/CosmologyAndFlrwCosmicExpansionSuite';
+import { QuantumElectrodynamicsAndVacuumSuite } from '@/components/tools/QuantumElectrodynamicsAndVacuumSuite';
 
 import { 
   Search, 
@@ -856,6 +857,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'cosmology-flrw-expansion-suite' && (
               <CosmologyAndFlrwCosmicExpansionSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'qed-vacuum-electroweak-suite' && (
+              <QuantumElectrodynamicsAndVacuumSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

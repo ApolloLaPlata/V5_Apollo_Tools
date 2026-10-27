@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 480 Ferramentas Ativas · 94 Etapas Concluídas)
+**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 485 Ferramentas Ativas · 95 Etapas Concluídas)
 
 ---
 
@@ -195,16 +195,17 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **Física de Partículas, Modelo Padrão & Cinemática Relativística** | `ParticlePhysicsAndRelativisticKinematicsSuite.tsx` | Explorador Modelo Padrão (Quarks/Léptons/Bósons), Mandelstam (s, t, u), Ressonância Breit-Wigner & Heisenberg, Diagramas de Feynman em SVG, Perda de Energia Bethe-Bloch & Pico de Bragg |
 | **Astrodinâmica Relativística, Geodésicas & Ondas Gravitacionais** | `GeneralRelativityAndGravitationalWavesSuite.tsx` | Calculador de Geometria de Buracos Negros (Schwarzschild & Kerr), Precessão do Periélio & Rosetas de Einstein, Dilatação Temporal Gravitacional & Redshift GPS, Lenteamento Gravitacional Forte & Anel de Einstein, Ondas Gravitacionais & Massa de Chirp (LIGO) |
 | **Cosmologia Observacional, Métrica FLRW & Espectro CMB** | `CosmologyAndFlrwCosmicExpansionSuite.tsx` | Calculador de Cosmologia FLRW & Densidades de Friedmann, Escada de Distâncias Cósmicas (dL, dA, dc, Lookback), Simulador de Picos Acústicos CMB Planck, Régua Padrão BAO & DESI, Energia Escura CPL (w0/wa & Big Rip) |
+| **Eletrodinâmica Quântica, Teoria Eletrofraca & Vácuo** | `QuantumElectrodynamicsAndVacuumSuite.tsx` | Força de Casimir & Energia do Vácuo (-π²ħc/240d⁴), Limite Crítico de Schwinger (1.32×10¹⁸ V/m), Ângulo de Weinberg & Unificação Eletrofraca, Lamb Shift em Hidrogênio (1057.8 MHz), Momento Magnético Anômalo g-2 (Schwinger α/2π) |
 
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário
 - **Sistema de Favoritos Local:** Usuário pode favoritar ferramentas com 1 clique (persistência no `localStorage`).
 - **Histórico Recente de Uso:** Barra de acesso rápido às últimas ferramentas utilizadas com persistência local.
-- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 480 ferramentas.
+- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 485 ferramentas.
 - **Deep-linking Universal:** Compartilhamento direto via URL (`?tool=id`) com cópia em 1 clique e ativação automática com scroll suave.
 - **Filtro Rápido:** Aba instantânea para ferramentas favoritadas na barra de categorias.
-- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 480 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
+- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 485 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
 - **Suporte a PWA Standalone:** Arquivo `manifest.json` com paleta Cyber Obsidian (`#020617` / `#06b6d4`) para instalação como app nativo no Desktop e Mobile.
 
 ---
@@ -226,5 +227,5 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 ---
 
 ## 6. Próximos Passos
-1. Prosseguir com a Esteira Determinística de Expansão (Etapa 95: Suíte de Eletrodinâmica Quântica, Teoria Eletrofraca & Efeito Casimir - Marco 485 Ferramentas).
+1. Prosseguir com a Esteira Determinística de Expansão (Etapa 96: Suíte de Cromodinâmica Quântica, Confinamento de Quarks & Plasma de Quarks-Glúons - Marco 490 Ferramentas).
 2. Manter monitoramento contínuo via Shadow Logger e Colmeia.
