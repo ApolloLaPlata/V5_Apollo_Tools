@@ -100,6 +100,7 @@ import { WebXrSpatialAndSensorsSuite } from '@/components/tools/WebXrSpatialAndS
 import { WebNnAndOnnxGraphSuite } from '@/components/tools/WebNnAndOnnxGraphSuite';
 import { WebGpuParallelAlgorithmsSuite } from '@/components/tools/WebGpuParallelAlgorithmsSuite';
 import { WebGpuRayTracingAndBvhSuite } from '@/components/tools/WebGpuRayTracingAndBvhSuite';
+import { HybridPqcAndStatefulHashSuite } from '@/components/tools/HybridPqcAndStatefulHashSuite';
 
 import { 
   Search, 
@@ -800,6 +801,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'webgpu-raytracing-suite' && (
               <WebGpuRayTracingAndBvhSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'hybrid-pqc-stateful-suite' && (
+              <HybridPqcAndStatefulHashSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
