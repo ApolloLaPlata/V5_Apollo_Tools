@@ -178,6 +178,9 @@ export function AudioVideoAndSocialSuite({ defaultTab = 'tone-generator' }: { de
 
       osc.start();
       osc.stop(ctx.currentTime + 0.05);
+      setTimeout(() => {
+        try { ctx.close(); } catch {}
+      }, 100);
     } catch {}
   };
 

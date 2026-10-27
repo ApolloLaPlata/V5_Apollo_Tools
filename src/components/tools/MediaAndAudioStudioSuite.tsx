@@ -46,6 +46,10 @@ export const MediaAndAudioStudioSuite: React.FC<MediaAndAudioStudioSuiteProps> =
   const activeSourceRef = useRef<AudioNode | null>(null);
 
   const stopAudio = () => {
+    if (audioContextRef.current) {
+      try { audioContextRef.current.close(); } catch {}
+      audioContextRef.current = null;
+    }
     if (activeSourceRef.current) {
       try {
         (activeSourceRef.current as any).stop?.();

@@ -230,6 +230,8 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 - **Resiliência de Rede & Timeouts no SDK da V5 API:** Injeção de `AbortSignal.timeout` nas chamadas de `V5ApolloClient` (10s para verificação de chave e frota, 30s para inferência), impedindo travamentos de interface em oscilações de rede.
 - **Blindagem da Clipboard API em 114 Componentes:** Tratamento global defensivo com try/catch e detecção `navigator.clipboard?.writeText(...).catch(() => {})` em todas as ferramentas da plataforma, eliminando riscos de exceções assíncronas não tratadas (ex: bloqueios de permissão do navegador, iframe sandbox e perda de foco de janela).
 - **Auditoria de SSR e Hidratação React (0 Falhas):** Verificação de que nenhum componente acessa `window` ou `localStorage` fora de blocos controlados ou `useEffect`.
+- **Implementação do CRC16-CCITT Oficial do Banco Central no Pix:** Em `PixQrCodeGenerator.tsx`, substituição do checksum estático fictício pelo algoritmo real de CRC16-CCITT (polinômio 0x1021, init 0xFFFF) com formatação TLV, tornando os QR Codes Pix gerados 100% legíveis e válidos em qualquer aplicativo bancário brasileiro.
+- **Prevenção de Esgotamento de Hardware de Áudio (AudioContext):** Fechamento automático de instâncias de `AudioContext` após reprodução em `TimeAndFocusSuite.tsx`, `AudioVideoAndSocialSuite.tsx` e `MediaAndAudioStudioSuite.tsx`, eliminando vazamento de contextos de áudio e erros de limite de hardware atingido no navegador.
 - **Dinamização de Contadores da Command Palette:** Rodapé do modal `Ctrl+K` atualizado para exibir `{TOOLS_CATALOG.length}` em tempo real.
 
 ---

@@ -142,6 +142,9 @@ export function TimeAndFocusSuite({ defaultTab = 'cronometro' }: { defaultTab?: 
       gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.6);
       osc.start();
       osc.stop(ctx.currentTime + 0.6);
+      setTimeout(() => {
+        try { ctx.close(); } catch {}
+      }, 700);
     } catch {
       // Audio fallback silent
     }

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { QrCode, Copy, Check, Download, ShieldCheck } from 'lucide-react';
 
 export function PixQrCodeGenerator() {
@@ -10,14 +10,67 @@ export function PixQrCodeGenerator() {
   const [amount, setAmount] = useState('49.90');
   const [copied, setCopied] = useState(false);
 
-  // Payload BR Code Simplificado
-  const cleanKey = pixKey.trim();
-  const cleanName = merchantName.trim().toUpperCase().slice(0, 25);
-  const cleanCity = merchantCity.trim().toUpperCase().slice(0, 15);
-  const formattedAmount = parseFloat(amount || '0').toFixed(2);
+  // Algoritmo Oficial de CRC16-CCITT (Polinômio 0x1021, Init 0xFFFF) padrão BACEN
+  const computeCrc16 = (payload: string): string => {
+    let crc = 0xFFFF;
+    for (let i = 0; i < payload.length; i++) {
+      crc ^= payload.charCodeAt(i) << 8;
+      for (let j = 0; j < 8; j++) {
+        if ((crc & 0x8000) !== 0) {
+          crc = ((crc << 1) ^ 0x1021) & 0xFFFF;
+        } else {
+          crc = (crc << 1) & 0xFFFF;
+        }
+      }
+    }
+    return crc.toString(16).toUpperCase().padStart(4, '0');
+  };
 
-  // Simulação de Copia e Cola padrão BACEN
-  const copiaColaCode = `00020126580014br.gov.bcb.pix0136${cleanKey}520400005303986540${formattedAmount.length.toString().padStart(2, '0')}${formattedAmount}5802BR59${cleanName.length.toString().padStart(2, '0')}${cleanName}60${cleanCity.length.toString().padStart(2, '0')}${cleanCity}62070503***6304V5AP`;
+  // Payload BR Code oficial BACEN com estrutura TLV (Type-Length-Value)
+  const copiaColaCode = useMemo(() => {
+    const cleanKey = pixKey.trim();
+    if (!cleanKey) return '';
+
+    const cleanName = merchantName.trim().toUpperCase().slice(0, 25) || 'RECEBEDOR';
+    const cleanCity = merchantCity.trim().toUpperCase().slice(0, 15) || 'SAO PAULO';
+    const numAmount = parseFloat(amount || '0');
+
+    // 00: Format Indicator (01)
+    const f00 = '000201';
+
+    // 26: Merchant Account Information (Pix GUI + Chave)
+    const gui = '0014br.gov.bcb.pix';
+    const keyField = `01${cleanKey.length.toString().padStart(2, '0')}${cleanKey}`;
+    const mai = `${gui}${keyField}`;
+    const f26 = `26${mai.length.toString().padStart(2, '0')}${mai}`;
+
+    // 52: Merchant Category Code (0000)
+    const f52 = '52040000';
+    // 53: Transaction Currency (986 = BRL)
+    const f53 = '53039865';
+
+    // 54: Transaction Amount (opcional, incluído se > 0)
+    let f54 = '';
+    if (numAmount > 0) {
+      const formatted = numAmount.toFixed(2);
+      f54 = `54${formatted.length.toString().padStart(2, '0')}${formatted}`;
+    }
+
+    // 58: Country Code (BR)
+    const f58 = '5802BR';
+    // 59: Merchant Name
+    const f59 = `59${cleanName.length.toString().padStart(2, '0')}${cleanName}`;
+    // 60: Merchant City
+    const f60 = `60${cleanCity.length.toString().padStart(2, '0')}${cleanCity}`;
+    // 62: Additional Data Field Template (TxID)
+    const txid = '***';
+    const txidField = `05${txid.length.toString().padStart(2, '0')}${txid}`;
+    const f62 = `62${txidField.length.toString().padStart(2, '0')}${txidField}`;
+
+    const rawPayload = `${f00}${f26}${f52}${f53}${f54}${f58}${f59}${f60}${f62}6304`;
+    const crc = computeCrc16(rawPayload);
+    return `${rawPayload}${crc}`;
+  }, [pixKey, merchantName, merchantCity, amount]);
 
   // URL pública do QR Code com SVG
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(copiaColaCode)}&margin=10`;
