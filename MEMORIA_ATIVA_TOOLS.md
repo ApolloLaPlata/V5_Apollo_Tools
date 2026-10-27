@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 465 Ferramentas Ativas · 91 Etapas Concluídas)
+**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 470 Ferramentas Ativas · 92 Etapas Concluídas)
 
 ---
 
@@ -192,16 +192,17 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **Astrofísica Numérica, Mecânica Orbital & Efemérides** | `OrbitalMechanicsAndAstrophysicsSuite.tsx` | Integrador de Elementos Keplerianos, Propagador SGP4 TLE NORAD, Calculadora Hohmann & Tsiolkovsky, Simulador Pontos de Lagrange L1-L5 (CR3BP), Efemérides JPL Horizons/VSOP87 |
 | **Física de Plasmas, Fusão Tokamak & Vlasov-Maxwell** | `PlasmaPhysicsAndFusionSuite.tsx` | Equilíbrio Grad-Shafranov (ITER/DIII-D), Girocinética de Larmor & Deriva E×B, Critério de Lawson & Ignição D-T, Instabilidades MHD Kink & Sausage, Simulador Cinético PIC 1D |
 | **Bioinformática, Alinhamento & Genômica Estrutural** | `BioinformaticsAndStructuralGenomicsSuite.tsx` | Alinhador Needleman-Wunsch & Smith-Waterman, Transcritor/Tradutor de Códons DNA/RNA, Propriedades Fisicoquímicas de Proteínas (pI & Da), Parser PDB & Carbonos Alfa, Clivagem Enzimática de Restrição |
+| **Física de Partículas, Modelo Padrão & Cinemática Relativística** | `ParticlePhysicsAndRelativisticKinematicsSuite.tsx` | Explorador Modelo Padrão (Quarks/Léptons/Bósons), Mandelstam (s, t, u), Ressonância Breit-Wigner & Heisenberg, Diagramas de Feynman em SVG, Perda de Energia Bethe-Bloch & Pico de Bragg |
 
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário
 - **Sistema de Favoritos Local:** Usuário pode favoritar ferramentas com 1 clique (persistência no `localStorage`).
 - **Histórico Recente de Uso:** Barra de acesso rápido às últimas ferramentas utilizadas com persistência local.
-- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 465 ferramentas.
+- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 470 ferramentas.
 - **Deep-linking Universal:** Compartilhamento direto via URL (`?tool=id`) com cópia em 1 clique e ativação automática com scroll suave.
 - **Filtro Rápido:** Aba instantânea para ferramentas favoritadas na barra de categorias.
-- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 465 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
+- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 470 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
 - **Suporte a PWA Standalone:** Arquivo `manifest.json` com paleta Cyber Obsidian (`#020617` / `#06b6d4`) para instalação como app nativo no Desktop e Mobile.
 
 ---
@@ -223,5 +224,5 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 ---
 
 ## 6. Próximos Passos
-1. Prosseguir com a Esteira Determinística de Expansão (Etapa 92: Suíte de Física de Partículas, Modelo Padrão & Cinemática Relativística na Web - Marco 470 Ferramentas).
+1. Prosseguir com a Esteira Determinística de Expansão (Etapa 93: Suíte de Astrodinâmica Relativística, Geodésicas de Schwarzschild & Ondas Gravitacionais na Web - Marco 475 Ferramentas).
 2. Manter monitoramento contínuo via Shadow Logger e Colmeia.

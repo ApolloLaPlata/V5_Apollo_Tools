@@ -111,6 +111,7 @@ import { NextGenVideoAndHdrColorSuite } from '@/components/tools/NextGenVideoAnd
 import { OrbitalMechanicsAndAstrophysicsSuite } from '@/components/tools/OrbitalMechanicsAndAstrophysicsSuite';
 import { PlasmaPhysicsAndFusionSuite } from '@/components/tools/PlasmaPhysicsAndFusionSuite';
 import { BioinformaticsAndStructuralGenomicsSuite } from '@/components/tools/BioinformaticsAndStructuralGenomicsSuite';
+import { ParticlePhysicsAndRelativisticKinematicsSuite } from '@/components/tools/ParticlePhysicsAndRelativisticKinematicsSuite';
 
 import { 
   Search, 
@@ -844,6 +845,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'bioinformatics-structural-genomics-suite' && (
               <BioinformaticsAndStructuralGenomicsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'particle-physics-relativistic-suite' && (
+              <ParticlePhysicsAndRelativisticKinematicsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
