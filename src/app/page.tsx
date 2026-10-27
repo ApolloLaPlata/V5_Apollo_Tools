@@ -115,6 +115,7 @@ import { ParticlePhysicsAndRelativisticKinematicsSuite } from '@/components/tool
 import { GeneralRelativityAndGravitationalWavesSuite } from '@/components/tools/GeneralRelativityAndGravitationalWavesSuite';
 import { CosmologyAndFlrwCosmicExpansionSuite } from '@/components/tools/CosmologyAndFlrwCosmicExpansionSuite';
 import { QuantumElectrodynamicsAndVacuumSuite } from '@/components/tools/QuantumElectrodynamicsAndVacuumSuite';
+import { QuantumChromodynamicsAndQuarkGluonSuite } from '@/components/tools/QuantumChromodynamicsAndQuarkGluonSuite';
 
 import { 
   Search, 
@@ -860,6 +861,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'qed-vacuum-electroweak-suite' && (
               <QuantumElectrodynamicsAndVacuumSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'qcd-quark-gluon-suite' && (
+              <QuantumChromodynamicsAndQuarkGluonSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
