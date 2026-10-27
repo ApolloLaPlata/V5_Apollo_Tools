@@ -86,6 +86,7 @@ import { WebCryptoSymmetricAndWebRtcSuite } from '@/components/tools/WebCryptoSy
 import { WebAssemblyAndAstBytecodeSuite } from '@/components/tools/WebAssemblyAndAstBytecodeSuite';
 import { BinarySerializationProtobufSuite } from '@/components/tools/BinarySerializationProtobufSuite';
 import { WebRtcMediaAndCodecsSuite } from '@/components/tools/WebRtcMediaAndCodecsSuite';
+import { OAuthSecurityAndOidcSuite } from '@/components/tools/OAuthSecurityAndOidcSuite';
 
 import { 
   Search, 
@@ -744,6 +745,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'webrtc-media-codecs-suite' && (
               <WebRtcMediaAndCodecsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'oauth-security-oidc-suite' && (
+              <OAuthSecurityAndOidcSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

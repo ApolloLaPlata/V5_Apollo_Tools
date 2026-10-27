@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite' | 'webrtc-media-codecs-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite' | 'webrtc-media-codecs-suite' | 'oauth-security-oidc-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -5044,5 +5044,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'webrtc-media-codecs-suite',
     suiteTab: 'rtp-inspector',
     tags: ['rtp', 'rfc 3550', 'ssrc', 'sequence number', 'rtp payload type', 'webrtc packet dump', 'wireshark rtp']
+  },
+  // ==========================================
+  // ETAPA 67: SUÍTE DE WEB SECURITY, OAUTH 2.1 & OPENID CONNECT (MARCO 345 FERRAMENTAS)
+  // ==========================================
+  {
+    id: 'pkce-code-challenge-generator-tool',
+    title: 'Gerador & Validador PKCE RFC 7636 (S256)',
+    description: 'Gere pares criptográficos de code_verifier (43 a 128 caracteres) e code_challenge SHA-256 base64url-encoded sem padding para fluxos de autorização Authorization Code Grant OAuth 2.1.',
+    category: 'dev-4devs',
+    categoryLabel: 'Autenticação & Web Security',
+    icon: 'Key',
+    badge: 'PKCE S256 RFC 7636',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'oauth-security-oidc-suite',
+    suiteTab: 'pkce-generator',
+    tags: ['pkce', 'oauth 2.1', 'code_verifier', 'code_challenge', 'rfc 7636', 'sha-256 base64url', 'seguranca oauth']
+  },
+  {
+    id: 'jwt-claims-decoder-validator-tool',
+    title: 'Decodificador & Validador de Claims JWT / OIDC',
+    description: 'Decodifique e audite claims temporais de tokens JWT e ID Tokens (iss, sub, aud, exp, nbf, iat) com alerta de expiração em tempo real e tolerância a desvio de relógio (clock skew).',
+    category: 'dev-4devs',
+    categoryLabel: 'Autenticação & Web Security',
+    icon: 'Lock',
+    badge: 'Claims JWT / OIDC',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'oauth-security-oidc-suite',
+    suiteTab: 'jwt-claims',
+    tags: ['jwt claims', 'oidc token', 'id token', 'jwt exp', 'clock skew', 'jwt auditor', 'openid connect']
+  },
+  {
+    id: 'oauth-scope-matrix-builder-tool',
+    title: 'Construtor de Matriz de Escopos OAuth 2.1 (Least Privilege)',
+    description: 'Selecione escopos recomendados para Google, GitHub e Microsoft, avalie o nível de risco de segurança (baixo a crítico) e gere strings de escopos formatadas para parâmetros de URL.',
+    category: 'dev-4devs',
+    categoryLabel: 'Autenticação & Web Security',
+    icon: 'Sliders',
+    badge: 'Escopos OAuth 2.1',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'oauth-security-oidc-suite',
+    suiteTab: 'oauth-scopes',
+    tags: ['oauth scopes', 'least privilege', 'google scopes', 'github scopes', 'permissoes oauth', 'query string scope']
+  },
+  {
+    id: 'oauth-state-nonce-entropy-tool',
+    title: 'Gerador de State & Nonce com Entropia de Shannon',
+    description: 'Gere tokens criptográficos anti-CSRF (state) e anti-replay (nonce) via Web Crypto com 128 a 512 bits de entropia de Shannon e análise estatística contra ataques de injeção de sessão.',
+    category: 'dev-4devs',
+    categoryLabel: 'Autenticação & Web Security',
+    icon: 'ShieldAlert',
+    badge: 'State & Nonce Anti-CSRF',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'oauth-security-oidc-suite',
+    suiteTab: 'state-nonce',
+    tags: ['oauth state', 'oidc nonce', 'anti-csrf', 'anti-replay', 'entropia shannon', 'tokens seguranca', 'crypto random']
+  },
+  {
+    id: 'oidc-discovery-inspector-tool',
+    title: 'Inspecionador OpenID Connect Discovery (/.well-known)',
+    description: 'Valide metadados de servidores OpenID Connect (/.well-known/openid-configuration), inspecione suporte a PKCE S256, algoritmos de assinatura RS256/EdDSA e endpoints canônicos de autorização e JWKS.',
+    category: 'dev-4devs',
+    categoryLabel: 'Autenticação & Web Security',
+    icon: 'Globe',
+    badge: 'OIDC Discovery',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'oauth-security-oidc-suite',
+    suiteTab: 'oidc-discovery',
+    tags: ['openid-configuration', 'oidc discovery', 'well-known', 'jwks_uri', 'issuer validation', 'authorization endpoint']
   }
 ];

@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 340 Ferramentas Ativas · 66 Etapas Concluídas)
+**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 345 Ferramentas Ativas · 67 Etapas Concluídas)
 
 ---
 
@@ -167,6 +167,7 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **WebAssembly, AST & Compilers** | `WebAssemblyAndAstBytecodeSuite.tsx` | Desmontador & Inspetor Wasm vs WAT, Explorador Interativo de AST (ESTree JS/TS), Simulador de Autômato Finito (NFA/DFA Regex), Catálogo de Opcodes V8 Ignition, Decodificador de Source Maps VLQ v3 |
 | **Binary Serialization & Protobuf** | `BinarySerializationProtobufSuite.tsx` | Linter Proto3 & Gerador TypeScript, Codificador/Decodificador Varint LEB128 & ZigZag, Comparador MsgPack vs CBOR vs JSON, Visualizador FlatBuffers VTable, Parser TLV / EMV BER |
 | **WebRTC Media & Codecs Studio** | `WebRtcMediaAndCodecsSuite.tsx` | Calculadora Jitter Buffer & MOS ITU-T G.107, Comparador de Codecs de Áudio Opus/G.711/G.722, Matriz de Bitrates de Vídeo AV1/VP9/H.264, Custos e Egress TURN Relay, Inspecionador RTP RFC 3550 |
+| **OAuth 2.1 & OpenID Connect Security** | `OAuthSecurityAndOidcSuite.tsx` | Gerador/Validador PKCE S256 (RFC 7636), Auditor de Claims JWT/OIDC, Matriz de Escopos Least Privilege, Tokens State/Nonce (Entropia Shannon), Auditor OIDC Discovery (/.well-known) |
 
 ---
 
@@ -198,5 +199,5 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 ---
 
 ## 6. Próximos Passos
-1. Prosseguir com a Esteira Determinística de Expansão (Etapa 67: Suíte de Web Security, OAuth 2.1, PKCE RFC 7636 & OpenID Connect).
+1. Prosseguir com a Esteira Determinística de Expansão (Etapa 68: Suíte de WebGL 2.0 Diagnostics, Canvas Pixel Manipulation & Display-P3 Gamut).
 2. Manter monitoramento contínuo via Shadow Logger e Colmeia.
