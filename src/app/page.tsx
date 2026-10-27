@@ -107,6 +107,7 @@ import { PairingCryptoAndThresholdSuite } from '@/components/tools/PairingCrypto
 import { CrossShaderCompilerAndReflectionSuite } from '@/components/tools/CrossShaderCompilerAndReflectionSuite';
 import { QuantumCircuitAndBlochSphereSuite } from '@/components/tools/QuantumCircuitAndBlochSphereSuite';
 import { GeospatialAndCartographySuite } from '@/components/tools/GeospatialAndCartographySuite';
+import { NextGenVideoAndHdrColorSuite } from '@/components/tools/NextGenVideoAndHdrColorSuite';
 
 import { 
   Search, 
@@ -828,6 +829,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'geospatial-cartography-suite' && (
               <GeospatialAndCartographySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'nextgen-video-hdr-suite' && (
+              <NextGenVideoAndHdrColorSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
