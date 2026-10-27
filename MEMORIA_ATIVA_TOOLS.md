@@ -254,6 +254,8 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 
 - **Fase 13 - Suporte Unicode Real & Regex com Acentuação em Manipulação de Texto:** Contagem real de glifos/grafemas via `Array.from(text).length` em `CharacterCounter.tsx`, suportando emojis e surrogate pairs sem distorção. Suporte a caracteres acentuados no conversor de Primeira Letra Maiúscula (`CaseConverter.tsx`) utilizando regex Unicode (`/(?:^|\s)\p{L}/gu`), inversão preservando glifos compostos e desativação reativa de botões de cópia com `disabled={!text}`.
 
+- **Fase 14 - Acessibilidade & Prevenção de Estados Vazios em Ferramentas de IA:** Proteção contra cópia de texto vazio com estados reativos `disabled` e opacidade em `PromptCrafter.tsx` e `ViralTitleGenerator.tsx`. Injeção de `aria-label` descritivos em botões de cópia individual e coletiva de títulos de alta CTR.
+
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário

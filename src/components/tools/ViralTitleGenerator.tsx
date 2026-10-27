@@ -248,7 +248,9 @@ export function ViralTitleGenerator() {
 
           <button
             onClick={copyAllTitles}
-            className="text-xs font-semibold px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 transition cursor-pointer flex items-center gap-1.5"
+            disabled={titles.length === 0}
+            aria-label="Copiar todos os títulos otimizados"
+            className={`text-xs font-semibold px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 transition cursor-pointer flex items-center gap-1.5 ${titles.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
           >
             {copiedAll ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
             {copiedAll ? 'Todos Copiados!' : 'Copiar Todos'}

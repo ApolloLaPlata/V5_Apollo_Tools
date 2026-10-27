@@ -225,7 +225,9 @@ export function PromptCrafter() {
             </span>
             <button
               onClick={copyPrompt}
-              className="px-3.5 py-1.5 rounded-xl bg-purple-500 hover:bg-purple-400 text-slate-950 font-bold text-xs flex items-center gap-1.5 shadow-md shadow-purple-500/20 transition cursor-pointer"
+              disabled={!positivePrompt.trim()}
+              aria-label="Copiar Prompt Técnico Otimizado"
+              className={`px-3.5 py-1.5 rounded-xl bg-purple-500 hover:bg-purple-400 text-slate-950 font-bold text-xs flex items-center gap-1.5 shadow-md shadow-purple-500/20 transition cursor-pointer ${!positivePrompt.trim() ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
               {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
               {copied ? 'Copiado!' : 'Copiar Prompt'}
