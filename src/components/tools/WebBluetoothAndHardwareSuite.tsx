@@ -1,5 +1,6 @@
 'use client';
 
+import { normalizeStr } from '@/lib/utils/stringUtils';
 import React, { useState, useMemo } from 'react';
 import { 
   Bluetooth, 
@@ -333,9 +334,11 @@ export const WebBluetoothAndHardwareSuite: React.FC<WebBluetoothAndHardwareSuite
 
   const filteredSigItems = useMemo(() => {
     return sigAssignedNumbers.filter(item => {
-      const matchQuery = item.name.toLowerCase().includes(sigSearchTerm.toLowerCase()) ||
-                         item.uuid.toLowerCase().includes(sigSearchTerm.toLowerCase()) ||
-                         item.desc.toLowerCase().includes(sigSearchTerm.toLowerCase());
+      const q = normalizeStr(sigSearchTerm);
+      const matchQuery = !q ||
+        normalizeStr(item.name).includes(q) ||
+        normalizeStr(item.uuid).includes(q) ||
+        normalizeStr(item.desc).includes(q);
       const matchType = sigTypeFilter === 'all' || item.type === sigTypeFilter;
       return matchQuery && matchType;
     });

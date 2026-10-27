@@ -1,5 +1,6 @@
 'use client';
 
+import { normalizeStr } from '@/lib/utils/stringUtils';
 import React, { useState, useMemo, useEffect } from 'react';
 import { 
   Lock, 
@@ -491,8 +492,10 @@ a=candidate:3344556677 1 udp 41819903 203.0.113.50 3478 typ relay raddr 177.136.
 
   const filteredCiphers = useMemo(() => {
     return CIPHER_CATALOG.filter(c => {
-      const matchesSearch = c.name.toLowerCase().includes(cipherSearch.toLowerCase()) || 
-                            c.encryption.toLowerCase().includes(cipherSearch.toLowerCase());
+      const q = normalizeStr(cipherSearch);
+      const matchesSearch = !q ||
+        normalizeStr(c.name).includes(q) ||
+        normalizeStr(c.encryption).includes(q);
       const matchesTls = cipherFilterTls === 'all' || c.tlsVersion.includes(cipherFilterTls);
       return matchesSearch && matchesTls;
     });

@@ -1,5 +1,6 @@
 'use client';
 
+import { normalizeStr } from '@/lib/utils/stringUtils';
 import React, { useState, useMemo } from 'react';
 import { 
   Type, 
@@ -405,7 +406,8 @@ export function TextManipulatorSuite({ defaultTab = 'fontes' }: { defaultTab?: T
       const hex = '0x' + i.toString(16).toUpperCase().padStart(2, '0');
       const bin = i.toString(2).padStart(8, '0');
       const desc = i === 32 ? 'Espaço (Space)' : `Caractere imprimível '${char}'`;
-      if (!asciiSearch || char.includes(asciiSearch) || String(i).includes(asciiSearch) || hex.toLowerCase().includes(asciiSearch.toLowerCase())) {
+      const q = normalizeStr(asciiSearch);
+      if (!q || normalizeStr(char).includes(q) || String(i).includes(q) || normalizeStr(hex).includes(q) || normalizeStr(desc).includes(q)) {
         list.push({ dec: i, hex, bin, char, desc });
       }
     }

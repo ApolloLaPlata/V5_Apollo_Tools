@@ -1,5 +1,6 @@
 'use client';
 
+import { normalizeStr } from '@/lib/utils/stringUtils';
 import React, { useState, useMemo, useRef } from 'react';
 import { 
   Binary, 
@@ -391,12 +392,12 @@ export const BinaryBuffersAndHexDumpSuite: React.FC<BinaryBuffersAndHexDumpSuite
       if (selectedAsciiCategory === 'printable' && item.isControl) return false;
       if (!asciiSearchQuery.trim()) return true;
 
-      const q = asciiSearchQuery.toLowerCase();
+      const q = normalizeStr(asciiSearchQuery);
       return (
-        item.char.toLowerCase().includes(q) ||
+        normalizeStr(item.char).includes(q) ||
         item.dec.toString().includes(q) ||
-        item.hex.toLowerCase().includes(q) ||
-        item.desc.toLowerCase().includes(q)
+        normalizeStr(item.hex).includes(q) ||
+        normalizeStr(item.desc).includes(q)
       );
     });
   }, [asciiTable, selectedAsciiCategory, asciiSearchQuery]);

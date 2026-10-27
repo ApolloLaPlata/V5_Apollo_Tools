@@ -1,5 +1,6 @@
 'use client';
 
+import { normalizeStr } from '@/lib/utils/stringUtils';
 import React, { useState, useMemo } from 'react';
 import { 
   FileCode, 
@@ -311,11 +312,11 @@ export const ApiDocsOpenApiMockSuite: React.FC<ApiDocsOpenApiMockSuiteProps> = (
     return HTTP_STATUS_LIST.filter(s => {
       if (statusFilterCat !== 'all' && s.cat !== statusFilterCat) return false;
       if (!statusSearch.trim()) return true;
-      const q = statusSearch.toLowerCase();
+      const q = normalizeStr(statusSearch);
       return (
         s.code.toString().includes(q) ||
-        s.name.toLowerCase().includes(q) ||
-        s.desc.toLowerCase().includes(q)
+        normalizeStr(s.name).includes(q) ||
+        normalizeStr(s.desc).includes(q)
       );
     });
   }, [statusFilterCat, statusSearch]);

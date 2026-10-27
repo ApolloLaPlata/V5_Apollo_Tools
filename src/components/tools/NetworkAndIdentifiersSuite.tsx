@@ -1,5 +1,6 @@
 'use client';
 
+import { normalizeStr } from '@/lib/utils/stringUtils';
 import React, { useState, useEffect } from 'react';
 import { 
   Sparkles, 
@@ -134,11 +135,10 @@ export function NetworkAndIdentifiersSuite({ defaultTab = 'uuid-nanoid' }: { def
     { code: 504, name: 'Gateway Timeout', cat: '5xx Erro do Servidor', desc: 'O servidor upstream demorou mais que o tempo limite configurado para responder.' }
   ];
 
-  const filteredStatusCodes = HTTP_STATUS_LIST.filter(item => 
-    item.code.toString().includes(statusCodeSearch) || 
-    item.name.toLowerCase().includes(statusCodeSearch.toLowerCase()) ||
-    item.desc.toLowerCase().includes(statusCodeSearch.toLowerCase())
-  );
+  const filteredStatusCodes = HTTP_STATUS_LIST.filter(item => {
+    const q = normalizeStr(statusCodeSearch);
+    return !q || item.code.toString().includes(q) || normalizeStr(item.name).includes(q) || normalizeStr(item.desc).includes(q);
+  });
 
   const SECURITY_HEADERS_SNIPPET = `# Headers de Segurança Recomendados (Nginx / Next.js)
 Strict-Transport-Security: max-age=63072000; includeSubDomains; preload

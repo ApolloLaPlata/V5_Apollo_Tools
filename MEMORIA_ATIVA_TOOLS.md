@@ -244,6 +244,8 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 
 - **Fase 8 - Homologação Universal de Acessibilidade WCAG 2.1 (Zero Botões Órfãos):** Eliminação de 100% dos botões puramente de ícone sem acessibilidade na plataforma, com injeção de `aria-label` e `title` semânticos em `BrazilianDocsSuite.tsx` (geradores de CNH, Título de Eleitor e Certidão de Nascimento), `VehiclesAndBanksSuite.tsx` (cópia e regeneração de Renavam), `ComfyWorkflowModal.tsx` (botão fechar) e `LotteryAndGamesSuite.tsx` (adição de itens na roleta). Blindagem de acessibilidade nos controles globais de `src/app/page.tsx` (atalho `⌘K`, fechar bancada, favoritar e copiar link direto).
 
+- **Fase 9 - Normalização NFD Soberana em Filtros Internos (Busca Insensível a Acentos):** Criação de `src/lib/utils/stringUtils.ts` com o utilitário `normalizeStr`. Atualização de todos os 8 filtros locais de dados (`ApiAndNetworkTestingSuite.tsx`, `NetworkAndIdentifiersSuite.tsx`, `TextManipulatorSuite.tsx`, `ApiDocsOpenApiMockSuite.tsx`, `WebAssemblyAndAstBytecodeSuite.tsx`, `WebBluetoothAndHardwareSuite.tsx`, `WebCryptoSymmetricAndWebRtcSuite.tsx` e `BinaryBuffersAndHexDumpSuite.tsx`), permitindo encontrar termos acentuados mesmo digitando sem acento ou cedilha.
+
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário

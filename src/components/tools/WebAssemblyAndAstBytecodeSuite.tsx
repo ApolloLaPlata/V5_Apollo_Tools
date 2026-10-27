@@ -1,5 +1,6 @@
 'use client';
 
+import { normalizeStr } from '@/lib/utils/stringUtils';
 import React, { useState, useMemo } from 'react';
 import { 
   Cpu, 
@@ -461,10 +462,11 @@ export const WebAssemblyAndAstBytecodeSuite: React.FC<WebAssemblyAndAstBytecodeS
   const [bytecodeSearch, setBytecodeSearch] = useState<string>('');
 
   const filteredOpcodes = useMemo(() => {
+    const q = normalizeStr(bytecodeSearch);
     return V8_OPCODES.filter(op => 
-      op.opcode.toLowerCase().includes(bytecodeSearch.toLowerCase()) ||
-      op.desc.toLowerCase().includes(bytecodeSearch.toLowerCase()) ||
-      op.category.toLowerCase().includes(bytecodeSearch.toLowerCase())
+      normalizeStr(op.opcode).includes(q) ||
+      normalizeStr(op.desc).includes(q) ||
+      normalizeStr(op.category).includes(q)
     );
   }, [bytecodeSearch]);
 

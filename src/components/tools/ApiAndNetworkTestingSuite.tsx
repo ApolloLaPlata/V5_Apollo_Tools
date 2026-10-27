@@ -1,5 +1,6 @@
 'use client';
 
+import { normalizeStr } from '@/lib/utils/stringUtils';
 import React, { useState, useEffect } from 'react';
 import { 
   Network, 
@@ -338,9 +339,8 @@ echo $response;`;
   const [portCategoryFilter, setPortCategoryFilter] = useState<'All' | 'Web' | 'Database' | 'Email' | 'Infra' | 'Dev'>('All');
 
   const filteredPorts = PORTS_DATA.filter(p => {
-    const matchesSearch = p.port.toString().includes(portSearch) || 
-      p.service.toLowerCase().includes(portSearch.toLowerCase()) || 
-      p.description.toLowerCase().includes(portSearch.toLowerCase());
+    const q = normalizeStr(portSearch);
+    const matchesSearch = !q || p.port.toString().includes(q) || normalizeStr(p.service).includes(q) || normalizeStr(p.description).includes(q);
     const matchesCategory = portCategoryFilter === 'All' || p.category === portCategoryFilter;
     return matchesSearch && matchesCategory;
   });
