@@ -239,6 +239,9 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 - **Fase 6 - Segurança Web e Sanitização Numérica no Pix:** Em `PixQrCodeGenerator.tsx`, sanitização de parsing para valores com vírgula (`amount.replace(',', '.')`), blindagem contra `NaN` e injeção de `rel="noopener noreferrer"` no link de download contra vulnerabilidades de reverse-tabnabbing.
 - **Fase 6 - Responsividade Mobile em Tabelas Densas:** Injeção de `overflow-x-auto` na tabela ASCII de 6 colunas (`TextManipulatorSuite.tsx`), garantindo rolagem horizontal suave em viewports mobile (< 640px) sem deformar a grade geral da aplicação.
 
+- **Fase 7 - Sanitização Soberana de SVG e Markdown (Anti-XSS):** Implementação de `src/lib/utils/svgSanitizer.ts` com neutralização de scripts, foreignObjects e manipuladores de eventos inline em `SvgVectorAndDesignTokensSuite.tsx`, `VectorAndPixelOptimizationSuite.tsx` e `WebAssetsAndDiagnosticsSuite.tsx`. Sanitização prévia de entidades HTML no live preview de Markdown (`DataAndDevFormatsSuite.tsx`).
+- **Fase 7 - Acessibilidade por Teclado e Ciclo de Vida da Command Palette:** Suporte ao fechamento de todos os modais (ComfyUI Workflow e Command Palette) via tecla `Escape`, além de limpeza automática do estado de consulta (`commandQuery`) após ativação de ferramenta em `src/app/page.tsx`.
+
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário

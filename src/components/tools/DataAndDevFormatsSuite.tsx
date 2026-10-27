@@ -110,13 +110,14 @@ Bem-vindo ao **V5 Apollo Tools**! Este editor suporta visualização em tempo re
   const [mdInput, setMdInput] = useState<string>(DEFAULT_MD);
 
   const convertMarkdownToHtml = (md: string) => {
-    let html = md
+    const escaped = md.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+    let html = escaped
       .replace(/^### (.*$)/gim, '<h3 class="text-base font-bold text-cyan-400 mt-3 mb-1">$1</h3>')
       .replace(/^## (.*$)/gim, '<h2 class="text-lg font-bold text-slate-100 mt-4 mb-2">$1</h2>')
       .replace(/^# (.*$)/gim, '<h1 class="text-xl font-black text-white mt-2 mb-3 pb-2 border-b border-slate-800">$1</h1>')
       .replace(/\*\*(.*?)\*\*/gim, '<strong class="text-cyan-300 font-bold">$1</strong>')
       .replace(/\*(.*?)\*/gim, '<em class="italic text-slate-300">$1</em>')
-      .replace(/^\> (.*$)/gim, '<blockquote class="border-l-4 border-cyan-500 pl-3 italic text-slate-400 my-2">$1</blockquote>')
+      .replace(/^&gt; (.*$)/gim, '<blockquote class="border-l-4 border-cyan-500 pl-3 italic text-slate-400 my-2">$1</blockquote>')
       .replace(/^- (.*$)/gim, '<li class="ml-4 list-disc text-slate-300 my-0.5">$1</li>');
 
     return html.replace(/\n/gim, '<br/>');

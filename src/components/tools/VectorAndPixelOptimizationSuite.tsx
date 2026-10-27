@@ -1,5 +1,7 @@
 'use client';
 
+import { sanitizeSvg } from '@/lib/utils/svgSanitizer';
+
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { 
   Palette, 
@@ -499,14 +501,14 @@ export const VectorAndPixelOptimizationSuite: React.FC<VectorAndPixelOptimizatio
                 <span className="text-[10px] uppercase font-mono text-slate-500 block mb-2">Preview Original</span>
                 <div 
                   className="w-24 h-24 bg-slate-900 border border-slate-800 rounded-xl flex items-center justify-center p-2 overflow-hidden"
-                  dangerouslySetInnerHTML={{ __html: svgInput }}
+                  dangerouslySetInnerHTML={{ __html: sanitizeSvg(svgInput) }}
                 />
               </div>
               <div className="text-center">
                 <span className="text-[10px] uppercase font-mono text-teal-400 block mb-2">Preview Otimizado</span>
                 <div 
                   className="w-24 h-24 bg-slate-900 border border-teal-900/60 rounded-xl flex items-center justify-center p-2 overflow-hidden shadow-lg shadow-teal-950/50"
-                  dangerouslySetInnerHTML={{ __html: optimizedSvgResult.text }}
+                  dangerouslySetInnerHTML={{ __html: sanitizeSvg(optimizedSvgResult.text) }}
                 />
               </div>
             </div>

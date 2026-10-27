@@ -1,5 +1,7 @@
 'use client';
 
+import { sanitizeSvg } from '@/lib/utils/svgSanitizer';
+
 import React, { useState, useMemo } from 'react';
 import { 
   FileCode2, 
@@ -546,7 +548,7 @@ export type DesignTokens = typeof DESIGN_TOKENS;`;
                   {/* PREVIEW VISUAL */}
                   <div className="bg-slate-900 border border-slate-800 rounded-lg p-4 flex items-center justify-center min-h-[140px] mb-3">
                     <div 
-                      dangerouslySetInnerHTML={{ __html: optimizedSvgResult.code }} 
+                      dangerouslySetInnerHTML={{ __html: sanitizeSvg(optimizedSvgResult.code) }} 
                       className="flex items-center justify-center max-h-[120px] max-w-[120px]"
                     />
                   </div>

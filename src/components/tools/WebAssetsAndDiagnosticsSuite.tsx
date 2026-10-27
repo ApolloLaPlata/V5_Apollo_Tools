@@ -1,5 +1,7 @@
 'use client';
 
+import { sanitizeSvg } from '@/lib/utils/svgSanitizer';
+
 import React, { useState, useEffect } from 'react';
 import { 
   Sparkles, 
@@ -355,7 +357,7 @@ export function WebAssetsAndDiagnosticsSuite({ defaultTab = 'svg-optimizer' }: {
                   {/* Preview do SVG */}
                   <div className="h-28 rounded-xl bg-slate-950 border border-slate-800/80 flex items-center justify-center p-3 overflow-hidden">
                     <div 
-                      dangerouslySetInnerHTML={{ __html: optimizedSvg }}
+                      dangerouslySetInnerHTML={{ __html: sanitizeSvg(optimizedSvg) }}
                       className="w-20 h-20 flex items-center justify-center"
                     />
                   </div>

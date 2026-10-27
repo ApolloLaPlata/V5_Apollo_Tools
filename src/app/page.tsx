@@ -478,6 +478,7 @@ export default function ApolloToolsPage() {
         setIsCommandOpen((prev) => !prev);
       } else if (e.key === 'Escape') {
         setIsCommandOpen(false);
+        setActiveComfyModal(null);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
@@ -593,6 +594,7 @@ export default function ApolloToolsPage() {
       window.scrollTo({ top: 380, behavior: 'smooth' });
     }
     setIsCommandOpen(false);
+    setCommandQuery('');
   };
 
   return (
