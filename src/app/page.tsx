@@ -105,6 +105,7 @@ import { WebGpuPhysicsAndFluidSuite } from '@/components/tools/WebGpuPhysicsAndF
 import { SpatialAudioAndAmbisonicsSuite } from '@/components/tools/SpatialAudioAndAmbisonicsSuite';
 import { PairingCryptoAndThresholdSuite } from '@/components/tools/PairingCryptoAndThresholdSuite';
 import { CrossShaderCompilerAndReflectionSuite } from '@/components/tools/CrossShaderCompilerAndReflectionSuite';
+import { QuantumCircuitAndBlochSphereSuite } from '@/components/tools/QuantumCircuitAndBlochSphereSuite';
 
 import { 
   Search, 
@@ -820,6 +821,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'cross-shader-reflection-suite' && (
               <CrossShaderCompilerAndReflectionSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'quantum-circuit-bloch-suite' && (
+              <QuantumCircuitAndBlochSphereSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
