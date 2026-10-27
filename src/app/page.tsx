@@ -83,6 +83,7 @@ import { ModernImageCompressionWasmSuite } from '@/components/tools/ModernImageC
 import { DataCompressionStreamsSuite } from '@/components/tools/DataCompressionStreamsSuite';
 import { V8MemoryAndGarbageCollectionSuite } from '@/components/tools/V8MemoryAndGarbageCollectionSuite';
 import { WebCryptoSymmetricAndWebRtcSuite } from '@/components/tools/WebCryptoSymmetricAndWebRtcSuite';
+import { WebAssemblyAndAstBytecodeSuite } from '@/components/tools/WebAssemblyAndAstBytecodeSuite';
 
 import { 
   Search, 
@@ -732,6 +733,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'web-crypto-webrtc-suite' && (
               <WebCryptoSymmetricAndWebRtcSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'wasm-ast-bytecode-suite' && (
+              <WebAssemblyAndAstBytecodeSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}

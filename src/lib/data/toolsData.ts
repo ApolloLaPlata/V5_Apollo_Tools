@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -4825,5 +4825,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'web-crypto-webrtc-suite',
     suiteTab: 'tls-ciphers',
     tags: ['tls 1.3', 'ciphersuites', 'chacha20-poly1305', 'forward secrecy', 'sweet32', 'ssl security', 'owasp tls']
+  },
+  // ==========================================
+  // ETAPA 64: SUÍTE DE WEBASSEMBLY, AST SYNTAX TREES & COMPILAÇÃO (MARCO 330 FERRAMENTAS)
+  // ==========================================
+  {
+    id: 'wasm-wat-disassembler-tool',
+    title: 'Desmontador & Inspetor WebAssembly (Wasm vs WAT)',
+    description: 'Inspecione a estrutura binária de módulos .wasm (Magic 0x0061736d, seções Type, Import, Function, Memory, Export e Code) e visualize a desmontagem equivalente em WebAssembly Text Format (.wat).',
+    category: 'dev-4devs',
+    categoryLabel: 'Compilação & WebAssembly',
+    icon: 'Binary',
+    badge: 'Wasm vs WAT',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'wasm-ast-bytecode-suite',
+    suiteTab: 'wasm-wat',
+    tags: ['webassembly', 'wasm', 'wat', 'disassembler', 'bytecode wasm', 'magic bytes wasm', 'compilador web']
+  },
+  {
+    id: 'js-ast-syntax-tree-explorer-tool',
+    title: 'Explorador Interativo de AST (ESTree JavaScript / TS)',
+    description: 'Visualize a Árvore Sintática Abstrata (AST) no padrão ESTree para código JavaScript moderno (FunctionDeclaration, ArrowFunction, LogicalExpression, Identifiers e Literals) com navegação expansível.',
+    category: 'dev-4devs',
+    categoryLabel: 'Compilação & WebAssembly',
+    icon: 'GitBranch',
+    badge: 'ESTree AST',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'wasm-ast-bytecode-suite',
+    suiteTab: 'ast-explorer',
+    tags: ['ast', 'estree', 'abstract syntax tree', 'babel parser', 'arvore sintatica', 'compilador js', 'typescript ast']
+  },
+  {
+    id: 'regex-state-machine-nfa-dfa-tool',
+    title: 'Simulador de Autômato Finito (NFA / DFA) para Regex',
+    description: 'Simule a máquina de estados finitos (autômato de Thompson) gerada por expressões regulares, trace o caminho de transição de estados e valide a aceitação de strings de teste em tempo real.',
+    category: 'dev-4devs',
+    categoryLabel: 'Compilação & WebAssembly',
+    icon: 'RotateCcw',
+    badge: 'NFA / DFA Regex',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'wasm-ast-bytecode-suite',
+    suiteTab: 'regex-fsm',
+    tags: ['automato finito', 'dfa', 'nfa', 'regex fsm', 'state machine', 'thompson construction', 'teoria da computacao']
+  },
+  {
+    id: 'bytecode-opcode-lookup-v8-tool',
+    title: 'Catálogo de Bytecodes & Opcodes do V8 Ignition',
+    description: 'Consulte os opcodes fundamentais do interpretador Ignition da engine V8 (LdaNamedProperty, Star, Ldar, Add, Return, JumpIfTrue) com registradores, formato de operandos e exemplos de descompilação.',
+    category: 'dev-4devs',
+    categoryLabel: 'Compilação & WebAssembly',
+    icon: 'Code2',
+    badge: 'V8 Ignition Opcodes',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'wasm-ast-bytecode-suite',
+    suiteTab: 'v8-bytecode',
+    tags: ['v8 bytecode', 'ignition opcodes', 'ldanamedproperty', 'star', 'ldar', 'acumulador v8', 'motor javascript']
+  },
+  {
+    id: 'source-map-vlq-decoder-tool',
+    title: 'Decodificador de Source Maps VLQ (Revision 3)',
+    description: 'Decodifique sequências Base64 VLQ de mapeamento de código minificado conforme a RFC de Source Map v3, correlacionando colunas geradas com linhas e colunas originais do código-fonte.',
+    category: 'dev-4devs',
+    categoryLabel: 'Compilação & WebAssembly',
+    icon: 'FileCode',
+    badge: 'SourceMap VLQ',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'wasm-ast-bytecode-suite',
+    suiteTab: 'sourcemap-vlq',
+    tags: ['source map', 'vlq base64', 'sourcemap v3', 'codigo minificado', 'depuracao bundle', 'variable length quantity']
   }
 ];
