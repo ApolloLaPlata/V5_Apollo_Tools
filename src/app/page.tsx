@@ -109,6 +109,7 @@ import { QuantumCircuitAndBlochSphereSuite } from '@/components/tools/QuantumCir
 import { GeospatialAndCartographySuite } from '@/components/tools/GeospatialAndCartographySuite';
 import { NextGenVideoAndHdrColorSuite } from '@/components/tools/NextGenVideoAndHdrColorSuite';
 import { OrbitalMechanicsAndAstrophysicsSuite } from '@/components/tools/OrbitalMechanicsAndAstrophysicsSuite';
+import { PlasmaPhysicsAndFusionSuite } from '@/components/tools/PlasmaPhysicsAndFusionSuite';
 
 import { 
   Search, 
@@ -836,6 +837,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'orbital-mechanics-astrophysics-suite' && (
               <OrbitalMechanicsAndAstrophysicsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'plasma-physics-fusion-suite' && (
+              <PlasmaPhysicsAndFusionSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
