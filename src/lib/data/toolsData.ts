@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite' | 'webrtc-media-codecs-suite' | 'oauth-security-oidc-suite' | 'webgl-canvas-diagnostics-suite' | 'post-quantum-crypto-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite' | 'v8-memory-suite' | 'web-crypto-webrtc-suite' | 'wasm-ast-bytecode-suite' | 'binary-serialization-protobuf-suite' | 'webrtc-media-codecs-suite' | 'oauth-security-oidc-suite' | 'webgl-canvas-diagnostics-suite' | 'post-quantum-crypto-suite' | 'web-bluetooth-hardware-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -5263,5 +5263,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'post-quantum-crypto-suite',
     suiteTab: 'shor-threat',
     tags: ['algoritmo de shor', 'qubits logicos', 'qubits fisicos', 'surface code', 'quebra rsa', 'q-day', 'store now decrypt later']
+  },
+  // ==========================================
+  // ETAPA 70: SUÍTE DE WEB BLUETOOTH, WEBHID & HARDWARE DIAGNOSTICS (MARCO 360 FERRAMENTAS!)
+  // ==========================================
+  {
+    id: 'web-bluetooth-gatt-explorer-tool',
+    title: 'Explorador GATT Web Bluetooth (Services, Characteristics & CCCD)',
+    description: 'Navegue na árvore hierárquica GATT de periféricos BLE, inspecione serviços primários (Heart Rate, BME280, DIS), características e decodifique buffers de telemetria DataView em tempo real.',
+    category: 'dev-4devs',
+    categoryLabel: 'Hardware & IoT (4Devs)',
+    icon: 'Bluetooth',
+    badge: 'Web Bluetooth GATT',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-bluetooth-hardware-suite',
+    suiteTab: 'ble-gatt',
+    tags: ['web bluetooth', 'gatt profile', 'ble characteristics', 'cccd 0x2902', 'dataview', 'primary service', 'telemetria ble']
+  },
+  {
+    id: 'web-hid-report-descriptor-parser-tool',
+    title: 'Parser de Descritores USB HID Reports (WebHID API)',
+    description: 'Decodifique descritores binários de relatório USB HID para mouses, teclados e gamepads: desmonte itens Main, Global e Local (Usage Pages, Report Size, Input/Output/Feature) em árvore.',
+    category: 'dev-4devs',
+    categoryLabel: 'Hardware & IoT (4Devs)',
+    icon: 'Layers',
+    badge: 'USB HID Report Parser',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-bluetooth-hardware-suite',
+    suiteTab: 'web-hid',
+    tags: ['webhid', 'hid report descriptor', 'usb hid', 'usage page', 'usage minimum', 'mouse descriptor', 'keyboard 6kro']
+  },
+  {
+    id: 'web-serial-framing-simulator-tool',
+    title: 'Simulador de Enquadramento & Telemetria Serial UART (Web Serial API)',
+    description: 'Configure portas seriais (baud rate 9600 a 921600 bps, 8N1/7E1), calcule tempo de transmissão, taxa efetiva em B/s, overhead de enquadramento e checksums de integridade XOR LRC e CRC-8.',
+    category: 'dev-4devs',
+    categoryLabel: 'Hardware & IoT (4Devs)',
+    icon: 'Terminal',
+    badge: 'UART / Web Serial',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-bluetooth-hardware-suite',
+    suiteTab: 'web-serial',
+    tags: ['web serial', 'uart rs232', 'baud rate', 'framing overhead', 'crc-8', 'xor lrc', 'throughput serial', 'microcontroladores']
+  },
+  {
+    id: 'ble-battery-service-calculator-tool',
+    title: 'Calculadora de Autonomia BLE Battery Service (UUID 0x180F)',
+    description: 'Estime a vida útil exata de baterias Coin Cell CR2032 (225 mAh) ou LiPo em dias, meses e anos para dispositivos BLE considerando correntes de sleep em microamperes, bursts de rádio Tx e sensores.',
+    category: 'dev-4devs',
+    categoryLabel: 'Hardware & IoT (4Devs)',
+    icon: 'Battery',
+    badge: 'BLE Battery 0x180F',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-bluetooth-hardware-suite',
+    suiteTab: 'ble-battery',
+    tags: ['ble battery', '0x180f', '0x2a19', 'cr2032 vida util', 'autonomia iot', 'corrente sleep ua', 'advertising interval']
+  },
+  {
+    id: 'bluetooth-sig-assigned-numbers-inspector-tool',
+    title: 'Dicionário de Números Atribuídos da Bluetooth SIG (UUIDs Canônicos)',
+    description: 'Consulte e filtre instantaneamente o catálogo oficial de UUIDs 16-bit padronizados da Bluetooth SIG para Serviços GATT, Características de telemetria médica/ambiental e Descritores normativos.',
+    category: 'dev-4devs',
+    categoryLabel: 'Hardware & IoT (4Devs)',
+    icon: 'Hash',
+    badge: 'Bluetooth SIG UUIDs',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'web-bluetooth-hardware-suite',
+    suiteTab: 'sig-numbers',
+    tags: ['bluetooth sig', 'assigned numbers', 'uuid 16-bit', 'gatt dictionary', 'heart rate 0x180d', 'battery service 0x180f', 'cccd 0x2902']
   }
 ];

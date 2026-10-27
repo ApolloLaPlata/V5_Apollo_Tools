@@ -89,6 +89,7 @@ import { WebRtcMediaAndCodecsSuite } from '@/components/tools/WebRtcMediaAndCode
 import { OAuthSecurityAndOidcSuite } from '@/components/tools/OAuthSecurityAndOidcSuite';
 import { WebGlAndCanvasDiagnosticsSuite } from '@/components/tools/WebGlAndCanvasDiagnosticsSuite';
 import { PostQuantumCryptographySuite } from '@/components/tools/PostQuantumCryptographySuite';
+import { WebBluetoothAndHardwareSuite } from '@/components/tools/WebBluetoothAndHardwareSuite';
 
 import { 
   Search, 
@@ -756,6 +757,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'post-quantum-crypto-suite' && (
               <PostQuantumCryptographySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'web-bluetooth-hardware-suite' && (
+              <WebBluetoothAndHardwareSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
