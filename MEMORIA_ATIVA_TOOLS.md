@@ -1,7 +1,7 @@
 # 🛠️ MEMÓRIA ATIVA - V5 APOLLO TOOLS (CAPITANIA #11)
 
 **Holding V5 Apollo · Repositório Local · Porta :3009**
-**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 515 Ferramentas Ativas · 101 Etapas Concluídas · Início do Segundo Centenário)
+**Data de Atualização:** 27/10/2026 · **Status:** Operacional (Build 100% Green · 520 Ferramentas Ativas · 102 Etapas Concluídas · Segundo Centenário Ativo)
 
 ---
 
@@ -202,16 +202,17 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 | **Astrofísica de Altas Energias & Raios Cósmicos** | `HighEnergyAstrophysicsAndCosmicRaysSuite.tsx` | Limite GZK para UHECRs (Foto-píon em γ_CMB a 50 EeV & Atenuação 50 Mpc), Aceleração Difusiva em Choques de Fermi SNR (s = 2.0 & Critério de Hillas), Radiação Síncrotron & Auto-Compton Inverso SSC em Blazares, Modelo de Bola de Fogo de GRB (Γ > 100 & Transparência), Magnetosferas de Púlsares & Spin-Down Dipolar |
 | **Astrobiologia, Bioassinaturas & Exoplanetas** | `AstrobiologyExoplanetsAndHabitabilitySuite.tsx` | Zonas Habitáveis de Kopparapu (Estrelas F/G/K/M & Fluxo Efetivo Seff), Trânsitos Fotométricos TESS/Kepler (Profundidade ppm & Parâmetro de Impacto b), Índice de Similaridade com a Terra (ESI Global & Interior/Superfície), Bioassinaturas Atmosféricas JWST (Desequilíbrio O₂/CH₄ & NIRSpec), Equação de Drake & Hipótese do Grande Filtro |
 | **Redes Neurais Biológicas & Conectoma** | `BiologicalNeuralNetworksAndElectrophysiologySuite.tsx` | Potencial de Ação de Hodgkin-Huxley (1952 - Gating m, h, n), Neurônio Spiking de Izhikevich (2003 - RS, IB, CH, FS), Plasticidade Sináptica STDP (Bi & Poo 1998 - Janela Hebbiana), Teoria de Cabos Dendríticos de Rall (Constante de Espaço λ & τm), Grafos do Conectoma Cerebral (Small-Worldness σ = γ/λ & Hubs HCP) |
+| **Farmacologia Quantitativa, PBPK & QSAR** | `QuantitativePharmacologyAndPbpkSuite.tsx` | Farmacocinética Monocompartimental (CL, Vd, t1/2, Css & Infusão), Simulador Bicompartimental Oral com Função de Bateman (Cmax, Tmax, Q), Preditor de Partição Tecidual PBPK Rodgers-Rowland (Kp, fup, logP), Curvas Dose-Resposta & Equação de Hill (Cooperatividade & Schild), Avaliador QSAR Druglikeness (Regra de 5 Lipinski & Veber) |
 
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário
 - **Sistema de Favoritos Local:** Usuário pode favoritar ferramentas com 1 clique (persistência no `localStorage`).
 - **Histórico Recente de Uso:** Barra de acesso rápido às últimas ferramentas utilizadas com persistência local.
-- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 515 ferramentas.
+- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 520 ferramentas.
 - **Deep-linking Universal:** Compartilhamento direto via URL (`?tool=id`) com cópia em 1 clique e ativação automática com scroll suave.
 - **Filtro Rápido:** Aba instantânea para ferramentas favoritadas na barra de categorias.
-- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 515 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
+- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 520 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
 - **Suporte a PWA Standalone:** Arquivo `manifest.json` com paleta Cyber Obsidian (`#020617` / `#06b6d4`) para instalação como app nativo no Desktop e Mobile.
 
 ---
@@ -233,5 +234,5 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 ---
 
 ## 6. Próximos Passos
-1. Prosseguir com a Esteira Determinística de Expansão (Etapa 102: Suíte de Farmacologia Quantitativa, Farmacocinética PBPK & Modelagem QSAR - Marco 520 Ferramentas).
+1. Prosseguir com a Esteira Determinística de Expansão (Etapa 103: Suíte de Imunologia de Sistemas, Dinâmica Viral & Epidemiologia Matemática - Marco 525 Ferramentas).
 2. Manter monitoramento contínuo via Shadow Logger e Colmeia.

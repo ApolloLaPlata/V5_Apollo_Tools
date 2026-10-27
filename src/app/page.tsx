@@ -121,6 +121,7 @@ import { TheoryOfEverythingAndSupersymmetrySuite } from '@/components/tools/Theo
 import { HighEnergyAstrophysicsAndCosmicRaysSuite } from '@/components/tools/HighEnergyAstrophysicsAndCosmicRaysSuite';
 import { AstrobiologyExoplanetsAndHabitabilitySuite } from '@/components/tools/AstrobiologyExoplanetsAndHabitabilitySuite';
 import { BiologicalNeuralNetworksAndElectrophysiologySuite } from '@/components/tools/BiologicalNeuralNetworksAndElectrophysiologySuite';
+import { QuantitativePharmacologyAndPbpkSuite } from '@/components/tools/QuantitativePharmacologyAndPbpkSuite';
 
 import { 
   Search, 
@@ -884,6 +885,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'biological-neural-networks-suite' && (
               <BiologicalNeuralNetworksAndElectrophysiologySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'quantitative-pharmacology-pbpk-suite' && (
+              <QuantitativePharmacologyAndPbpkSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
