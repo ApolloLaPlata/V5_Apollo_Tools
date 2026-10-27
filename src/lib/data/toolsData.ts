@@ -7,7 +7,7 @@ export interface ToolItem {
   icon: string;
   badge?: string;
   isInteractive?: boolean;
-  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite';
+  suiteTarget?: 'brazilian-docs' | 'vehicles-banks' | 'math-utils' | 'text-manipulator' | 'crypto-web' | 'apollo-suite' | 'geometry-suite' | 'dev-cv-suite' | 'lottery-games-suite' | 'time-focus-suite' | 'calendar-astronomy-suite' | 'units-converters-suite' | 'finance-economy-suite' | 'health-everyday-suite' | 'media-utility-suite' | 'text-specialized-suite' | 'ai-gateway-suite' | 'creative-speed-suite' | 'dev-web-media-suite' | 'security-infra-suite' | 'legal-workplace-suite' | 'audio-video-social-suite' | 'data-dev-formats-suite' | 'design-frontend-suite' | 'productivity-types-suite' | 'network-identifiers-suite' | 'crypto-security-suite' | 'web-assets-suite' | 'ai-prompt-viral-suite' | 'ecommerce-traffic-suite' | 'academic-study-suite' | 'legal-documents-a4-suite' | 'tax-fiscal-suite' | 'accessibility-perf-suite' | 'regex-lexical-suite' | 'api-network-suite' | 'document-opensource-suite' | 'media-audio-studio-suite' | 'email-transactional-suite' | 'devops-git-suite' | 'crypto-hash-suite' | 'typography-design-suite' | 'investment-finance-suite' | 'web-security-diag-suite' | 'vector-pixel-suite' | 'performance-vitals-suite' | 'terminal-sysadmin-suite' | 'iot-hardware-suite' | 'database-sql-suite' | 'modern-crypto-suite' | 'network-dns-suite' | 'binary-buffers-suite' | 'api-docs-mock-suite' | 'dependencies-sbom-suite' | 'server-benchmarks-suite' | 'ai-telemetry-suite' | 'prompt-engineering-suite' | 'svg-design-tokens-suite' | 'modern-images-wasm-suite' | 'data-compression-streams-suite';
   suiteTab?: string;
   modelTarget?: string;
   popular?: boolean;
@@ -4606,5 +4606,78 @@ export const TOOLS_CATALOG: ToolItem[] = [
     suiteTarget: 'modern-images-wasm-suite',
     suiteTab: 'aspect-ratio-cls',
     tags: ['aspect ratio', 'padding hack', 'cls', 'layout shift', '16:9', '9:16 reels', 'css proporcional']
+  },
+  // ==========================================
+  // ETAPA 61: SUÍTE DE COMPRESSÃO DE DADOS, ALGORITMOS & STREAMS WEB
+  // ==========================================
+  {
+    id: 'gzip-deflate-stream-compressor-tool',
+    title: 'Compressor & Descompressor Gzip / Deflate via Web Streams',
+    description: 'Comprima e descompacte payloads e arquivos em formato Gzip (RFC 1952) e Deflate nativamente no navegador usando a API CompressionStream.',
+    category: 'dev-4devs',
+    categoryLabel: 'Streams & Compressão',
+    icon: 'Zap',
+    badge: 'Web Streams Gzip',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'data-compression-streams-suite',
+    suiteTab: 'gzip-streams',
+    tags: ['gzip', 'deflate', 'compression stream', 'descompressor', 'magic bytes 1f8b', 'rfc 1952']
+  },
+  {
+    id: 'brotli-compression-ratio-simulator-tool',
+    title: 'Simulador & Comparador de Taxas Brotli vs Gzip',
+    description: 'Compare as taxas de compressão do algoritmo Brotli (níveis 1 a 11 com dicionário estático) contra Gzip em JSON, HTML e CSS, estimando tempos de rede 3G/4G.',
+    category: 'dev-4devs',
+    categoryLabel: 'Algoritmos & Benchmarks',
+    icon: 'TrendingDown',
+    badge: 'Brotli vs Gzip',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'data-compression-streams-suite',
+    suiteTab: 'brotli-simulator',
+    tags: ['brotli', 'gzip comparativo', 'taxa compressao', 'dicionario estatico', 'latencia rede', 'nginx brotli']
+  },
+  {
+    id: 'tar-archive-wasm-creator-tool',
+    title: 'Gerador de Pacotes Tarball (.tar) POSIX UStar',
+    description: 'Crie arquivos de arquivamento .tar reais no navegador em blocos de 512 bytes com permissões octais e metadados POSIX para download unificado.',
+    category: 'dev-4devs',
+    categoryLabel: 'Arquivamento & Tar',
+    icon: 'Archive',
+    badge: 'POSIX UStar Tar',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'data-compression-streams-suite',
+    suiteTab: 'tar-builder',
+    tags: ['tar', 'tarball', 'posix ustar', 'gerador tar', 'arquivamento', 'pacote arquivos']
+  },
+  {
+    id: 'zlib-crc32-adler32-checksum-tool',
+    title: 'Calculadora de Checksums CRC-32 & Adler-32',
+    description: 'Calcule somas de verificação de integridade CRC-32 (IEEE 802.3 Ethernet) e Adler-32 (RFC 1950 Zlib) em texto e buffers binários com exibição Hex e Decimal.',
+    category: 'dev-4devs',
+    categoryLabel: 'Integridade & Hashes',
+    icon: 'Binary',
+    badge: 'CRC-32 & Adler-32',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'data-compression-streams-suite',
+    suiteTab: 'checksums',
+    tags: ['crc32', 'adler32', 'checksum', 'verificacao integridade', 'zlib checksum', 'hash binario']
+  },
+  {
+    id: 'chunked-transfer-encoding-calculator-tool',
+    title: 'Simulador de Transfer-Encoding: chunked HTTP/1.1',
+    description: 'Fragmente payloads em blocos de streaming com delimitadores hexadecimais de tamanho, CRLF e chunk final 0\\r\\n\\r\\n conforme as RFCs 7230 e 9112.',
+    category: 'dev-4devs',
+    categoryLabel: 'Protocolos HTTP & Redes',
+    icon: 'Layers',
+    badge: 'Chunked HTTP',
+    isInteractive: true,
+    popular: true,
+    suiteTarget: 'data-compression-streams-suite',
+    suiteTab: 'chunked-http',
+    tags: ['chunked transfer', 'http chunked', 'streaming http', 'transfer encoding', 'rfc 9112', 'overhead hex']
   }
 ];

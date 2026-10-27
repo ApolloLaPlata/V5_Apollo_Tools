@@ -80,6 +80,7 @@ import { AiTelemetryAndTokenEconomicsSuite } from '@/components/tools/AiTelemetr
 import { PromptEngineeringReasoningSuite } from '@/components/tools/PromptEngineeringReasoningSuite';
 import { SvgVectorAndDesignTokensSuite } from '@/components/tools/SvgVectorAndDesignTokensSuite';
 import { ModernImageCompressionWasmSuite } from '@/components/tools/ModernImageCompressionWasmSuite';
+import { DataCompressionStreamsSuite } from '@/components/tools/DataCompressionStreamsSuite';
 
 import { 
   Search, 
@@ -720,6 +721,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'modern-images-wasm-suite' && (
               <ModernImageCompressionWasmSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'data-compression-streams-suite' && (
+              <DataCompressionStreamsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
