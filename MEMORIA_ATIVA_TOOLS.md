@@ -227,16 +227,19 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 - **Busca Resiliente a Acentos (Normalização Unicode NFD):** Implementação de normalizador em `src/app/page.tsx` para busca rápida e Command Palette (Ctrl+K), permitindo que termos digitados sem acento encontrem ferramentas acentuadas e vice-versa.
 - **Auditoria de `suiteTab` (0 Divergências):** Verificação de que todos os 539 utilitários mapeiam para abas válidas e ativas em suas suítes.
 - **Atualização de Metadados SEO, PWA & OpenGraph:** Sincronização de contadores em `layout.tsx` e `manifest.json` para refletir com exatidão mais de 530 ferramentas.
+- **Resiliência de Rede & Timeouts no SDK da V5 API:** Injeção de `AbortSignal.timeout` nas chamadas de `V5ApolloClient` (10s para verificação de chave e frota, 30s para inferência), impedindo travamentos de interface em oscilações de rede.
+- **Blindagem da Clipboard API:** Tratamento com try/catch e detecção defensiva em `copyShareLink` contra bloqueios de permissão do navegador.
+- **Dinamização de Contadores da Command Palette:** Rodapé do modal `Ctrl+K` atualizado para exibir `{TOOLS_CATALOG.length}` em tempo real.
 
 ---
 
 ### ⭐ Recursos de Experiência Soberana do Usuário
 - **Sistema de Favoritos Local:** Usuário pode favoritar ferramentas com 1 clique (persistência no `localStorage`).
 - **Histórico Recente de Uso:** Barra de acesso rápido às últimas ferramentas utilizadas com persistência local.
-- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 520 ferramentas.
+- **Command Palette Global (`Ctrl+K` / `Cmd+K`):** Navegação instantânea por teclado estilo Raycast/Linear em todas as 539 ferramentas.
 - **Deep-linking Universal:** Compartilhamento direto via URL (`?tool=id`) com cópia em 1 clique e ativação automática com scroll suave.
 - **Filtro Rápido:** Aba instantânea para ferramentas favoritadas na barra de categorias.
-- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 520 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
+- **SEO Programático Soberano:** Geração dinâmica de `sitemap.xml` para as 539 rotas, regras completas de `robots.txt` e injeção de JSON-LD Schema.org (`WebApplication` & `Organization`).
 - **Suporte a PWA Standalone:** Arquivo `manifest.json` com paleta Cyber Obsidian (`#020617` / `#06b6d4`) para instalação como app nativo no Desktop e Mobile.
 
 ---

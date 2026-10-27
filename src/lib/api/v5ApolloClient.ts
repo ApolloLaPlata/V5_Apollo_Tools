@@ -51,7 +51,8 @@ export class V5ApolloClient {
     try {
       const res = await fetch(`${this.baseUrl}/api/v1/auth/verify_key`, {
         method: 'GET',
-        headers: this.getHeaders()
+        headers: this.getHeaders(),
+        signal: typeof AbortSignal !== 'undefined' && 'timeout' in AbortSignal ? AbortSignal.timeout(10000) : undefined
       });
       if (!res.ok) {
         return { valid: false, tier: 'unauthorized', quota_remaining: 0 };
@@ -69,7 +70,8 @@ export class V5ApolloClient {
     try {
       const res = await fetch(`${this.baseUrl}/api/v1/fleet/balances`, {
         method: 'GET',
-        headers: this.getHeaders()
+        headers: this.getHeaders(),
+        signal: typeof AbortSignal !== 'undefined' && 'timeout' in AbortSignal ? AbortSignal.timeout(10000) : undefined
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       return await res.json();
@@ -92,7 +94,8 @@ export class V5ApolloClient {
       const res = await fetch(`${this.baseUrl}/api/v1/generate`, {
         method: 'POST',
         headers: this.getHeaders(),
-        body: JSON.stringify(params)
+        body: JSON.stringify(params),
+        signal: typeof AbortSignal !== 'undefined' && 'timeout' in AbortSignal ? AbortSignal.timeout(30000) : undefined
       });
 
       if (!res.ok) {

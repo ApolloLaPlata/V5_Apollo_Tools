@@ -519,7 +519,11 @@ export default function ApolloToolsPage() {
     e.stopPropagation();
     if (typeof window !== 'undefined') {
       const shareUrl = `${window.location.origin}${window.location.pathname}?tool=${toolId}`;
-      navigator.clipboard.writeText(shareUrl);
+      try {
+        if (navigator.clipboard?.writeText) {
+          navigator.clipboard.writeText(shareUrl).catch(() => {});
+        }
+      } catch {}
       setCopiedLinkToolId(toolId);
       setTimeout(() => setCopiedLinkToolId(null), 2000);
     }
@@ -1273,7 +1277,7 @@ export default function ApolloToolsPage() {
             {/* Footer da Command Palette */}
             <div className="px-4 py-2.5 bg-slate-950 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-500">
               <span>Navegue com o mouse ou clique para executar</span>
-              <span>115+ Ferramentas Cadastradas</span>
+              <span>{TOOLS_CATALOG.length} Ferramentas Cadastradas</span>
             </div>
           </div>
         </div>
