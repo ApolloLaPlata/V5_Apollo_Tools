@@ -106,6 +106,7 @@ import { SpatialAudioAndAmbisonicsSuite } from '@/components/tools/SpatialAudioA
 import { PairingCryptoAndThresholdSuite } from '@/components/tools/PairingCryptoAndThresholdSuite';
 import { CrossShaderCompilerAndReflectionSuite } from '@/components/tools/CrossShaderCompilerAndReflectionSuite';
 import { QuantumCircuitAndBlochSphereSuite } from '@/components/tools/QuantumCircuitAndBlochSphereSuite';
+import { GeospatialAndCartographySuite } from '@/components/tools/GeospatialAndCartographySuite';
 
 import { 
   Search, 
@@ -824,6 +825,9 @@ export default function ApolloToolsPage() {
             )}
             {selectedToolItem?.suiteTarget === 'quantum-circuit-bloch-suite' && (
               <QuantumCircuitAndBlochSphereSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
+            )}
+            {selectedToolItem?.suiteTarget === 'geospatial-cartography-suite' && (
+              <GeospatialAndCartographySuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
 
             {/* Ferramentas Standalone */}
