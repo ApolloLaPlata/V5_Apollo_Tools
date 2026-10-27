@@ -135,7 +135,7 @@ export function ComfyWorkflowModal({ tool, onClose }: ComfyWorkflowModalProps) {
   const jsonStr = JSON.stringify(workflowDetails.fullJson, null, 2);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(jsonStr);
+    try { if (navigator.clipboard?.writeText) navigator.clipboard.writeText(jsonStr).catch(() => {}); } catch {}
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };

@@ -228,7 +228,8 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 - **Auditoria de `suiteTab` (0 Divergências):** Verificação de que todos os 539 utilitários mapeiam para abas válidas e ativas em suas suítes.
 - **Atualização de Metadados SEO, PWA & OpenGraph:** Sincronização de contadores em `layout.tsx` e `manifest.json` para refletir com exatidão mais de 530 ferramentas.
 - **Resiliência de Rede & Timeouts no SDK da V5 API:** Injeção de `AbortSignal.timeout` nas chamadas de `V5ApolloClient` (10s para verificação de chave e frota, 30s para inferência), impedindo travamentos de interface em oscilações de rede.
-- **Blindagem da Clipboard API:** Tratamento com try/catch e detecção defensiva em `copyShareLink` contra bloqueios de permissão do navegador.
+- **Blindagem da Clipboard API em 114 Componentes:** Tratamento global defensivo com try/catch e detecção `navigator.clipboard?.writeText(...).catch(() => {})` em todas as ferramentas da plataforma, eliminando riscos de exceções assíncronas não tratadas (ex: bloqueios de permissão do navegador, iframe sandbox e perda de foco de janela).
+- **Auditoria de SSR e Hidratação React (0 Falhas):** Verificação de que nenhum componente acessa `window` ou `localStorage` fora de blocos controlados ou `useEffect`.
 - **Dinamização de Contadores da Command Palette:** Rodapé do modal `Ctrl+K` atualizado para exibir `{TOOLS_CATALOG.length}` em tempo real.
 
 ---

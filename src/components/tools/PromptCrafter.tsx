@@ -74,7 +74,7 @@ export function PromptCrafter() {
   }, [subject, selectedStyle, selectedLighting, selectedCamera, aspectRatio, addQualityTags, engine]);
 
   const copyPrompt = () => {
-    navigator.clipboard.writeText(positivePrompt);
+    try { if (navigator.clipboard?.writeText) navigator.clipboard.writeText(positivePrompt).catch(() => {}); } catch {}
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };

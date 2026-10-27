@@ -19,7 +19,7 @@ export function CharacterCounter() {
   const speechTimeSec = Math.round((wordCount / 130) * 60);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(text);
+    try { if (navigator.clipboard?.writeText) navigator.clipboard.writeText(text).catch(() => {}); } catch {}
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };

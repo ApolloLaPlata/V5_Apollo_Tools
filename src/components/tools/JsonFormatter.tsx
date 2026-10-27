@@ -73,7 +73,7 @@ export function JsonFormatter() {
 
   const handleCopy = () => {
     if (!inputJson) return;
-    navigator.clipboard.writeText(inputJson);
+    try { if (navigator.clipboard?.writeText) navigator.clipboard.writeText(inputJson).catch(() => {}); } catch {}
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };

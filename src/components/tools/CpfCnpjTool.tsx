@@ -158,7 +158,7 @@ export function CpfCnpjTool() {
   };
 
   const handleCopy = (text: string, id: string) => {
-    navigator.clipboard.writeText(text);
+    try { if (navigator.clipboard?.writeText) navigator.clipboard.writeText(text).catch(() => {}); } catch {}
     setCopiedField(id);
     setTimeout(() => setCopiedField(null), 2000);
   };

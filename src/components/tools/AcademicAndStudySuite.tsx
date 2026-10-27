@@ -51,7 +51,7 @@ export function AcademicAndStudySuite({ defaultTab = 'abnt-citations' }: Academi
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
   const copyToClipboard = (text: string, id: string) => {
-    navigator.clipboard.writeText(text);
+    try { if (navigator.clipboard?.writeText) navigator.clipboard.writeText(text).catch(() => {}); } catch {}
     setCopiedId(id);
     setTimeout(() => setCopiedId(null), 2000);
   };

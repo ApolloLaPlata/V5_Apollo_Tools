@@ -79,7 +79,7 @@ export function PasswordGenerator() {
 
   const handleCopy = () => {
     if (!password) return;
-    navigator.clipboard.writeText(password);
+    try { if (navigator.clipboard?.writeText) navigator.clipboard.writeText(password).catch(() => {}); } catch {}
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };

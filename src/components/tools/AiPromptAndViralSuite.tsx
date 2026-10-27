@@ -34,7 +34,7 @@ export function AiPromptAndViralSuite({ defaultTab = 'prompt-optimizer' }: { def
   }, [defaultTab]);
 
   const copyToClipboard = (text: string, key: string) => {
-    navigator.clipboard.writeText(text);
+    try { if (navigator.clipboard?.writeText) navigator.clipboard.writeText(text).catch(() => {}); } catch {}
     setCopiedKey(key);
     setTimeout(() => setCopiedKey(null), 2000);
   };

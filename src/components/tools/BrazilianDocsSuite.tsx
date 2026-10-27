@@ -319,7 +319,7 @@ export function BrazilianDocsSuite({ defaultTab = 'cpf' }: { defaultTab?: 'cpf' 
   }, [withMask, tipoCertidao, selectedUfIE]);
 
   const copyToClipboard = (text: string, key: string) => {
-    navigator.clipboard.writeText(text);
+    try { if (navigator.clipboard?.writeText) navigator.clipboard.writeText(text).catch(() => {}); } catch {}
     setCopiedKey(key);
     setTimeout(() => setCopiedKey(null), 2000);
   };

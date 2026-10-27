@@ -33,7 +33,7 @@ export const NetworkDnsDiagnosticsSuite: React.FC<NetworkDnsDiagnosticsSuiteProp
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
 
   const copyToClipboard = (text: string, key: string) => {
-    navigator.clipboard.writeText(text);
+    try { if (navigator.clipboard?.writeText) navigator.clipboard.writeText(text).catch(() => {}); } catch {}
     setCopiedKey(key);
     setTimeout(() => setCopiedKey(null), 2500);
   };

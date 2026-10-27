@@ -51,7 +51,7 @@ export function LineCleaner() {
 
   const handleCopy = () => {
     if (!processed) return;
-    navigator.clipboard.writeText(processed);
+    try { if (navigator.clipboard?.writeText) navigator.clipboard.writeText(processed).catch(() => {}); } catch {}
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };

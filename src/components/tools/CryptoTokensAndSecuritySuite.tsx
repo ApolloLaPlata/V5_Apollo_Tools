@@ -33,7 +33,7 @@ export function CryptoTokensAndSecuritySuite({ defaultTab = 'rsa-keys' }: { defa
   }, [defaultTab]);
 
   const copyToClipboard = (text: string, key: string) => {
-    navigator.clipboard.writeText(text);
+    try { if (navigator.clipboard?.writeText) navigator.clipboard.writeText(text).catch(() => {}); } catch {}
     setCopiedKey(key);
     setTimeout(() => setCopiedKey(null), 2000);
   };

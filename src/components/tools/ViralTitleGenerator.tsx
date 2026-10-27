@@ -109,7 +109,7 @@ export function ViralTitleGenerator() {
   }, [trigger, platform]);
 
   const copySingleTitle = (title: string, idx: number) => {
-    navigator.clipboard.writeText(title);
+    try { if (navigator.clipboard?.writeText) navigator.clipboard.writeText(title).catch(() => {}); } catch {}
     setCopiedIndex(idx);
     setTimeout(() => setCopiedIndex(null), 2000);
   };
@@ -117,7 +117,7 @@ export function ViralTitleGenerator() {
   const copyAllTitles = () => {
     if (titles.length === 0) return;
     const text = titles.map((t, i) => `${i + 1}. ${t.title}`).join('\n');
-    navigator.clipboard.writeText(text);
+    try { if (navigator.clipboard?.writeText) navigator.clipboard.writeText(text).catch(() => {}); } catch {}
     setCopiedAll(true);
     setTimeout(() => setCopiedAll(false), 2000);
   };

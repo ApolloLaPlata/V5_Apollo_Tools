@@ -28,7 +28,7 @@ export function WebGpuRenderingAndShadersSuite({ defaultTab = 'webgpu-vertex-fra
   const [copied, setCopied] = useState<string | null>(null);
 
   const handleCopy = (text: string, id: string) => {
-    navigator.clipboard.writeText(text);
+    try { if (navigator.clipboard?.writeText) navigator.clipboard.writeText(text).catch(() => {}); } catch {}
     setCopied(id);
     setTimeout(() => setCopied(null), 2000);
   };

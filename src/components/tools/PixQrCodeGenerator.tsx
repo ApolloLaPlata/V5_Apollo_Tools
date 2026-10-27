@@ -23,7 +23,7 @@ export function PixQrCodeGenerator() {
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(copiaColaCode)}&margin=10`;
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(copiaColaCode);
+    try { if (navigator.clipboard?.writeText) navigator.clipboard.writeText(copiaColaCode).catch(() => {}); } catch {}
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };

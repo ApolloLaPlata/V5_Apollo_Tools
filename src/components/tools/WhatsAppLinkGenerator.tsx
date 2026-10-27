@@ -28,7 +28,7 @@ export function WhatsAppLinkGenerator() {
 
   const copyLink = () => {
     if (!generatedLink) return;
-    navigator.clipboard.writeText(generatedLink);
+    try { if (navigator.clipboard?.writeText) navigator.clipboard.writeText(generatedLink).catch(() => {}); } catch {}
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
