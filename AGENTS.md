@@ -1,5 +1,5 @@
 # V5 APOLLO TOOLS - DIRETRIZES DO AGENTE (AGENTS.md)
-**Holding V5 Apollo · Capitania #11 · Porta Local :3009**
+**Holding V5 Apollo · Capitania #11 · Porta Local :3014 (Soberana)**
 
 ---
 
@@ -44,8 +44,8 @@ Ele foi projetado para absorver e unificar a **Tríade Sagrada de Benchmarks da 
 ### 🚫 LEI 3: PROIBIDO TOCAR NO V5 ACADEMY
 - A pasta `E:\MEUS PROGRAMAS\V5_APOLLO_SITES\V5_Apollo_Academy` está sob operação autônoma de outro agente. Não leia, não edite e não faça alterações nessa pasta.
 
-### 💻 LEI 4: DESENVOLVIMENTO LOCAL SOBERANO (PORTA 3009)
-- O projeto deve ser desenvolvido e testado **100% em ambiente local** (`http://localhost:3009`).
+### 💻 LEI 4: DESENVOLVIMENTO LOCAL SOBERANO (PORTA 3014)
+- O projeto deve ser desenvolvido e testado **100% em ambiente local** (`http://localhost:3014`).
 - **NÃO crie** instâncias no Vercel ou projetos no Supabase antes da ordem explícita do Comandante. O banco de dados para ferramentas client-side deve utilizar `localStorage` ou memória do navegador, preservando a soberania do usuário.
 
 ### ⚡ LEI 5: FILOSOFIA CLIENT-SIDE FIRST (ZERO GPU COST)
