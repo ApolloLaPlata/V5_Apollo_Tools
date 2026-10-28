@@ -288,7 +288,8 @@ import {
   Waves,
   Workflow,
   LayoutGrid,
-  PanelLeft
+  PanelLeft,
+  ChevronRight
 } from 'lucide-react';
 
 const ICON_MAP: Record<string, React.ElementType> = {
@@ -457,7 +458,7 @@ const normalize = (str: string) =>
 export default function ApolloToolsPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeInteractiveTool, setActiveInteractiveTool] = useState<string | null>('cpf-cnpj-tool');
-  const [viewMode, setViewMode] = useState<'portal' | 'workbench'>('portal');
+  const [viewMode, setViewMode] = useState<'portal' | 'workbench'>('workbench');
   const [sidebarSearch, setSidebarSearch] = useState('');
   const [selectedMacroCategory, setSelectedMacroCategory] = useState<string>('all');
   const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
@@ -560,6 +561,9 @@ export default function ApolloToolsPage() {
     return macro ? macro.name : 'Utilidades Gerais';
   };
 
+
+  
+
   const sidebarTools = useMemo(() => {
     const q = normalize(sidebarSearch);
     return TOOLS_CATALOG.filter((tool) => {
@@ -586,6 +590,39 @@ export default function ApolloToolsPage() {
       );
     });
   }, [sidebarSearch, selectedMacroCategory, favorites]);
+
+  const getToolGroup = (tool: ToolItem): string => {
+    const t = tool.title.toLowerCase();
+    if (t.startsWith('gerador') || t.includes('gerador de') || t.includes('gerador ')) return 'GERADORES';
+    if (t.startsWith('validador') || t.includes('validador de') || t.includes('validador ')) return 'VALIDADORES';
+    if (t.startsWith('calculadora') || t.startsWith('cálculo') || t.includes('calculadora')) return 'CALCULADORAS & MATEMÁTICA';
+    if (t.startsWith('conversor') || t.startsWith('formatador') || t.includes('conversor') || t.includes('formatador')) return 'CONVERSORES & FORMATADORES';
+    if (t.startsWith('simulador') || t.startsWith('testador') || t.includes('analisador') || t.includes('inspetor')) return 'SIMULADORES & ANALISADORES';
+    if (tool.category === 'comfyui' || t.includes('comfyui') || t.includes('ia visual')) return 'IMAGEM, VÍDEO & IA';
+    return 'UTILIDADES GERAIS';
+  };
+
+  const groupedSidebarTools = useMemo(() => {
+    const groups: Record<string, ToolItem[]> = {};
+    const order = [
+      'GERADORES',
+      'VALIDADORES',
+      'CALCULADORAS & MATEMÁTICA',
+      'CONVERSORES & FORMATADORES',
+      'SIMULADORES & ANALISADORES',
+      'IMAGEM, VÍDEO & IA',
+      'UTILIDADES GERAIS'
+    ];
+    order.forEach(g => { groups[g] = []; });
+    sidebarTools.forEach(tool => {
+      const g = getToolGroup(tool);
+      if (!groups[g]) groups[g] = [];
+      groups[g].push(tool);
+    });
+    return order
+      .filter(g => groups[g] && groups[g].length > 0)
+      .map(g => ({ groupName: g, tools: groups[g] }));
+  }, [sidebarTools]);
 
   const relatedTools = useMemo(() => {
     if (!selectedToolItem) return [];
@@ -640,10 +677,10 @@ export default function ApolloToolsPage() {
       <V5AppActivationBanner />
 
       {/* Header Soberano Branco e Limpo */}
-      <header className="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-xs">
+      <header className="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-2xs">
         <div className="max-w-[1700px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
-          {/* Esquerda: Botão Menu Mobile + Logo + Identidade */}
-          <div className="flex items-center gap-3">
+          {/* Esquerda: Logo + Subtítulo Oficial */}
+          <div className="flex items-center gap-3 shrink-0">
             <button
               type="button"
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -655,72 +692,79 @@ export default function ApolloToolsPage() {
 
             <div
               className="flex items-center gap-2.5 cursor-pointer"
-              onClick={() => setViewMode('portal')}
-              title="Voltar à Página Inicial Visual"
+              onClick={() => { setSelectedMacroCategory('all'); setViewMode('workbench'); }}
+              title="V5 Apollo Tools - Início"
             >
               <Apollo5RocketLogo size="sm" showText={false} />
               <div>
-                <div className="flex items-center gap-2">
-                  <span className="font-extrabold text-base sm:text-lg text-slate-900 tracking-tight">
-                    V5 Apollo Tools
+                <div className="flex items-center gap-1.5 leading-none">
+                  <span className="font-black text-base sm:text-lg text-slate-900 tracking-tight">
+                    V5 Apollo
                   </span>
-                  <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-blue-50 text-blue-700 border border-blue-200">
-                    544 Ferramentas
+                  <span className="text-sky-600 font-extrabold text-base sm:text-lg">
+                    Tools
                   </span>
                 </div>
-                <div className="text-[11px] text-slate-500 font-medium hidden md:block">
-                  Biblioteca Soberana de Utilidades, Imagem, Vídeo & IA
+                <div className="text-[10px] text-slate-500 font-sans tracking-wide block mt-0.5">
+                  ferramentas online
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Centro: Barra de Busca Rápida */}
-          <div className="flex-1 max-w-md sm:max-w-xl mx-2">
+          {/* Centro: Abas das Grandes Categorias (Padrão 4Devs) */}
+          <div className="hidden lg:flex items-center gap-1 overflow-x-auto scrollbar-none py-1">
+            <button
+              onClick={() => { setSelectedMacroCategory('all'); setViewMode('workbench'); }}
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition cursor-pointer whitespace-nowrap ${
+                selectedMacroCategory === 'all'
+                  ? 'bg-sky-600 text-white shadow-xs'
+                  : 'bg-slate-50 border border-slate-200 text-slate-700 hover:bg-slate-100'
+              }`}
+            >
+              Todas ({TOOLS_CATALOG.length})
+            </button>
+            {MACRO_CATEGORIES.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => { setSelectedMacroCategory(cat.id); setViewMode('workbench'); }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition cursor-pointer whitespace-nowrap ${
+                  selectedMacroCategory === cat.id
+                    ? 'bg-sky-600 text-white shadow-xs'
+                    : 'bg-slate-50 border border-slate-200 text-slate-700 hover:bg-slate-100'
+                }`}
+              >
+                {cat.shortName}
+              </button>
+            ))}
+          </div>
+
+          {/* Direita: Busca Rápida + Alternador de Portais */}
+          <div className="flex items-center gap-2.5 shrink-0">
             <div
               onClick={() => setIsCommandOpen(true)}
-              className="w-full bg-slate-50 hover:bg-slate-100 border border-slate-200 hover:border-slate-300 rounded-xl px-3.5 py-2 flex items-center justify-between text-xs text-slate-500 transition shadow-xs cursor-pointer"
+              className="w-40 sm:w-56 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg px-3 py-1.5 flex items-center justify-between text-xs text-slate-500 transition shadow-2xs cursor-pointer"
             >
               <div className="flex items-center gap-2 truncate">
-                <Search className="w-4 h-4 text-slate-400 shrink-0" />
-                <span className="truncate">Buscar ferramenta (ex: CPF, Pix, Remover Fundo, Regra de 3, JSON)...</span>
+                <Search className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                <span className="truncate">Buscar ferramenta...</span>
               </div>
-              <kbd className="hidden sm:inline-block px-1.5 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-mono text-slate-500 shadow-xs shrink-0">
+              <kbd className="hidden sm:inline-block px-1.5 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-mono text-slate-400">
                 ⌘K
               </kbd>
             </div>
-          </div>
 
-          {/* Direita: Alternância de Modo & Favoritos */}
-          <div className="flex items-center gap-2">
             <button
               onClick={() => setViewMode(viewMode === 'portal' ? 'workbench' : 'portal')}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-semibold transition cursor-pointer ${
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-bold transition cursor-pointer ${
                 viewMode === 'portal'
-                  ? 'bg-blue-50 border-blue-300 text-blue-700 font-bold'
-                  : 'bg-white border-slate-200 hover:bg-slate-50 text-slate-700 shadow-xs'
+                  ? 'bg-sky-50 border-sky-300 text-sky-700'
+                  : 'bg-white border-slate-200 hover:bg-slate-50 text-slate-700 shadow-2xs'
               }`}
-              title="Alternar entre modo Portais Visuais e Bancada de Execução"
+              title="Alternar visão geral em Portais"
             >
-              <LayoutGrid className="w-3.5 h-3.5 text-blue-600" />
-              <span className="hidden sm:inline">{viewMode === 'portal' ? 'Vendo Portais' : 'Ver Portais'}</span>
-            </button>
-
-            <button
-              onClick={() => {
-                setSelectedMacroCategory(selectedMacroCategory === 'favorites' ? 'all' : 'favorites');
-                setIsSidebarOpen(true);
-              }}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-semibold transition cursor-pointer ${
-                selectedMacroCategory === 'favorites'
-                  ? 'bg-amber-50 border-amber-300 text-amber-800'
-                  : 'bg-white border-slate-200 hover:bg-slate-50 text-slate-700 shadow-xs'
-              }`}
-              title="Filtrar Favoritos na barra lateral"
-            >
-              <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
-              <span className="hidden sm:inline">Favoritos</span>
-              <span className="text-[11px] font-mono">({favorites.length})</span>
+              <LayoutGrid className="w-3.5 h-3.5 text-sky-600" />
+              <span className="hidden sm:inline">{viewMode === 'portal' ? 'Bancada' : 'Portais'}</span>
             </button>
           </div>
         </div>
@@ -740,16 +784,15 @@ export default function ApolloToolsPage() {
         {/* BARRA LATERAL AMPLA, NÍTIDA & FOCADA EM TEXTO E CATEGORIAS      */}
         {/* ============================================================== */}
         <aside
-          className={`fixed lg:sticky top-0 lg:top-16 inset-y-0 left-0 z-50 lg:z-10 w-88 sm:w-96 lg:w-[390px] xl:w-[420px] bg-white border-r border-slate-200 flex flex-col h-full lg:h-[calc(100vh-4rem)] transition-transform duration-200 ease-in-out shadow-lg lg:shadow-none ${
+          className={`fixed lg:sticky top-0 lg:top-16 inset-y-0 left-0 z-50 lg:z-10 w-64 sm:w-72 lg:w-72 bg-white border-r border-slate-200 flex flex-col h-full lg:h-[calc(100vh-4rem)] transition-transform duration-200 ease-in-out shadow-lg lg:shadow-none ${
             isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
           }`}
         >
-          {/* Header da Barra Lateral */}
-          <div className="p-3 border-b border-slate-200 bg-slate-50/70 space-y-2.5">
+          {/* Header da Barra Lateral (Categoria Ativa em Azul) */}
+          <div className="p-3 border-b border-slate-200 bg-slate-50/80 space-y-2">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
-                <PanelLeft className="w-3.5 h-3.5 text-blue-600" />
-                <span>Biblioteca de Ferramentas</span>
+              <span className="text-xs font-extrabold text-sky-700 uppercase tracking-wider flex items-center gap-1.5 underline underline-offset-4 decoration-sky-500">
+                <span>{selectedMacroCategory === 'all' ? 'COMPUTAÇÃO & DEV' : MACRO_CATEGORIES.find(c => c.id === selectedMacroCategory)?.name || 'FERRAMENTAS'}</span>
               </span>
               <button
                 onClick={() => setIsSidebarOpen(false)}
@@ -765,10 +808,10 @@ export default function ApolloToolsPage() {
               <Search className="w-3.5 h-3.5 absolute left-2.5 top-2.5 text-slate-400" />
               <input
                 type="text"
-                placeholder="Filtrar ferramentas pelo nome..."
+                placeholder="Filtrar ferramentas..."
                 value={sidebarSearch}
                 onChange={(e) => setSidebarSearch(e.target.value)}
-                className="w-full bg-white border border-slate-200 rounded-lg pl-8 pr-7 py-1.5 text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition shadow-xs"
+                className="w-full bg-white border border-slate-200 rounded-lg pl-8 pr-7 py-1.5 text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 shadow-2xs"
               />
               {sidebarSearch && (
                 <button
@@ -781,77 +824,108 @@ export default function ApolloToolsPage() {
               )}
             </div>
 
-            {/* Seletor Elegante de Macro Categoria */}
-            <div className="space-y-1.5 pt-1">
-              <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
-                Filtrar por Categoria
-              </label>
+            {/* Seletor Mobile / Telas Menores */}
+            <div className="xl:hidden">
               <select
                 value={selectedMacroCategory}
-                onChange={(e) => {
-                  setSelectedMacroCategory(e.target.value);
-                  setSelectedSubcategory('all');
-                }}
-                className="w-full bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs font-semibold text-slate-800 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 shadow-xs cursor-pointer"
+                onChange={(e) => setSelectedMacroCategory(e.target.value)}
+                className="w-full bg-white border border-slate-200 rounded-lg px-2 py-1 text-xs font-semibold text-slate-700"
               >
-                <option value="all">Todas as Categorias ({TOOLS_CATALOG.length} ferramentas)</option>
-                {MACRO_CATEGORIES.map((cat) => {
-                  const count = TOOLS_CATALOG.filter((t) => getToolMacroCategory(t) === cat.id).length;
-                  return (
-                    <option key={cat.id} value={cat.id}>
-                      {cat.shortName} ({count})
-                    </option>
-                  );
-                })}
+                <option value="all">Todas as Categorias ({TOOLS_CATALOG.length})</option>
+                {MACRO_CATEGORIES.map((cat) => (
+                  <option key={cat.id} value={cat.id}>{cat.shortName}</option>
+                ))}
               </select>
             </div>
           </div>
 
-          {/* Lista de Ferramentas - TEXTO PURO, SEM BADGES POLUÍDOS */}
-          <div className="flex-1 overflow-y-auto px-2 py-2 divide-y divide-slate-100">
+          {/* Lista de Ferramentas Agrupada Estilo 4Devs (Puro Texto + Chevron) */}
+          <div className="flex-1 overflow-y-auto divide-y divide-slate-100">
             {sidebarTools.length === 0 ? (
               <div className="p-6 text-center text-xs text-slate-500 font-sans">
                 <p>Nenhuma ferramenta encontrada para "{sidebarSearch}".</p>
                 <button
                   onClick={() => { setSidebarSearch(''); setSelectedMacroCategory('all'); }}
-                  className="mt-2 text-blue-600 font-semibold hover:underline text-xs block mx-auto"
+                  className="mt-2 text-sky-600 font-semibold hover:underline text-xs block mx-auto"
                 >
                   Limpar filtros
                 </button>
               </div>
+            ) : sidebarSearch ? (
+              /* Visualização Plana durante a Busca */
+              <div className="py-1">
+                {sidebarTools.map((tool) => {
+                  const isSelected = activeInteractiveTool === tool.id && viewMode === 'workbench';
+                  return (
+                    <button
+                      key={tool.id}
+                      onClick={() => {
+                        handleToolClick(tool);
+                        if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+                          setIsSidebarOpen(false);
+                        }
+                      }}
+                      className={`w-full text-left px-3.5 py-1.5 text-xs transition-colors flex items-center justify-between group cursor-pointer ${
+                        isSelected
+                          ? 'bg-sky-600 text-white font-semibold'
+                          : 'text-slate-700 hover:bg-slate-50 hover:text-sky-700 font-normal'
+                      }`}
+                    >
+                      <span className="truncate pr-2">{tool.title}</span>
+                      <ChevronRight
+                        className={`w-3.5 h-3.5 shrink-0 transition-transform ${
+                          isSelected ? 'text-white' : 'text-slate-300 group-hover:text-slate-500 group-hover:translate-x-0.5'
+                        }`}
+                      />
+                    </button>
+                  );
+                })}
+              </div>
             ) : (
-              sidebarTools.map((tool) => {
-                const isSelected = activeInteractiveTool === tool.id && viewMode === 'workbench';
-                const isFav = favorites.includes(tool.id);
-
-                return (
-                  <button
-                    key={tool.id}
-                    onClick={() => {
-                      handleToolClick(tool);
-                      if (typeof window !== 'undefined' && window.innerWidth < 1024) {
-                        setIsSidebarOpen(false);
-                      }
-                    }}
-                    className={`w-full text-left px-3.5 py-3 rounded-xl transition-all flex items-center justify-between group cursor-pointer ${
-                      isSelected
-                        ? 'bg-blue-50 text-blue-900 font-bold border-l-4 border-blue-600 shadow-2xs'
-                        : 'text-slate-800 hover:bg-slate-100/80 hover:text-blue-700 font-semibold'
-                    }`}
-                  >
-                    <span className="text-[14px] leading-snug break-words pr-2 font-semibold text-slate-800 group-hover:text-blue-700">{tool.title}</span>
-                    {isFav && (
-                      <Star className="w-4 h-4 text-amber-500 fill-amber-500 shrink-0 ml-1" />
-                    )}
-                  </button>
-);
-              })
+              /* Visualização Agrupada em Seções (Padrão 4Devs) */
+              <div>
+                {groupedSidebarTools.map((group) => (
+                  <div key={group.groupName} className="border-b border-slate-100 last:border-none">
+                    <div className="px-3 pt-3 pb-1 text-[11px] font-bold text-slate-500 uppercase tracking-wider bg-slate-50/50">
+                      {group.groupName}
+                    </div>
+                    <div>
+                      {group.tools.map((tool) => {
+                        const isSelected = activeInteractiveTool === tool.id && viewMode === 'workbench';
+                        return (
+                          <button
+                            key={tool.id}
+                            onClick={() => {
+                              handleToolClick(tool);
+                              if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+                                setIsSidebarOpen(false);
+                              }
+                            }}
+                            className={`w-full text-left px-3.5 py-1.5 text-xs transition-colors flex items-center justify-between group cursor-pointer ${
+                              isSelected
+                                ? 'bg-sky-600 text-white font-semibold'
+                                : 'text-slate-700 hover:bg-slate-50 hover:text-sky-700 font-normal'
+                            }`}
+                          >
+                            <span className="truncate pr-2">{tool.title}</span>
+                            <ChevronRight
+                              className={`w-3.5 h-3.5 shrink-0 transition-transform ${
+                                isSelected ? 'text-white' : 'text-slate-300 group-hover:text-slate-500 group-hover:translate-x-0.5'
+                              }`}
+                            />
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
+              </div>
             )}
           </div>
 
           {/* Rodapé da Barra Lateral */}
-          <div className="p-2.5 border-t border-slate-200 bg-slate-50/80 text-[11px] font-mono text-slate-500 flex items-center justify-between">
-            <span className="font-semibold text-slate-700">{sidebarTools.length} ferramentas</span>
+          <div className="p-2 border-t border-slate-200 bg-slate-50 text-[11px] font-mono text-slate-500 flex items-center justify-between">
+            <span className="font-semibold text-slate-600">{sidebarTools.length} ferramentas</span>
             <span className="text-emerald-600 font-semibold flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> 100% Client-Side
             </span>
