@@ -11,10 +11,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: 'V5 Apollo Tools • Canivete Suíço de Produtividade, Dev & Workflows ComfyUI',
-  description: 'Mais de 530 ferramentas soberanas client-side: 4Devs, Invertexto, Workflows ComfyUI e IA Criativa Apollo La Plata. Zero custo de API e privacidade total.',
+  description: 'Mais de 530 ferramentas soberanas client-side: utilitários de desenvolvedor, cálculos fiscais, manipulação de texto e workflows de IA ComfyUI. Zero custo de API e privacidade total.',
   keywords: [
-    '4devs',
-    'invertexto',
+    'utilitarios online',
+    'ferramentas dev',
     'gerador de cpf',
     'gerador de cnpj',
     'validador de cpf',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   openGraph: {
     title: 'V5 Apollo Tools • Canivete Suíço de Produtividade & IA',
-    description: 'A união definitiva das utilidades de desenvolvedor do 4Devs, agilidade do Invertexto e workflows de IA do Nordy.ai ComfyUI.',
+    description: 'O maior ecossistema soberano de ferramentas online, cálculos, manipulação de mídia e workflows de IA generativa.',
     url: 'https://tools.v5apollo.com',
     siteName: 'V5 Apollo Tools',
     locale: 'pt_BR',

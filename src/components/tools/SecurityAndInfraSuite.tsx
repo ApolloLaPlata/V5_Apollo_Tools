@@ -149,8 +149,8 @@ infra:
   cold_start: 2.8s
   soberania: 100%
 ferramentas:
-  - 4Devs
-  - Invertexto
+  - V5 Tools
+  - V5 Tools
   - ComfyUI`;
 
   const [yamlText, setYamlText] = useState<string>(DEFAULT_YAML);

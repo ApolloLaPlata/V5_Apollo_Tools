@@ -96,8 +96,8 @@ export function DataAndDevFormatsSuite({ defaultTab = 'csv-json-sql' }: { defaul
 Bem-vindo ao **V5 Apollo Tools**! Este editor suporta visualização em tempo real.
 
 ### Principais Pilares:
-- **4Devs Benchmark:** Documentos, validações fiscais e dados mock.
-- **Invertexto Benchmark:** Utilidades rápidas e manipulação de texto.
+- **V5 SOBERANO:** Documentos, validações fiscais e dados mock.
+- **V5 SOBERANO:** Utilidades rápidas e manipulação de texto.
 - **Nordy.ai ComfyUI:** Grafos e workflows para Modal H100.
 
 > Soberania de dados: 100% de processamento local sem envio externo.

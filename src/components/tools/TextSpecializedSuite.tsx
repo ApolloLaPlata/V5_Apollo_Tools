@@ -193,7 +193,7 @@ export function TextSpecializedSuite({ defaultTab = 'letras-estilizadas' }: { de
         <div>
           <div className="flex items-center gap-2">
             <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 font-bold uppercase tracking-wider">
-              Benchmark Invertexto · Manipulação & Cripto
+              V5 Soberano · Manipulação & Cripto
             </span>
             <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-400 border border-slate-700">
               100% Client-Side

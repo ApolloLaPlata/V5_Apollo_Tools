@@ -131,7 +131,7 @@ export function V5AiGatewaySuite({ defaultTab = 'ai-playground' }: { defaultTab?
   const apiAgentPrompt = `[ORDEM DO COMANDANTE V5 APOLLO · CAPITANIA #11 (V5 TOOLS) -> CAPITANIA V5 APOLLO API]
 
 Olá Agente da V5 Apollo API!
-A Capitania #11 (V5 Tools) concluiu com 100% de sucesso a clonagem de todas as ferramentas da Tríade Sagrada (4Devs + Invertexto + Nordy.ai ComfyUI) operando localmente na porta :3009.
+A Capitania #11 (V5 Tools) concluiu com 100% de sucesso a clonagem de todas as ferramentas da Tríade Sagrada (V5 Tools + V5 Tools + Nordy.ai ComfyUI) operando localmente na porta :3009.
 
 Agora precisamos sincronizar a infraestrutura de backend para execução real dos nossos workflows:
 1. Verifique a frota de 20 contas Modal cadastradas na pasta 'E:\\MEUS PROGRAMAS\\FERRAMENTAS'.

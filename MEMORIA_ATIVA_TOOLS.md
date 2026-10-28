@@ -318,3 +318,12 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 ## 6. Próximos Passos
 1. Prosseguir com a Esteira Determinística de Expansão (Etapa 104: Suíte de Bioinformática Estrutural, Cristalografia de Raios-X & Dinâmica Molecular - Marco 530 Ferramentas).
 2. Manter monitoramento contínuo via Shadow Logger e Colmeia.
+
+---
+
+## 7. Fase 18: Extinção Definitiva de Badges e Sanitização Soberana de UI (28/10/2026)
+- **Eliminação Completa de Badges na Sidebar e Paleta:** Removidos 100% dos pill badges (ex: 'Markdown VIP', 'Estratégia De/Por', 'Unit Economics', 'DAS 2026', '16-bit PCM') que poluíam a visualização e causavam truncamento das ferramentas.
+- **Ampliação da Sidebar:** Largura ampliada para 390px (Desktop) / 420px (Telas amplas) garantindo que nenhum título seja cortado com reticências.
+- **Tipografia em Evidência:** Títulos das ferramentas agora possuem peso semibold, tamanho 14px, alto contraste contra o fundo branco e destaque ativo imediato.
+- **Seletor de Macro Categorias:** Dropdown intuitivo integrado ao topo da sidebar permitindo alternar instantaneamente entre as 7 Grandes Áreas de Atuação (Imagem/IA, Vídeo/Áudio, Documentos/Fiscal, Dia a Dia, Texto, IA Prompts, Dev/QA).
+- **Sanitização de Concorrentes:** Expurgadas todas as menções a nomes de concorrentes (4Devs, Invertexto) dos componentes e metadados, reafirmando a soberania da Holding V5 Apollo.

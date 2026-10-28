@@ -79,7 +79,7 @@ export function LineCleaner() {
             <h3 className="text-lg font-bold text-slate-100 flex items-center gap-2">
               Limpador de Linhas & Duplicatas
               <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 font-bold border border-cyan-500/30">
-                Padrão Invertexto
+                Padrão Oficial
               </span>
             </h3>
             <p className="text-xs text-slate-400">

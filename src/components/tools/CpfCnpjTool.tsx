@@ -175,7 +175,7 @@ export function CpfCnpjTool() {
             <h3 className="text-lg font-bold text-slate-100 flex items-center gap-2">
               Gerador & Validador de CPF / CNPJ
               <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30">
-                Padrão 4Devs
+                Padrão Oficial
               </span>
             </h3>
             <p className="text-xs text-slate-400">

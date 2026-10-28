@@ -238,9 +238,9 @@ echo $response;`;
   // =========================================================================
   // ABA 3: INSPETOR E CONSTRUTOR DE QUERY PARAMS
   // =========================================================================
-  const [fullUrlInput, setFullUrlInput] = useState('https://tools.v5apollo.com/search?category=dev-4devs&page=1&tags=cpf%2Ccnpj&sort=popular');
+  const [fullUrlInput, setFullUrlInput] = useState('https://tools.v5apollo.com/search?category=dev-v5&page=1&tags=cpf%2Ccnpj&sort=popular');
   const [queryParams, setQueryParams] = useState<QueryParamItem[]>([
-    { id: '1', key: 'category', value: 'dev-4devs', enabled: true },
+    { id: '1', key: 'category', value: 'dev-v5', enabled: true },
     { id: '2', key: 'page', value: '1', enabled: true },
     { id: '3', key: 'tags', value: 'cpf,cnpj', enabled: true },
     { id: '4', key: 'sort', value: 'popular', enabled: true },

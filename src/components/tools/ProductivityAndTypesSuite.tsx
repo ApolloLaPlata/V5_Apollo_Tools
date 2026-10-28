@@ -331,8 +331,8 @@ export function calculateContrast(c1: string, c2: string): number {
 
 ## 📦 Funcionalidades Principais
 
-- **4Devs Total Reverse:** CPF, CNPJ, Cartões Luhn, Inscrição Estadual, SUS e Massa QA.
-- **Invertexto Total Reverse:** Manipulação de texto, códigos de barras, QR Code Pix e conversores.
+- **V5 SOBERANO:** CPF, CNPJ, Cartões Luhn, Inscrição Estadual, SUS e Massa QA.
+- **V5 SOBERANO:** Manipulação de texto, códigos de barras, QR Code Pix e conversores.
 - **Nordy.ai Workflows:** Visualização técnica de grafos ComfyUI e download de JSON de API.
 - **V5 AI Gateway:** Playground LLM e despacho de execuções na frota Modal H100.
 

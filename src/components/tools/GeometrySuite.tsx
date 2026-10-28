@@ -275,7 +275,7 @@ export function GeometrySuite({ defaultTab = 'circulo' }: GeometrySuiteProps) {
               Suíte de Geometria Plana & Calculadoras de Área
             </h2>
             <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/40">
-              13 FORMAS 4DEVS
+              13 FORMAS GEOMÉTRICAS
             </span>
           </div>
           <p className="text-xs text-slate-400">

@@ -397,7 +397,7 @@ export function CalendarAndAstronomySuite({ defaultTab = 'idade-signos' }: { def
         <div>
           <div className="flex items-center gap-2">
             <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-bold uppercase tracking-wider">
-              Benchmark Invertexto · Suíte de Tempo
+              V5 Soberano · Suíte de Tempo
             </span>
             <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-400 border border-slate-700">
               100% Client-Side

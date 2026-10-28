@@ -340,7 +340,7 @@ export function BrazilianDocsSuite({ defaultTab = 'cpf' }: { defaultTab?: 'cpf' 
               Suíte Oficial de Documentos Brasileiros & Validadores
             </h2>
             <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/40">
-              4DEVS TOTAL REVERSE
+              V5 SOBERANO
             </span>
           </div>
           <p className="text-xs text-slate-400">
@@ -754,7 +754,7 @@ export function BrazilianDocsSuite({ defaultTab = 'cpf' }: { defaultTab?: 'cpf' 
               </select>
             </div>
             <span className="text-[11px] font-mono text-slate-500">
-              Padrão Sintegra / Confaz / 4Devs Oficial
+              Padrão Sintegra / Confaz Oficial
             </span>
           </div>
 

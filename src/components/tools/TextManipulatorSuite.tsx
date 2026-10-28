@@ -442,11 +442,11 @@ export function TextManipulatorSuite({ defaultTab = 'fontes' }: { defaultTab?: T
       {/* Abas */}
       <div className="flex items-center gap-1.5 overflow-x-auto pb-4 mb-6 border-b border-slate-800/80">
         {[
-          { id: 'ocorrencia-palavra', label: 'Frequência de Palavras', badge: '4Devs' },
-          { id: 'texto-html', label: 'Texto para HTML', badge: '4Devs' },
-          { id: 'cortar-texto', label: 'Cortar Textos (Slice)', badge: '4Devs' },
-          { id: 'dividir-string', label: 'Dividir String', badge: '4Devs' },
-          { id: 'tabela-ascii', label: 'Tabela ASCII & Inspetor', badge: '4Devs' },
+          { id: 'ocorrencia-palavra', label: 'Frequência de Palavras' },
+          { id: 'texto-html', label: 'Texto para HTML' },
+          { id: 'cortar-texto', label: 'Cortar Textos (Slice)' },
+          { id: 'dividir-string', label: 'Dividir String' },
+          { id: 'tabela-ascii', label: 'Tabela ASCII & Inspetor' },
           { id: 'fontes', label: 'Fontes Estilizadas' },
           { id: 'flip', label: 'Texto Invertido (Flip)' },
           { id: 'diff', label: 'Comparador Diff' },
@@ -464,13 +464,7 @@ export function TextManipulatorSuite({ defaultTab = 'fontes' }: { defaultTab?: T
             }`}
           >
             {tab.label}
-            {tab.badge && (
-              <span className={`text-[9px] px-1.5 py-0.2 rounded font-mono ${
-                activeTab === tab.id ? 'bg-slate-950/40 text-slate-900 font-extrabold' : 'bg-purple-500/20 text-purple-400'
-              }`}>
-                {tab.badge}
-              </span>
-            )}
+            
           </button>
         ))}
       </div>

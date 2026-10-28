@@ -193,7 +193,7 @@ Titular: ${generatedCard.holder}`;
               Cartão de Crédito: Validador & Gerador QA
             </h2>
             <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-bold border border-amber-500/40">
-              4DEVS BENCHMARK
+              V5 SOBERANO
             </span>
           </div>
           <p className="text-xs text-slate-400">

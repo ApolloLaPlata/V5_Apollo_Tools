@@ -274,7 +274,7 @@ export function HealthAndEverydaySuite({ defaultTab = 'imc-peso' }: { defaultTab
         <div>
           <div className="flex items-center gap-2">
             <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20 font-bold uppercase tracking-wider">
-              Benchmark Invertexto · Saúde & Vida Cotidiana
+              V5 Soberano · Saúde & Vida Cotidiana
             </span>
             <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-400 border border-slate-700">
               100% Client-Side

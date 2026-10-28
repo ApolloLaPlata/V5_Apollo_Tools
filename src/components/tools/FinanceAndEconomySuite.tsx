@@ -217,7 +217,7 @@ export function FinanceAndEconomySuite({ defaultTab = 'juros-compostos' }: { def
         <div>
           <div className="flex items-center gap-2">
             <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold uppercase tracking-wider">
-              Benchmark Invertexto · Finanças & Economia
+              V5 Soberano · Finanças & Economia
             </span>
             <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-400 border border-slate-700">
               100% Client-Side

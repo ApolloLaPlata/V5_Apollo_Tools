@@ -251,7 +251,7 @@ Senha Sugerida: ${person.senhaMock}`;
               Gerador de Pessoas & Massa de Testes (QA)
             </h2>
             <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/40">
-              4DEVS BENCHMARK
+              V5 SOBERANO
             </span>
           </div>
           <p className="text-xs text-slate-400">
