@@ -274,6 +274,20 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 
 ---
 
+- **Fase 17 - Arquitetura de 7 Grandes Portais por Atuação, Subcategorias e Limpeza Visual Soberana:**
+  - **Eliminação Definitiva de Nomes de Terceiros:** Removidas todas as menções públicas a sites de benchmark concorrentes (4Devs, Invertexto). A plataforma se afirma com identidade própria soberana da Holding V5 Apollo.
+  - **7 Portais Macro de Atuação com Visual Rico:**
+    1. 🖼️ **Edição de Imagem & IA Visual** (Remover fundo, Upscale 4K, Face Swap, Foto Comercial, ComfyUI)
+    2. 🎬 **Vídeo, Áudio & Multimídia** (Geradores de Vídeo, TTS Síntese de Voz, Ruído de Foco, WebRTC)
+    3. 📄 **Documentos, Cadastros & Fiscal** (Gerador CPF/CNPJ, Pessoas Mock, Cartão Luhn, MEI/DAS, Contratos A4)
+    4. ⚡ **Utilidades Rápidas & Dia a Dia** (Pix QR Code BACEN, WhatsApp wa.me, Regra de 3, Porcentagem, Senhas)
+    5. 📝 **Texto, Redação & Normas ABNT** (Contador de Caracteres, Conversor de Caixa, Limpador, ABNT NBR 6023)
+    6. 💡 **IA Criativa, Prompts & Roteiros** (Prompts Virais, Roteiros 30-60s com Retenção, Títulos de Alto CTR)
+    7. 💻 **Desenvolvedor, QA & Dados** (Formatador JSON/SQL, Criptografia SHA, Regex, APIs, Redes)
+  - **Modo Portal Inicial ("O Que Você Quer Fazer Hoje?"):** Visual impactante com os 7 grandes botões ilustrados e acesso rápido em 1 clique às 8 ferramentas mais famosas do Brasil.
+  - **Limpeza Radical da Barra Lateral (Texto Puro e Nítido):** Extintos 100% dos badges poluídos (`Dias & Úteis`, `Bidirecional`, `16-bit PCM`, `3 Cálculos`, `EAN-13`, etc.), permitindo que o título de cada ferramenta ocupe a largura total de 350px com tipografia nítida e sem cortes abruptos.
+  - **Correções de Layout:** Sanadas caixas pretas residuais na Regra de Três (`MathUtilsSuite`) com styling clean white, e reformulado o formulário de referências ABNT (`AcademicAndStudySuite`) com grid balanceado e espaçoso.
+
 ### ⭐ Recursos de Experiência Soberana do Usuário
 - **Sistema de Favoritos Local:** Usuário pode favoritar ferramentas com 1 clique (persistência no `localStorage`).
 - **Histórico Recente de Uso:** Barra de acesso rápido às últimas ferramentas utilizadas com persistência local.
