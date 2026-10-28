@@ -454,15 +454,21 @@ const ICON_MAP: Record<string, React.ElementType> = {
 
 
 const APOLLO_BRIDGE_LINKS = [
+  { name: 'Hub V5', port: ':3000', url: 'http://localhost:3000', color: 'text-zinc-700 border-zinc-200 bg-zinc-50 hover:bg-zinc-100' },
+  { name: 'PixDrop Store', port: ':3000', url: 'http://localhost:3000', color: 'text-emerald-600 border-emerald-200 bg-emerald-50 hover:bg-emerald-100' },
   { name: 'Finders', port: ':3001', url: 'http://localhost:3001', color: 'text-rose-600 border-rose-200 bg-rose-50 hover:bg-rose-100' },
   { name: 'AutoBlog', port: ':3002', url: 'http://localhost:3002', color: 'text-blue-600 border-blue-200 bg-blue-50 hover:bg-blue-100' },
-  { name: 'Pocket Director', port: ':3007', url: 'http://localhost:3007', color: 'text-emerald-600 border-emerald-200 bg-emerald-50 hover:bg-emerald-100' },
   { name: 'Sound', port: ':3005', url: 'http://localhost:3005', color: 'text-amber-600 border-amber-200 bg-amber-50 hover:bg-amber-100' },
-  { name: 'Broadcaster', port: ':3008', url: 'http://localhost:3008', color: 'text-purple-600 border-purple-200 bg-purple-50 hover:bg-purple-100' },
+  { name: 'Payment', port: ':3006', url: 'http://localhost:3006', color: 'text-emerald-600 border-emerald-200 bg-emerald-50 hover:bg-emerald-100' },
+  { name: 'Pocket Director', port: ':3007', url: 'http://localhost:3007', color: 'text-emerald-600 border-emerald-200 bg-emerald-50 hover:bg-emerald-100' },
+  { name: 'Finance', port: ':3009', url: 'http://localhost:3009', color: 'text-emerald-600 border-emerald-200 bg-emerald-50 hover:bg-emerald-100' },
   { name: 'Avatar', port: ':3010', url: 'http://localhost:3010', color: 'text-violet-600 border-violet-200 bg-violet-50 hover:bg-violet-100' },
   { name: 'Poster', port: ':3011', url: 'http://localhost:3011', color: 'text-pink-600 border-pink-200 bg-pink-50 hover:bg-pink-100' },
+  { name: 'Prisma', port: ':3013', url: 'http://localhost:3013', color: 'text-violet-600 border-violet-200 bg-violet-50 hover:bg-violet-100' },
+  { name: 'Broadcaster', port: ':3014', url: 'http://localhost:3014', color: 'text-purple-600 border-purple-200 bg-purple-50 hover:bg-purple-100' },
+  { name: 'RMT', port: ':3015', url: 'http://localhost:3015', color: 'text-amber-600 border-amber-200 bg-amber-50 hover:bg-amber-100' },
+  { name: 'Academy', port: ':3016', url: 'http://localhost:3016', color: 'text-indigo-600 border-indigo-200 bg-indigo-50 hover:bg-indigo-100' },
   { name: 'Games 9:16', port: ':3012', url: 'http://localhost:3012', color: 'text-orange-600 border-orange-200 bg-orange-50 hover:bg-orange-100' },
-  { name: 'Finance', port: ':3009', url: 'http://localhost:3009', color: 'text-emerald-600 border-emerald-200 bg-emerald-50 hover:bg-emerald-100' },
 ];
 
 const normalize = (str: string) =>
