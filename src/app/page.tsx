@@ -4,6 +4,7 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
 import Apollo5RocketLogo from '@/components/ui/Apollo5RocketLogo';
 import V5AppActivationBanner from '@/components/ui/V5AppActivationBanner';
 import { TOOLS_CATALOG, ToolItem } from '@/lib/data/toolsData';
+import { MACRO_CATEGORIES, MacroCategory, getToolMacroCategory } from '@/lib/data/categoriesData';
 
 // Individual Tools
 import { CharacterCounter } from '@/components/tools/CharacterCounter';
@@ -455,11 +456,11 @@ const normalize = (str: string) =>
 
 export default function ApolloToolsPage() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<'all' | 'favorites' | 'dev-4devs' | 'invertexto' | 'comfyui' | 'prompts'>('all');
   const [activeInteractiveTool, setActiveInteractiveTool] = useState<string | null>('cpf-cnpj-tool');
-  const [viewMode, setViewMode] = useState<'workbench' | 'catalog'>('workbench');
+  const [viewMode, setViewMode] = useState<'portal' | 'workbench'>('portal');
   const [sidebarSearch, setSidebarSearch] = useState('');
-  const [sidebarCategory, setSidebarCategory] = useState<'all' | 'favorites' | 'dev-4devs' | 'invertexto' | 'comfyui' | 'prompts'>('all');
+  const [selectedMacroCategory, setSelectedMacroCategory] = useState<string>('all');
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [activeComfyModal, setActiveComfyModal] = useState<ToolItem | null>(null);
   const [favorites, setFavorites] = useState<string[]>([]);
@@ -553,81 +554,47 @@ export default function ApolloToolsPage() {
     return TOOLS_CATALOG.find((t) => t.id === activeInteractiveTool) || null;
   }, [activeInteractiveTool]);
 
-  const getCategoryLabel = (category: string) => {
-    switch (category) {
-      case 'dev-4devs': return '4Devs & QA';
-      case 'invertexto': return 'Invertexto & Web';
-      case 'comfyui': return 'ComfyUI & IA Visual';
-      case 'prompts': return 'Apollo La Plata Prompts';
-      default: return 'Geral';
-    }
-  };
-
-  const getCategoryBadgeClass = (category: string) => {
-    switch (category) {
-      case 'dev-4devs': return 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30';
-      case 'invertexto': return 'bg-cyan-500/10 text-cyan-400 border-cyan-500/30';
-      case 'comfyui': return 'bg-purple-500/10 text-purple-400 border-purple-500/30';
-      case 'prompts': return 'bg-amber-500/10 text-amber-400 border-amber-500/30';
-      default: return 'bg-slate-800 text-slate-300 border-slate-700';
-    }
+  const getMacroNameForTool = (tool: ToolItem) => {
+    const macroId = getToolMacroCategory(tool);
+    const macro = MACRO_CATEGORIES.find((c) => c.id === macroId);
+    return macro ? macro.name : 'Utilidades Gerais';
   };
 
   const sidebarTools = useMemo(() => {
     const q = normalize(sidebarSearch);
     return TOOLS_CATALOG.filter((tool) => {
-      const matchesCat =
-        sidebarCategory === 'all'
+      const toolMacro = getToolMacroCategory(tool);
+      const matchesMacro =
+        selectedMacroCategory === 'all'
           ? true
-          : sidebarCategory === 'favorites'
+          : selectedMacroCategory === 'favorites'
           ? favorites.includes(tool.id)
-          : tool.category === sidebarCategory;
+          : toolMacro === selectedMacroCategory;
 
-      if (!q) return matchesCat;
+      if (!matchesMacro) return false;
+
+      if (!q) return true;
 
       const titleNorm = normalize(tool.title);
       const descNorm = normalize(tool.description);
       const tagsNorm = tool.tags.map(normalize);
 
       return (
-        matchesCat &&
-        (titleNorm.includes(q) || descNorm.includes(q) || tagsNorm.some((t) => t.includes(q)))
+        titleNorm.includes(q) ||
+        descNorm.includes(q) ||
+        tagsNorm.some((t) => t.includes(q))
       );
     });
-  }, [sidebarSearch, sidebarCategory, favorites]);
+  }, [sidebarSearch, selectedMacroCategory, favorites]);
 
   const relatedTools = useMemo(() => {
     if (!selectedToolItem) return [];
+    const currentMacro = getToolMacroCategory(selectedToolItem);
     return TOOLS_CATALOG.filter(
-      (t) => t.category === selectedToolItem.category && t.id !== selectedToolItem.id
+      (t) => getToolMacroCategory(t) === currentMacro && t.id !== selectedToolItem.id
     ).slice(0, 4);
   }, [selectedToolItem]);
 
-
-  const filteredTools = useMemo(() => {
-    const q = normalize(searchTerm);
-    return TOOLS_CATALOG.filter((tool) => {
-      const matchesCategory =
-        selectedCategory === 'all'
-          ? true
-          : selectedCategory === 'favorites'
-          ? favorites.includes(tool.id)
-          : tool.category === selectedCategory;
-
-      if (!q) return matchesCategory;
-
-      const titleNorm = normalize(tool.title);
-      const descNorm = normalize(tool.description);
-      const tagsNorm = tool.tags.map(normalize);
-
-      const matchesSearch =
-        titleNorm.includes(q) ||
-        descNorm.includes(q) ||
-        tagsNorm.some((t) => t.includes(q));
-
-      return matchesCategory && matchesSearch;
-    });
-  }, [searchTerm, selectedCategory, favorites]);
 
   const commandResults = useMemo(() => {
     const q = normalize(commandQuery);
@@ -672,9 +639,9 @@ export default function ApolloToolsPage() {
       {/* Top Banner de Ativação Apollo 5 */}
       <V5AppActivationBanner />
 
-      {/* Header Soberano Branco (Padrão 4Devs / Invertexto) */}
+      {/* Header Soberano Branco e Limpo */}
       <header className="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-xs">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+        <div className="max-w-[1700px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
           {/* Esquerda: Botão Menu Mobile + Logo + Identidade */}
           <div className="flex items-center gap-3">
             <button
@@ -686,7 +653,11 @@ export default function ApolloToolsPage() {
               <PanelLeft className="w-5 h-5" />
             </button>
 
-            <div className="flex items-center gap-2.5">
+            <div
+              className="flex items-center gap-2.5 cursor-pointer"
+              onClick={() => setViewMode('portal')}
+              title="Voltar à Página Inicial Visual"
+            >
               <Apollo5RocketLogo size="sm" showText={false} />
               <div>
                 <div className="flex items-center gap-2">
@@ -694,25 +665,25 @@ export default function ApolloToolsPage() {
                     V5 Apollo Tools
                   </span>
                   <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-blue-50 text-blue-700 border border-blue-200">
-                    Capitania #11
+                    544 Ferramentas
                   </span>
                 </div>
                 <div className="text-[11px] text-slate-500 font-medium hidden md:block">
-                  Padrão 4Devs · Invertexto · Apollo La Plata · Nordy.ai ComfyUI
+                  Biblioteca Soberana de Utilidades, Imagem, Vídeo & IA
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Centro: Barra de Busca Rápida (Estilo 4Devs / Invertexto) */}
-          <div className="flex-1 max-w-md sm:max-w-lg mx-2">
+          {/* Centro: Barra de Busca Rápida */}
+          <div className="flex-1 max-w-md sm:max-w-xl mx-2">
             <div
               onClick={() => setIsCommandOpen(true)}
               className="w-full bg-slate-50 hover:bg-slate-100 border border-slate-200 hover:border-slate-300 rounded-xl px-3.5 py-2 flex items-center justify-between text-xs text-slate-500 transition shadow-xs cursor-pointer"
             >
               <div className="flex items-center gap-2 truncate">
                 <Search className="w-4 h-4 text-slate-400 shrink-0" />
-                <span className="truncate">Buscar ferramenta (ex: CPF, JSON, Pix, Hash, ComfyUI)...</span>
+                <span className="truncate">Buscar ferramenta (ex: CPF, Pix, Remover Fundo, Regra de 3, JSON)...</span>
               </div>
               <kbd className="hidden sm:inline-block px-1.5 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-mono text-slate-500 shadow-xs shrink-0">
                 ⌘K
@@ -720,15 +691,28 @@ export default function ApolloToolsPage() {
             </div>
           </div>
 
-          {/* Direita: Ações Rápidas (Favoritos) */}
+          {/* Direita: Alternância de Modo & Favoritos */}
           <div className="flex items-center gap-2">
             <button
+              onClick={() => setViewMode(viewMode === 'portal' ? 'workbench' : 'portal')}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-semibold transition cursor-pointer ${
+                viewMode === 'portal'
+                  ? 'bg-blue-50 border-blue-300 text-blue-700 font-bold'
+                  : 'bg-white border-slate-200 hover:bg-slate-50 text-slate-700 shadow-xs'
+              }`}
+              title="Alternar entre modo Portais Visuais e Bancada de Execução"
+            >
+              <LayoutGrid className="w-3.5 h-3.5 text-blue-600" />
+              <span className="hidden sm:inline">{viewMode === 'portal' ? 'Vendo Portais' : 'Ver Portais'}</span>
+            </button>
+
+            <button
               onClick={() => {
-                setSidebarCategory(sidebarCategory === 'favorites' ? 'all' : 'favorites');
+                setSelectedMacroCategory(selectedMacroCategory === 'favorites' ? 'all' : 'favorites');
                 setIsSidebarOpen(true);
               }}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-semibold transition cursor-pointer ${
-                sidebarCategory === 'favorites'
+                selectedMacroCategory === 'favorites'
                   ? 'bg-amber-50 border-amber-300 text-amber-800'
                   : 'bg-white border-slate-200 hover:bg-slate-50 text-slate-700 shadow-xs'
               }`}
@@ -743,7 +727,7 @@ export default function ApolloToolsPage() {
       </header>
 
       {/* Layout Master-Detail: Barra Lateral à Esquerda + Conteúdo à Direita */}
-      <div className="flex-1 flex max-w-[1600px] w-full mx-auto relative bg-[#f8fafc]">
+      <div className="flex-1 flex max-w-[1700px] w-full mx-auto relative bg-[#f8fafc]">
         {/* Backdrop Mobile para a Sidebar */}
         {isSidebarOpen && (
           <div
@@ -753,19 +737,19 @@ export default function ApolloToolsPage() {
         )}
 
         {/* ============================================================== */}
-        {/* BARRA LATERAL MINIMIZADA (TEXTO PURO - PADRÃO 4DEVS / INVERTEXTO) */}
+        {/* BARRA LATERAL AMPLA, NÍTIDA & FOCADA EM TEXTO E CATEGORIAS      */}
         {/* ============================================================== */}
         <aside
-          className={`fixed lg:sticky top-0 lg:top-16 inset-y-0 left-0 z-50 lg:z-10 w-72 sm:w-80 bg-white border-r border-slate-200 flex flex-col h-full lg:h-[calc(100vh-4rem)] transition-transform duration-200 ease-in-out shadow-lg lg:shadow-none ${
+          className={`fixed lg:sticky top-0 lg:top-16 inset-y-0 left-0 z-50 lg:z-10 w-80 sm:w-88 lg:w-[350px] bg-white border-r border-slate-200 flex flex-col h-full lg:h-[calc(100vh-4rem)] transition-transform duration-200 ease-in-out shadow-lg lg:shadow-none ${
             isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
           }`}
         >
           {/* Header da Barra Lateral */}
-          <div className="p-3 border-b border-slate-200 bg-slate-50/60">
-            <div className="flex items-center justify-between mb-2">
+          <div className="p-3 border-b border-slate-200 bg-slate-50/70 space-y-2.5">
+            <div className="flex items-center justify-between">
               <span className="text-xs font-bold text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
                 <PanelLeft className="w-3.5 h-3.5 text-blue-600" />
-                <span>Navegação de Ferramentas</span>
+                <span>Biblioteca de Ferramentas</span>
               </span>
               <button
                 onClick={() => setIsSidebarOpen(false)}
@@ -776,7 +760,7 @@ export default function ApolloToolsPage() {
               </button>
             </div>
 
-            {/* Input de Filtro Rápido na Barra Lateral */}
+            {/* Input de Filtro Rápido */}
             <div className="relative">
               <Search className="w-3.5 h-3.5 absolute left-2.5 top-2.5 text-slate-400" />
               <input
@@ -784,7 +768,7 @@ export default function ApolloToolsPage() {
                 placeholder="Filtrar ferramentas pelo nome..."
                 value={sidebarSearch}
                 onChange={(e) => setSidebarSearch(e.target.value)}
-                className="w-full bg-white border border-slate-200 rounded-lg pl-8 pr-7 py-1.5 text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition"
+                className="w-full bg-white border border-slate-200 rounded-lg pl-8 pr-7 py-1.5 text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition shadow-xs"
               />
               {sidebarSearch && (
                 <button
@@ -797,76 +781,49 @@ export default function ApolloToolsPage() {
               )}
             </div>
 
-            {/* Filtros Rápidos de Categoria em Texto */}
-            <div className="flex items-center gap-1 mt-2 overflow-x-auto pb-1 scrollbar-none text-[11px]">
+            {/* Filtros Rápidos das 7 Grandes Categorias Macro */}
+            <div className="flex items-center gap-1 overflow-x-auto pb-1 scrollbar-none text-[11px]">
               <button
-                onClick={() => setSidebarCategory('all')}
+                onClick={() => { setSelectedMacroCategory('all'); setSelectedSubcategory('all'); }}
                 className={`px-2 py-0.5 rounded-md font-medium whitespace-nowrap transition cursor-pointer ${
-                  sidebarCategory === 'all'
+                  selectedMacroCategory === 'all'
                     ? 'bg-blue-600 text-white font-bold shadow-xs'
                     : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-100'
                 }`}
               >
                 Todas ({TOOLS_CATALOG.length})
               </button>
-              <button
-                onClick={() => setSidebarCategory('dev-4devs')}
-                className={`px-2 py-0.5 rounded-md font-medium whitespace-nowrap transition cursor-pointer ${
-                  sidebarCategory === 'dev-4devs'
-                    ? 'bg-emerald-600 text-white font-bold shadow-xs'
-                    : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-100'
-                }`}
-              >
-                🇧🇷 4Devs
-              </button>
-              <button
-                onClick={() => setSidebarCategory('invertexto')}
-                className={`px-2 py-0.5 rounded-md font-medium whitespace-nowrap transition cursor-pointer ${
-                  sidebarCategory === 'invertexto'
-                    ? 'bg-cyan-600 text-white font-bold shadow-xs'
-                    : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-100'
-                }`}
-              >
-                ⚡ Invertexto
-              </button>
-              <button
-                onClick={() => setSidebarCategory('comfyui')}
-                className={`px-2 py-0.5 rounded-md font-medium whitespace-nowrap transition cursor-pointer ${
-                  sidebarCategory === 'comfyui'
-                    ? 'bg-purple-600 text-white font-bold shadow-xs'
-                    : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-100'
-                }`}
-              >
-                🎨 ComfyUI
-              </button>
-              <button
-                onClick={() => setSidebarCategory('prompts')}
-                className={`px-2 py-0.5 rounded-md font-medium whitespace-nowrap transition cursor-pointer ${
-                  sidebarCategory === 'prompts'
-                    ? 'bg-amber-600 text-white font-bold shadow-xs'
-                    : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-100'
-                }`}
-              >
-                💡 IA
-              </button>
+              {MACRO_CATEGORIES.map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => { setSelectedMacroCategory(cat.id); setSelectedSubcategory('all'); }}
+                  className={`px-2 py-0.5 rounded-md font-medium whitespace-nowrap transition cursor-pointer ${
+                    selectedMacroCategory === cat.id
+                      ? 'bg-blue-600 text-white font-bold shadow-xs'
+                      : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-100'
+                  }`}
+                >
+                  {cat.shortName}
+                </button>
+              ))}
             </div>
           </div>
 
-          {/* Lista de Ferramentas (TEXTO PURO, CLIQUE INSTANTÂNEO, SEM CARDS) */}
+          {/* Lista de Ferramentas - TEXTO PURO, SEM BADGES POLUÍDOS */}
           <div className="flex-1 overflow-y-auto px-2 py-2 divide-y divide-slate-100">
             {sidebarTools.length === 0 ? (
-              <div className="p-4 text-center text-xs text-slate-500 font-sans">
+              <div className="p-6 text-center text-xs text-slate-500 font-sans">
                 <p>Nenhuma ferramenta encontrada para "{sidebarSearch}".</p>
                 <button
-                  onClick={() => { setSidebarSearch(''); setSidebarCategory('all'); }}
-                  className="mt-2 text-blue-600 font-semibold hover:underline text-xs"
+                  onClick={() => { setSidebarSearch(''); setSelectedMacroCategory('all'); }}
+                  className="mt-2 text-blue-600 font-semibold hover:underline text-xs block mx-auto"
                 >
                   Limpar filtros
                 </button>
               </div>
             ) : (
               sidebarTools.map((tool) => {
-                const isSelected = activeInteractiveTool === tool.id;
+                const isSelected = activeInteractiveTool === tool.id && viewMode === 'workbench';
                 const isFav = favorites.includes(tool.id);
 
                 return (
@@ -878,23 +835,16 @@ export default function ApolloToolsPage() {
                         setIsSidebarOpen(false);
                       }
                     }}
-                    className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs transition-colors flex items-center justify-between group cursor-pointer ${
+                    className={`w-full text-left px-3 py-2.5 rounded-lg text-[13px] transition-all flex items-center justify-between group cursor-pointer ${
                       isSelected
-                        ? 'bg-blue-50 text-blue-800 font-bold border-l-4 border-blue-600 shadow-xs'
-                        : 'text-slate-700 hover:bg-slate-100 hover:text-slate-900 font-normal'
+                        ? 'bg-blue-50 text-blue-700 font-bold border-l-4 border-blue-600 shadow-xs'
+                        : 'text-slate-800 hover:bg-slate-100 hover:text-blue-700 font-medium'
                     }`}
                   >
-                    <span className="truncate pr-2">{tool.title}</span>
-                    <div className="flex items-center gap-1 shrink-0">
-                      {isFav && (
-                        <Star className="w-3 h-3 text-amber-500 fill-amber-500" />
-                      )}
-                      {tool.badge && (
-                        <span className="text-[9px] font-mono px-1.5 py-0.2 rounded font-semibold text-slate-500 bg-slate-100 group-hover:bg-slate-200">
-                          {tool.badge}
-                        </span>
-                      )}
-                    </div>
+                    <span className="leading-snug pr-2">{tool.title}</span>
+                    {isFav && (
+                      <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />
+                    )}
                   </button>
                 );
               })
@@ -903,7 +853,7 @@ export default function ApolloToolsPage() {
 
           {/* Rodapé da Barra Lateral */}
           <div className="p-2.5 border-t border-slate-200 bg-slate-50/80 text-[11px] font-mono text-slate-500 flex items-center justify-between">
-            <span>{sidebarTools.length} de {TOOLS_CATALOG.length}</span>
+            <span className="font-semibold text-slate-700">{sidebarTools.length} ferramentas</span>
             <span className="text-emerald-600 font-semibold flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> 100% Client-Side
             </span>
@@ -911,89 +861,267 @@ export default function ApolloToolsPage() {
         </aside>
 
         {/* ============================================================== */}
-        {/* ÁREA DE CONTEÚDO PRINCIPAL (A FERRAMENTA ATIVA À DIREITA)       */}
+        {/* ÁREA PRINCIPAL: MODO PORTAL VISUAL OU BANCADA DE FERRAMENTA     */}
         {/* ============================================================== */}
         <main className="flex-1 min-w-0 p-4 sm:p-6 lg:p-8 flex flex-col">
-          {selectedToolItem ? (
-            <div ref={workbenchRef} className="space-y-6 max-w-6xl w-full mx-auto">
-              {/* Header da Ferramenta Ativa (Breadcrumbs + Título + Ações) */}
-              <div className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-xs">
-                {/* Breadcrumbs */}
-                <div className="flex items-center gap-1.5 text-xs text-slate-500 font-mono mb-2">
-                  <span className="hover:text-blue-600 cursor-pointer" onClick={() => setActiveInteractiveTool('cpf-cnpj-tool')}>Início</span>
-                  <span className="text-slate-300">/</span>
-                  <span className="text-slate-600 font-medium">{getCategoryLabel(selectedToolItem.category)}</span>
-                  <span className="text-slate-300">/</span>
-                  <span className="text-blue-600 font-bold truncate">{selectedToolItem.title}</span>
-                </div>
-
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                  <div>
-                    <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                      {selectedToolItem.title}
-                    </h1>
-                    <p className="text-sm text-slate-600 mt-1 max-w-3xl leading-relaxed">
-                      {selectedToolItem.description}
-                    </p>
+          {viewMode === 'portal' ? (
+            /* ========================================================== */
+            /* MODO PORTAL: A GRANDE BIBLIOTECA ILUSTRADA COM BOTÕES GRANDES */
+            /* ========================================================== */
+            <div className="space-y-8 max-w-6xl w-full mx-auto">
+              {/* Hero Banner Ilustrado */}
+              <div className="bg-gradient-to-br from-blue-50 via-white to-indigo-50/40 border border-blue-100 rounded-3xl p-6 sm:p-10 shadow-sm relative overflow-hidden">
+                <div className="relative z-10 max-w-3xl space-y-3">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100/80 border border-blue-200 text-blue-800 text-xs font-bold tracking-wide uppercase">
+                    <Sparkles className="w-3.5 h-3.5 text-blue-600" />
+                    Biblioteca Soberana de Utilidades da Internet
                   </div>
-
-                  {/* Botões de Ação da Ferramenta */}
-                  <div className="flex items-center gap-2 shrink-0">
-                    <button
-                      onClick={(e) => copyShareLink(selectedToolItem.id, e)}
-                      title="Copiar Link Direto da Ferramenta"
-                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 hover:border-slate-300 bg-white hover:bg-slate-50 text-xs font-semibold text-slate-700 shadow-xs transition cursor-pointer"
-                    >
-                      {copiedLinkToolId === selectedToolItem.id ? (
-                        <>
-                          <Check className="w-3.5 h-3.5 text-emerald-600" />
-                          <span className="text-emerald-700">Link Copiado!</span>
-                        </>
-                      ) : (
-                        <>
-                          <Share2 className="w-3.5 h-3.5 text-slate-500" />
-                          <span>Compartilhar</span>
-                        </>
-                      )}
-                    </button>
-
-                    <button
-                      onClick={(e) => toggleFavorite(selectedToolItem.id, e)}
-                      title={favorites.includes(selectedToolItem.id) ? "Remover dos Favoritos" : "Adicionar aos Favoritos"}
-                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-semibold transition cursor-pointer ${
-                        favorites.includes(selectedToolItem.id)
-                          ? 'bg-amber-50 border-amber-300 text-amber-800'
-                          : 'bg-white border-slate-200 hover:bg-slate-50 text-slate-700 shadow-xs'
-                      }`}
-                    >
-                      <Star
-                        className={`w-3.5 h-3.5 ${
-                          favorites.includes(selectedToolItem.id) ? 'fill-amber-500 text-amber-500' : 'text-slate-400'
-                        }`}
-                      />
-                      <span>{favorites.includes(selectedToolItem.id) ? 'Favorito' : 'Favoritar'}</span>
-                    </button>
-                  </div>
-                </div>
-
-                {/* Badges de Garantia Soberana */}
-                <div className="flex items-center gap-2 pt-3 mt-3 border-t border-slate-100 flex-wrap text-[11px] font-mono">
-                  <span className="px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200 font-semibold flex items-center gap-1">
-                    <ShieldCheck className="w-3 h-3 text-emerald-600" /> 100% Client-Side
-                  </span>
-                  <span className="px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 border border-blue-200 font-semibold flex items-center gap-1">
-                    <Lock className="w-3 h-3 text-blue-600" /> Privacidade Absoluta (Zero Envio de Dados)
-                  </span>
-                  <span className="px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-200 font-semibold flex items-center gap-1">
-                    <Zap className="w-3 h-3 text-purple-600" /> Execução Instantânea
-                  </span>
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+                    O que você quer fazer hoje?
+                  </h1>
+                  <p className="text-base text-slate-600 leading-relaxed max-w-2xl">
+                    Mais de 540 ferramentas práticas divididas em 7 grandes áreas de atuação: edição de imagem, estúdio de vídeo, documentos oficiais, cálculos, redação e inteligência artificial. Sem cadastro e 100% no seu navegador.
+                  </p>
                 </div>
               </div>
 
-              {/* Bancada da Ferramenta (Container com Estilo Branco .workbench-light) */}
-              <div className="bg-white border border-slate-200 rounded-2xl p-4 sm:p-6 shadow-sm workbench-light">
-                {/* Suítes Especializadas */}
-                {selectedToolItem?.suiteTarget === 'brazilian-docs' && (
+              {/* Seção 1: As 8 Ferramentas Mais Acessadas do Brasil */}
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+                    <Zap className="w-4 h-4 text-amber-500 fill-amber-500" />
+                    <span>Acesso Rápido às Ferramentas Populares</span>
+                  </h2>
+                  <span className="text-xs text-slate-500 font-mono hidden sm:inline">1 clique para executar</span>
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  {[
+                    { id: 'cpf-cnpj-tool', title: 'Gerador de CPF & CNPJ', desc: 'Módulo 11 oficial da Receita', icon: ShieldCheck, color: 'text-emerald-600 bg-emerald-50 border-emerald-200' },
+                    { id: 'pix-qr-generator', title: 'Gerador QR Code Pix', desc: 'Padrão oficial BACEN', icon: QrCode, color: 'text-cyan-600 bg-cyan-50 border-cyan-200' },
+                    { id: 'face-swap-reactor', title: 'Remover Fundo / Upscale', desc: 'IA ComfyUI de imagem', icon: ImageIcon, color: 'text-purple-600 bg-purple-50 border-purple-200' },
+                    { id: 'regra3', suiteId: 'math-utils', title: 'Regra de Três', desc: 'Proporções diretas e inversas', icon: Calculator, color: 'text-blue-600 bg-blue-50 border-blue-200' },
+                    { id: 'whatsapp-link-gen', title: 'Link Direto WhatsApp', desc: 'Link wa.me com mensagem', icon: MessageSquare, color: 'text-emerald-600 bg-emerald-50 border-emerald-200' },
+                    { id: 'char-counter', title: 'Contador de Caracteres', desc: 'Palavras, linhas e tempo', icon: Type, color: 'text-amber-600 bg-amber-50 border-amber-200' },
+                    { id: 'password-generator', title: 'Gerador de Senhas', desc: 'Entropia forte e segura', icon: Lock, color: 'text-indigo-600 bg-indigo-50 border-indigo-200' },
+                    { id: 'abnt-citations', suiteId: 'academic-study-suite', title: 'Formatador ABNT 6023', desc: 'Citações de livros e artigos', icon: GraduationCap, color: 'text-rose-600 bg-rose-50 border-rose-200' }
+                  ].map((pop) => {
+                    const PopIcon = pop.icon;
+                    return (
+                      <button
+                        key={pop.id}
+                        onClick={() => {
+                          const targetTool = TOOLS_CATALOG.find((t) => t.id === pop.id || t.id === pop.suiteId);
+                          if (targetTool) handleToolClick(targetTool);
+                        }}
+                        className="p-3.5 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all text-left cursor-pointer group flex flex-col justify-between"
+                      >
+                        <div className="space-y-2">
+                          <div className={`w-9 h-9 rounded-xl border flex items-center justify-center ${pop.color}`}>
+                            <PopIcon className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="font-bold text-xs text-slate-900 group-hover:text-blue-600 transition">
+                              {pop.title}
+                            </div>
+                            <div className="text-[11px] text-slate-500 line-clamp-1 mt-0.5">
+                              {pop.desc}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex items-center justify-between text-[10px] text-blue-600 font-bold mt-2 pt-2 border-t border-slate-100">
+                          <span>Executar</span>
+                          <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Seção 2: Os 7 Grandes Portais por Categoria */}
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-xl font-extrabold text-slate-900 flex items-center gap-2">
+                    <Layers className="w-5 h-5 text-blue-600" />
+                    <span>Explore por Categoria de Atuação</span>
+                  </h2>
+                  <span className="text-xs text-slate-500 font-mono">7 Grandes Áreas</span>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {MACRO_CATEGORIES.map((macro) => {
+                    const count = TOOLS_CATALOG.filter((t) => getToolMacroCategory(t) === macro.id).length;
+                    const IconComp = ICON_MAP[macro.icon] || Sparkles;
+
+                    return (
+                      <div
+                        key={macro.id}
+                        className={`rounded-3xl bg-white border p-6 shadow-sm hover:shadow-lg transition-all duration-200 flex flex-col justify-between group ${macro.gradient}`}
+                      >
+                        <div className="space-y-4">
+                          <div className="flex items-center justify-between">
+                            <div className="p-3 rounded-2xl bg-white border border-slate-200 shadow-xs text-blue-600 group-hover:scale-105 transition-transform">
+                              <IconComp className="w-6 h-6" />
+                            </div>
+                            <span className="text-xs font-mono font-bold px-2.5 py-1 rounded-full bg-white border border-slate-200 text-slate-700 shadow-2xs">
+                              {count} ferramentas
+                            </span>
+                          </div>
+
+                          <div>
+                            <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                              {macro.name}
+                            </h3>
+                            <p className="text-xs text-slate-600 mt-1.5 leading-relaxed line-clamp-3">
+                              {macro.description}
+                            </p>
+                          </div>
+
+                          {/* Pills de Subcategorias */}
+                          <div className="flex flex-wrap gap-1.5 pt-1">
+                            {macro.subcategories.slice(1, 4).map((sub) => (
+                              <span
+                                key={sub.id}
+                                className="text-[10px] font-medium px-2 py-0.5 rounded-lg bg-slate-100 text-slate-700 border border-slate-200/80"
+                              >
+                                {sub.name}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div className="pt-5 mt-4 border-t border-slate-200/60">
+                          <button
+                            onClick={() => {
+                              setSelectedMacroCategory(macro.id);
+                              // Abre a primeira ferramenta em destaque dessa categoria
+                              const firstTool = TOOLS_CATALOG.find((t) => macro.featuredTools.includes(t.id)) ||
+                                TOOLS_CATALOG.find((t) => getToolMacroCategory(t) === macro.id);
+                              if (firstTool) handleToolClick(firstTool);
+                            }}
+                            className="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-blue-600 text-white font-bold text-xs transition-colors flex items-center justify-center gap-2 shadow-xs cursor-pointer"
+                          >
+                            <span>Explorar {macro.name}</span>
+                            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                          </button>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Footer da Página Inicial */}
+              <footer className="pt-8 pb-4 text-center text-xs text-slate-400 font-mono border-t border-slate-200">
+                <p>
+                  Holding V5 Apollo · Capitania #11 (V5 Tools) · Biblioteca Soberana de Utilidades · 100% Client-Side
+                </p>
+              </footer>
+            </div>
+          ) : (
+            /* ========================================================== */
+            /* MODO BANCADA: A FERRAMENTA ATIVA EM EXECUÇÃO                */
+            /* ========================================================== */
+            selectedToolItem ? (
+              <div ref={workbenchRef} className="space-y-6 max-w-6xl w-full mx-auto">
+                {/* Botão de Retorno e Breadcrumb */}
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                  <div className="flex items-center gap-1.5 text-xs text-slate-500 font-mono">
+                    <button
+                      onClick={() => setViewMode('portal')}
+                      className="hover:text-blue-600 font-bold cursor-pointer flex items-center gap-1"
+                    >
+                      <LayoutGrid className="w-3.5 h-3.5" />
+                      <span>Início (Portais)</span>
+                    </button>
+                    <span className="text-slate-300">/</span>
+                    <span className="text-slate-600 font-medium">{getMacroNameForTool(selectedToolItem)}</span>
+                    <span className="text-slate-300">/</span>
+                    <span className="text-blue-600 font-bold truncate">{selectedToolItem.title}</span>
+                  </div>
+
+                  <button
+                    onClick={() => setViewMode('portal')}
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 hover:border-blue-400 bg-white hover:bg-blue-50 text-xs font-bold text-blue-700 shadow-xs transition cursor-pointer self-start sm:self-auto"
+                  >
+                    <LayoutGrid className="w-3.5 h-3.5 text-blue-600" />
+                    <span>Ver Todas as Categorias</span>
+                  </button>
+                </div>
+
+                {/* Header da Ferramenta Ativa */}
+                <div className="bg-white border border-slate-200 rounded-3xl p-5 sm:p-7 shadow-xs">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div className="space-y-1.5">
+                      <span className="text-xs font-mono font-bold text-blue-600 uppercase tracking-wider block">
+                        {getMacroNameForTool(selectedToolItem)}
+                      </span>
+                      <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                        {selectedToolItem.title}
+                      </h1>
+                      <p className="text-sm text-slate-600 max-w-3xl leading-relaxed">
+                        {selectedToolItem.description}
+                      </p>
+                    </div>
+
+                    {/* Botões de Ação */}
+                    <div className="flex items-center gap-2 shrink-0">
+                      <button
+                        onClick={(e) => copyShareLink(selectedToolItem.id, e)}
+                        title="Copiar Link Direto da Ferramenta"
+                        className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-slate-200 hover:border-slate-300 bg-white hover:bg-slate-50 text-xs font-semibold text-slate-700 shadow-xs transition cursor-pointer"
+                      >
+                        {copiedLinkToolId === selectedToolItem.id ? (
+                          <>
+                            <Check className="w-3.5 h-3.5 text-emerald-600" />
+                            <span className="text-emerald-700 font-bold">Copiado!</span>
+                          </>
+                        ) : (
+                          <>
+                            <Share2 className="w-3.5 h-3.5 text-slate-500" />
+                            <span>Compartilhar</span>
+                          </>
+                        )}
+                      </button>
+
+                      <button
+                        onClick={(e) => toggleFavorite(selectedToolItem.id, e)}
+                        title={favorites.includes(selectedToolItem.id) ? "Remover dos Favoritos" : "Adicionar aos Favoritos"}
+                        className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl border text-xs font-semibold transition cursor-pointer ${
+                          favorites.includes(selectedToolItem.id)
+                            ? 'bg-amber-50 border-amber-300 text-amber-800 font-bold'
+                            : 'bg-white border-slate-200 hover:bg-slate-50 text-slate-700 shadow-xs'
+                        }`}
+                      >
+                        <Star
+                          className={`w-3.5 h-3.5 ${
+                            favorites.includes(selectedToolItem.id) ? 'fill-amber-500 text-amber-500' : 'text-slate-400'
+                          }`}
+                        />
+                        <span>{favorites.includes(selectedToolItem.id) ? 'Favorito' : 'Favoritar'}</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Badges de Garantia Soberana */}
+                  <div className="flex items-center gap-2 pt-4 mt-4 border-t border-slate-100 flex-wrap text-[11px] font-mono">
+                    <span className="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200 font-semibold flex items-center gap-1">
+                      <ShieldCheck className="w-3 h-3 text-emerald-600" /> 100% Client-Side
+                    </span>
+                    <span className="px-2.5 py-1 rounded-lg bg-blue-50 text-blue-700 border border-blue-200 font-semibold flex items-center gap-1">
+                      <Lock className="w-3 h-3 text-blue-600" /> Privacidade Absoluta (Zero Envio de Dados)
+                    </span>
+                    <span className="px-2.5 py-1 rounded-lg bg-purple-50 text-purple-700 border border-purple-200 font-semibold flex items-center gap-1">
+                      <Zap className="w-3 h-3 text-purple-600" /> Execução Instantânea
+                    </span>
+                  </div>
+                </div>
+
+                {/* Bancada da Ferramenta */}
+                <div className="bg-white border border-slate-200 rounded-3xl p-4 sm:p-6 shadow-sm workbench-light">
+                  {/* Suítes Especializadas */}
+                  {selectedToolItem?.suiteTarget === 'brazilian-docs' && (
               <BrazilianDocsSuite key={activeInteractiveTool} defaultTab={selectedToolItem.suiteTab as any} />
             )}
             {selectedToolItem?.suiteTarget === 'vehicles-banks' && (
@@ -1379,7 +1507,7 @@ export default function ApolloToolsPage() {
             <div className="p-12 text-center text-slate-500 bg-white border border-slate-200 rounded-2xl shadow-xs">
               Selecione uma ferramenta na barra lateral para começar a usar.
             </div>
-          )}
+          ))}
 
           {/* Footer Limpo e Profissional */}
           <footer className="mt-auto pt-8 pb-4 text-center text-xs text-slate-400 font-mono">

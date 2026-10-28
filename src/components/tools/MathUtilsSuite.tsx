@@ -401,8 +401,8 @@ export function MathUtilsSuite({ defaultTab = 'porcentagem' }: { defaultTab?: Ma
             <h2 className="text-xl font-bold text-white tracking-tight">
               Suíte de Matemática Avançada & Operações Temporais
             </h2>
-            <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 font-bold border border-cyan-500/40">
-              4DEVS & INVERTEXTO
+            <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 font-bold border border-blue-200">
+              Matemática & Proporções
             </span>
           </div>
           <p className="text-xs text-slate-400">
@@ -414,9 +414,9 @@ export function MathUtilsSuite({ defaultTab = 'porcentagem' }: { defaultTab?: Ma
       {/* Abas */}
       <div className="flex items-center gap-1.5 overflow-x-auto pb-4 mb-6 border-b border-slate-800/80">
         {[
-          { id: 'fatorar', label: 'Fatorar Número (Primos)', badge: '4Devs' },
-          { id: 'resto-divisao', label: 'Resto da Divisão (%)', badge: '4Devs' },
-          { id: 'operacoes-datas', label: 'Somar/Subtrair Datas', badge: '4Devs' },
+          { id: 'fatorar', label: 'Fatorar Número (Primos)' },
+          { id: 'resto-divisao', label: 'Resto da Divisão (%)' },
+          { id: 'operacoes-datas', label: 'Somar/Subtrair Datas' },
           { id: 'porcentagem', label: 'Porcentagem (%)' },
           { id: 'regra3', label: 'Regra de 3' },
           { id: 'extenso', label: 'Número por Extenso' },
@@ -434,13 +434,6 @@ export function MathUtilsSuite({ defaultTab = 'porcentagem' }: { defaultTab?: Ma
             }`}
           >
             {tab.label}
-            {tab.badge && (
-              <span className={`text-[9px] px-1.5 py-0.2 rounded font-mono ${
-                activeTab === tab.id ? 'bg-slate-950/40 text-slate-900 font-extrabold' : 'bg-cyan-500/20 text-cyan-400'
-              }`}>
-                {tab.badge}
-              </span>
-            )}
           </button>
         ))}
       </div>
@@ -808,15 +801,18 @@ export function MathUtilsSuite({ defaultTab = 'porcentagem' }: { defaultTab?: Ma
 
       {/* ABA: REGRA DE 3 */}
       {activeTab === 'regra3' && (
-        <div className="max-w-xl mx-auto p-5 bg-slate-950/70 border border-slate-800 rounded-2xl space-y-4">
-          <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-            <span className="text-xs font-bold uppercase text-slate-400">Proporção:</span>
+        <div className="max-w-xl mx-auto p-6 bg-slate-50 border border-slate-200 rounded-2xl space-y-5 shadow-xs">
+          <div className="flex items-center justify-between border-b border-slate-200 pb-3">
+            <div>
+              <span className="text-xs font-bold uppercase text-slate-600 block">Tipo de Proporção:</span>
+              <span className="text-[11px] text-slate-500">Alterne entre direta ou inversamente proporcional</span>
+            </div>
             <button
               onClick={() => setR3Inversa(!r3Inversa)}
-              className={`text-xs px-3 py-1 rounded-lg border font-semibold transition-all ${
+              className={`text-xs px-3.5 py-1.5 rounded-xl border font-bold transition-all shadow-xs cursor-pointer ${
                 r3Inversa
-                  ? 'bg-amber-500/20 text-amber-300 border-amber-500/40'
-                  : 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40'
+                  ? 'bg-amber-100 text-amber-900 border-amber-300'
+                  : 'bg-blue-100 text-blue-900 border-blue-300'
               }`}
             >
               {r3Inversa ? 'Inversamente Proporcional' : 'Diretamente Proporcional'}
@@ -824,36 +820,36 @@ export function MathUtilsSuite({ defaultTab = 'porcentagem' }: { defaultTab?: Ma
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <label className="text-[10px] uppercase font-bold text-slate-500">Valor A</label>
+            <div className="space-y-1.5">
+              <label className="text-xs font-bold text-slate-700">Valor A (Está para)</label>
               <input
                 type="number"
                 value={r3A}
                 onChange={(e) => setR3A(e.target.value)}
-                className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 text-sm font-mono text-white focus:border-cyan-500"
+                className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm font-mono text-slate-900 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 shadow-xs"
               />
             </div>
-            <div className="space-y-2">
-              <label className="text-[10px] uppercase font-bold text-slate-500">Valor B</label>
+            <div className="space-y-1.5">
+              <label className="text-xs font-bold text-slate-700">Valor B</label>
               <input
                 type="number"
                 value={r3B}
                 onChange={(e) => setR3B(e.target.value)}
-                className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 text-sm font-mono text-white focus:border-cyan-500"
+                className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm font-mono text-slate-900 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 shadow-xs"
               />
             </div>
-            <div className="space-y-2">
-              <label className="text-[10px] uppercase font-bold text-slate-500">Valor C</label>
+            <div className="space-y-1.5">
+              <label className="text-xs font-bold text-slate-700">Valor C (Assim como C está para)</label>
               <input
                 type="number"
                 value={r3C}
                 onChange={(e) => setR3C(e.target.value)}
-                className="w-full bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 text-sm font-mono text-white focus:border-cyan-500"
+                className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm font-mono text-slate-900 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 shadow-xs"
               />
             </div>
-            <div className="space-y-2">
-              <label className="text-[10px] uppercase font-bold text-cyan-400">Resultado X</label>
-              <div className="w-full bg-slate-900 border border-cyan-500/40 rounded-xl px-3 py-2 text-sm font-mono font-bold text-cyan-300 flex items-center justify-between">
+            <div className="space-y-1.5">
+              <label className="text-xs font-bold text-blue-700">Resultado X</label>
+              <div className="w-full bg-blue-50 border border-blue-300 rounded-xl px-3.5 py-2.5 text-base font-mono font-extrabold text-blue-900 flex items-center justify-between shadow-xs">
                 <span>{resRegra3.toLocaleString('pt-BR', { maximumFractionDigits: 4 })}</span>
               </div>
             </div>

@@ -418,10 +418,10 @@ export function AcademicAndStudySuite({ defaultTab = 'abnt-citations' }: Academi
             <GraduationCap className="w-4 h-4" />
             <span>Capitania #11 · Suíte Acadêmica, Citações ABNT & Estudo</span>
           </div>
-          <h2 className="text-xl sm:text-2xl font-black tracking-tight text-white flex items-center gap-2">
+          <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 flex items-center gap-2">
             Produtividade Acadêmica & ABNT NBR 6023
-            <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-cyan-950/80 text-cyan-400 border border-cyan-800/50">
-              Client-Side Soberano
+            <span className="text-[10px] uppercase font-mono px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 font-bold border border-blue-200">
+              Norma ABNT 6023:2020
             </span>
           </h2>
           <p className="text-xs text-slate-400 mt-1">
@@ -554,24 +554,24 @@ export function AcademicAndStudySuite({ defaultTab = 'abnt-citations' }: Academi
               </button>
             </div>
 
-            {/* Inputs de Campos */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="space-y-3">
+            {/* Inputs de Campos com Layout Balanceado e Espaçoso */}
+            <div className="space-y-4 bg-slate-50 border border-slate-200 rounded-2xl p-5 shadow-xs">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-mono text-slate-400 mb-1">
+                  <label className="block text-xs font-bold text-slate-700 mb-1">
                     Autor Principal (SOBRENOME, Nome):
                   </label>
                   <input
                     type="text"
                     value={abntAuthor}
                     onChange={(e) => setAbntAuthor(e.target.value)}
-                    placeholder="SOBRENOME, Nome"
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-cyan-500 font-sans"
+                    placeholder="SILVA, Lucas Ribeiro"
+                    className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 shadow-xs font-sans"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono text-slate-400 mb-1">
+                  <label className="block text-xs font-bold text-slate-700 mb-1">
                     Segundo Autor (Opcional - SOBRENOME, Nome):
                   </label>
                   <input
@@ -579,76 +579,84 @@ export function AcademicAndStudySuite({ defaultTab = 'abnt-citations' }: Academi
                     value={abntSecondAuthor}
                     onChange={(e) => setAbntSecondAuthor(e.target.value)}
                     placeholder="Deixe em branco se for autor único"
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-cyan-500 font-sans"
+                    className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 shadow-xs font-sans"
                   />
                 </div>
+              </div>
 
-                <div className="grid grid-cols-2 gap-3">
-                  <div>
-                    <label className="block text-xs font-mono text-slate-400 mb-1">Título da Obra:</label>
-                    <input
-                      type="text"
-                      value={abntTitle}
-                      onChange={(e) => setAbntTitle(e.target.value)}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-cyan-500 font-sans"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-mono text-slate-400 mb-1">Subtítulo (se houver):</label>
-                    <input
-                      type="text"
-                      value={abntSubtitle}
-                      onChange={(e) => setAbntSubtitle(e.target.value)}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-cyan-500 font-sans"
-                    />
-                  </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">Título da Obra:</label>
+                  <input
+                    type="text"
+                    value={abntTitle}
+                    onChange={(e) => setAbntTitle(e.target.value)}
+                    placeholder="Inteligência Artificial e Sistemas"
+                    className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 shadow-xs font-sans"
+                  />
                 </div>
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">Subtítulo (se houver):</label>
+                  <input
+                    type="text"
+                    value={abntSubtitle}
+                    onChange={(e) => setAbntSubtitle(e.target.value)}
+                    placeholder="uma introdução prática"
+                    className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 shadow-xs font-sans"
+                  />
+                </div>
+              </div>
 
-                <div className="grid grid-cols-3 gap-3">
-                  <div>
-                    <label className="block text-xs font-mono text-slate-400 mb-1">Cidade:</label>
-                    <input
-                      type="text"
-                      value={abntCity}
-                      onChange={(e) => setAbntCity(e.target.value)}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-cyan-500 font-sans"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-mono text-slate-400 mb-1">Editora / Portal:</label>
-                    <input
-                      type="text"
-                      value={abntPublisher}
-                      onChange={(e) => setAbntPublisher(e.target.value)}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-cyan-500 font-sans"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-mono text-slate-400 mb-1">Ano:</label>
-                    <input
-                      type="text"
-                      value={abntYear}
-                      onChange={(e) => setAbntYear(e.target.value)}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-cyan-500 font-sans"
-                    />
-                  </div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">Cidade:</label>
+                  <input
+                    type="text"
+                    value={abntCity}
+                    onChange={(e) => setAbntCity(e.target.value)}
+                    placeholder="São Paulo"
+                    className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 shadow-xs font-sans"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">Editora / Portal:</label>
+                  <input
+                    type="text"
+                    value={abntPublisher}
+                    onChange={(e) => setAbntPublisher(e.target.value)}
+                    placeholder="Editora Campus"
+                    className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 shadow-xs font-sans"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">Ano:</label>
+                  <input
+                    type="text"
+                    value={abntYear}
+                    onChange={(e) => setAbntYear(e.target.value)}
+                    placeholder="2026"
+                    className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 shadow-xs font-sans"
+                  />
+                </div>
+                <div>
+                  {abntDocType === 'book' && (
+                    <>
+                      <label className="block text-xs font-bold text-slate-700 mb-1">Edição:</label>
+                      <input
+                        type="text"
+                        value={abntEdition}
+                        onChange={(e) => setAbntEdition(e.target.value)}
+                        placeholder="Ex: 2. ed."
+                        className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 shadow-xs font-sans"
+                      />
+                    </>
+                  )}
                 </div>
               </div>
 
               {/* Campos específicos por tipo */}
-              <div className="space-y-3">
-                {abntDocType === 'book' && (
-                  <div>
-                    <label className="block text-xs font-mono text-slate-400 mb-1">Edição:</label>
-                    <input
-                      type="text"
-                      value={abntEdition}
-                      onChange={(e) => setAbntEdition(e.target.value)}
-                      placeholder="Ex: 2. ed."
-                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-100 focus:outline-none focus:border-cyan-500 font-sans"
-                    />
-                  </div>
-                )}
+              <div>
+                {abntDocType === 'book' && null}
 
                 {abntDocType === 'article' && (
                   <>

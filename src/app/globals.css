@@ -15,7 +15,7 @@ body {
   padding: 0;
 }
 
-/* Scrollbars limpas estilo 4Devs / Invertexto */
+/* Scrollbars limpas e suaves */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -32,7 +32,7 @@ body {
 }
 
 /* ========================================================================== */
-/* MOTOR DE TEMA CLARO SOBERANO (PADRÃO 4DEVS & INVERTEXTO)                   */
+/* MOTOR DE TEMA CLARO SOBERANO (PADRÃO V5 TOOLS LIMPO E ELEGANTE)           */
 /* Transforma automaticamente cartões, painéis, inputs e tabelas em branco    */
 /* ========================================================================== */
 .workbench-light {
@@ -40,28 +40,27 @@ body {
   color: #0f172a;
 }
 
-/* Painéis e cards principais */
-.workbench-light .bg-slate-900,
-.workbench-light .bg-slate-900\/90,
-.workbench-light .bg-slate-900\/80,
-.workbench-light .bg-slate-900\/60,
-.workbench-light .bg-slate-900\/40,
-.workbench-light .bg-slate-950,
-.workbench-light .bg-slate-950\/90,
-.workbench-light .bg-slate-950\/80,
-.workbench-light .bg-slate-950\/60,
-.workbench-light .bg-slate-950\/40 {
+/* Painéis e cards principais (qualquer opacidade ou variação slate) */
+.workbench-light [class*="bg-slate-950"],
+.workbench-light [class*="bg-slate-900"],
+.workbench-light [class*="bg-slate-850"] {
   background-color: #ffffff !important;
   border-color: #e2e8f0 !important;
   color: #0f172a !important;
 }
 
-/* Bordas suaves */
-.workbench-light .border-slate-800,
-.workbench-light .border-slate-800\/80,
-.workbench-light .border-slate-800\/60,
-.workbench-light .border-slate-700,
-.workbench-light .border-slate-700\/80 {
+/* Painéis secundários ou caixas internas (fundo cinza suave muito limpo) */
+.workbench-light [class*="bg-slate-950/"],
+.workbench-light [class*="bg-slate-900/"],
+.workbench-light [class*="bg-slate-800/"] {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* Bordas suaves universais */
+.workbench-light [class*="border-slate-800"],
+.workbench-light [class*="border-slate-700"] {
   border-color: #e2e8f0 !important;
 }
 
@@ -115,14 +114,16 @@ body {
 /* Botões secundários cinza neutro */
 .workbench-light button.bg-slate-800,
 .workbench-light button.bg-slate-800\/80,
-.workbench-light button.bg-slate-800\/60 {
+.workbench-light button.bg-slate-800\/60,
+.workbench-light button[class*="bg-slate-800"] {
   background-color: #f1f5f9 !important;
   border-color: #cbd5e1 !important;
   color: #0f172a !important;
 }
 
 .workbench-light button.bg-slate-800:hover,
-.workbench-light button.bg-slate-800\/80:hover {
+.workbench-light button.bg-slate-800\/80:hover,
+.workbench-light button[class*="bg-slate-800"]:hover {
   background-color: #e2e8f0 !important;
   color: #0f172a !important;
 }
