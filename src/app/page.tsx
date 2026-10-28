@@ -452,6 +452,19 @@ const ICON_MAP: Record<string, React.ElementType> = {
   PanelLeft
 };
 
+
+const APOLLO_BRIDGE_LINKS = [
+  { name: 'Finders', port: ':3001', url: 'http://localhost:3001', color: 'text-rose-600 border-rose-200 bg-rose-50 hover:bg-rose-100' },
+  { name: 'AutoBlog', port: ':3002', url: 'http://localhost:3002', color: 'text-blue-600 border-blue-200 bg-blue-50 hover:bg-blue-100' },
+  { name: 'Pocket Director', port: ':3007', url: 'http://localhost:3007', color: 'text-emerald-600 border-emerald-200 bg-emerald-50 hover:bg-emerald-100' },
+  { name: 'Sound', port: ':3005', url: 'http://localhost:3005', color: 'text-amber-600 border-amber-200 bg-amber-50 hover:bg-amber-100' },
+  { name: 'Broadcaster', port: ':3008', url: 'http://localhost:3008', color: 'text-purple-600 border-purple-200 bg-purple-50 hover:bg-purple-100' },
+  { name: 'Avatar', port: ':3010', url: 'http://localhost:3010', color: 'text-violet-600 border-violet-200 bg-violet-50 hover:bg-violet-100' },
+  { name: 'Poster', port: ':3011', url: 'http://localhost:3011', color: 'text-pink-600 border-pink-200 bg-pink-50 hover:bg-pink-100' },
+  { name: 'Games 9:16', port: ':3012', url: 'http://localhost:3012', color: 'text-orange-600 border-orange-200 bg-orange-50 hover:bg-orange-100' },
+  { name: 'Finance', port: ':3009', url: 'http://localhost:3009', color: 'text-emerald-600 border-emerald-200 bg-emerald-50 hover:bg-emerald-100' },
+];
+
 const normalize = (str: string) =>
   str.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 
@@ -678,6 +691,27 @@ export default function ApolloToolsPage() {
 
       {/* Header Soberano Branco e Limpo */}
       <header className="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-2xs">
+        {/* Apollo Bridge Inter-Capitanias Bar */}
+        <div className="border-b border-slate-200 bg-slate-50/80 px-4 sm:px-6 py-1.5 flex items-center justify-between text-[11px] overflow-x-auto gap-3">
+          <div className="flex items-center gap-2 font-mono text-slate-600 shrink-0">
+            <span className="w-2 h-2 rounded-full bg-sky-500 animate-pulse" />
+            <span className="font-bold text-slate-800">Apollo Bridge (Holding V5):</span>
+          </div>
+          <div className="flex items-center gap-1.5 shrink-0">
+            {APOLLO_BRIDGE_LINKS.map((b) => (
+              <a
+                key={b.name}
+                href={b.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg border text-[10px] font-mono font-semibold transition-all ${b.color}`}
+              >
+                <span>{b.name}</span>
+                <span className="opacity-70">{b.port}</span>
+              </a>
+            ))}
+          </div>
+        </div>
         <div className="max-w-[1700px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
           {/* Esquerda: Logo + Subtítulo Oficial */}
           <div className="flex items-center gap-3 shrink-0">
