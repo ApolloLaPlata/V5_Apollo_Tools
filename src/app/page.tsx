@@ -455,7 +455,7 @@ const ICON_MAP: Record<string, React.ElementType> = {
 
 const APOLLO_BRIDGE_LINKS = [
   { name: 'Hub V5', port: ':3000', url: 'http://localhost:3000', color: 'text-zinc-700 border-zinc-200 bg-zinc-50 hover:bg-zinc-100' },
-  { name: 'PixDrop Store', port: ':3000', url: 'http://localhost:3000', color: 'text-emerald-600 border-emerald-200 bg-emerald-50 hover:bg-emerald-100' },
+  { name: 'PixDrop Store', port: ':3008', url: 'http://localhost:3008', color: 'text-emerald-600 border-emerald-200 bg-emerald-50 hover:bg-emerald-100' },
   { name: 'Finders', port: ':3001', url: 'http://localhost:3001', color: 'text-rose-600 border-rose-200 bg-rose-50 hover:bg-rose-100' },
   { name: 'AutoBlog', port: ':3002', url: 'http://localhost:3002', color: 'text-blue-600 border-blue-200 bg-blue-50 hover:bg-blue-100' },
   { name: 'Sound', port: ':3005', url: 'http://localhost:3005', color: 'text-amber-600 border-amber-200 bg-amber-50 hover:bg-amber-100' },
