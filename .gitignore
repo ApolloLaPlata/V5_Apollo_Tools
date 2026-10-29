@@ -8,3 +8,5 @@ out
 
 # Pesquisa e Conhecimento (benchmarks pesados)
 Pesquisa e Conhecimento/
+
+*.tsbuildinfo
