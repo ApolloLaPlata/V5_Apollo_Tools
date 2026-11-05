@@ -1,7 +1,11 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
+import V5EcosystemHeader from '@/components/layout/V5EcosystemHeader';
 
 
+import V5EcosystemFooter from '@/components/layout/V5EcosystemFooter';
+import V5FloatingConcierge from '@/components/layout/V5FloatingConcierge';
+import V5ClientErrorSentinel from '@/components/layout/V5ClientErrorSentinel';
 export const viewport: Viewport = {
   themeColor: '#020617',
   width: 'device-width',
@@ -10,7 +14,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'V5 Apollo Tools • Canivete Suíço de Produtividade, Dev & Workflows ComfyUI',
+  title: 'V5 Apollo Tools — Canivete Suíço de Produtividade, Dev & Workflows ComfyUI',
   description: 'Mais de 530 ferramentas soberanas client-side: utilitários de desenvolvedor, cálculos fiscais, manipulação de texto e workflows de IA ComfyUI. Zero custo de API e privacidade total.',
   keywords: [
     'utilitarios online',
@@ -32,7 +36,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://tools.v5apollo.com'),
   manifest: '/manifest.json',
   openGraph: {
-    title: 'V5 Apollo Tools • Canivete Suíço de Produtividade & IA',
+    title: 'V5 Apollo Tools — Canivete Suíço de Produtividade & IA',
     description: 'O maior ecossistema soberano de ferramentas online, cálculos, manipulação de mídia e workflows de IA generativa.',
     url: 'https://tools.v5apollo.com',
     siteName: 'V5 Apollo Tools',
@@ -41,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'V5 Apollo Tools • Canivete Suíço de Produtividade & IA',
+    title: 'V5 Apollo Tools — Canivete Suíço de Produtividade & IA',
     description: 'Mais de 530 ferramentas gratuitas e soberanas para desenvolvedores, QA e criadores de conteúdo.',
   },
   robots: {
@@ -96,7 +100,11 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-[#020617] text-slate-100 min-h-screen antialiased selection:bg-cyan-500/30 font-sans">
+        <V5EcosystemHeader currentSite="tools" />
         {children}
+              <V5EcosystemFooter currentSite="tools" />
+        <V5FloatingConcierge currentSite="tools" />
+        <V5ClientErrorSentinel siteId="tools" />
       </body>
     </html>
   );
