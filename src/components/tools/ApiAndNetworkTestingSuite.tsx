@@ -85,7 +85,7 @@ export function ApiAndNetworkTestingSuite({ defaultTab = 'curl-to-code' }: ApiAn
   const [curlInput, setCurlInput] = useState<string>(
     `curl -X POST https://api.v5apollo.com/v1/generate \\
   -H "Content-Type: application/json" \\
-  -H "Authorization: Bearer v5_live_sk982734" \\
+  -H "Authorization: Bearer sample_demo_key_982734" \\
   -d '{"prompt": "Saturn IB Rocket Apollo 5", "steps": 30, "cfg": 7.5}'`
   );
   const [targetLang, setTargetLang] = useState<'fetch' | 'axios' | 'python' | 'go' | 'php'>('fetch');
@@ -217,9 +217,9 @@ echo $response;`;
   const [authType, setAuthType] = useState<'bearer' | 'basic' | 'apikey'>('bearer');
   const [basicUser, setBasicUser] = useState('admin_apollo');
   const [basicPass, setBasicPass] = useState('V5Pass#2026!');
-  const [bearerToken, setBearerToken] = useState('v5_live_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.tK1');
+  const [bearerToken, setBearerToken] = useState('sample_jwt_token_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.tK1');
   const [apiKeyHeaderName, setApiKeyHeaderName] = useState('X-API-Key');
-  const [apiKeyValue, setApiKeyValue] = useState('v5_sec_99a8b7c6d5e4f3');
+  const [apiKeyValue, setApiKeyValue] = useState('sample_sec_99a8b7c6d5e4f3');
 
   const getBasicAuthBase64 = () => {
     try {
@@ -277,7 +277,7 @@ echo $response;`;
   // ABA 4: SIMULADOR DE WEBHOOKS & ASSINATURA HMAC
   // =========================================================================
   const [webhookProvider, setWebhookProvider] = useState<'stripe' | 'github' | 'mercadopago'>('stripe');
-  const [webhookSecret, setWebhookSecret] = useState('whsec_v5apollo_secret_key_8899');
+  const [webhookSecret, setWebhookSecret] = useState('whsec_sample_secret_key_8899');
   const [webhookPayload, setWebhookPayload] = useState<string>(
     JSON.stringify({
       id: "evt_3MvY8kLkdIwHu7ix0ABCDE",

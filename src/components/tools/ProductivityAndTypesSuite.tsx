@@ -325,9 +325,9 @@ export function calculateContrast(c1: string, c2: string): number {
 
 > O Canivete Suíço de Produtividade, Workflows ComfyUI e Testes Técnicos da Holding V5 Apollo.
 
-[![Build Status](https://img.shields.io/badge/Build-100%25%20Green-emerald)](http://localhost:3009)
+[![Build Status](https://img.shields.io/badge/Build-100%25%20Green-emerald)](https://v5apollo.com)
 [![License](https://img.shields.io/badge/License-Proprietary-cyan)](https://v5apollo.com)
-[![Port](https://img.shields.io/badge/Port-3009-amber)](http://localhost:3009)
+[![Status](https://img.shields.io/badge/Status-Online-emerald)](https://v5apollo.com)
 
 ## 📦 Funcionalidades Principais
 
@@ -361,7 +361,7 @@ Despacha requisições de geração de imagem ou vídeo diretamente para instân
 
 \`\`\`http
 Content-Type: application/json
-Authorization: Bearer v5_live_key_9981x
+Authorization: Bearer sample_demo_key_9981x
 \`\`\`
 
 ### Corpo da Requisição (Body JSON)

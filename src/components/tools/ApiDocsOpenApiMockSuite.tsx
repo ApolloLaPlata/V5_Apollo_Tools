@@ -39,7 +39,7 @@ const DEFAULT_OPENAPI_SPEC = {
   },
   servers: [
     { url: "https://api.v5apollo.com/v1", description: "Produção Soberana V5" },
-    { url: "http://localhost:3009/api", description: "Ambiente Local de Testes" }
+    { url: "https://api.v5apollo.com/api", description: "Gateway Oficial V5 Apollo" }
   ],
   paths: {
     "/workflows/dispatch": {

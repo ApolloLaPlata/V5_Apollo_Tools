@@ -309,7 +309,7 @@ Para acomodar 47+ ferramentas sem poluir o código ou criar dezenas de páginas 
 ## 5. Integração com a V5 Apollo API (Frota Modal GPU & LLMs)
 - **Status:** 100% Conectado e Validado via Supabase / Produção Vercel.
 - **Endpoint Oficial:** `https://api.v5apollo.com`
-- **Chave de API Dedicada (Capitania #11):** `v5_live_v5_tools_86506bd331adc1bbc223e177c720840c`
+- **Chave de API Dedicada (Capitania #11):** `v5_live_v5_tools_********************************`
 - **Tier de Acesso:** `internal_unlimited` (Vídeo MiniMax H3, Imagem Flux-Schnell, Texto Gemini LLM, TTS e Voz).
 - **Variáveis de Ambiente:** Configuradas em `.env.local` e com fallback nativo em `src/lib/api/v5ApolloClient.ts`.
 
